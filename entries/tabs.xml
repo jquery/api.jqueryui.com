@@ -169,7 +169,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 		<option name="deselectable" type="Boolean" default='false'>
 			<desc>deprecated in jQuery UI 1.7, use collapsible.</desc>
 		</option>
-		<option name="disabled" type="Array&lt;Number>" default='[]'>
+		<option name="disabled" type="Boolean, Array&lt;Number>" default='false'>
 			<desc>An array containing the position of the tabs (zero-based index) that should be disabled on initialization.</desc>
 		</option>
 		<option name="event" type="String" default='"click"'>

@@ -18,12 +18,10 @@
 			<desc>When ''autoOpen'' is ''true'' the dialog will open automatically when ''dialog'' is called. If ''false'' it will stay hidden until ''.dialog("open")'' is called on it.</desc>
 		</option>
 		<option name="buttons" type="Object" default='{ }'>
-			<desc>Specifies which buttons should be displayed on the dialog. The property key is the text of the button. The value is the callback function for when the button is clicked.  The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.
-</desc>
+			<desc>Specifies which buttons should be displayed on the dialog. The property key is the text of the button. The value is the callback function for when the button is clicked.  The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
 		</option>
 		<option name="buttons" type="Array" default='[ ]'>
-			<desc>Specifies which buttons should be displayed on the dialog. Each element of the array must be an Object defining the properties to set on the button.
-</desc>
+			<desc>Specifies which buttons should be displayed on the dialog. Each element of the array must be an Object defining the properties to set on the button.</desc>
 		</option>
 		<option name="closeOnEscape" type="Boolean" default='true'>
 			<desc>Specifies whether the dialog should close when it has focus and the user presses the esacpe (ESC) key.</desc>
@@ -33,6 +31,9 @@
 		</option>
 		<option name="dialogClass" type="String" default='""'>
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
+		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the dialog if set to true.</desc>
 		</option>
 		<option name="draggable" type="Boolean" default='true'>
 			<desc>If set to true, the dialog will be draggable will be draggable by the titlebar.</desc>

@@ -17,6 +17,9 @@
 		<option name="delay" type="Integer" default='0'>
 			<desc>Time in milliseconds to define when the selecting should start. It helps preventing unwanted selections when clicking on an element.</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the selectable if set to true.</desc>
+		</option>
 		<option name="distance" type="Integer" default='0'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until after mouse is dragged beyond distance.</desc>
 		</option>

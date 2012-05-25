@@ -44,6 +44,9 @@ Note: the element specified for containment must have a calculated width and hei
 		<option name="delay" type="Integer" default='0'>
 			<desc>Time in milliseconds to define when the sorting should start. It helps preventing unwanted drags when clicking on an element.</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the sortable if set to true.</desc>
+		</option>
 		<option name="distance" type="Integer" default='1'>
 			<desc>Tolerance, in pixels, for when sorting should start. If specified, sorting will not start until after mouse is dragged beyond distance. Can be used to allow for clicks on elements within a handle.</desc>
 		</option>

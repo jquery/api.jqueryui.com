@@ -53,6 +53,9 @@
 		<option name="delay" type="Integer" default='300'>
 			<desc>The delay in milliseconds the Autocomplete waits after a keystroke to activate itself. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the autocomplete if set to true.</desc>
+		</option>
 		<option name="minLength" type="Integer" default='1'>
 			<desc>The minimum number of characters a user has to type before the Autocomplete activates. Zero is useful for local data with just a few items. Should be increased when there are a lot of items, where a single character would match a few thousand items.</desc>
 		</option>

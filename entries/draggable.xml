@@ -47,6 +47,9 @@ Note: Specifying this option as an array of selectors has been removed.</desc>
 		<option name="delay" type="Integer" default='0'>
 			<desc>Time in milliseconds after mousedown until dragging should start. This option can be used to prevent unwanted drags when clicking on an element.</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the draggable if set to true.</desc>
+		</option>
 		<option name="distance" type="Integer" default='1'>
 			<desc>Distance in pixels after mousedown the mouse must move before dragging should start. This option can be used to prevent unwanted drags when clicking on an element.</desc>
 		</option>

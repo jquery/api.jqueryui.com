@@ -20,6 +20,9 @@ The slider widget will create handle elements with the class 'ui-slider-handle' 
 		<option name="animate" type="Boolean, String, Number" default='false'>
 			<desc>Whether to slide handle smoothly when user click outside handle on the bar. Will also accept a string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the slider if set to true.</desc>
+		</option>
 		<option name="max" type="Number" default='100'>
 			<desc>The maximum value of the slider.</desc>
 		</option>
