@@ -277,4 +277,5 @@ will cancel the change. Useful in the 'receive' callback.</desc>
 ]]></html>
 
 	</example>
+	<category slug="interactions"/>
 </entry>

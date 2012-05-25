@@ -32,4 +32,5 @@
 			<desc>The number of pieces to explode, should be a perfect square, any other values are rounded to the nearest square.</desc>
 		</option>
 	</options>
+	<category slug="effects"/>
 </entry>

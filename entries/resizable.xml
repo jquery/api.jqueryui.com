@@ -121,4 +121,5 @@ If specified as an object, the following keys are supported: { n, e, s, w, ne, s
 ]]></html>
 
 	</example>
+	<category slug="interactions"/>
 </entry>

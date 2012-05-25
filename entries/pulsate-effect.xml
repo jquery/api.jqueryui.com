@@ -34,4 +34,5 @@
 			<desc>The number of times the element should pulse.  An extra half pulse is added for hide/show</desc>
 		</option>
 	</options>
+	<category slug="effects"/>
 </entry>

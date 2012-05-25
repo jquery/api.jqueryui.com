@@ -32,4 +32,5 @@
 			<desc>The background color used during the animation</desc>
 		</option>
 	</options>
+	<category slug="effects"/>
 </entry>

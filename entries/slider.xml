@@ -116,4 +116,5 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 ]]></html>
 
 	</example>
+	<category slug="widgets"/>
 </entry>

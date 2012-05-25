@@ -29,4 +29,5 @@
 			<desc>A callback function, executed when the effect completes</desc>
 		</option>
 	</options>
+	<category slug="effects"/>
 </entry>

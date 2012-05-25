@@ -35,4 +35,5 @@
 			<desc>If the horizontal direction happens first when hiding. Remember, showing inverts hiding.</desc>
 		</option>
 	</options>
+	<category slug="effects"/>
 </entry>

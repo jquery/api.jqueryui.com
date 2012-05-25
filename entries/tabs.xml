@@ -365,4 +365,5 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 ]]></html>
 
 	</example>
+	<category slug="widgets"/>
 </entry>
