@@ -18,13 +18,13 @@
 	<created>1.0</created>
 	<options>
 
-		<option name="appendTo" type="String" default=''parent''>
+		<option name="appendTo" type="String" default='"parent"'>
 			<desc>Defines where the helper that moves with the mouse is being appended to during the drag (for example, to resolve overlap/zIndex issues).</desc>
 		</option>
 		<option name="axis" type="String" default='false'>
 			<desc>If defined, the items can be dragged only horizontally or vertically. Possible values:'x', 'y'.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='':input,button''>
+		<option name="cancel" type="Selector" default='":input,button"'>
 			<desc>Prevents sorting if you start on elements matching the selector.</desc>
 		</option>
 		<option name="connectWith" type="Selector" default='false'>
@@ -35,7 +35,7 @@
 
 Note: the element specified for containment must have a calculated width and height (though it need not be explicit), so for example, if you have float:left sortable children and specify containment:'parent' be sure to have float:left on the sortable/parent container as well or it will have height: 0, causing undefined behavior.</desc>
 		</option>
-		<option name="cursor" type="String" default=''auto''>
+		<option name="cursor" type="String" default='"auto"'>
 			<desc>Defines the cursor that is being shown while sorting.</desc>
 		</option>
 		<option name="cursorAt" type="Object" default='false'>
@@ -62,7 +62,7 @@ Note: the element specified for containment must have a calculated width and hei
 		<option name="handle" type="Selector, Element" default='false'>
 			<desc>Restricts sort start click to the specified element.</desc>
 		</option>
-		<option name="helper" type="String, Function" default=''original''>
+		<option name="helper" type="String, Function" default='"original"'>
 			<desc>Allows for a helper element to be used for dragging display. The supplied function receives the event and the element being sorted, and should return a DOMElement to be used as a custom proxy helper. Possible values: 'original', 'clone'</desc>
 		</option>
 		<option name="items" type="Selector" default=''> *''>
@@ -86,7 +86,7 @@ Note: the element specified for containment must have a calculated width and hei
 		<option name="scrollSpeed" type="Integer" default='20'>
 			<desc>The speed at which the window should scroll once the mouse pointer gets within the scrollSensitivity distance.</desc>
 		</option>
-		<option name="tolerance" type="String" default=''intersect''>
+		<option name="tolerance" type="String" default='"intersect"'>
 			<desc>This is the way the reordering behaves during drag. Possible values: 'intersect', 'pointer'. In some setups, 'pointer' is more natural.
 <ul>
 <li>'''intersect''': draggable overlaps the droppable at least 50%</li>
@@ -214,11 +214,11 @@ Note: the element specified for containment must have a calculated width and hei
 		<method name="serialize">
 			<desc>Serializes the sortable's item id's into a form/ajax submittable string. Calling this method produces a hash that can be appended to any url to easily submit a new item order back to the server.
 
-It works by default by looking at the id of each item in the format 'setname_number', and it spits out a hash like "setname[]=number&setname[]=number".
+It works by default by looking at the id of each item in the format 'setname_number', and it spits out a hash like "setname[]=number&amp;setname[]=number".
 
 You can also give in a option hash as second argument to custom define how the function works. The possible options are: 'key' (replaces part1[] with whatever you want), 'attribute' (test another attribute than 'id') and 'expression' (use your own regexp).
 
-If serialize returns an empty string, make sure the id attributes include an underscore.  They must be in the form: "set_number" For example, a 3 element list with id attributes foo_1, foo_5, foo_2 will serialize to foo[]=1&foo[]=5&foo[]=2. You can use an underscore, equal sign or hyphen to separate the set and number.  For example foo=1 or foo-1 or foo_1 all serialize to foo[]=1.
+If serialize returns an empty string, make sure the id attributes include an underscore.  They must be in the form: "set_number" For example, a 3 element list with id attributes foo_1, foo_5, foo_2 will serialize to foo[]=1&amp;foo[]=5&amp;foo[]=2. You can use an underscore, equal sign or hyphen to separate the set and number.  For example foo=1 or foo-1 or foo_1 all serialize to foo[]=1.
 </desc>
 			<argument name="options" type="Hash" optional="true">
 				<desc></desc>
