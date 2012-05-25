@@ -54,6 +54,9 @@
 		<option name="collapsible" type="Boolean" default='false'>
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section by the triggering event (click is the default).</desc>
 		</option>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the accordion if set to true.</desc>
+		</option>
 		<option name="event" type="String" default='"click"'>
 			<desc>The event on which to trigger the accordion.</desc>
 		</option>
@@ -86,10 +89,8 @@
 });]]></pre>
 </desc>
 			<argument name="event" type="Event">
-				<desc></desc>
 			</argument>
 			<argument name="ui" type="Object">
-				<desc></desc>
 			</argument>
 		</event>
 		<event name="changestart" type="accordionchangestart">
@@ -103,25 +104,54 @@
 });]]></pre>
 </desc>
 			<argument name="event" type="Event">
-				<desc></desc>
 			</argument>
 			<argument name="ui" type="Object">
-				<desc></desc>
 			</argument>
 		</event>
-
+		<event name="create">
+			<desc>
+				This event is triggered when the accordion is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 	</events>
 	<methods>
 		<method name="activate">
 			<desc>Activate a content part of the Accordion programmatically. The index can be a zero-indexed number to match the position of the header to close or a Selector matching an element. Pass <code>false</code> to close all (only possible with <code>collapsible:true</code>).</desc>
 			<argument name="index" type="String, Element, jQuery, Boolean, Number">
-				<desc></desc>
 			</argument>
+		</method>
+		<method name="destroy">
+			<desc>
+				Remove the accordion functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
+		<method name="disable">
+			<desc>
+				Disable the accordion.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the accordion.
+			</desc>
+		</method>
+		<method name="option">
+			<desc>
+				Returns the widget
+			</desc>
 		</method>
 		<method name="resize">
 			<desc>Recompute heights of the accordion contents when using the fillSpace option and the container height changed. For example, when the container is a resizable, this method should be called by its resize-event.</desc>
 		</method>
-
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 

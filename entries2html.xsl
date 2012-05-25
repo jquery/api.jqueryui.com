@@ -197,8 +197,10 @@
 			<xsl:text>: </xsl:text>
 			<xsl:value-of select="@type"/>
 			<xsl:if test="not(@null)">
-				<xsl:text>, </xsl:text>
-				<xsl:value-of select="desc"/>
+				<xsl:if test="desc">
+					<xsl:text>, </xsl:text>
+					<xsl:value-of select="desc"/>
+				</xsl:if>
 				<ul>
 					<xsl:apply-templates select="property"/>
 				</ul>
