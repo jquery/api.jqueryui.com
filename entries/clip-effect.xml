@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="../../entries2html.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="clip" namespace="effect" type="effect">
 	<desc>
 		The clip effect will hide or show an element by clipping the element vertically or horizontally

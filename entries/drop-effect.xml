@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="../../entries2html.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="drop" namespace="effect" type="effect">
 	<desc>
 		The drop effect hides or shows an element fading in/out and sliding in a direction.
