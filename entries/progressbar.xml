@@ -30,6 +30,15 @@ This is a determinate progress bar, meaning that it should only be used in situa
 				<desc></desc>
 			</argument>
 		</event>
+		<event name="create">
+			<desc>
+				This event is triggered when the progressbar is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="complete" type="progressbarcomplete">
 			<desc>This event is triggered when the value of the progressbar reaches the maximum value of 100.</desc>
 			<argument name="event" type="Event">
@@ -39,7 +48,6 @@ This is a determinate progress bar, meaning that it should only be used in situa
 				<desc></desc>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<method name="value">

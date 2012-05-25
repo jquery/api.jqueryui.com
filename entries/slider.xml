@@ -47,6 +47,15 @@ The slider widget will create handle elements with the class 'ui-slider-handle' 
 
 	</options>
 	<events>
+		<event name="create">
+			<desc>
+				This event is triggered when the slider is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="start" type="slidestart">
 			<desc>This event is triggered when the user starts sliding.</desc>
 			<argument name="event" type="Event">

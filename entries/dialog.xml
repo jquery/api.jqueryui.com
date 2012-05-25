@@ -90,8 +90,7 @@
 	</options>
 	<events>
 		<event name="beforeClose" type="dialogbeforeclose">
-			<desc>This event is triggered when a dialog attempts to close. If the beforeClose event handler (callback function) returns false, the close will be prevented.
-</desc>
+			<desc>This event is triggered when a dialog attempts to close. If the beforeClose event handler (callback function) returns false, the close will be prevented.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -99,9 +98,17 @@
 				<desc></desc>
 			</argument>
 		</event>
+		<event name="create">
+			<desc>
+				This event is triggered when the dialog is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="open" type="dialogopen">
-			<desc>This event is triggered when dialog is opened.
-</desc>
+			<desc>This event is triggered when dialog is opened.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -110,8 +117,7 @@
 			</argument>
 		</event>
 		<event name="focus" type="dialogfocus">
-			<desc>This event is triggered when the dialog gains focus.
-</desc>
+			<desc>This event is triggered when the dialog gains focus.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -120,8 +126,7 @@
 			</argument>
 		</event>
 		<event name="dragStart" type="dialogdragstart">
-			<desc>This event is triggered at the beginning of the dialog being dragged.
-</desc>
+			<desc>This event is triggered at the beginning of the dialog being dragged.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -130,8 +135,7 @@
 			</argument>
 		</event>
 		<event name="drag" type="dialogdrag">
-			<desc>This event is triggered when the dialog is dragged.
-</desc>
+			<desc>This event is triggered when the dialog is dragged.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -140,8 +144,7 @@
 			</argument>
 		</event>
 		<event name="dragStop" type="dialogdragstop">
-			<desc>This event is triggered after the dialog has been dragged.
-</desc>
+			<desc>This event is triggered after the dialog has been dragged.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -150,8 +153,7 @@
 			</argument>
 		</event>
 		<event name="resizeStart" type="dialogresizestart">
-			<desc>This event is triggered at the beginning of the dialog being resized.
-</desc>
+			<desc>This event is triggered at the beginning of the dialog being resized.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -160,8 +162,7 @@
 			</argument>
 		</event>
 		<event name="resize" type="dialogresize">
-			<desc>This event is triggered when the dialog is resized. [http://www.jsfiddle.net/Jp7TM/18/ demo]
-</desc>
+			<desc>This event is triggered when the dialog is resized.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -170,8 +171,7 @@
 			</argument>
 		</event>
 		<event name="resizeStop" type="dialogresizestop">
-			<desc>This event is triggered after the dialog has been resized.
-</desc>
+			<desc>This event is triggered after the dialog has been resized.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -180,8 +180,7 @@
 			</argument>
 		</event>
 		<event name="close" type="dialogclose">
-			<desc>This event is triggered when the dialog is closed.
-</desc>
+			<desc>This event is triggered when the dialog is closed.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>

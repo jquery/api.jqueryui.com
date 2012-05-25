@@ -28,8 +28,15 @@
 		</option>
 	</options>
 	<events>
-<p>There are no events for this plugin.</p>
-
+		<event name="create">
+			<desc>
+				This event is triggered when the button is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 	</events>
 	<methods>
 		<method name="refresh">

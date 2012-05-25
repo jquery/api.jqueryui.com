@@ -58,6 +58,15 @@
 				<desc></desc>
 			</argument>
 		</event>
+		<event name="create">
+			<desc>
+				This event is triggered when the droppable is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="deactivate" type="dropdeactivate">
 			<desc>This event is triggered any time an accepted draggable stops dragging.</desc>
 			<argument name="event" type="Event">

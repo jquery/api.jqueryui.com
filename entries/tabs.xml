@@ -196,9 +196,17 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 
 	</options>
 	<events>
+		<event name="create">
+			<desc>
+				This event is triggered when the tabs widget is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="select" type="tabsselect">
-			<desc>This event is triggered when clicking a tab.
-</desc>
+			<desc>This event is triggered when clicking a tab.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -207,8 +215,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="load" type="tabsload">
-			<desc>This event is triggered after the content of a remote tab has been loaded.
-</desc>
+			<desc>This event is triggered after the content of a remote tab has been loaded.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -217,8 +224,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="show" type="tabsshow">
-			<desc>This event is triggered when a tab is shown.
-</desc>
+			<desc>This event is triggered when a tab is shown.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -227,8 +233,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="add" type="tabsadd">
-			<desc>This event is triggered when a tab is added.
-</desc>
+			<desc>This event is triggered when a tab is added.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -237,8 +242,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="remove" type="tabsremove">
-			<desc>This event is triggered when a tab is removed.
-</desc>
+			<desc>This event is triggered when a tab is removed.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -247,8 +251,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="enable" type="tabsenable">
-			<desc>This event is triggered when a tab is enabled.
-</desc>
+			<desc>This event is triggered when a tab is enabled.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -257,8 +260,7 @@ resizeMap() will call Google Maps' checkResize() on the particular map.
 			</argument>
 		</event>
 		<event name="disable" type="tabsdisable">
-			<desc>This event is triggered when a tab is disabled.
-</desc>
+			<desc>This event is triggered when a tab is disabled.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>

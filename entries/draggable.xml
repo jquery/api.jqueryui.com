@@ -107,6 +107,15 @@ Note: Specifying this option as an array of selectors has been removed.</desc>
 
 	</options>
 	<events>
+		<event name="create">
+			<desc>
+				This event is triggered when the draggable is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="start" type="dragstart">
 			<desc>This event is triggered when dragging starts.</desc>
 			<argument name="event" type="Event">

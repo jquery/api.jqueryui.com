@@ -68,6 +68,15 @@
 
 	</options>
 	<events>
+		<event name="create">
+			<desc>
+				This event is triggered when the autocomplete is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
 		<event name="search" type="autocompletesearch">
 			<desc>Before a request (source-option) is started, after minLength and delay are met. Can be canceled (return false), then no request will be started and no items suggested.</desc>
 			<argument name="event" type="Event">
