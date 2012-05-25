@@ -1,0 +1,30 @@
+{
+  "name": "api.jqueryui.com",
+  "title": "jQuery UI API Docs",
+  "description": "API reference documentation for jQuery UI.",
+  "version": "1.8.20",
+  "homepage": "https://github.com/jquery/api.jqueryui.com",
+  "author": {
+    "name": "jQuery Foundation (http://jquery.org/)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jquery/api.jqueryui.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jquery/api.jqueryui.com/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "grunt": "0.3.x",
+    "grunt-clean": "0.1.0",
+    "grunt-wordpress": "0.1.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
