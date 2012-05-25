@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../entries2html.xsl" ?>
+<entry name="selectable" namespace="fn" type="Widget" widgetnamespace="ui">
+	<longdesc>
+		
+<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Also, elements can be selected by click or drag while holding the Ctrl/Meta key, allowing for multiple (non-contiguous) selections.</p>
+
+	</longdesc>
+	<created>1.0</created>
+	<options>
+		<option name="autoRefresh" type="Boolean" default='true'>
+			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many many items, you may want to set this to false and call the refresh method manually.</desc>
+		</option>
+		<option name="cancel" type="Selector" default='":input,option"'>
+			<desc>Prevents selecting if you start on elements matching the selector.</desc>
+		</option>
+		<option name="delay" type="Integer" default='0'>
+			<desc>Time in milliseconds to define when the selecting should start. It helps preventing unwanted selections when clicking on an element.</desc>
+		</option>
+		<option name="distance" type="Integer" default='0'>
+			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until after mouse is dragged beyond distance.</desc>
+		</option>
+		<option name="filter" type="Selector" default='"*"'>
+			<desc>The matching child elements will be made selectees (able to be selected).</desc>
+		</option>
+		<option name="tolerance" type="String" default='"touch"'>
+			<desc>Possible values: 'touch', 'fit'.
+<ul>
+<li>'''fit''': draggable overlaps the droppable entirely</li>
+<li>'''touch''': draggable overlaps the droppable any amount</li>
+</ul>
+</desc>
+		</option>
+
+	</options>
+	<events>
+		<event name="selected" type="selectableselected">
+			<desc>This event is triggered at the end of the select operation, on each element added to the selection.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="selecting" type="selectableselecting">
+			<desc>This event is triggered during the select operation, on each element added to the selection.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="start" type="selectablestart">
+			<desc>This event is triggered at the beginning of the select operation.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="stop" type="selectablestop">
+			<desc>This event is triggered at the end of the select operation.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="unselected" type="selectableunselected">
+			<desc>This event is triggered at the end of the select operation, on each element removed from the selection.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="unselecting" type="selectableunselecting">
+			<desc>This event is triggered during the select operation, on each element removed from the selection.
+</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+
+	</events>
+	<methods>
+		<method name="refresh">
+			<desc> Refresh the position and size of each selectee element. This method can be used to manually recalculate the position and size of each selectee element. Very useful if autoRefresh is set to false.</desc>
+		</method>
+
+	</methods>
+	<example>
+
+		<desc>A simple jQuery UI Selectable.</desc>
+		<inhead><![CDATA[<style type="text/css">
+#selectable .ui-selecting {
+	background: silver;
+}
+#selectable .ui-selected {
+	background: gray;
+}
+</style>
+]]></inhead>
+		<code><![CDATA[$("#selectable").selectable();]]></code>
+		<html><![CDATA[
+<ul id="selectable">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+<li>Item 4</li>
+<li>Item 5</li>
+</ul>
+
+]]></html>
+
+	</example>
+</entry>
