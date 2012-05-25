@@ -146,8 +146,37 @@ Note: Specifying this option as an array of selectors has been removed.</desc>
 
 	</events>
 	<methods>
-
-
+		<method name="disable">
+			<desc>
+				Disable the draggable.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the draggable.
+			</desc>
+		</method>
+		<method name="option">
+			<desc>
+				Get or set any draggable option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple draggable options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 

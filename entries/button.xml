@@ -39,10 +39,40 @@
 		</event>
 	</events>
 	<methods>
+		<method name="disable">
+			<desc>
+				Disable the button.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the button.
+			</desc>
+		</method>
 		<method name="refresh">
 			<desc>Refreshes the visual state of the button. Useful for updating button state after the native element's checked or disabled state is changed programatically.</desc>
 		</method>
-
+		<method name="option">
+			<desc>
+				Get or set any button option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple button options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 

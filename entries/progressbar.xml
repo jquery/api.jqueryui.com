@@ -50,13 +50,43 @@ This is a determinate progress bar, meaning that it should only be used in situa
 		</event>
 	</events>
 	<methods>
+		<method name="disable">
+			<desc>
+				Disable the progressbar.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the progressbar.
+			</desc>
+		</method>
+		<method name="option">
+			<desc>
+				Get or set any progressbar option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple progressbar options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
 		<method name="value">
 			<desc>This method gets or sets the current value of the progressbar.</desc>
 			<argument name="value" type="Number" optional="true">
 				<desc></desc>
 			</argument>
 		</method>
-
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 

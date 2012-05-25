@@ -194,6 +194,16 @@
 		<method name="close">
 			<desc>Close the dialog.</desc>
 		</method>
+		<method name="disable">
+			<desc>
+				Disable the dialog.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the dialog.
+			</desc>
+		</method>
 		<method name="isOpen">
 			<desc>Returns true if the dialog is currently open.</desc>
 		</method>
@@ -203,7 +213,27 @@
 		<method name="open">
 			<desc>Open the dialog.</desc>
 		</method>
-
+		<method name="option">
+			<desc>
+				Get or set any dialog option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple dialog options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 

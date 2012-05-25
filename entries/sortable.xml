@@ -223,6 +223,49 @@ Note: the element specified for containment must have a calculated width and hei
 
 	</events>
 	<methods>
+		<method name="cancel">
+			<desc>Cancels a change in the current sortable and reverts it back to how it was before the current sort started. Useful in the stop and receive callback functions.
+
+If the sortable item is not being moved from one connected sortable to another:
+<pre><![CDATA[$(this).sortable('cancel');]]></pre>
+will cancel the change.
+
+If the sortable item is being moved from one connected sortable to another:
+<pre><![CDATA[$(ui.sender).sortable('cancel');]]></pre>
+will cancel the change. Useful in the 'receive' callback.</desc>
+		</method>
+		<method name="disable">
+			<desc>
+				Disable the sortable.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the sortable.
+			</desc>
+		</method>
+		<method name="option">
+			<desc>
+				Get or set any sortable option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple sortable options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="refresh">
+			<desc>Refresh the sortable items. Custom trigger the reloading of all sortable items, causing new items to be recognized.</desc>
+		</method>
+		<method name="refreshPositions">
+			<desc>Refresh the cached positions of the sortables' items. Calling this method refreshes the cached item positions of all sortables. This is usually done automatically by the script and slows down performance. Use wisely.</desc>
+		</method>
 		<method name="serialize">
 			<desc>Serializes the sortable's item id's into a form/ajax submittable string. Calling this method produces a hash that can be appended to any url to easily submit a new item order back to the server.
 
@@ -254,24 +297,11 @@ then
 
 <pre><![CDATA[result[0] will contain "hello" and result[1] will contain "goodbye".]]></pre></desc>
 		</method>
-		<method name="refresh">
-			<desc>Refresh the sortable items. Custom trigger the reloading of all sortable items, causing new items to be recognized.</desc>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
 		</method>
-		<method name="refreshPositions">
-			<desc>Refresh the cached positions of the sortables' items. Calling this method refreshes the cached item positions of all sortables. This is usually done automatically by the script and slows down performance. Use wisely.</desc>
-		</method>
-		<method name="cancel">
-			<desc>Cancels a change in the current sortable and reverts it back to how it was before the current sort started. Useful in the stop and receive callback functions.
-
-If the sortable item is not being moved from one connected sortable to another:
-<pre><![CDATA[$(this).sortable('cancel');]]></pre>
-will cancel the change.
-
-If the sortable item is being moved from one connected sortable to another:
-<pre><![CDATA[$(ui.sender).sortable('cancel');]]></pre>
-will cancel the change. Useful in the 'receive' callback.</desc>
-		</method>
-
 	</methods>
 	<example>
 

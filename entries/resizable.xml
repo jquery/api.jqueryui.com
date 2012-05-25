@@ -117,8 +117,37 @@ If specified as an object, the following keys are supported: { n, e, s, w, ne, s
 
 	</events>
 	<methods>
-
-
+		<method name="disable">
+			<desc>
+				Disable the resizable.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the resizable.
+			</desc>
+		</method>
+		<method name="option">
+			<desc>
+				Get or set any resizable option. If no value is specified, will act as a getter.
+			</desc>
+			<argument name="optionName" type="String">
+			</argument>
+			<argument name="value" type="Object" optional="true">
+			</argument>
+		</method>
+		<method name="option">
+			<desc>
+				Set multiple resizable options at once by providing an options object.
+			</desc>
+			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
 	</methods>
 	<example>
 
