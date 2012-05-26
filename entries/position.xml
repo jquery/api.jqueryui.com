@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="position" namespace="fn" type="Utility" return="jQuery">
+	<longdesc>
+		<p>Utility script for positioning any widget relative to the window, document, a particular element, or the cursor/mouse.</p>
+		<p><em>Note: jQuery UI does not support positioning hidden elements.</em></p>
+		<p>Does not need ui.core.js or effects.core.js.</p>
+	</longdesc>
+	<signature>
+		<argument name="options" type="Options"></argument>
+	</signature>
+	<options>
+		<option name="my" type="String" default='"center"'>
+			<desc>Defines which position <strong>on the element being positioned</strong> to align with the target element: "horizontal vertical" alignment. A single value such as "right" will default to "right center", "top" will default to "center top" (following CSS convention). Acceptable values: "top", "center", "bottom", "left", "right". Example: "left top" or "center center"</desc>
+		</option>
+		<option name="at" type="String" default='"center"'>
+			<desc>Defines which position <strong>on the target element</strong> to align the positioned element against: "horizontal vertical" alignment. A single value such as "right" will default to "right center", "top" will default to "center top" (following CSS convention). Acceptable values: "top", "center", "bottom", "left", "right". Example: "left top" or "center center"</desc>
+		</option>
+		<option name="of" type="Selector, Element, jQuery, Event" default='null'>
+			<desc>Element to position against. If you provide a selector, the first matching element will be used. If you provide a jQuery object, the first element will be used. If you provide an event object, the pageX and pageY properties will be used. Example: "#top-menu"</desc>
+		</option>
+		<option name="offset" type="String" default='null'>
+			<desc>Add these left-top values to the calculated position, eg. "50 50" (left top) A single value such as "50" will apply to both.</desc>
+		</option>
+		<option name="collision" type="String" default='"flip"'>
+			<desc>
+				<p>When the positioned element overflows the window in some direction, move it to an alternative position. Similar to my and at, this accepts a single value or a pair for horizontal/vertical, eg. "flip", "fit", "fit flip", "fit none".</p>
+				<ul>
+					<li><b>flip</b>: to the opposite side and the collision detection is run again to see if it will fit. Whichever side allows more of the element to be visible will be used.</li>
+					<li><b>fit</b>: so the element keeps in the desired direction, but is re-positioned so it fits.</li>
+					<li><b>none</b>: not do collision detection.</li>
+				</ul>
+			</desc>
+		</option>
+		<option name="using" type="Function" default='null'>
+			<desc>When specified the actual property setting is delegated to this callback. Receives a single parameter which is a hash of top and left values for the position that should be set.</desc>
+		</option>
+	</options>
+	<example>
+		<desc>Clicking on the green element transfers to the other.</desc>
+		<code><![CDATA[$("#position1").position({
+	my: "center",
+	at: "center",
+	of: "#targetElement"
+});
+$("#position2").position({
+	my: "left top",
+	at: "left top",
+	of: "#targetElement"
+});
+$("#position3").position({
+	my: "right center",
+	at: "right bottom",
+	of: "#targetElement"
+});
+$(document).mousemove(function(ev){
+	$("#position4").position({
+		my: "left bottom",
+		of: ev,
+		offset: "3 -3",
+		collision: "fit"
+	});
+});]]></code>
+		<html><![CDATA[
+<div id="targetElement">
+	<div class="positionDiv" id="position1"></div>
+	<div class="positionDiv" id="position2"></div>
+	<div class="positionDiv" id="position3"></div>
+	<div class="positionDiv" id="position4"></div>
+</div>
+
+]]></html>
+	</example>
+	<category slug="utilities"/>
+</entry>
