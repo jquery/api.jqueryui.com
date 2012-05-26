@@ -13,6 +13,6 @@ libxslt from <a href="http://sourceforge.net/projects/gnuwin32/files/">GnuWin32<
 ### Build
 
 1. `npm install`
-2. cp config-sample.json config.json
-3. # Edit config.json to set up deployment target and auth
+2. `cp config-sample.json config.json`
+3. Edit config.json to set up deployment target and authentication
 4. `grunt`
