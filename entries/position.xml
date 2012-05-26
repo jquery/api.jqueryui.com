@@ -4,7 +4,8 @@
 	<longdesc>
 		<p>Utility script for positioning any widget relative to the window, document, a particular element, or the cursor/mouse.</p>
 		<p><em>Note: jQuery UI does not support positioning hidden elements.</em></p>
-		<p>Does not need ui.core.js or effects.core.js.</p>
+		<p>This is a standalone jQuery plugin and has no dependencies on other jQuery UI components.</p>
+		<p>This plugin extends jQuery's built-in position getter method. If you forget to include this plugin, code calling position() won't fail directly, as the method still exists. But it'll just retrieve the position instead of setting it.</p>
 	</longdesc>
 	<signature>
 		<argument name="options" type="Options"></argument>
@@ -28,7 +29,7 @@
 				<ul>
 					<li><b>flip</b>: to the opposite side and the collision detection is run again to see if it will fit. Whichever side allows more of the element to be visible will be used.</li>
 					<li><b>fit</b>: so the element keeps in the desired direction, but is re-positioned so it fits.</li>
-					<li><b>none</b>: not do collision detection.</li>
+					<li><b>none</b>: no collision detection.</li>
 				</ul>
 			</desc>
 		</option>
