@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="widget" namespace="fn" widgetnamespace="ui">
+	<desc>
+		<p>[widget factory description]</p>
+		<p>More details at <a href="https://github.com/scottgonzalez/widget-factory-docs/">https://github.com/scottgonzalez/widget-factory-docs/</a></p>
+	</desc>
+	<longdesc>[more details]</longdesc>
+	<signature returns="jQuery">
+		<desc>Initialize the widget.</desc>
+		<argument name="options" type="Options" optional="true">
+			<desc>A map of options to override defaults on initialization.</desc>
+		</argument>
+	</signature>
+	<signature>
+		<desc>Call a widget method after initialization.</desc>
+		<argument name="method" type="Methods">
+			<desc>The name of the method to call.</desc>
+		</argument>
+		<argument name="..." type="Rest" optional="true">
+			<desc>All additional arguments are passed as arguments to the method.</desc>
+		</argument>
+	</signature>
+	<options>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables the widget if set to true.</desc>
+		</option>
+	</options>
+	<methods>
+		<method name="destroy">
+			<desc>
+				Remove the <entryname/> functionality completely. The will return the element back to its pre-init state.
+			</desc>
+		</method>
+		<method name="disable">
+			<desc>
+				Disable the <entryname/>.
+			</desc>
+		</method>
+		<method name="enable">
+			<desc>
+				Enable the <entryname/>.
+			</desc>
+		</method>
+		<method name="option">
+			<signature>
+				<desc>
+					Get the value of the specified <entryname/> option.
+				</desc>
+				<argument name="optionName" type="String">
+				</argument>
+			</signature>
+			<signature returns="jQuery">
+				<desc>
+					Set the value of the specified <entryname/> option.
+				</desc>
+				<argument name="optionName" type="String">
+				</argument>
+				<argument name="value" type="*">
+				</argument>
+			</signature>
+			<signature returns="jQuery">
+				<desc>
+					Set multiple <entryname/> options at once by providing an options map.
+				</desc>
+				<argument name="options" type="Options">
+				</argument>
+			</signature>
+		</method>
+		<method name="widget">
+			<desc>
+				Returns the widget
+			</desc>
+		</method>
+	</methods>
+	<events>
+		<event name="create">
+			<desc>
+				This event is triggered when the <entryname/> is created.
+			</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
+		</event>
+	</events>
+</entry>
