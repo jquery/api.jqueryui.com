@@ -56,7 +56,7 @@
 				'.tooltipped'
 			</example>
 		</option>
-		<option name="position" default="{ my: 'left+15 center', at: 'right center', collision: 'flipfit flipfit' })">
+		<option name="position" default="{ my: 'left+15 center', at: 'right center', collision: 'flipfit flipfit' }">
 			<desc>Configuration for the Position  utility. The of property defaults to the target element, but can also be overriden.</desc>
 			<type name="Object" />
 			<example>
