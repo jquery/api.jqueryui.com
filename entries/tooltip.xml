@@ -178,9 +178,6 @@
 			</argument>
 		</event>
 	</events>
-	<theming>
-		TODO
-	</theming>
 	<example>
         <desc>Create a tooltip on the document, using event delegation for all elements with a title attribute.</desc>
         <code><![CDATA[
