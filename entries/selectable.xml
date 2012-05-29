@@ -1,38 +1,45 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="selectable" namespace="fn" type="Widget" widgetnamespace="ui">
+	<desc>Use the mouse to select individual or a group of elements</desc>
 	<longdesc>
-		
-<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Also, elements can be selected by click or drag while holding the Ctrl/Meta key, allowing for multiple (non-contiguous) selections.</p>
-
+		<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Also, elements can be selected by click or drag while holding the Ctrl/Meta key, allowing for multiple (non-contiguous) selections.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
-		<option name="autoRefresh" type="Boolean" default='true'>
+		<option name="autoRefresh" default='true'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many many items, you may want to set this to false and call the refresh method manually.</desc>
+			<type name="Boolean" />
 		</option>
-		<option name="cancel" type="Selector" default='":input,option"'>
+		<option name="cancel" default='":input,option"'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
+			<type name="Selector" />
 		</option>
-		<option name="delay" type="Integer" default='0'>
+		<option name="delay" default='0'>
 			<desc>Time in milliseconds to define when the selecting should start. It helps preventing unwanted selections when clicking on an element.</desc>
+			<type name="Number" />
 		</option>
-		<option name="disabled" type="Boolean" default="false">
+		<option name="disabled" default="false">
 			<desc>Disables the selectable if set to true.</desc>
+			<type name="Boolean" />
 		</option>
-		<option name="distance" type="Integer" default='0'>
+		<option name="distance" default='0'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until after mouse is dragged beyond distance.</desc>
+			<type name="Number" />
 		</option>
-		<option name="filter" type="Selector" default='"*"'>
+		<option name="filter" default='"*"'>
 			<desc>The matching child elements will be made selectees (able to be selected).</desc>
+			<type name="Selector" />
 		</option>
-		<option name="tolerance" type="String" default='"touch"'>
-			<desc>Possible values: 'touch', 'fit'.
-<ul>
-<li>'''fit''': draggable overlaps the droppable entirely</li>
-<li>'''touch''': draggable overlaps the droppable any amount</li>
-</ul>
-</desc>
+		<option name="tolerance" default='"touch"'>
+			<desc>
+				Possible values: 'touch', 'fit'.
+				<ul>
+					<li>'''fit''': draggable overlaps the droppable entirely</li>
+					<li>'''touch''': draggable overlaps the droppable any amount</li>
+				</ul>
+			</desc>
+			<type name="String" />
 		</option>
 
 	</options>
