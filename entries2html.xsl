@@ -85,14 +85,15 @@
 								<xsl:value-of select="@name"/>
 							</h3>
 							<p>
-								<strong>Type:</strong>
+								<strong>Type: </strong>
+								<xsl:value-of select="@type"/>
 								<xsl:for-each select="type">
 									<xsl:if test="position() &gt; 1">, </xsl:if>
 									<xsl:value-of select="@name"/>
 								</xsl:for-each>
 							</p>
 							<p>
-								<strong>Default:</strong>
+								<strong>Default: </strong>
 								<xsl:value-of select="@default"/>
 							</p>
 							<p>
