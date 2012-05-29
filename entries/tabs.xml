@@ -142,28 +142,16 @@
 
 	</events>
 	<methods>
-		<method name="abort">
-			<desc>Terminate all running tab ajax requests and animations.</desc>
-		</method>
-		<method name="add">
-			<desc>String</desc>
-			<argument name="url" type="String">
-				<desc></desc>
-			</argument>
-			<argument name="label" type="String">
-				<desc></desc>
-			</argument>
-			<argument name="index" type="Number" optional="true">
-				<desc></desc>
-			</argument>
-		</method>
 		<method name="disable">
 			<desc>
 				Disable the tabs widget.
 			</desc>
 		</method>
 		<method name="disable">
-			<desc>Disable a tab. The selected tab cannot be disabled. To disable more than one tab at once use: <code>$('#example').tabs("option","disabled", [1, 2, 3]);</code>  The second argument is the zero-based index of the tab to be disabled. Instead of an index, the href of the tab may be passed.</desc>
+			<desc>
+				Disable a tab. The selected tab cannot be disabled. To disable more than one tab at once use: <code>$('#example').tabs("option","disabled", [1, 2, 3]);</code>
+				<p>The argument is the zero-based index of the tab to be disabled. Instead of an index, the href of the tab may be passed.</p>
+			</desc>
 			<argument name="index" type="Number, String">
 				<desc></desc>
 			</argument>
@@ -174,18 +162,18 @@
 			</desc>
 		</method>
 		<method name="enable">
-			<desc>Enable a disabled tab.  To enable more than one tab at once reset the disabled property like: <code>$('#example').tabs("option","disabled",[]);</code>. The second argument is the zero-based index of the tab to be enabled. Instead of an index, the href of the tab may be passed.</desc>
+			<desc>
+				Enable a disabled tab. To enable more than one tab at once reset the disabled property like: <code>$('#example').tabs("option","disabled",[]);</code>.
+				<p>The argument is the zero-based index of the tab to be enabled. Instead of an index, the href of the tab may be passed.</p>
+			</desc>
 			<argument name="index" type="Number, String">
 				<desc></desc>
 			</argument>
 		</method>
-		<method name="length">
-			<desc>Retrieve the number of tabs of the first matched tab pane.</desc>
-		</method>
 		<method name="load">
-			<desc>Reload the content of an Ajax tab programmatically. This method always loads the tab content from the remote location, even if cache is set to true. The second argument is the zero-based index of the tab to be reloaded. </desc>
-			<argument name="index" type="Number">
-				<desc></desc>
+			<desc>Load the panel content of a remote tab (specified by index)</desc>
+			<argument name="index" type="Number, String">
+				<desc>may also be the href value of a tab</desc>
 			</argument>
 		</method>
 		<method name="option">
@@ -202,36 +190,6 @@
 				Set multiple tabs widget options at once by providing an options object.
 			</desc>
 			<argument name="options" type="Object">
-			</argument>
-		</method>
-		<method name="remove">
-			<desc>Remove a tab. The second argument is the zero-based index of the tab to be removed. Instead of an index, the href of the tab may be passed.</desc>
-			<argument name="index" type="Number, String">
-				<desc></desc>
-			</argument>
-		</method>
-		<method name="rotate">
-			<desc>Boolean</desc>
-			<argument name="ms" type="Number">
-				<desc></desc>
-			</argument>
-			<argument name="continuing" type="Boolean" optional="true">
-				<desc></desc>
-			</argument>
-		</method>
-		<method name="select">
-			<desc>Select a tab, as if it were clicked. The second argument is the zero-based index of the tab to be selected or the id selector of the panel the tab is associated with (the tab's href fragment identifier, e.g. hash, points to the panel's id).</desc>
-			<argument name="index" type="Number, String">
-				<desc></desc>
-			</argument>
-		</method>
-		<method name="url">
-			<desc>String</desc>
-			<argument name="index" type="Number">
-				<desc></desc>
-			</argument>
-			<argument name="url" type="String">
-				<desc></desc>
 			</argument>
 		</method>
 		<method name="widget">
