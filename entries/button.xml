@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="button" namespace="fn" type="Widget" widgetnamespace="ui">
+	<desc>Themable button and buttonsets</desc>
 	<longdesc>
 		<p>Button enhances standard form elements like button, input of type submit or reset or anchors to themable buttons with appropiate mouseover and active styles.</p>
 
