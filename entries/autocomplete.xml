@@ -163,6 +163,11 @@
 		<method name="close">
 			<desc>Close the Autocomplete menu. Useful in combination with the search method, to close the open menu.</desc>
 		</method>
+		<method name="destroy">
+			<desc>
+				Remove the autocomplete functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the autocomplete.

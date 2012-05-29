@@ -266,6 +266,11 @@
 				will cancel the change. Useful in the 'receive' callback.
 			</desc>
 		</method>
+		<method name="destroy">
+			<desc>
+				Remove the sortable functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the sortable.

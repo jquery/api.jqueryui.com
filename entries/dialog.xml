@@ -216,6 +216,11 @@
 		<method name="close">
 			<desc>Close the dialog.</desc>
 		</method>
+		<method name="destroy">
+			<desc>
+				Remove the dialog functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the dialog.

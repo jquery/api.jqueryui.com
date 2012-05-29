@@ -116,6 +116,11 @@ ui.draggable represents the draggable.</desc>
 
 	</events>
 	<methods>
+		<method name="destroy">
+			<desc>
+				Remove the droppable functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the droppable.

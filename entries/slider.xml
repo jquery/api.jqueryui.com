@@ -108,6 +108,11 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 
 	</events>
 	<methods>
+		<method name="destroy">
+			<desc>
+				Remove the slider functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the slider.

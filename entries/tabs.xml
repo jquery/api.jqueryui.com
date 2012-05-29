@@ -128,6 +128,11 @@
 		</event>
 	</events>
 	<methods>
+		<method name="destroy">
+			<desc>
+				Remove the tabs functionality completely. This will return the element back to its pre-init state.
+			</desc>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the tabs widget.
