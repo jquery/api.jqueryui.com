@@ -96,8 +96,8 @@
 			<argument name="ui" type="Object">
 				<property name="newHeader"></property>
 				<property name="oldHeader"></property>
-				<property name="newContent"></property>
-				<property name="oldContent"></property>
+				<property name="newPanel"></property>
+				<property name="oldPanel"></property>
 			</argument>
 		</event>
 		<event name="activate" type="accordionactivate">
@@ -110,8 +110,8 @@
 				</desc>
 				<property name="newHeader"></property>
 				<property name="oldHeader"></property>
-				<property name="newContent"></property>
-				<property name="oldContent"></property>
+				<property name="newPanel"></property>
+				<property name="oldPanel"></property>
 			</argument>
 		</event>
 		<event name="create">
