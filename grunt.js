@@ -4,13 +4,14 @@ module.exports = function( grunt ) {
 var // modules
 	fs = require( "fs" ),
 	path = require( "path" ),
+	pygmentize = require( "pygmentize" ),
 	spawn = require( "child_process" ).spawn,
 
 	// files
 	entryFiles = grunt.file.expandFiles( "entries/*.xml" ),
 	resourceFiles = grunt.file.expandFiles( "resources/*" ),
 	
-	xmlFiles = [].concat( entryFiles, "categories.xml" );
+	xmlFiles = [].concat( entryFiles, "cat2tax.xsl", "categories.xml", "entries2html.xsl", "xml2json.xsl" );
 	
 function pathSlug( fileName ) {
 	return path.basename( fileName, path.extname( fileName ) );
@@ -85,10 +86,25 @@ grunt.registerTask( "build-entries", function() {
 				return;
 			}
 			grunt.verbose.ok();
+
 			targetFileName = targetDir + path.basename( fileName );
 			targetFileName = targetFileName.substr( 0, targetFileName.length - "xml".length ) + "html";
-			grunt.file.write( targetFileName, result );
-			fileDone();
+
+			grunt.verbose.write( "Pygmentizing " + targetFileName + "..." );
+			pygmentize.file( result, function( error, data ) {
+				if ( error ) {
+					grunt.verbose.error();
+					grunt.log.error( error );
+					fileDone();
+					return;
+				}
+				grunt.verbose.ok();
+
+				grunt.file.write( targetFileName, data );
+
+				fileDone();				
+			});
+
 		});
 	}, function() {
 		if ( task.errorCount ) {
