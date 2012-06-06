@@ -53,7 +53,7 @@
 		</option>
 		<option name="hide" default='null'>
 			<desc>The effect to be used when the dialog is closed.</desc>
-			<type name="Ojbect" />
+			<type name="Object" />
 		</option>
 		<option name="maxHeight" default='false'>
 			<desc>The maximum height to which the dialog can be resized, in pixels.</desc>
