@@ -13,6 +13,8 @@
 		  <li><b>ui.handle</b>: DOMElement - the current focused handle</li>
 		  <li><b>ui.value</b>: Integer - the current handle's value</li>
 		</ul>
+
+		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>

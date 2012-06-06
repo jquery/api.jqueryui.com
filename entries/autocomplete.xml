@@ -2,45 +2,45 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="autocomplete" namespace="fn" type="Widget" widgetnamespace="ui">
 	<longdesc>
-		
-<p>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</p>
+		<p>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</p>
 
-<p>By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>
+		<p>By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>
 
-<p>This can be used to enter previous selected values, for example you could use Autocomplete for entering tags, to complete an address, you could enter a city name and get the zip code, or maybe enter email addresses from an address book.</p>
+		<p>This can be used to enter previous selected values, for example you could use Autocomplete for entering tags, to complete an address, you could enter a city name and get the zip code, or maybe enter email addresses from an address book.</p>
 
-<p>You can pull data in from a local and/or a remote source: Local is good for small data sets (like an address book with 50 entries), remote is necessary for big data sets, like a database with hundreds or millions of entries to select from.</p>
+		<p>You can pull data in from a local and/or a remote source: Local is good for small data sets (like an address book with 50 entries), remote is necessary for big data sets, like a database with hundreds or millions of entries to select from.</p>
 
-<p>Autocomplete can be customized to work with various data sources, by just specifying the source option. A data source can be:</p>
+		<p>Autocomplete can be customized to work with various data sources, by just specifying the source option. A data source can be:</p>
 
-<ul>
-<li>an Array with local data</li>
-<li>a String, specifying a URL</li>
-<li>a Callback</li>
-</ul>
+		<ul>
+		<li>an Array with local data</li>
+		<li>a String, specifying a URL</li>
+		<li>a Callback</li>
+		</ul>
 
-<p><b>Expected data format</b></p>
+		<p><b>Expected data format</b></p>
 
-<p>The data from local data, a url or a callback can come in two variants:</p>
+		<p>The data from local data, a url or a callback can come in two variants:</p>
 
-<ul>
-<li>An Array of Strings:<br/><code>[ "Choice1", "Choice2" ]</code></li>
-<li>An Array of Objects with label and value properties:<br/><code>[ { label: "Choice1", value: "value1" }, ... ]</code></li>
-</ul>
+		<ul>
+		<li>An Array of Strings:<br/><code>[ "Choice1", "Choice2" ]</code></li>
+		<li>An Array of Objects with label and value properties:<br/><code>[ { label: "Choice1", value: "value1" }, ... ]</code></li>
+		</ul>
 
-<p>The label property is displayed in the suggestion menu. The value will be inserted into the input element after the user selected something from the menu. If just one property is specified, it will be used for both, eg. if you provide only value-properties, the value will also be used as the label.</p>
+		<p>The label property is displayed in the suggestion menu. The value will be inserted into the input element after the user selected something from the menu. If just one property is specified, it will be used for both, eg. if you provide only value-properties, the value will also be used as the label.</p>
 
-<p>When a String is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must provide JSONP). The Autocomplete plugin does not filter the results, instead the request parameter "term" gets added to the URL, which the server-side script should use for filtering the results. The data itself can be in the same format as the local data described above.</p>
+		<p>When a String is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must provide JSONP). The Autocomplete plugin does not filter the results, instead the request parameter "term" gets added to the URL, which the server-side script should use for filtering the results. The data itself can be in the same format as the local data described above.</p>
 
-<p>The third variation, the callback, provides the most flexibility, and can be used to connect any data source to Autocomplete. The callback gets two arguments:</p>
+		<p>The third variation, the callback, provides the most flexibility, and can be used to connect any data source to Autocomplete. The callback gets two arguments:</p>
 
-<ul>
-<li>A request object, with a single property called "term", which refers to the value currently in the text input. For example, when the user entered "new yo" in a city field, the Autocomplete term will equal "new yo".</li>
-<li>A response callback, which expects a single argument to contain the data to suggest to the user. This data should be filtered based on the provided term, and can be in any of the formats described above for simple local data (String-Array or Object-Array with label/value/both properties). It's important when providing a custom source callback to handle errors during the request. You must always call the response callback even if you encounter an error. This ensures that the widget always has the correct state.</li>
-</ul>
+		<ul>
+		<li>A request object, with a single property called "term", which refers to the value currently in the text input. For example, when the user entered "new yo" in a city field, the Autocomplete term will equal "new yo".</li>
+		<li>A response callback, which expects a single argument to contain the data to suggest to the user. This data should be filtered based on the provided term, and can be in any of the formats described above for simple local data (String-Array or Object-Array with label/value/both properties). It's important when providing a custom source callback to handle errors during the request. You must always call the response callback even if you encounter an error. This ensures that the widget always has the correct state.</li>
+		</ul>
 
-<p>The label is always treated as text, if you want the label to be treated as html you can use [https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js Scott González' html extension]. The demos all focus on different variations of the source-option - look for the one that matches your use case, and take a look at the code.</p>
+		<p>The label is always treated as text, if you want the label to be treated as html you can use [https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js Scott González' html extension]. The demos all focus on different variations of the source-option - look for the one that matches your use case, and take a look at the code.</p>
 
+		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>

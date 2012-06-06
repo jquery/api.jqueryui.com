@@ -31,7 +31,7 @@
 
 		<h3>Localization</h3>
 		<p>Datepicker provides support for localizing its content to cater for different languages
-			and date formats. Each localization is contained within its own file with the 
+			and date formats. Each localization is contained within its own file with the
 			language code appended to the name, e.g. <code>jquery.ui.datepicker-fr.js</code> for French.
 			The desired localization file should be included after the main datepicker code. They add their settings to the set
 			of available localizations and automatically apply them as defaults for all instances.</p>
@@ -39,7 +39,7 @@
 			indexed by language code, with "" referring to the default (English). Each entry is
 			an object with the following attributes: <code>closeText</code>, <code>prevText</code>,
 			<code>nextText</code>, <code>currentText</code>, <code>monthNames</code>,
-			<code>monthNamesShort</code>, <code>dayNames</code>, <code>dayNamesShort</code>, 
+			<code>monthNamesShort</code>, <code>dayNames</code>, <code>dayNamesShort</code>,
 			<code>dayNamesMin</code>, <code>weekHeader</code>, <code>dateFormat</code>,
 			<code>firstDay</code>, <code>isRTL</code>, <code>showMonthAfterYear</code>,
 			and <code>yearSuffix</code>.</p>
@@ -47,6 +47,8 @@
 		<code>$.datepicker.setDefaults($.datepicker.regional[""]);</code>
 		<p>And can then override an individual datepicker for a specific locale:</p>
 		<code>$(selector).datepicker($.datepicker.regional['fr']);</code>
+
+		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>

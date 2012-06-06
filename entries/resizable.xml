@@ -6,12 +6,14 @@
 		<p>The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.</p>
 		<p>All callbacks (start,stop,resize) receive two arguments: The original browser event and a prepared ui object.  The ui object has the following fields:</p>
 		<ul>
-		<li><b>ui.helper</b> - a jQuery object containing the helper element</li>
-		<li><b>ui.originalPosition</b> - {top, left} before resizing started</li>
-		<li><b>ui.originalSize</b> - {width, height} before resizing started</li>
-		<li><b>ui.position</b> - {top, left} current position</li>
-		<li><b>ui.size</b> - {width, height} current size</li>
+			<li><b>ui.helper</b> - a jQuery object containing the helper element</li>
+			<li><b>ui.originalPosition</b> - {top, left} before resizing started</li>
+			<li><b>ui.originalSize</b> - {width, height} before resizing started</li>
+			<li><b>ui.position</b> - {top, left} current position</li>
+			<li><b>ui.size</b> - {width, height} current size</li>
 		</ul>
+
+		<p>This interaction requires some functional CSS, otherwise it won't work. If you build a custom theme, use the interaction's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>

@@ -18,6 +18,8 @@
 		<p>If you use a different element for the header, specify the header-option with an appropriate selector, eg. header: 'a.header'. The content element must be always next to its header.</p>
 		<p>If you have links inside a accordion panel and use a-elements as headers, add a class to them and use that as the header, eg. header: 'a.header'.</p>
 		<p>Use activate(Number) to change the active panel programmatically.</p>
+
+		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>

@@ -27,6 +27,8 @@
 		<p>If you use a structure other than UL/LI, including using the same element for the menu and the menu items, use the <code>menus</code> option to specify a way to differentiate the two elements, eg. <code>menus: 'div.menuElement'</code>.</p>
 
 		<p>Any menu item can be disabled by adding the ui-state-disabled class to that element.</p>
+
+		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.9</created>
 	<options>
