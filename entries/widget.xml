@@ -25,52 +25,130 @@
 		<option name="disabled" type="Boolean" default="false">
 			<desc>Disables the widget if set to true.</desc>
 		</option>
+		<option name="hide" default="true">
+			<desc>How to hide the tooltip.</desc>
+			<type name="Boolean" />
+			<type name="Object" />
+			<example>
+				{
+					effect: 'explode',
+					delay: 250
+				}
+			</example>
+		</option>
+		<option name="show" default="true">
+			<desc>How to show the tooltip.</desc>
+			<type name="Boolean" />
+			<type name="Object" />
+			<example>
+				{
+					effect: 'slideDown',
+					delay: 250
+				}
+			</example>
+		</option>
 	</options>
 	<methods>
-		<method name="destroy">
+		<method name="_create">
+			<desc>This is the widget's constructor.</desc>
+		</method>
+		<method name="_init">
 			<desc>
-				Remove the <entryname/> functionality completely. The will return the element back to its pre-init state.
+				Widgets have the concept of initialization that is distinct from creation. Any time the plugin is called with no arguments or with only an option hash, the widget is initialized; this includes when the widget is created.
+				<p>Initialization should only be handled if there is a logical action to perform on successive calls to the widget with no arguments.</p>
 			</desc>
 		</method>
-		<method name="disable">
-			<desc>
-				Disable the <entryname/>.
-			</desc>
+		<method name="_destroy">
+			<desc>The <code>destroy()</code> method cleans up all common data, events, etc. and then delegates out to <code>_destroy()</code> for custom cleanup. </desc>
 		</method>
-		<method name="enable">
+		<method name="_setOptions">
 			<desc>
-				Enable the <entryname/>.
+				Called with a hash of key/value pairs to set whenever the <code>option()</code> method is called, regardless of the form in which option() was called.
+				<p>Overriding this is useful if you can defer processor-intensive changes for multiple option changes.</p>
 			</desc>
+			<argument name="options" type="Object"></argument>
 		</method>
-		<method name="option">
-			<signature>
-				<desc>
-					Get the value of the specified <entryname/> option.
-				</desc>
-				<argument name="optionName" type="String">
-				</argument>
-			</signature>
-			<signature returns="jQuery">
-				<desc>
-					Set the value of the specified <entryname/> option.
-				</desc>
-				<argument name="optionName" type="String">
-				</argument>
-				<argument name="value" type="*">
-				</argument>
-			</signature>
-			<signature returns="jQuery">
-				<desc>
-					Set multiple <entryname/> options at once by providing an options map.
-				</desc>
-				<argument name="options" type="Options">
-				</argument>
-			</signature>
-		</method>
-		<method name="widget">
+		<method name="_setOption">
 			<desc>
-				Returns the widget
+				Called from <code>_setOptions()</code> for each individual option.
+				<p>Widget state should be updated based on changes.</p>
 			</desc>
+			<argument name="key" type="String"></argument>
+			<argument name="value" type="Object"></argument>
+		</method>
+		<method name="_bind">
+			<desc>
+				Binds events to the specified element. If no element is specified then this.element is used.
+				<p><code>handlers</code> is a hash of event names and event handlers. Delegation is supported via selectors inside the event names, e.g., "<code>click .foo</code>".</p>
+				<p>Maintains proper <code>this</code> context inside the handlers.</p>
+				<p>Automatically handles disabled widgets: If the widget is disabled or the event occurs on an element with the <code>ui-state-disabled</code> class, the event handler is not invoked.</p>
+				<p>Event handlers are automatically namespaced and cleaned up on destroy. </p>
+			</desc>
+			<argument name="element" type="jQuery" optional="true"></argument>
+			<argument name="handlers" type="Object"></argument>
+		</method>
+		<method name="_super">
+			<desc>Invoke the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.</desc>
+		</method>
+		<method name="_superApply">
+			<desc>Invoke the method of the same name from the parent widget, with the array of arguments. Essentially <code>.apply()</code>.</desc>
+			<argument name="arguments" type="Object"></argument>
+		</method>
+		<method name="_delay" return="Number">
+			<desc>
+				Invoke fn after delay milliseconds. Keeps `this` context correct. Essentially <code>setTimeout()</code>.
+				<p>Returns the timeout ID for use with <code>clearTimeout()</code>.</p>
+			</desc>
+			<argument name="fn" type="Function"></argument>
+			<argument name="delay" type="Number"></argument>
+		</method>
+		<method name="_hoverable">
+			<desc>
+				Sets up <code>element</code> to apply the <code>ui-state-hover</code> class on hover.
+				<p>The event handlers are automatically cleaned up on destroy.</p>
+			</desc>
+			<argument name="element" type="jQuery"></argument>
+		</method>
+		<method name="_focusable">
+			<desc>
+				Sets up <code>element</code> to apply the <code>ui-state-focus</code> class on hover.
+				<p>The event handlers are automatically cleaned up on destroy.</p>
+			</desc>
+			<argument name="element" type="jQuery"></argument>
+		</method>
+		<method name="_trigger">
+			<desc>
+				Triggers an event and its associated callback.
+				<p>The option with the name equal to type is invoked as the callback.</p>
+				<p>The event name is the widget name + type.</p>
+			</desc>
+			<argument name="type" type="String" />
+			<argument name="event" type="Event" optional="true">
+				<desc>The original event that caused this event to occur; useful for providing context to the listener</desc>
+			</argument>
+			<argument name="data" type="Object" optional="true">
+				<desc>A hash of data associated with the event</desc>
+			</argument>
+		</method>
+		<method name="_show">
+			<desc>
+				Show element immediately, using built-in animation methods, or using custom effects.
+				See show option for possible values to option.
+				Invoke callback after the element is shown.
+			</desc>
+			<argument name="element" type="jQuery"></argument>
+			<argument name="option" type="Object"></argument>
+			<argument name="callback" type="Function" optional="true"></argument>
+		</method>
+		<method name="_hide">
+			<desc>
+				Hide element immediately, using built-in animation methods, or using custom effects.
+				<p>See hide option for possible values to option.</p>
+				<p>Invoke callback after the element is shown.</p>
+			</desc>
+			<argument name="element" type="jQuery"></argument>
+			<argument name="option" type="Object"></argument>
+			<argument name="callback" type="Function" optional="true"></argument>
 		</method>
 	</methods>
 	<events>
