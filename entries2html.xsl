@@ -20,151 +20,157 @@
 			<xsl:copy-of select="desc/node()"/>
 			<nav>
 				<ul>
-					<li>
-						<a href="#overview">Overview</a>
-					</li>
-					<li>
-						<a href="#options">Options</a>
-						<ul>
-							<xsl:for-each select="options/option">
-								<li>
-									<a href="#option-{@name}">
-										<xsl:value-of select="@name"/>
-									</a>
-								</li>
-							</xsl:for-each>
-						</ul>
-					</li>
-					<li>
-						<a href="#methods">Methods</a>
-						<ul>
-							<xsl:for-each select="methods/method">
-								<li>
-									<a href="#method-{@name}">
-										<xsl:value-of select="@name"/>
-									</a>
-								</li>
-							</xsl:for-each>
-						</ul>
-					</li>
-					<li>
-						<a href="#events">Events</a>
-						<ul>
-							<xsl:for-each select="events/event">
-								<li>
-									<a href="#event-{@name}">
-										<xsl:value-of select="@name"/>
-									</a>
-								</li>
-							</xsl:for-each>
-						</ul>
-					</li>
-					<li>
-						<a href="#theming">Theming</a>
-					</li>
-					<li>
-						<a href="#examples">Examples</a>
-					</li>
+					<xsl:if test="longdesc">
+						<li><a href="#overview">Overview</a></li>
+					</xsl:if>
+					<xsl:if test="options">
+						<li>
+							<a href="#options">Options</a>
+							<ul>
+								<xsl:for-each select="options/option">
+									<li>
+										<a href="#option-{@name}">
+											<xsl:value-of select="@name"/>
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</li>
+					</xsl:if>
+					<xsl:if test="methods">
+						<li>
+							<a href="#methods">Methods</a>
+							<ul>
+								<xsl:for-each select="methods/method">
+									<li>
+										<a href="#method-{@name}">
+											<xsl:value-of select="@name"/>
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</li>
+					</xsl:if>
+					<xsl:if test="events">
+						<li>
+							<a href="#events">Events</a>
+							<ul>
+								<xsl:for-each select="events/event">
+									<li>
+										<a href="#event-{@name}">
+											<xsl:value-of select="@name"/>
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</li>
+					</xsl:if>
+					<xsl:if test="example">
+						<li><a href="#examples">Examples</a></li>
+					</xsl:if>
 				</ul>
 			</nav>
-			<section id="overview">
-				<header>
-					<h2 class="underline">Overview</h2>
-				</header>
-				<p>
-					<xsl:copy-of select="longdesc/node()"/>
-				</p>
-			</section>
-			<section id="options">
-				<header>
-					<h2 class="underline">Options</h2>
-				</header>
-				<ul>
-					<xsl:for-each select="options/option">
-						<li id="option-{@name}">
-							<h3>
-								<xsl:value-of select="@name"/>
-							</h3>
-							<p>
-								<strong>Type: </strong>
-								<xsl:call-template name="render-types" />
-							</p>
-							<p>
-								<strong>Default: </strong>
-								<xsl:value-of select="@default"/>
-							</p>
-							<p>
-								<xsl:copy-of select="desc/node()"/>
-							</p>
-							<xsl:if test="type/desc">
-								Multiple types supported:
-								<ul>
-									<xsl:for-each select="type/desc">
-										<li>
-											<strong><xsl:value-of select="../@name"/></strong>: <xsl:copy-of select="node()"/>
-										</li>
-									</xsl:for-each>
-								</ul>
-							</xsl:if>
-						</li>
-					</xsl:for-each>
-				</ul>
-			</section>
-			<section id="methods">
-				<header>
-					<h2 class="underline">Methods</h2>
-				</header>
-				<ul>
-					<xsl:for-each select="methods/method">
-						<li id="method-{@name}">
-							<h3><xsl:value-of select="@name"/>(
-     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each>
-     )</h3>
-							<p>
-								<xsl:copy-of select="desc/node()"/>
-							</p>
-							<xsl:call-template name="arguments"/>
-						</li>
-					</xsl:for-each>
-				</ul>
-			</section>
-			<section id="events">
-				<header>
-					<h2 class="underline">Events</h2>
-				</header>
-				<ul>
-					<xsl:for-each select="events/event">
-						<li id="event-{@name}">
-							<h3><xsl:value-of select="@name"/>(
-     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each>
-     )</h3>
-							<p>
-								<xsl:copy-of select="desc/node()"/>
-							</p>
-							<xsl:call-template name="arguments"/>
-						</li>
-					</xsl:for-each>
-				</ul>
-			</section>
-			<section id="theming">
-				<header>
-					<h2 class="underline">Theming</h2>
-				</header>
-				<xsl-copy-of select="theming/node()"/>
-			</section>
-			<section id="examples">
-				<header>
-					<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if></h2>
-				</header>
-				<xsl:for-each select="example">
-					<h4>
-						<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
-						<span class="desc">
-							<xsl:value-of select="desc"/>
-						</span>
-					</h4>
-					<pre>
-						<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
+			<xsl:if test="longdesc">
+				<section id="overview">
+					<header>
+						<h2 class="underline">Overview</h2>
+					</header>
+					<p>
+						<xsl:copy-of select="longdesc/node()"/>
+					</p>
+				</section>
+			</xsl:if>
+			<xsl:if test="options">
+				<section id="options">
+					<header>
+						<h2 class="underline">Options</h2>
+					</header>
+					<ul>
+						<xsl:for-each select="options/option">
+							<li id="option-{@name}">
+								<h3>
+									<xsl:value-of select="@name"/>
+								</h3>
+								<p>
+									<strong>Type: </strong>
+									<xsl:call-template name="render-types" />
+								</p>
+								<p>
+									<strong>Default: </strong>
+									<xsl:value-of select="@default"/>
+								</p>
+								<p>
+									<xsl:copy-of select="desc/node()"/>
+								</p>
+								<xsl:if test="type/desc">
+									Multiple types supported:
+									<ul>
+										<xsl:for-each select="type/desc">
+											<li>
+												<strong><xsl:value-of select="../@name"/></strong>: <xsl:copy-of select="node()"/>
+											</li>
+										</xsl:for-each>
+									</ul>
+								</xsl:if>
+							</li>
+						</xsl:for-each>
+					</ul>
+				</section>
+			</xsl:if>
+			<xsl:if test="methods">
+				<section id="methods">
+					<header>
+						<h2 class="underline">Methods</h2>
+					</header>
+					<ul>
+						<xsl:for-each select="methods/method">
+							<li id="method-{@name}">
+								<h3><xsl:value-of select="@name"/>(
+	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each>
+	     )</h3>
+								<p>
+									<xsl:copy-of select="desc/node()"/>
+								</p>
+								<xsl:call-template name="arguments"/>
+							</li>
+						</xsl:for-each>
+					</ul>
+				</section>
+			</xsl:if>
+			<xsl:if test="events">
+				<section id="events">
+					<header>
+						<h2 class="underline">Events</h2>
+					</header>
+					<ul>
+						<xsl:for-each select="events/event">
+							<li id="event-{@name}">
+								<h3><xsl:value-of select="@name"/>(
+	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each>
+	     )</h3>
+								<p>
+									<xsl:copy-of select="desc/node()"/>
+								</p>
+								<xsl:call-template name="arguments"/>
+							</li>
+						</xsl:for-each>
+					</ul>
+				</section>
+			</xsl:if>
+			<xsl:if test="example">
+				<section id="examples">
+					<header>
+						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if></h2>
+					</header>
+					<xsl:for-each select="example">
+						<h4>
+							<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
+							<span class="desc">
+								<xsl:value-of select="desc"/>
+							</span>
+						</h4>
+						<pre>
+							<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
@@ -180,22 +186,23 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code>
-					</pre>
-					<xsl:if test="html">
-						<h4>Demo:</h4>
-						<div>
-							<xsl:choose>
-								<xsl:when test="html">
-									<xsl:attribute name="class">demo code-demo</xsl:attribute>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:attribute name="class">demo</xsl:attribute>
-								</xsl:otherwise>
-							</xsl:choose>
-						</div>
-					</xsl:if>
-				</xsl:for-each>
-			</section>
+						</pre>
+						<xsl:if test="html">
+							<h4>Demo:</h4>
+							<div>
+								<xsl:choose>
+									<xsl:when test="html">
+										<xsl:attribute name="class">demo code-demo</xsl:attribute>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:attribute name="class">demo</xsl:attribute>
+									</xsl:otherwise>
+								</xsl:choose>
+							</div>
+						</xsl:if>
+					</xsl:for-each>
+				</section>
+			</xsl:if>
 		</article>
 	</xsl:for-each>
 </xsl:template>
