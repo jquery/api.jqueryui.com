@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="slide" namespace="effect" type="effect">
-	<desc>Slides the element out of the viewport.</desc>
+<entry name="shake" namespace="effect" type="effect">
+	<desc>Shakes the element multiple times, vertically or horizontally.</desc>
 	<options>
 		<option name="direction" type="String" default="both">
 			<desc>The direction of the effect. Can be "left", "right", "up", "down".</desc>
 		</option>
-		<option name="distance" type="Number" default="el.outerWidth">
-			<desc>The distance of the effect. Is set to either the height or width of the elemenet depending on the direction option. Can be set to any integer less than the width/height of the element.</desc>
+		<option name="distance" type="Number" default="20">
+			<desc>Distance to shake.</desc>
 		</option>
-		<option name="mode" type="String" default="show">
-			<desc>The mode of the effect. Can be "show" or "hide"</desc>
+		<option name="times" type="Number" default="3">
+			<desc>Times to shake.</desc>
 		</option>
 		<option name="duration" type="Number" default="400">
 			<desc>The number of ms the animation will run for</desc>
@@ -23,10 +23,10 @@
 		</option>
 	</options>
 	<example>
-		<desc>Hides the element by sliding it down.</desc>
+		<desc>Shakes 3 times when clicking on the element.</desc>
 		<code><![CDATA[
 $("div").click(function () {
-      $(this).hide("slide", { direction: "down" }, 1000);
+      $(this).effect("shake", { times:3 }, 300);
 });
 ]]></code>
 		<html><![CDATA[
