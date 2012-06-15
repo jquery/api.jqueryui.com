@@ -1,6 +1,11 @@
 <categories>
 	<category name="Effects" slug="effects">
-		<desc></desc>
+		<desc>
+			<![CDATA[
+			Effects include extensions to jQuery's built-in animate method, providing support for animating colors and doing transitions from one class to another.
+			<p>Effects also add, to jQuery's built-in linear and swing transitions, a bunch of easings.</p>
+			]]>
+		</desc>
 	</category>
 	<category name="Interactions" slug="interactions">
 		<desc></desc>

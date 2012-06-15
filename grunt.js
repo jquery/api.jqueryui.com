@@ -10,9 +10,9 @@ var // modules
 	// files
 	entryFiles = grunt.file.expandFiles( "entries/*.xml" ),
 	resourceFiles = grunt.file.expandFiles( "resources/*" ),
-	
+
 	xmlFiles = [].concat( entryFiles, "cat2tax.xsl", "categories.xml", "entries2html.xsl", "xml2json.xsl" );
-	
+
 function pathSlug( fileName ) {
 	return path.basename( fileName, path.extname( fileName ) );
 }
@@ -102,7 +102,7 @@ grunt.registerTask( "build-entries", function() {
 
 				grunt.file.write( targetFileName, data );
 
-				fileDone();				
+				fileDone();
 			});
 
 		});
