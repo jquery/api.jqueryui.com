@@ -15,7 +15,7 @@
 		<option name="duration" type="Number" default="400">
 			<desc>The number of ms the animation will run for</desc>
 		</option>
-		<option name="easing" type="String" default='"swing"'>
+		<option name="easing" type="String" default="swing">
 			<desc>The easing function to use</desc>
 		</option>
 		<option name="complete" type="function">
