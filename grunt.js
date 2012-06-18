@@ -173,6 +173,5 @@ grunt.registerTask( "build-resources", function() {
 
 grunt.registerTask( "default", "build-wordpress" );
 grunt.registerTask( "build-wordpress", "clean lint xmllint build-entries build-categories build-resources" );
-grunt.registerTask( "deploy", "wordpress-deploy" );
 
 };
