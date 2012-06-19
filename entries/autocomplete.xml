@@ -16,7 +16,7 @@
 	<created>1.0</created>
 	<options>
 		<option name="appendTo" type="Selector" default='"body"'>
-			<desc>Which element the menu should be appended to.</desc>
+			<desc>Which element the menu should be appended to. Override this when the autocomplete is inside a <code>position:fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
 		</option>
 		<option name="autoFocus" type="Boolean" default='false'>
 			<desc>If set to true the first item will be automatically focused.</desc>
