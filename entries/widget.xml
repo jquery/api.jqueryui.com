@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>You can create new widgets from scratch, using just the <code>$.Widget</code> object as base to inherit from, or you can explicitly inherit from existing jQuery UI or third-party widgets. Defining a widget with the same name as you inherit from even allows you to extend widgets in place.</p>
 
-		<p>More details at <a href="https://github.com/scottgonzalez/widget-factory-docs/">https://github.com/scottgonzalez/widget-factory-docs/</a></p>
+		<p>For now, more details can be found at <a href="https://github.com/scottgonzalez/widget-factory-docs/">github.com/scottgonzalez/widget-factory-docs/</a></p>
 	</longdesc>
 	<signature returns="jQuery">
 		<desc>Initialize the widget.</desc>
@@ -77,16 +77,24 @@
 			<argument name="key" type="String"></argument>
 			<argument name="value" type="Object"></argument>
 		</method>
-		<method name="_bind">
+		<method name="_on">
 			<desc>
-				Binds events to the specified element. If no element is specified then this.element is used.
-				<p><code>handlers</code> is a hash of event names and event handlers. Delegation is supported via selectors inside the event names, e.g., "<code>click .foo</code>".</p>
+				Binds events to the specified element. If no element is specified then <code>this.element</code> is used.
+				<p><code>handlers</code> is an object of event names and event handlers. Delegation is supported via selectors inside the event names, e.g., "<code>click .foo</code>".</p>
 				<p>Maintains proper <code>this</code> context inside the handlers.</p>
 				<p>Automatically handles disabled widgets: If the widget is disabled or the event occurs on an element with the <code>ui-state-disabled</code> class, the event handler is not invoked.</p>
 				<p>Event handlers are automatically namespaced and cleaned up on destroy. </p>
 			</desc>
 			<argument name="element" type="jQuery" optional="true"></argument>
 			<argument name="handlers" type="Object"></argument>
+		</method>
+		<method name="_off">
+			<desc>
+				Unbinds events from the specified element (required, unlike <code>_on</code>).
+				<p><code>eventName</code> is a string of one or more space-separated events to remove. The widget's event namespace is appended to each when removing events. </p>
+			</desc>
+			<argument name="element" type="jQuery"></argument>
+			<argument name="eventName" type="String"></argument>
 		</method>
 		<method name="_super">
 			<desc>Invoke the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.</desc>
