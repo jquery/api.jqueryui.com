@@ -42,7 +42,7 @@
 			<type name="Boolean" />
 		</option>
 		<option name="draggable" default='true'>
-			<desc>If set to true, the dialog will be draggable will be draggable by the titlebar.</desc>
+			<desc>If set to true, the dialog will be draggable by the titlebar.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="height" default='"auto"'>
