@@ -15,7 +15,7 @@
 	</div>
 		]]></pre>
 
-		<p>If you use a different element for the header, specify the header-option with an appropriate selector, eg. header: 'a.header'. The content element must be always next to its header.<
+		<p>If you use a different element for the header, specify the header-option with an appropriate selector, eg. header: 'a.header'. The content element must be always next to its header.</p>
 		<p>If you have links inside a accordion panel and use a-elements as headers, add a class to them and use that as the header, eg. header: 'a.header'.</p>
 		<p>Use activate(Number) to change the active panel programmatically.</p>
 
