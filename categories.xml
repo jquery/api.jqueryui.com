@@ -1,17 +1,17 @@
 <categories>
 	<category name="Effects" slug="effects">
 		<desc>
-			<![CDATA[
-			Effects include extensions to jQuery's built-in animate method, providing support for animating colors and doing transitions from one class to another.
-			<p>For class transitions, <code>addClass(class)</code>, <code>removeClass(class)</code>, <code>toggleClass(class)</code> and <code>toggleClass(switch)</code> are each extended to accept three additional parameters: <code>speed</code>, <code>easing</code> (optional), and <code>callback</code>.</p>
-			<p>In addition, a <code>switchClass</code> method is added, alllowing you to visually transition from one class to another. (This functionality is often described as 'animateClass'.)</p>
-			<pre><code>$(elem).switchClass('currentClass','newClass',500,'easeOutBounce',function(){
-  console.log('transition is done!');
-});</code></pre>
-			<p>Similar to the extension of the class-related methods, the <code>show</code>, <code>hide</code> and <code>toggle</code> methods are extended. Each can now accept configuration for the effects listed below, as <code>effect</code> (what effect to use, like "blind", <code>options</code> (effect specific configuration), <code>duration</code>, and <code>callback</code>. For effects like <code>transfer</code>, where neither a show nor hide happens, you can use the underlying <code>effect</code> method directly. The signature is the same.
-			<p>For color animation support, jQuery UI bundles the <a href="https://github.com/jquery/jquery-color">jquery-color plugin</a>. The plugin extends jQuery's <code>animate</code> method with support for animating the following properties: <code>backgroundColor, borderBottomColor, borderLeftColor, borderRightColor, borderTopColor, color, outlineColor</code>
-			<p>Effects also add, to jQuery's built-in linear and swing transitions, a bunch of easings. The full list: <code>linear, swing, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint, easeInExpo, easeOutExpo, easeInOutExpo, easeInSine, easeOutSine, easeInOutSine, easeInCirc, easeOutCirc, easeInOutCirc, easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce</code></p>
-			]]>
+			<p>Effects include extensions to jQuery's built-in animate method, providing support for animating colors and doing transitions from one class to another.</p>
+			<div class="longdesc">
+				<p>For class transitions, <code>addClass(class)</code>, <code>removeClass(class)</code>, <code>toggleClass(class)</code> and <code>toggleClass(switch)</code> are each extended to accept three additional parameters: <code>speed</code>, <code>easing</code> (optional), and <code>callback</code>.</p>
+				<p>In addition, a <code>switchClass</code> method is added, alllowing you to visually transition from one class to another. (This functionality is often described as 'animateClass'.)</p>
+				<pre><code>$(elem).switchClass('currentClass','newClass',500,'easeOutBounce',function(){
+	  console.log('transition is done!');
+	});</code></pre>
+				<p>Similar to the extension of the class-related methods, the <code>show</code>, <code>hide</code> and <code>toggle</code> methods are extended. Each can now accept configuration for the effects listed below, as <code>effect</code> (what effect to use, like "blind", <code>options</code> (effect specific configuration), <code>duration</code>, and <code>callback</code>. For effects like <code>transfer</code>, where neither a show nor hide happens, you can use the underlying <code>effect</code> method directly. The signature is the same.
+				<p>For color animation support, jQuery UI bundles the <a href="https://github.com/jquery/jquery-color">jquery-color plugin</a>. The plugin extends jQuery's <code>animate</code> method with support for animating the following properties: <code>backgroundColor, borderBottomColor, borderLeftColor, borderRightColor, borderTopColor, color, outlineColor</code></p>
+				<p>Effects also add, to jQuery's built-in linear and swing transitions, a bunch of easings. The full list: <code>linear, swing, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint, easeInExpo, easeOutExpo, easeInOutExpo, easeInSine, easeOutSine, easeInOutSine, easeInCirc, easeOutCirc, easeInOutCirc, easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce</code></p>
+			</div>
 		</desc>
 	</category>
 	<category name="Interactions" slug="interactions">
