@@ -79,13 +79,17 @@
 		<option name="tooltipClass" default="null">
 			<desc>
 				A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
-
-				This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.
+				<p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
 			</desc>
 			<type name="String" />
 			<example>
 				'ui-state-highlight'
 			</example>
+		</option>
+		<option name="track" type="Boolean" default="false">
+			<desc>
+				Whether the tooltip should track (follow) the mouse.
+			</desc>
 		</option>
 	</options>
 	<methods>
