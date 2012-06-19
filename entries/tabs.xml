@@ -76,56 +76,70 @@
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
-		<event name="beforeActivate" type="tabsselect">
-			<desc>Triggered directly after a tab is activated. Can be cancelled to prevent the tab from activating.</desc>
+		<event name="select" type="tabsselect">
+			<desc>This event is triggered when clicking a tab.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="newTab"></property>
-				<property name="oldTab"></property>
-				<property name="newPanel"></property>
-				<property name="newPanel"></property>
-			</argument>
-		</event>
-		<event name="activate" type="tabsselect">
-			<desc>Triggered after a tab has been activated and the associated panels have been shown and hidden.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="newTab"></property>
-				<property name="oldTab"></property>
-				<property name="newPanel"></property>
-				<property name="newPanel"></property>
-			</argument>
-		</event>
-		<event name="beforeLoad" type="tabsload">
-			<desc>Triggered after beforeActivate for a remote tab. Can be cancelled to prevent the tab panel from loading content.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="tab"></property>
-				<property name="panel"></property>
-				<property name="jqXHR"></property>
-				<property name="ajaxSettings"></property>
 			</argument>
 		</event>
 		<event name="load" type="tabsload">
-			<desc>Triggered after a remote tab has been loaded.</desc>
+			<desc>This event is triggered after the content of a remote tab has been loaded.</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="tab"></property>
-				<property name="panel"></property>
 			</argument>
 		</event>
+		<event name="show" type="tabsshow">
+			<desc>This event is triggered when a tab is shown.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="add" type="tabsadd">
+			<desc>This event is triggered when a tab is added.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="remove" type="tabsremove">
+			<desc>This event is triggered when a tab is removed.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="enable" type="tabsenable">
+			<desc>This event is triggered when a tab is enabled.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="disable" type="tabsdisable">
+			<desc>This event is triggered when a tab is disabled.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+
 	</events>
 	<methods>
 		<method name="destroy">
@@ -133,16 +147,28 @@
 				Remove the tabs functionality completely. This will return the element back to its pre-init state.
 			</desc>
 		</method>
+		<method name="abort">
+			<desc>Terminate all running tab ajax requests and animations.</desc>
+		</method>
+		<method name="add">
+			<desc>String</desc>
+			<argument name="url" type="String">
+				<desc></desc>
+			</argument>
+			<argument name="label" type="String">
+				<desc></desc>
+			</argument>
+			<argument name="index" type="Number" optional="true">
+				<desc></desc>
+			</argument>
+		</method>
 		<method name="disable">
 			<desc>
 				Disable the tabs widget.
 			</desc>
 		</method>
 		<method name="disable">
-			<desc>
-				Disable a tab. The selected tab cannot be disabled. To disable more than one tab at once use: <code>$('#example').tabs("option","disabled", [1, 2, 3]);</code>
-				<p>The argument is the zero-based index of the tab to be disabled. Instead of an index, the href of the tab may be passed.</p>
-			</desc>
+			<desc>Disable a tab. The selected tab cannot be disabled. To disable more than one tab at once use: <code>$('#example').tabs("option","disabled", [1, 2, 3]);</code>  The second argument is the zero-based index of the tab to be disabled. Instead of an index, the href of the tab may be passed.</desc>
 			<argument name="index" type="Number, String">
 				<desc></desc>
 			</argument>
@@ -153,18 +179,18 @@
 			</desc>
 		</method>
 		<method name="enable">
-			<desc>
-				Enable a disabled tab. To enable more than one tab at once reset the disabled property like: <code>$('#example').tabs("option","disabled",[]);</code>.
-				<p>The argument is the zero-based index of the tab to be enabled. Instead of an index, the href of the tab may be passed.</p>
-			</desc>
+			<desc>Enable a disabled tab.  To enable more than one tab at once reset the disabled property like: <code>$('#example').tabs("option","disabled",[]);</code>. The second argument is the zero-based index of the tab to be enabled. Instead of an index, the href of the tab may be passed.</desc>
 			<argument name="index" type="Number, String">
 				<desc></desc>
 			</argument>
 		</method>
+		<method name="length">
+			<desc>Retrieve the number of tabs of the first matched tab pane.</desc>
+		</method>
 		<method name="load">
-			<desc>Load the panel content of a remote tab (specified by index)</desc>
-			<argument name="index" type="Number, String">
-				<desc>may also be the href value of a tab</desc>
+			<desc>Reload the content of an Ajax tab programmatically. This method always loads the tab content from the remote location, even if cache is set to true. The second argument is the zero-based index of the tab to be reloaded. </desc>
+			<argument name="index" type="Number">
+				<desc></desc>
 			</argument>
 		</method>
 		<method name="option">
@@ -181,6 +207,36 @@
 				Set multiple tabs widget options at once by providing an options object.
 			</desc>
 			<argument name="options" type="Object">
+			</argument>
+		</method>
+		<method name="remove">
+			<desc>Remove a tab. The second argument is the zero-based index of the tab to be removed. Instead of an index, the href of the tab may be passed.</desc>
+			<argument name="index" type="Number, String">
+				<desc></desc>
+			</argument>
+		</method>
+		<method name="rotate">
+			<desc>Boolean</desc>
+			<argument name="ms" type="Number">
+				<desc></desc>
+			</argument>
+			<argument name="continuing" type="Boolean" optional="true">
+				<desc></desc>
+			</argument>
+		</method>
+		<method name="select">
+			<desc>Select a tab, as if it were clicked. The second argument is the zero-based index of the tab to be selected or the id selector of the panel the tab is associated with (the tab's href fragment identifier, e.g. hash, points to the panel's id).</desc>
+			<argument name="index" type="Number, String">
+				<desc></desc>
+			</argument>
+		</method>
+		<method name="url">
+			<desc>String</desc>
+			<argument name="index" type="Number">
+				<desc></desc>
+			</argument>
+			<argument name="url" type="String">
+				<desc></desc>
 			</argument>
 		</method>
 		<method name="widget">
