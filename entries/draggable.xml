@@ -5,15 +5,6 @@
 	<longdesc>
 		<p>The jQuery UI Draggable plugin makes selected elements draggable by mouse.</p>
 		<p>Draggable elements gets a class of <code>ui-draggable</code>. During drag the element also gets a class of <code>ui-draggable-dragging</code>. If you want not just drag, but drag-and-drop, see the jQuery UI Droppable plugin, which provides a drop target for draggables.</p>
-		<p>All callbacks (start, stop, drag) receive two arguments: The original browser event and a prepared ui object, view below for a documentation of this object (if you name your second argument 'ui'):</p>
-
-		<ul>
-		<li><b>ui.helper</b> - the jQuery object representing the helper that's being dragged</li>
-		<li><b>ui.position</b> - current position of the helper as { top, left } object, relative to the offset element</li>
-		<li><b>ui.offset</b> - current absolute position of the helper as { top, left } object, relative to page</li>
-		</ul>
-
-		<p>To manipulate the position of a draggable during drag, you can either [http://jsbin.com/etako/edit use a wrapper as the draggable helper] and position the wrapped element with absolute positioning, or  you can correct internal values like so: <code>$(this).data('draggable').offset.click.top -= x</code>.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
@@ -157,6 +148,15 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being dragged</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>Current position of the helper as <code>{ top, left }</code> object, relative to the offset element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>Current absolute position of the helper as <code>{ top, left }</code> object, relative to page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="drag" type="drag">
@@ -166,6 +166,15 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being dragged</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>Current position of the helper as <code>{ top, left }</code> object, relative to the offset element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>Current absolute position of the helper as <code>{ top, left }</code> object, relative to page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="stop" type="dragstop">
@@ -175,6 +184,15 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being dragged</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>Current position of the helper as <code>{ top, left }</code> object, relative to the offset element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>Current absolute position of the helper as <code>{ top, left }</code> object, relative to page</desc>
+				</property>
 			</argument>
 		</event>
 
