@@ -111,6 +111,7 @@ ui.draggable represents the draggable.</desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="draggable"></property>
 			</argument>
 		</event>
 
