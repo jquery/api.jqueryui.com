@@ -86,7 +86,7 @@
 				<property name="newTab"></property>
 				<property name="oldTab"></property>
 				<property name="newPanel"></property>
-				<property name="newPanel"></property>
+				<property name="oldPanel"></property>
 			</argument>
 		</event>
 		<event name="activate" type="tabsselect">
@@ -99,7 +99,7 @@
 				<property name="newTab"></property>
 				<property name="oldTab"></property>
 				<property name="newPanel"></property>
-				<property name="newPanel"></property>
+				<property name="oldPanel"></property>
 			</argument>
 		</event>
 		<event name="beforeLoad" type="tabsload">
