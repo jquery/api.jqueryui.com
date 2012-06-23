@@ -65,6 +65,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="draggable" type="jQuery">
+				  <desc>current draggable element</desc>
+				</property>
+				<property name="helper" type="jQuery">
+				  <desc>current draggable helper</desc>
+				</property>
+				<property name="position" type="Object">
+				  <desc>current position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
+				<property name="offset" type="Object">
+				  <desc>current absolute position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
 			</argument>
 		</event>
 		<event name="create">
@@ -83,6 +95,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="draggable" type="jQuery">
+				  <desc>current draggable element</desc>
+				</property>
+				<property name="helper" type="jQuery">
+				  <desc>current draggable helper</desc>
+				</property>
+				<property name="position" type="Object">
+				  <desc>current position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
+				<property name="offset" type="Object">
+				  <desc>current absolute position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
 			</argument>
 		</event>
 		<event name="over" type="dropover">
@@ -92,6 +116,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="draggable" type="jQuery">
+				  <desc>current draggable element</desc>
+				</property>
+				<property name="helper" type="jQuery">
+				  <desc>current draggable helper</desc>
+				</property>
+				<property name="position" type="Object">
+				  <desc>current position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
+				<property name="offset" type="Object">
+				  <desc>current absolute position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
 			</argument>
 		</event>
 		<event name="out" type="dropout">
@@ -111,7 +147,18 @@ ui.draggable represents the draggable.</desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="draggable"></property>
+				<property name="draggable" type="jQuery">
+				  <desc>current draggable element</desc>
+				</property>
+				<property name="helper" type="jQuery">
+				  <desc>current draggable helper</desc>
+				</property>
+				<property name="position" type="Object">
+				  <desc>current position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
+				<property name="offset" type="Object">
+				  <desc>current absolute position of the draggable helper <code>{ top: , left: }</code></desc>
+				</property>
 			</argument>
 		</event>
 
