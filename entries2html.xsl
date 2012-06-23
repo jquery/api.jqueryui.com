@@ -240,7 +240,7 @@
 		<xsl:call-template name="render-types" />
 		<xsl:if test="desc">
 			<xsl:text>, </xsl:text>
-			<xsl:value-of select="desc"/>
+			<xsl:copy-of select="desc"/>
 		</xsl:if>
 	</li>
 </xsl:template>
