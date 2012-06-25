@@ -255,7 +255,7 @@
 	<methods>
 		<method name="cancel">
 			<desc>
-				Cancels a change in the current sortable and reverts it back to how it was before the current sort started. Useful in the stop and receive callback functions.
+				Cancels a change in the current sortable and reverts it to the state prior to when the current sort was started. Useful in the stop and receive callback functions.
 
 				<p>If the sortable item is not being moved from one connected sortable to another:</p>
 				<pre><![CDATA[$(this).sortable('cancel');]]></pre>
