@@ -15,7 +15,7 @@
 	}
 </script>
 	<xsl:for-each select="//entry">
-		<xsl:variable name="number-examples" select="count(example)"/>
+		<xsl:variable name="number-general-examples" select="count(example)"/>
 		<article>
 			<xsl:copy-of select="desc/node()"/>
 			<nav>
@@ -87,6 +87,7 @@
 					</header>
 					<ul>
 						<xsl:for-each select="options/option">
+							<xsl:variable name="number-option-examples" select="count(example)" />
 							<li id="option-{@name}">
 								<h3>
 									<xsl:value-of select="@name"/>
@@ -112,6 +113,9 @@
 										</xsl:for-each>
 									</ul>
 								</xsl:if>
+								<xsl:apply-templates select="example">
+									<xsl:with-param name="number-examples" select="$number-option-examples" />
+								</xsl:apply-templates>
 							</li>
 						</xsl:for-each>
 					</ul>
@@ -160,47 +164,11 @@
 			<xsl:if test="example">
 				<section id="examples">
 					<header>
-						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if></h2>
+						<h2 class="underline">Example<xsl:if test="$number-general-examples &gt; 1">s</xsl:if></h2>
 					</header>
-					<xsl:for-each select="example">
-						<h4>
-							<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
-							<span class="desc">
-								<xsl:value-of select="desc"/>
-							</span>
-						</h4>
-						<pre>
-							<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
-&lt;link rel="stylesheet" href="jquery-ui.css"&gt;<xsl:if test="css">
-&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
-&lt;script src="jquery.js"&gt;&lt;/script&gt;
-&lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-<xsl:copy-of select="html/text()"/>
-&lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code>
-						</pre>
-						<xsl:if test="html">
-							<h4>Demo:</h4>
-							<div>
-								<xsl:choose>
-									<xsl:when test="html">
-										<xsl:attribute name="class">demo code-demo</xsl:attribute>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:attribute name="class">demo</xsl:attribute>
-									</xsl:otherwise>
-								</xsl:choose>
-							</div>
-						</xsl:if>
-					</xsl:for-each>
+					<xsl:apply-templates select="example">
+						<xsl:with-param name="number-examples" select="$number-general-examples" />
+					</xsl:apply-templates>
 				</section>
 			</xsl:if>
 		</article>
@@ -243,6 +211,48 @@
 			<xsl:copy-of select="desc"/>
 		</xsl:if>
 	</li>
+</xsl:template>
+
+<!-- examples -->
+<xsl:template match="example">
+	<xsl:param name="number-examples" />
+	<h4>
+		<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
+		<span class="desc">
+			<xsl:value-of select="desc"/>
+		</span>
+	</h4>
+	<pre>
+		<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
+&lt;link rel="stylesheet" href="jquery-ui.css"&gt;<xsl:if test="css">
+&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
+&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<xsl:copy-of select="html/text()"/>
+&lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+	</pre>
+	<xsl:if test="html">
+		<h4>Demo:</h4>
+		<div>
+			<xsl:choose>
+				<xsl:when test="html">
+					<xsl:attribute name="class">demo code-demo</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="class">demo</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+		</div>
+	</xsl:if>
 </xsl:template>
 
 <!--
