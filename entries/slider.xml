@@ -76,6 +76,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="handle" type="jQuery">
+					<desc>The jQuery object representing the handle being slid</desc>
+				</property>
+				<property name="value" type="Number">
+					<desc>The current value of the slider</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="slide" type="slide">
@@ -87,6 +93,15 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="handle" type="jQuery">
+					<desc>The jQuery object representing the handle being slid</desc>
+				</property>
+				<property name="value" type="Number">
+					<desc>The current value of the slider</desc>
+				</property>
+				<property name="values" type="Array">
+					<desc>An array of the current values of a multi-handled slider</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="change" type="slidechange">
@@ -96,6 +111,12 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="handle" type="jQuery">
+					<desc>The jQuery object representing the handle that was slid</desc>
+				</property>
+				<property name="value" type="Number">
+					<desc>The current value of the slider</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="stop" type="slidestop">
@@ -105,6 +126,12 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="handle" type="jQuery">
+					<desc>The jQuery object representing the handle that was slid</desc>
+				</property>
+				<property name="value" type="Number">
+					<desc>The current value of the slider</desc>
+				</property>
 			</argument>
 		</event>
 

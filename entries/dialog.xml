@@ -156,6 +156,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="drag" type="dialogdrag">
@@ -165,6 +171,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="dragStop" type="dialogdragstop">
@@ -174,6 +186,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="resizeStart" type="dialogresizestart">
@@ -183,6 +201,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="resize" type="dialogresize">
@@ -192,6 +216,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="resizeStop" type="dialogresizestop">
@@ -201,6 +231,12 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="position" type="Object">
+					<desc>The current position of the dialog relative to the offset</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the dialog, relative to the page</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="close" type="dialogclose">
