@@ -1,6 +1,7 @@
 <categories>
 	<category name="Effects" slug="effects">
 		<desc>
+			<![CDATA[
 			<p>Effects include extensions to jQuery's built-in animate method, providing support for animating colors and doing transitions from one class to another.</p>
 			<div class="longdesc">
 				<p>For class transitions, <code>addClass(class)</code>, <code>removeClass(class)</code>, <code>toggleClass(class)</code> and <code>toggleClass(switch)</code> are each extended to accept three additional parameters: <code>speed</code>, <code>easing</code> (optional), and <code>callback</code>.</p>
@@ -12,6 +13,7 @@
 				<p>For color animation support, jQuery UI bundles the <a href="https://github.com/jquery/jquery-color">jquery-color plugin</a>. The plugin extends jQuery's <code>animate</code> method with support for animating the following properties: <code>backgroundColor, borderBottomColor, borderLeftColor, borderRightColor, borderTopColor, color, outlineColor</code></p>
 				<p>Effects also add, to jQuery's built-in linear and swing transitions, a bunch of easings. The full list: <code>linear, swing, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint, easeInExpo, easeOutExpo, easeInOutExpo, easeInSine, easeOutSine, easeInOutSine, easeInCirc, easeOutCirc, easeInOutCirc, easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce</code></p>
 			</div>
+			]]>
 		</desc>
 	</category>
 	<category name="Interactions" slug="interactions">
