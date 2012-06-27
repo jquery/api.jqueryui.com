@@ -4,15 +4,7 @@
 	<desc>Change the size of an element using the mouse</desc>
 	<longdesc>
 		<p>The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.</p>
-		<p>All callbacks (start,stop,resize) receive two arguments: The original browser event and a prepared ui object.  The ui object has the following fields:</p>
-		<ul>
-			<li><b>ui.helper</b> - a jQuery object containing the helper element</li>
-			<li><b>ui.originalPosition</b> - {top, left} before resizing started</li>
-			<li><b>ui.originalSize</b> - {width, height} before resizing started</li>
-			<li><b>ui.position</b> - {top, left} current position</li>
-			<li><b>ui.size</b> - {width, height} current size</li>
-		</ul>
-
+		<p>All callbacks (start,stop,resize) receive two arguments: The original browser event and a prepared ui object.</p>
 		<p>This interaction requires some functional CSS, otherwise it won't work. If you build a custom theme, use the interaction's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.0</created>
@@ -123,6 +115,27 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="element" type="jQuery">
+					<desc>The jQuery object representing the element to be resized</desc>
+				</property>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being resized</desc>
+				</property>
+				<property name="originalElement" type="jQuery">
+					<desc>The jQuery object representing the original element before it is wrapped</desc>
+				</property>
+				<property name="originalPosition" type="jQuery">
+					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
+				</property>
+				<property name="originalSize" type="Object">
+					<desc>The size represented as <code>{ width, height }</code> before the resizable is resized</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position represented as <code>{ left, top }</code></desc>
+				</property>
+				<property name="size" type="Object">
+					<desc>The current size represented as <code>{ width, height }</code></desc>
+				</property>
 			</argument>
 		</event>
 		<event name="resize" type="resize">
@@ -132,6 +145,27 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="element" type="jQuery">
+					<desc>The jQuery object representing the element to be resized</desc>
+				</property>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being resized</desc>
+				</property>
+				<property name="originalElement" type="jQuery">
+					<desc>The jQuery object representing the original element before it is wrapped</desc>
+				</property>
+				<property name="originalPosition" type="jQuery">
+					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
+				</property>
+				<property name="originalSize" type="Object">
+					<desc>The size represented as <code>{ width, height }</code> before the resizable is resized</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position represented as <code>{ left, top }</code></desc>
+				</property>
+				<property name="size" type="Object">
+					<desc>The current size represented as <code>{ width, height }</code></desc>
+				</property>
 			</argument>
 		</event>
 		<event name="stop" type="resizestop">
@@ -141,6 +175,27 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="element" type="jQuery">
+					<desc>The jQuery object representing the element to be resized</desc>
+				</property>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper that's being resized</desc>
+				</property>
+				<property name="originalElement" type="jQuery">
+					<desc>The jQuery object representing the original element before it is wrapped</desc>
+				</property>
+				<property name="originalPosition" type="jQuery">
+					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
+				</property>
+				<property name="originalSize" type="Object">
+					<desc>The size represented as <code>{ width, height }</code> before the resizable is resized</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position represented as <code>{ left, top }</code></desc>
+				</property>
+				<property name="size" type="Object">
+					<desc>The current size represented as <code>{ width, height }</code></desc>
+				</property>
 			</argument>
 		</event>
 

@@ -83,10 +83,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="newTab"></property>
-				<property name="oldTab"></property>
-				<property name="newPanel"></property>
-				<property name="oldPanel"></property>
+				<property name="newTab" type="jQuery">
+					<desc>The jQuery object representing the new tab to be activated</desc>
+				</property>
+				<property name="oldTab" type="jQuery">
+					<desc>The jQuery object representing the current tab to be deactivated</desc>
+				</property>
+				<property name="newPanel" type="jQuery">
+					<desc>The jQuery object representing the new panel to be shown</desc>
+				</property>
+				<property name="oldPanel" type="jQuery">
+					<desc>The jQuery object representing the current panel to be hidden</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="activate" type="tabsselect">
@@ -96,10 +104,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="newTab"></property>
-				<property name="oldTab"></property>
-				<property name="newPanel"></property>
-				<property name="oldPanel"></property>
+				<property name="newTab" type="jQuery">
+					<desc>The jQuery object representing the new tab to be activated</desc>
+				</property>
+				<property name="oldTab" type="jQuery">
+					<desc>The jQuery object representing the current tab to be deactivated</desc>
+				</property>
+				<property name="newPanel" type="jQuery">
+					<desc>The jQuery object representing the new panel to be shown</desc>
+				</property>
+				<property name="oldPanel" type="jQuery">
+					<desc>The jQuery object representing the current panel to be hidden</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="beforeLoad" type="tabsload">
@@ -109,10 +125,18 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="tab"></property>
-				<property name="panel"></property>
-				<property name="jqXHR"></property>
-				<property name="ajaxSettings"></property>
+				<property name="tab" type="jQuery">
+					<desc>The jQuery object representing the current active tab</desc>
+				</property>
+				<property name="panel" type="jQuery">
+					<desc>The jQuery object representing the current visible panel</desc>
+				</property>
+				<property name="jqXHR" type="Object">
+					<desc>The jqXHR returned by jQuery.ajax when loading remote content</desc>
+				</property>
+				<property name="ajaxSettings" type="Object">
+					<desc>The settings used when making the jQuery.ajax call to load remote content</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="load" type="tabsload">
@@ -122,8 +146,87 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
-				<property name="tab"></property>
-				<property name="panel"></property>
+				<property name="tab" type="jQuery">
+					<desc>The jQuery object representing the current active tab</desc>
+				</property>
+				<property name="panel" type="jQuery">
+					<desc>The jQuery object representing the current visible panel</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="enable" type="tabsenable">
+			<desc>Triggered after a disabled tab has been enabled.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+				<property name="tab" type="Element">
+					<desc>The tab element that has been enabled</desc>
+				</property>
+				<property name="panel" type="Element">
+					<desc>The panel element that has been enabled</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="disable" type="tabsdisable">
+			<desc>Triggered after an enabled tab has been disabled.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+				<property name="tab" type="Element">
+					<desc>The tab element that has been disabled</desc>
+				</property>
+				<property name="panel" type="Element">
+					<desc>The panel element that has been disabled</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="add" type="tabsadd">
+			<desc>Triggered after a new tab is added.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+				<property name="tab" type="Element">
+					<desc>The tab element to be added</desc>
+				</property>
+				<property name="panel" type="Element">
+					<desc>The panel element to be added</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="remove" type="tabsremove">
+			<desc>Triggered after a tab has been removed.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+				<property name="tab" type="Element">
+					<desc>The anchor element from the tab that has been removed</desc>
+				</property>
+				<property name="panel" type="Element">
+					<desc>The panel element that has been removed</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="show" type="tabsshow">
+			<desc>Triggered after a tab has been shown.</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+				<property name="tab" type="Element">
+					<desc>The anchor element from the tab that has been shown</desc>
+				</property>
+				<property name="panel" type="jQuery">
+					<desc>The panel element that has been shown</desc>
+				</property>
 			</argument>
 		</event>
 	</events>

@@ -62,6 +62,9 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="selected" type="Object">
+					<desc>The selectable item that has been selected</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="selecting" type="selectableselecting">
@@ -71,6 +74,9 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="selecting" type="Object">
+					<desc>The current selectable item being selected</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="start" type="selectablestart">
@@ -98,6 +104,9 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="unselected" type="Object">
+					<desc>The selectable item that has been unselected</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="unselecting" type="selectableunselecting">
@@ -107,6 +116,9 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="unselecting" type="Object">
+					<desc>The current selectable item being unselected</desc>
+				</property>
 			</argument>
 		</event>
 
