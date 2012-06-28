@@ -4,15 +4,7 @@
 	<desc>Reorder elements in a list or grid using the mouse</desc>
 	<longdesc>
 		<p>The jQuery UI Sortable plugin makes selected elements sortable by dragging with the mouse.</p>
-		<p>All callbacks receive two arguments: The original browser event and a prepared ui object, view below for a documentation of this object (if you name your second argument 'ui'):</p>
-		<ul>
-			<li><b>ui.helper</b> - the current helper element (most often a clone of the item)</li>
-			<li><b>ui.position</b> - current position of the helper</li>
-			<li><b>ui.offset</b> - current absolute position of the helper</li>
-			<li><b>ui.item</b> - the current dragged element</li>
-			<li><b>ui.placeholder</b> - the placeholder (if you defined one)</li>
-			<li><b>ui.sender</b> - the sortable where the item comes from (only exists if you move from one connected list to another)</li>
-		</ul>
+		<p>All callbacks receive two arguments: The original browser event and a prepared ui object.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
@@ -149,6 +141,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="sort" type="sort">
@@ -158,6 +168,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="change" type="sortchange">
@@ -167,6 +195,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="beforeStop" type="sortbeforestop">
@@ -176,6 +222,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="stop" type="sortstop">
@@ -185,6 +249,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="update" type="sortupdate">
@@ -194,6 +276,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="receive" type="sortreceive">
@@ -203,6 +303,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="remove" type="sortremove">
@@ -212,6 +330,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="over" type="sortover">
@@ -221,6 +357,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="out" type="sortout">
@@ -230,6 +384,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="activate" type="sortactivate">
@@ -239,6 +411,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="deactivate" type="sortdeactivate">
@@ -248,6 +438,24 @@
 			</argument>
 			<argument name="ui" type="Object">
 				<desc></desc>
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
+				</property>
+				<property name="sender" type="jQuery">
+					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
+				</property>
 			</argument>
 		</event>
 
