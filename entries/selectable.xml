@@ -124,45 +124,15 @@
 
 	</events>
 	<methods>
-		<method name="destroy">
-			<desc>
-				Remove the selectable functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>
-				Disable the selectable.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the selectable.
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
 		<method name="refresh">
 			<desc> Refresh the position and size of each selectee element. This method can be used to manually recalculate the position and size of each selectee element. Very useful if autoRefresh is set to false.</desc>
 		</method>
-		<method name="option">
-			<desc>
-				Get or set any selectable option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple selectable options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
 

@@ -7,4 +7,9 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
+  <xsl:template match="widget-inherit">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude">
+        <xsl:attribute name="href">../inherits/<xsl:value-of select="@id"/>.xml</xsl:attribute>
+    </xi:include>
+  </xsl:template>
 </xsl:stylesheet>

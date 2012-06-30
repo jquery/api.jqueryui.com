@@ -231,16 +231,8 @@
 		</event>
 	</events>
 	<methods>
-		<method name="destroy">
-			<desc>
-				Remove the tabs functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>
-				Disable the tabs widget.
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
 		<method name="disable">
 			<desc>
 				Disable a tab. The selected tab cannot be disabled. To disable more than one tab at once use: <code>$('#example').tabs("option","disabled", [1, 2, 3]);</code>
@@ -250,11 +242,7 @@
 				<desc></desc>
 			</argument>
 		</method>
-		<method name="enable">
-			<desc>
-				Enable the tabs widget.
-			</desc>
-		</method>
+		<widget-inherit id="widget-enable" />
 		<method name="enable">
 			<desc>
 				Enable a disabled tab. To enable more than one tab at once reset the disabled property like: <code>$('#example').tabs("option","disabled",[]);</code>.
@@ -270,27 +258,9 @@
 				<desc>may also be the href value of a tab</desc>
 			</argument>
 		</method>
-		<method name="option">
-			<desc>
-				Get or set any tabs widget option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple tabs widget options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
 

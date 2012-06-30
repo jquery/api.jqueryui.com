@@ -243,11 +243,7 @@
 
 	</events>
 	<methods>
-		<method name="destroy">
-			<desc>
-				Remove the datepicker functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
 		<method name="dialog">
 			<desc>Function</desc>
 			<argument name="date" type="String or Date">

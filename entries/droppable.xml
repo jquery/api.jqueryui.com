@@ -157,42 +157,12 @@ ui.draggable represents the draggable.</desc>
 
 	</events>
 	<methods>
-		<method name="destroy">
-			<desc>
-				Remove the droppable functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>
-				Disable the droppable.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the droppable.
-			</desc>
-		</method>
-		<method name="option">
-			<desc>
-				Get or set any droppable option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple droppable options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
 		<desc>Makes the div droppable (a drop target for a draggable).</desc>

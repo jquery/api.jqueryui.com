@@ -73,16 +73,9 @@
 				<desc>Indicates whether all sub-menus should be closed or only sub-menus below and including the menu that is or contains the target of the triggering event.</desc>
 			</argument>
 		</method>
-		<method name="disable">
-			<desc>
-				Disable the menu.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the menu.
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
 		<method name="expand">
 			<desc>
 				Open the sub-menu below the currently active item, if it exists.
@@ -128,22 +121,8 @@
 				<desc>What triggered the method.</desc>
 			</argument>
 		</method>
-		<method name="option">
-			<desc>
-				Get or set any menu option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple menu options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
 		<method name="previous">
 			<desc>
 				Move active state to previous menu item.
@@ -173,11 +152,7 @@
 				<desc>What triggered the method.</desc>
 			</argument>
 		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<events>
 		<event name="blur" type="menublur">

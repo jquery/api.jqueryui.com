@@ -162,48 +162,18 @@
 		<method name="close">
 			<desc>Close the Autocomplete menu. Useful in combination with the search method, to close the open menu.</desc>
 		</method>
-		<method name="destroy">
-			<desc>
-				Remove the autocomplete functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>
-				Disable the autocomplete.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the autocomplete.
-			</desc>
-		</method>
-		<method name="option">
-			<desc>
-				Get or set any autocomplete option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple autocomplete options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
 		<method name="search">
 			<desc>Triggers a search event, which, when data is available, then will display the suggestions; can be used by a selectbox-like button to open the suggestions when clicked. If no value argument is specified, the current input's value is used. Can be called with an empty string and minLength: 0 to display all items.</desc>
 			<argument name="value" type="String" optional="true">
 				<desc></desc>
 			</argument>
 		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
 

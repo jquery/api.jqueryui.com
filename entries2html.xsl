@@ -16,6 +16,7 @@
 </script>
 	<xsl:for-each select="//entry">
 		<xsl:variable name="number-general-examples" select="count(example)"/>
+		<xsl:variable name="entry-name" select="@name"/>
 		<article>
 			<xsl:copy-of select="desc/node()"/>
 			<nav>
@@ -133,7 +134,9 @@
 	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each>
 	     )</h3>
 								<p>
-									<xsl:copy-of select="desc/node()"/>
+									<xsl:apply-templates select="desc">
+										<xsl:with-param name="entry-name" select="$entry-name"/>
+									</xsl:apply-templates>
 								</p>
 								<xsl:call-template name="arguments"/>
 							</li>
@@ -153,7 +156,7 @@
 	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each>
 	     )</h3>
 								<p>
-									<xsl:copy-of select="desc/node()"/>
+									<xsl: select="desc/node()"/>
 								</p>
 								<xsl:call-template name="arguments"/>
 							</li>
@@ -174,6 +177,20 @@
 		</article>
 	</xsl:for-each>
 </xsl:template>
+
+<xsl:template match="desc">
+	<xsl:param name="entry-name"/>
+	<xsl:copy>
+        <xsl:apply-templates select="node()|@*">
+        	<xsl:with-param name="entry-name" select="$entry-name"/>
+        </xsl:apply-templates>
+    </xsl:copy>
+</xsl:template>
+<xsl:template match="placeholder">
+	<xsl:param name="entry-name"/>
+	<xsl:value-of select="$entry-name"/>
+</xsl:template>
+
 <!-- arguments -->
 <xsl:template name="arguments">
 	<xsl:if test="argument">

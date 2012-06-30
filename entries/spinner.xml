@@ -81,32 +81,11 @@
 		</option>
 	</options>
 	<methods>
-		<method name="disable">
-			<desc>
-				Disable the spinner.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the spinner.
-			</desc>
-		</method>
-		<method name="option">
-			<desc>
-				Get or set any spinner option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple spinner options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
 		<method name="pageDown">
 			<desc>
 				Decrements the value by the specified number of pages, as defined by the page-option. Without the parameter, a single page is decremented.
@@ -152,11 +131,7 @@
 				<desc>The value to set.</desc>
 			</argument>
 		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<events>
 		<event name="create">

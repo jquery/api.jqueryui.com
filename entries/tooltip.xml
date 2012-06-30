@@ -101,16 +101,9 @@
 				<desc>What triggered the method.</desc>
 			</argument>
 		</method>
-		<method name="disable">
-			<desc>
-				Disable the tooltip.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the tooltip.
-			</desc>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
 		<method name="open">
 			<desc>
 				Programmatically open a tooltip. If the widget's element is the target, the event argument is optional. Otherwise you have to pass an event object with the <code>currentTarget</code> property pointing at the target.
@@ -119,27 +112,9 @@
 				<desc>What triggered the method.</desc>
 			</argument>
 		</method>
-		<method name="option">
-			<desc>
-				Get or set any tooltip option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple tooltip options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<events>
 		<event name="create">
