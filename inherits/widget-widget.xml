@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<method name="widget">
+    <desc>
+        Returns a jQuery object containing the element.
+    </desc>
+</method>

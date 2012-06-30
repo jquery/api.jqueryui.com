@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<method name="option">
+    <desc>
+        Get or set any <placeholder name="title"/> option. If no value is specified, will act as a getter.
+    </desc>
+    <argument name="optionName" type="String">
+    </argument>
+    <argument name="value" type="Object" optional="true">
+    </argument>
+</method>
