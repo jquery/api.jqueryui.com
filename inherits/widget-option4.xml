@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<method name="option" return="jQuery">
+    <desc>
+        Set multiple <placeholder name="title"/> options at once by providing an options object.
+    </desc>
+    <argument name="options" type="Object"></argument>
+</method>

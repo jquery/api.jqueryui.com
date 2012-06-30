@@ -479,6 +479,8 @@
 		<widget-inherit id="widget-enable" />
 		<widget-inherit id="widget-option1" />
 		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-option3" />
+		<widget-inherit id="widget-option4" />
 		<method name="refresh">
 			<desc>Refresh the sortable items. Custom trigger the reloading of all sortable items, causing new items to be recognized.</desc>
 		</method>

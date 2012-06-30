@@ -86,6 +86,8 @@
 		<widget-inherit id="widget-enable" />
 		<widget-inherit id="widget-option1" />
 		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-option3" />
+		<widget-inherit id="widget-option4" />
 		<method name="pageDown">
 			<desc>
 				Decrements the value by the specified number of pages, as defined by the page-option. Without the parameter, a single page is decremented.

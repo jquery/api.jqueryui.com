@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
-<method name="option">
+<method name="option" return="Object">
     <desc>
-        Get or set any <placeholder name="title"/> option. If no value is specified, will act as a getter.
+        Get an object containing key/value pairs representing the current <placeholder name="title"/> options hash.
     </desc>
-    <argument name="optionName" type="String">
-    </argument>
-    <argument name="value" type="Object" optional="true">
-    </argument>
 </method>

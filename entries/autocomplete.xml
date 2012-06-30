@@ -167,6 +167,8 @@
 		<widget-inherit id="widget-enable" />
 		<widget-inherit id="widget-option1" />
 		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-option3" />
+		<widget-inherit id="widget-option4" />
 		<method name="search">
 			<desc>Triggers a search event, which, when data is available, then will display the suggestions; can be used by a selectbox-like button to open the suggestions when clicked. If no value argument is specified, the current input's value is used. Can be called with an empty string and minLength: 0 to display all items.</desc>
 			<argument name="value" type="String" optional="true">

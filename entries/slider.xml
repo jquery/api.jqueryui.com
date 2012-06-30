@@ -137,37 +137,13 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 
 	</events>
 	<methods>
-		<method name="destroy">
-			<desc>
-				Remove the slider functionality completely. This will return the element back to its pre-init state.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>
-				Disable the slider.
-			</desc>
-		</method>
-		<method name="enable">
-			<desc>
-				Enable the slider.
-			</desc>
-		</method>
-		<method name="option">
-			<desc>
-				Get or set any slider option. If no value is specified, will act as a getter.
-			</desc>
-			<argument name="optionName" type="String">
-			</argument>
-			<argument name="value" type="Object" optional="true">
-			</argument>
-		</method>
-		<method name="option">
-			<desc>
-				Set multiple slider options at once by providing an options object.
-			</desc>
-			<argument name="options" type="Object">
-			</argument>
-		</method>
+		<widget-inherit id="widget-destroy" />
+		<widget-inherit id="widget-disable" />
+		<widget-inherit id="widget-enable" />
+		<widget-inherit id="widget-option1" />
+		<widget-inherit id="widget-option2" />
+		<widget-inherit id="widget-option3" />
+		<widget-inherit id="widget-option4" />
 		<method name="value">
 			<desc>Gets or sets the value of the slider. For single handle sliders.</desc>
 			<argument name="value" type="Number" optional="true">
@@ -183,11 +159,7 @@ Return false in order to prevent a slide, based on ui.value.</desc>
 				<desc></desc>
 			</argument>
 		</method>
-		<method name="widget">
-			<desc>
-				Returns the widget
-			</desc>
-		</method>
+		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
 
