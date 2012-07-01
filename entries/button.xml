@@ -50,10 +50,10 @@
 		<method name="refresh">
 			<desc>Refreshes the visual state of the button. Useful for updating button state after the native element's checked or disabled state is changed programatically.</desc>
 		</method>
-		<widget-inherit id="widget-option1" />
-		<widget-inherit id="widget-option2" />
-		<widget-inherit id="widget-option3" />
-		<widget-inherit id="widget-option4" />
+		<widget-inherit id="widget-get-options" />
+		<widget-inherit id="widget-get-option" />
+		<widget-inherit id="widget-set-option" />
+		<widget-inherit id="widget-set-options" />
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>

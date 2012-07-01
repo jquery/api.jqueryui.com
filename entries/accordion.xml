@@ -130,10 +130,10 @@
 		<widget-inherit id="widget-destroy" />
 		<widget-inherit id="widget-disable" />
 		<widget-inherit id="widget-enable" />
-		<widget-inherit id="widget-option1" />
-		<widget-inherit id="widget-option2" />
-		<widget-inherit id="widget-option3" />
-		<widget-inherit id="widget-option4" />
+		<widget-inherit id="widget-get-options" />
+		<widget-inherit id="widget-get-option" />
+		<widget-inherit id="widget-set-option" />
+		<widget-inherit id="widget-set-options" />
 		<method name="refresh">
 			<desc>Recompute heights of the accordion panels. Results depend on the content and the <code>heightStyle</code> option.</desc>
 		</method>

@@ -160,10 +160,10 @@ ui.draggable represents the draggable.</desc>
 		<widget-inherit id="widget-destroy" />
 		<widget-inherit id="widget-disable" />
 		<widget-inherit id="widget-enable" />
-		<widget-inherit id="widget-option1" />
-		<widget-inherit id="widget-option2" />
-		<widget-inherit id="widget-option3" />
-		<widget-inherit id="widget-option4" />
+		<widget-inherit id="widget-get-options" />
+		<widget-inherit id="widget-get-option" />
+		<widget-inherit id="widget-set-option" />
+		<widget-inherit id="widget-set-options" />
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>

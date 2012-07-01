@@ -130,10 +130,10 @@
 		<method name="refresh">
 			<desc> Refresh the position and size of each selectee element. This method can be used to manually recalculate the position and size of each selectee element. Very useful if autoRefresh is set to false.</desc>
 		</method>
-		<widget-inherit id="widget-option1" />
-		<widget-inherit id="widget-option2" />
-		<widget-inherit id="widget-option3" />
-		<widget-inherit id="widget-option4" />
+		<widget-inherit id="widget-get-options" />
+		<widget-inherit id="widget-get-option" />
+		<widget-inherit id="widget-set-option" />
+		<widget-inherit id="widget-set-options" />
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
