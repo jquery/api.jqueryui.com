@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="effect" namespace="fn" widgetnamespace="ui" type="jQuery">
+  <desc></desc>
+  <longdesc></longdesc>
+  <methods>
+    <method name="effect">
+      <desc>Uses a specific effect on an element (without the show/hide logic).</desc>
+      <argument name="effect" type="String">
+        <desc>The effect to be used. Possible values: 'blind', 'bounce', 'clip', 'drop', 'explode', 'fold', 'highlight', 'puff', 'pulsate', 'scale', 'shake', 'size', 'slide', 'transfer'.</desc>
+      </argument>
+      <argument name="options" type="Hash" optional="true">
+        <desc>A object/hash including specific options for the effect.</desc>
+      </argument>
+      <argument name="speed" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+      <argument name="callback" type="Function" optional="true">
+        <desc>A function that is called after the effect is completed.</desc>
+      </argument>
+    </method>
+    <method name="addClass">
+      <desc>Adds the specified class to each of the set of matched elements with an optional transition between the states.</desc>
+      <argument name="classNames" type="String">
+        <desc>One CSS class to add to the elements.</desc>
+      </argument>
+      <argument name="duration" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+      <argument name="callback" type="Function" optional="true">
+        <desc>A function that is called after the effect is completed.</desc>
+      </argument>
+    </method>
+    <method name="removeClass">
+      <desc>Removes all or specified class from each of the set of matched elements with an optional transition between the states.</desc>
+      <argument name="classNames" type="String" optional="true">
+        <desc>CSS classes to remove from the elements.</desc>
+      </argument>
+      <argument name="duration" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+      <argument name="callback" type="Function" optional="true">
+        <desc>A function that is called after the effect is completed.</desc>
+      </argument>
+    </method>
+    <method name="toggleClass">
+      <desc>
+        The enhanced toggle method optionally accepts jQuery UI advanced effects.
+        Uses a specific effect on an element to toggle the element if the first argument is an effect string.
+      </desc>
+      <argument name="effect" type="String">
+        <desc>The effect to be used. Possible values: 'blind', 'clip', 'drop', 'explode', 'fold', 'puff', 'slide', 'scale', 'size', 'pulsate'.</desc>
+      </argument>
+      <argument name="options" type="Hash" optional="true">
+        <desc>A object/hash including specific options for the effect.</desc>
+      </argument>
+      <argument name="speed" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+      <argument name="callback" type="Function" optional="true">
+        <desc>A function that is called after the effect is completed.</desc>
+      </argument>
+    </method>
+    <method name="switchClass">
+      <desc>Switches from the class defined in the first argument to the class defined as second argument, using an optional transition.</desc>
+      <argument name="remove" type="String">
+        <desc>The CSS class that will be removed.</desc>
+      </argument>
+      <argument name="add" type="String">
+        <desc>The CSS class that will be added.</desc>
+      </argument>
+      <argument name="duration" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+    </method>
+    <method name="show">
+      <desc>
+        The enhanced show method optionally accepts jQuery UI advanced effects.
+        Uses a specific effect on an element to show the element if the first argument is a effect string.
+      </desc>
+      <argument name="speed" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+    </method>
+    <method name="hide">
+      <desc>
+        The enhanced hide method optionally accepts jQuery UI advanced effects.
+        Uses a specific effect on an element to hide the element if the first argument is an effect string.
+      </desc>
+      <argument name="speed" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+    </method>
+    <method name="toggle">
+      <desc>
+        The enhanced toggle method optionally accepts jQuery UI advanced effects.
+        Uses a specific effect on an element to toggle the element if the first argument is an effect string.
+      </desc>
+      <argument name="speed" type="String, Number" optional="true">
+        <desc>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</desc>
+      </argument>
+    </method>
+  </methods>
+  <category slug="effects"/>
+</entry>
