@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="position" namespace="fn" type="Utility" return="jQuery">
+<entry name="position" namespace="fn" return="jQuery">
 	<desc>Place an element relative to another</desc>
 	<longdesc>
 		<p>Utility script for positioning any widget relative to the window, document, a particular element, or the cursor/mouse.</p>
