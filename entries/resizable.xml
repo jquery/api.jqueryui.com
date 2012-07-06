@@ -124,7 +124,7 @@
 				<property name="originalElement" type="jQuery">
 					<desc>The jQuery object representing the original element before it is wrapped</desc>
 				</property>
-				<property name="originalPosition" type="jQuery">
+				<property name="originalPosition" type="Object">
 					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
 				</property>
 				<property name="originalSize" type="Object">
@@ -154,7 +154,7 @@
 				<property name="originalElement" type="jQuery">
 					<desc>The jQuery object representing the original element before it is wrapped</desc>
 				</property>
-				<property name="originalPosition" type="jQuery">
+				<property name="originalPosition" type="Object">
 					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
 				</property>
 				<property name="originalSize" type="Object">
@@ -184,7 +184,7 @@
 				<property name="originalElement" type="jQuery">
 					<desc>The jQuery object representing the original element before it is wrapped</desc>
 				</property>
-				<property name="originalPosition" type="jQuery">
+				<property name="originalPosition" type="Object">
 					<desc>The position represented as <code>{ left, top }</code> before the resizable is resized</desc>
 				</property>
 				<property name="originalSize" type="Object">
