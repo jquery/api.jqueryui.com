@@ -19,6 +19,15 @@
 		<option name="disabled" type="Boolean" default="false">
 			<desc>Disables the spinner if set to true.</desc>
 		</option>
+		<option name="icons" type="Object" default='{ "down": "ui-icon-triangle-1-s", "up": "ui-icon-triangle-1-n" }'>
+			<desc>
+				Icons to use for buttons, matching an icon defined by the jQuery UI CSS Framework.
+				<ul>
+					<li>up (string, default: "ui-icon-triangle-1-n")</li>
+					<li>down (string, default: "ui-icon-triangle-1-s")</li>
+				</ul>
+			</desc>
+		</option>
 		<option name="incremental" default="true">
 			<desc>
 				Controls the number of steps taken when holding down a spin button.
