@@ -35,6 +35,14 @@
 		<option name="disabled" type="Boolean" default="false">
 			<desc>Disables the menu if set to true.</desc>
 		</option>
+		<option name="icons" type="Object" default='{ "submenu": "ui-icon-carat-1-e" }'>
+			<desc>
+				Icons to use for submenus, matching an icon defined by the jQuery UI CSS Framework.
+				<ul>
+					<li>submenu (string, default: "ui-icon-carat-1-e")</li>
+				</ul>
+			</desc>
+		</option>
 		<option name="menus" default="ul" type="String">
 			<desc>Selector for the elements that serve as the menu container, including sub-menus.</desc>
 		</option>
