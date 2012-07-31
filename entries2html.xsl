@@ -156,7 +156,7 @@
 	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each>
 	     )</h3>
 								<p>
-									<xsl: select="desc/node()"/>
+									<xsl:copy-of select="desc/node()"/>
 								</p>
 								<xsl:call-template name="arguments"/>
 							</li>
