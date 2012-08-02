@@ -5,37 +5,38 @@
 		Themeable menu with mouse and keyboard interactions for navigation.
 	</desc>
 	<longdesc>
-		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship and each menu item has an anchor. The most commonly used element is the unordered list (UL):</p>
+		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship and each menu item has an anchor. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
 
 		<pre><![CDATA[
-	<ul id="menu">
-		<li><a href="#">Item 1</a></li>
-		<li><a href="#">Item 2</a></li>
-		<li><a href="#">Item 3</a>
-			<ul>
-				<li><a href="#">Item 3-1</a></li>
-				<li><a href="#">Item 3-2</a></li>
-				<li><a href="#">Item 3-3</a></li>
-				<li><a href="#">Item 3-4</a></li>
-				<li><a href="#">Item 3-5</a></li>
-			</ul>
-		</li>
-		<li><a href="#">Item 4</a></li>
-		<li><a href="#">Item 5</a></li>
-	</ul>]]></pre>
+<ul id="menu">
+	<li><a href="#">Item 1</a></li>
+	<li><a href="#">Item 2</a></li>
+	<li><a href="#">Item 3</a>
+		<ul>
+			<li><a href="#">Item 3-1</a></li>
+			<li><a href="#">Item 3-2</a></li>
+			<li><a href="#">Item 3-3</a></li>
+			<li><a href="#">Item 3-4</a></li>
+			<li><a href="#">Item 3-5</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Item 4</a></li>
+	<li><a href="#">Item 5</a></li>
+</ul>
+]]></pre>
 
-		<p>If you use a structure other than UL/LI, including using the same element for the menu and the menu items, use the <code>menus</code> option to specify a way to differentiate the two elements, eg. <code>menus: 'div.menuElement'</code>.</p>
+		<p>If you use a structure other than <code>&lt;ul></code>/<code>&lt;li></code>, including using the same element for the menu and the menu items, use the <a href="#option-menus"><code>menus</code></a> option to specify a way to differentiate the two elements, e.g., <code>menus: "div.menuElement"</code>.</p>
 
-		<p>Any menu item can be disabled by adding the ui-state-disabled class to that element.</p>
+		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
 
 		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
 	<created>1.9</created>
 	<options>
 		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the menu if set to true.</desc>
+			<desc>Disables the menu if set to <code>true</code>.</desc>
 		</option>
-		<option name="icons" type="Object" default='{ "submenu": "ui-icon-carat-1-e" }'>
+		<option name="icons" type="Object" default='{ submenu: "ui-icon-carat-1-e" }'>
 			<desc>
 				Icons to use for submenus, matching an icon defined by the jQuery UI CSS Framework.
 				<ul>
@@ -43,39 +44,39 @@
 				</ul>
 			</desc>
 		</option>
-		<option name="menus" default="ul" type="String">
+		<option name="menus" type="String" default='"ul"'>
 			<desc>Selector for the elements that serve as the menu container, including sub-menus.</desc>
 		</option>
-		<option name="position" type="Object" default="{ my: 'top left', at: 'top right' }">
-			<desc>Using the Position utility, sets where the sub-menus will open in relation to the activated item in the parent menu.</desc>
+		<option name="position" type="Object" default='{ my: "top left", at: "top right" }'>
+			<desc>Using the <a href="/position">jQuery UI Position utility</a>, sets where the sub-menus will open in relation to the activated item in the parent menu.</desc>
 		</option>
-		<option name="role" type="String" default="menu">
-			<desc>Customize the aria roles used for the menu and menu items. The default uses "menuitem" for items. Setting it to "listbox" will use "option" for items.</desc>
+		<option name="role" type="String" default='"menu"'>
+			<desc>Customize the ARIA roles used for the menu and menu items. The default uses <code>"menuitem"</code> for items. Setting the <code>role</code> option to <code>"listbox"</code> will use <code>"option"</code> for items. If set to <code>null</code>, no roles will be set, which is useful if the menu is being controlled by another element that is maintaining focus.</desc>
 		</option>
 	</options>
 	<methods>
 		<method name="blur">
 			<desc>
-				Remove focus from a menu, reset any active element styles and trigger the menu blur event.
+				Removes focus from a menu, resets any active element styles and triggers the menu's <a href="event-blur"><code>blur</code></a> event.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the menu to blur.</desc>
 			</argument>
 		</method>
 		<method name="collapse">
 			<desc>
-				Close the currently active sub-menu.
+				Closes the currently active sub-menu.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the menu to collapse.</desc>
 			</argument>
 		</method>
 		<method name="collapseAll">
 			<desc>
-				Close all open sub-menus.
+				Closes all open sub-menus.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the menu to collapse.</desc>
 			</argument>
 			<argument name="all" type="Boolean" optional="true">
 				<desc>Indicates whether all sub-menus should be closed or only sub-menus below and including the menu that is or contains the target of the triggering event.</desc>
@@ -86,21 +87,21 @@
 		<widget-inherit id="widget-enable" />
 		<method name="expand">
 			<desc>
-				Open the sub-menu below the currently active item, if it exists.
+				Opens the sub-menu below the currently active item, if one exists.
 			</desc>
 			<argument name="event" type="Event" optional="false">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the menu to expand.</desc>
 			</argument>
 		</method>
 		<method name="focus">
 			<desc>
-				Activate a particular menu item, begin opening any sub-menu if present and trigger the menu focus event.
+				Activates a particular menu item, begins opening any sub-menu if present and triggers the menu's <a href="#event-focus"><code>focus</code></a> event.
 			</desc>
 			<argument name="event" type="Event" optional="false">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the menu item to gain focus.</desc>
 			</argument>
 			<argument name="item" type="jQuery" optional="false">
-				<desc>The menu item to "activate".</desc>
+				<desc>The menu item to focus/activate.</desc>
 			</argument>
 		</method>
 		<method name="isFirstItem">
@@ -115,18 +116,18 @@
 		</method>
 		<method name="next">
 			<desc>
-				Move active state to next menu item.
+				Moves active state to next menu item.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the focus to move.</desc>
 			</argument>
 		</method>
 		<method name="nextPage">
 			<desc>
-				Move active state to first menu item below the bottom of a scrollable menu or the last item if not scrollable.
+				Moves active state to first menu item below the bottom of a scrollable menu or the last item if not scrollable.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the focus to move.</desc>
 			</argument>
 		</method>
 		<widget-inherit id="widget-get-options" />
@@ -135,31 +136,31 @@
 		<widget-inherit id="widget-set-options" />
 		<method name="previous">
 			<desc>
-				Move active state to previous menu item.
+				Moves active state to previous menu item.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the focus to move.</desc>
 			</argument>
 		</method>
 		<method name="previousPage">
 			<desc>
-				Move active state to first menu item above the top of a scrollable menu or the first item if not scrollable.
+				Moves active state to first menu item above the top of a scrollable menu or the first item if not scrollable.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the focus to move.</desc>
 			</argument>
 		</method>
 		<method name="refresh">
 			<desc>
-				Initializes sub-menus and menu items that have not already been initialized. New menu items, including sub-menus can be added to the menu or all of the contents of the menu can be replaced and then initialized with the refresh method.
+				Initializes sub-menus and menu items that have not already been initialized. New menu items, including sub-menus can be added to the menu or all of the contents of the menu can be replaced and then initialized with the <code>refresh</code> method.
 			</desc>
 		</method>
 		<method name="select">
 			<desc>
-				Select the currently active menu item, collapse all sub-menus and trigger the menu select event.
+				Selects the currently active menu item, collapses all sub-menus and triggers the menu's <a href="#event-select"><code>select</code></a> event.
 			</desc>
 			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the method.</desc>
+				<desc>What triggered the selection.</desc>
 			</argument>
 		</method>
 		<widget-inherit id="widget-widget" />
@@ -171,9 +172,6 @@
 			</desc>
 			<argument name="event" type="Event"></argument>
 			<argument name="ui" type="Object">
-				<desc>
-					Extra event data for the ui menu blur event.
-				</desc>
 				<property name="item">
 					<desc>
 						The currently active menu item.
@@ -183,7 +181,7 @@
 		</event>
 		<event name="create">
 			<desc>
-				This event is triggered when the menu is created.
+				Triggered when the menu is created.
 			</desc>
 			<argument name="event" type="Event">
 			</argument>
@@ -192,13 +190,10 @@
 		</event>
 		<event name="focus" type="menufocus">
 			<desc>
-				Triggered when a menu gains focus or when any menu item is activated via mouseover, click or keyboard interaction.
+				Triggered when a menu gains focus or when any menu item is activated.
 			</desc>
 			<argument name="event" type="Event"></argument>
 			<argument name="ui" type="Object">
-				<desc>
-					Extra event data for the ui menu focus event.
-				</desc>
 				<property name="item">
 					<desc>
 						The currently active menu item.
@@ -208,13 +203,10 @@
 		</event>
 		<event name="select" type="menuselect">
 			<desc>
-				Triggered when a menu item is selected either via click or enter key.
+				Triggered when a menu item is selected.
 			</desc>
 			<argument name="event" type="Event"></argument>
 			<argument name="ui" type="Object">
-				<desc>
-					Exra event data for the ui menu select event.
-				</desc>
 				<property name="item">
 					<desc>
 						The currently active menu item.
@@ -223,33 +215,27 @@
 			</argument>
 		</event>
 	</events>
-	<!-- TODO wrap with 'examples'? -->
 	<example>
-        <desc>Initialize a menu with default options.</desc>
-        <code>
-	        $("#menu").menu();
-		</code>
-		<css>
-<![CDATA[
+		<desc>A simple jQuery UI Menu</desc>
+		<code><![CDATA[
+$( "#menu" ).menu();
+]]></code>
+		<css><![CDATA[
 	.ui-menu {
 		width: 200px;
-		margin-bottom: 2em;
-		font-size:62.5%;
 	}
-]]>
-		</css>
-		<html>
-	<![CDATA[
-	<ul id="menu">
-		<li><a href="#">Item 1</a></li>
-		<li><a href="#">Item 2</a>
-			<ul>
-				<li><a href="#">Item 2-1</a></li>
-			</ul>
-		</li>
-		<li><a href="#">Item 3</a></li>
-	</ul>]]>
-		</html>
+]]></css>
+		<html><![CDATA[
+<ul id="menu">
+	<li><a href="#">Item 1</a></li>
+	<li><a href="#">Item 2</a>
+		<ul>
+			<li><a href="#">Item 2-1</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Item 3</a></li>
+</ul>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

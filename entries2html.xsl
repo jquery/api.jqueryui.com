@@ -246,7 +246,7 @@
 	&lt;meta charset="utf-8"&gt;
 	&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
 	&lt;link rel="stylesheet" href="jquery-ui.css"&gt;<xsl:if test="css">
-	&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
+	&lt;style&gt;<xsl:copy-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
 	&lt;script src="jquery.js"&gt;&lt;/script&gt;
 	&lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
