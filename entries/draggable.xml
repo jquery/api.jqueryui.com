@@ -207,15 +207,13 @@
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Draggable</desc>
-		<inhead><![CDATA[
-<style>
-#draggable {
-	width: 100px;
-	height: 70px;
-	background: silver;
-}
-</style>
-]]></inhead>
+		<css><![CDATA[
+	#draggable {
+		width: 100px;
+		height: 70px;
+		background: silver;
+	}
+]]></css>
 		<code><![CDATA[
 $( "#draggable" ).draggable();
 ]]></code>
