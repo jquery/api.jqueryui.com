@@ -241,18 +241,21 @@
 	</h4>
 	<pre>
 		<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
-&lt;html&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
-&lt;link rel="stylesheet" href="jquery-ui.css"&gt;<xsl:if test="css">
-&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
-&lt;script src="jquery.js"&gt;&lt;/script&gt;
-&lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
+	&lt;link rel="stylesheet" href="jquery-ui.css"&gt;<xsl:if test="css">
+	&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
+	&lt;script src="jquery.js"&gt;&lt;/script&gt;
+	&lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 <xsl:copy-of select="html/text()"/>
-&lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
+&lt;script&gt;
+<xsl:copy-of select="code/text()"/>
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </code>
