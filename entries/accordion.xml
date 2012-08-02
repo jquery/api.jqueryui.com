@@ -58,11 +58,11 @@
 			<desc>Disables the accordion if set to true.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="event" default="click">
+		<option name="event" default='"click"'>
 			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specificed, separated by a space.</desc>
 			<type name="String" />
 		</option>
-		<option name="header" default="> li > :first-child,> :not(li):even">
+		<option name="header" default='"> li > :first-child,> :not(li):even"'>
 			<desc>
 				Selector for the header element.
 				<p>Must be a selector that applies to the accordion container element, via <code>.find()</code>.</p>
@@ -70,7 +70,7 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="heightStyle" default="auto">
+		<option name="heightStyle" default='"auto"'>
 			<desc>
 				Controls the height of the accordion and each panel. Possible values:
 				<ul>
