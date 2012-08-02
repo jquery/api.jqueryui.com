@@ -55,7 +55,7 @@
 			<type name="Boolean" />
 		</option>
 		<option name="disabled" default="false">
-			<desc>Disables the accordion if set to true.</desc>
+			<desc>Disables the accordion if set to <code>true</code>.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="event" default='"click"'>
@@ -142,7 +142,9 @@
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Accordion</desc>
-		<code><![CDATA[$("#accordion").accordion();]]></code>
+		<code><![CDATA[
+$( "#accordion" ).accordion();
+]]></code>
 		<html><![CDATA[
 <div id="accordion">
 	<h3>Section 1</h3>

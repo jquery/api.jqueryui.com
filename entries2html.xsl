@@ -252,9 +252,7 @@
 &lt;/head&gt;
 &lt;body&gt;
 <xsl:copy-of select="html/text()"/>
-&lt;script&gt;
-<xsl:copy-of select="code/text()"/>
-&lt;/script&gt;
+&lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
