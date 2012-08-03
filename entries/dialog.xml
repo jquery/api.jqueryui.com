@@ -11,7 +11,7 @@
 
 		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
-	<created>1.0</created>
+	<created>1.5</created>
 	<options>
 		<option name="autoOpen" default="true">
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open</code></a> method is called.</desc>
