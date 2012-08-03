@@ -5,7 +5,7 @@
 		Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
 	</desc>
 	<longdesc>
-		<p>Spinner wraps a input of type text, adds two buttons to increment and decrement the current value, along with handling key events for the same purpose. It delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
+		<p>Spinner wraps a text input, adds two buttons to increment and decrement the current value, along with handling key events for the same purpose. It delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
 
 		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
@@ -13,13 +13,13 @@
 	<options>
 		<option name="culture" default="null">
 			<desc>
-				Sets the culture to use for parsing and formatting the value, if null, the currently set culture in Globalization is used, see Globalization docs for available cultures. Only relevant if the <code>numberFormat</code> option is set.</desc>
+				Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
 			<type name="String" />
 		</option>
 		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the spinner if set to true.</desc>
+			<desc>Disables the spinner if set to <code>true</code>.</desc>
 		</option>
-		<option name="icons" type="Object" default='{ "down": "ui-icon-triangle-1-s", "up": "ui-icon-triangle-1-n" }'>
+		<option name="icons" type="Object" default='{ down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }'>
 			<desc>
 				Icons to use for buttons, matching an icon defined by the jQuery UI CSS Framework.
 				<ul>
@@ -35,15 +35,15 @@
 					<li>
 						a boolean
 						<ul>
-							<li>when set to true, the stepping delta will increase when spun incessantly</li>
-							<li>when set to false, all steps are equal (as defined by the step option)</li>
+							<li>When set to <code>true</code>, the stepping delta will increase when spun incessantly.</li>
+							<li>When set to <code>false</code>, all steps are equal (as defined by the <a href="#option-step"><code>step</code></a> option).</li>
 						</ul>
 					</li>
 					<li>
 						a function
 						<ul>
-							<li>receives the number of spins that have occurred as a parameter</li>
-							<li>must return the number of steps that should occur for the current spin</li>
+							<li>Receives one parameter: the number of spins that have occurred.</li>
+							<li>Must return the number of steps that should occur for the current spin.</li>
 						</ul>
 					</li>
 				</ul>
@@ -55,8 +55,8 @@
 			<desc>
 				The maximum allowed value.
 				<p>The element's <code>max</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>The max option can be passed as string which will be parsed based on numberFormat and culture or just using native parseFloat.</p>
-				<p>If null, there is no maximum enforced.</p>
+				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>max</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
+				<p>If <code>null</code>, there is no maximum enforced.</p>
 			</desc>
 			<type name="Number" />
 			<type name="String" />
@@ -65,25 +65,25 @@
 			<desc>
 				The minimum allowed value.
 				<p>The element's <code>min</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>The min option can be passed as string which will be parsed based on numberFormat and culture or just using native parseFloat.</p>
-				<p>If null, there is no minimum enforced.</p>
+				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>min</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
+				<p>If <code>null</code>, there is no minimum enforced.</p>
 			</desc>
 			<type name="Number" />
 			<type name="String" />
 		</option>
 		<option name="numberFormat" default="null">
-			<desc>Format of numbers passed to Globalize, if available. Most common are 'n' for a decimal number and 'C' for a currency value.</desc>
+			<desc>Format of numbers passed to  <a href="https://github.com/jquery/globalize"><code>Globalize</code></a>, if available. Most common are <code>"n"</code> for a decimal number and <code>"C"</code> for a currency value. Also see the <a href="#option-culture"><code>culture</code></a> option.</desc>
 			<type name="String" />
 		</option>
 		<option name="page" default="null">
-			<desc>The number of steps to take when paging via the pageUp()/pageDown() methods.</desc>
+			<desc>The number of steps to take when paging via the <a href="#method-pageUp"><code>pageUp</code></a>/<a href="#method-pageDown"><code>pageDown</code></a> methods.</desc>
 			<type name="Number" />
 		</option>
 		<option name="step" default="null">
 			<desc>
-				The size of step to take when spinning via buttons or via the stepUp()/stepDown() methods.
+				The size of the step to take when spinning via buttons or via the <a href="#method-stepUp"><code>stepUp</code></a>/<a href="#method-stepDown"><code>stepDown</code></a> methods.
 				<p>The element's <code>step</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>Can be passed as string which will be parsed based on numberFormat and culture or just using native parseFloat.</p>
+				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>step</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
 			</desc>
 			<type name="Number" />
 			<type name="String" />
@@ -99,7 +99,7 @@
 		<widget-inherit id="widget-set-options" />
 		<method name="pageDown">
 			<desc>
-				Decrements the value by the specified number of pages, as defined by the page-option. Without the parameter, a single page is decremented.
+				Decrements the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is decremented.
 			</desc>
 			<argument name="pages" type="Number" optional="true">
 				<desc>Number of pages to decrement, defaults to 1.</desc>
@@ -107,7 +107,7 @@
 		</method>
 		<method name="pageUp">
 			<desc>
-				Increments the value by the specified number of pages, as defined by the page-option. Without the parameter, a single page is incremented.
+				Increments the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is incremented.
 			</desc>
 			<argument name="pages" type="Number" optional="true">
 				<desc>Number of pages to increment, defaults to 1.</desc>
@@ -116,8 +116,7 @@
 		<method name="stepDown">
 			<desc>
 				Decrements the value by the specified number of steps. Without the parameter, a single step is decremented.
-				<p>If the resulting value is above the max or below the min, the value will be adjusted to the closest max or min.</p>
-				<p>If the resulting value is a step mismatch, the value will be adjusted to the closest step.</p>
+				<p>If the resulting value is above the max, below the min, or reuslts in a step mismatch, the value will be adjusted to the closest valid value.</p>
 			</desc>
 			<argument name="steps" type="Number" optional="true">
 				<desc>Number of steps to decrement, defaults to 1.</desc>
@@ -126,8 +125,7 @@
 		<method name="stepUp">
 			<desc>
 				Increments the value by the specified number of steps. Without the parameter, a single step is incremented.
-				<o>If the resulting value is above the max or below the min, the value will be adjusted to the closest max or min.</o>
-				<p>If the resulting value is a step mismatch, the value will be adjusted to the closest step.</p>
+				<p>If the resulting value is above the max, below the min, or reuslts in a step mismatch, the value will be adjusted to the closest valid value.</p>
 			</desc>
 			<argument name="steps" type="Number" optional="true">
 				<desc>Number of steps to increment, defaults to 1.</desc>
@@ -135,8 +133,8 @@
 		</method>
 		<method name="value">
 			<desc>
-				Get or set the current value. Without the value parameter, returns the current value as a parsed number. Otherwise, sets the value.
-				<p>If the value parameter is a string, its parsed based on the <code>numberFormat</code> and <code>culture</code> options.</p>
+				Gets or sets the current value. Without the value parameter, returns the current value as a parsed number. Otherwise, sets the value.
+				<p>If the <code>value</code> parameter is a string, its parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</p>
 			</desc>
 			<argument name="value" type="Number" optional="true">
 				<desc>The value to set.</desc>
@@ -146,9 +144,7 @@
 	</methods>
 	<events>
 		<event name="create">
-			<desc>
-				This event is triggered when the spinner is created.
-			</desc>
+			<desc>Triggered when the spinner is created.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
@@ -156,7 +152,7 @@
 		</event>
 		<event name="start" type="spinstart">
 			<desc>
-				Triggered before a spin. Can be cancelled, preventing all other events to fire.
+				Triggered before a spin. Can be canceled, preventing the spin from occurring.
 			</desc>
 			<argument name="event" type="Event" null="true">
 			</argument>
@@ -165,24 +161,19 @@
 		</event>
 		<event name="spin" type="spin">
 			<desc>
-				Triggered during increment/decrement (to determine direction of spin compare current value with ui.value).
-				<p>Can be cancelled, preventing the provided value to be set, firing <code>stop</code> and, if appropiate, <code>change</code> events.</p>
+				Triggered during increment/decrement (to determine direction of spin compare current value with <code>ui.value</code>).
+				<p>Can be canceled, preventing the value from being updated.</p>
 			</desc>
 			<argument name="event" type="Event" null="true">
 			</argument>
 			<argument name="ui" type="Object">
-				<desc>
-					Extra event data for the spin event
-				</desc>
 				<property name="value" type="Number">
 					<desc>The new value to be set, unless the event is cancelled.</desc>
 				</property>
 			</argument>
 		</event>
 		<event name="stop" type="spinstop">
-			<desc>
-				Triggered after a spin.
-			</desc>
+			<desc>Triggered after a spin.</desc>
 			<argument name="event" type="Event" null="true">
 			</argument>
 			<argument name="ui" type="Object">
@@ -198,5 +189,14 @@
 			</argument>
 		</event>
 	</events>
+	<example>
+		<desc>A simple jQuery UI Spinner</desc>
+		<code><![CDATA[
+$( "#spinner" ).spinner();
+]]></code>
+		<html><![CDATA[
+<input id="spinner">
+]]></html>
+	</example>
 	<category slug="widgets"/>
 </entry>
