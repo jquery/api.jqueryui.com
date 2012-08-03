@@ -130,9 +130,7 @@
 					<ul>
 						<xsl:for-each select="methods/method">
 							<li id="method-{@name}">
-								<h3><xsl:value-of select="@name"/>(
-	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each>
-	     )</h3>
+								<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each> )</h3>
 								<p>
 									<xsl:apply-templates select="desc">
 										<xsl:with-param name="entry-name" select="$entry-name"/>
@@ -152,9 +150,7 @@
 					<ul>
 						<xsl:for-each select="events/event">
 							<li id="event-{@name}">
-								<h3><xsl:value-of select="@name"/>(
-	     <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each>
-	     )</h3>
+								<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each> )</h3>
 								<p>
 									<xsl:copy-of select="desc/node()"/>
 								</p>
@@ -181,10 +177,10 @@
 <xsl:template match="desc">
 	<xsl:param name="entry-name"/>
 	<xsl:copy>
-        <xsl:apply-templates select="node()|@*">
-        	<xsl:with-param name="entry-name" select="$entry-name"/>
-        </xsl:apply-templates>
-    </xsl:copy>
+		<xsl:apply-templates select="node()|@*">
+			<xsl:with-param name="entry-name" select="$entry-name"/>
+		</xsl:apply-templates>
+	</xsl:copy>
 </xsl:template>
 <xsl:template match="placeholder">
 	<xsl:param name="entry-name"/>
