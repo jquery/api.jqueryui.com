@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <method name="option" return="Object">
-    <desc>
-        Return the current option value associated with the specified optionName.
-    </desc>
-    <argument name="optionName" type="String"></argument>
+	<desc>
+		Gets the value currently associated with the specified <code>optionName</code>.
+	</desc>
+	<argument name="optionName" type="String"></argument>
 </method>
