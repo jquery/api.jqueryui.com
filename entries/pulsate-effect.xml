@@ -34,5 +34,20 @@
 			<desc>The number of times the element should pulse.  An extra half pulse is added for hide/show</desc>
 		</option>
 	</options>
+	<example>
+		<desc>Pulsate toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
+		<code><![CDATA[
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "pulsate" } );
+});
+]]></code>
+		<html><![CDATA[
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
+]]></html>
+	</example>
 	<category slug="effects"/>
 </entry>

@@ -35,5 +35,20 @@
 			<desc>If the horizontal direction happens first when hiding. Remember, showing inverts hiding.</desc>
 		</option>
 	</options>
+	<example>
+		<desc>Fold toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
+		<code><![CDATA[
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "fold" } );
+});
+]]></code>
+		<html><![CDATA[
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
+]]></html>
+	</example>
 	<category slug="effects"/>
 </entry>

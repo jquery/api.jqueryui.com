@@ -25,6 +25,11 @@
 	</options>
 	<example>
 		<desc>Clicking on the green element transfers to the other.</desc>
+		<css><![CDATA[
+		div.green { margin: 0px; width: 100px; height: 80px; background: green; border: 1px solid black; position: relative; }
+		div.red { margin-top: 10px; width: 50px; height: 30px; background: red; border: 1px solid black; position: relative; }
+		.ui-effects-transfer { border: 1px dotted black; }
+		]]></css>
 		<code><![CDATA[
 $("div").click(function () {
       var i = 1 - $("div").index(this);
@@ -32,7 +37,8 @@ $("div").click(function () {
 });
 ]]></code>
 		<html><![CDATA[
-<div></div>
+<div class="green"></div>
+<div class="red"></div>
 ]]></html>
 	</example>
 	<category slug="effects"/>

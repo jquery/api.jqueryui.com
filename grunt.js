@@ -1,4 +1,3 @@
-/*jshint node:true */
 module.exports = function( grunt ) {
 
 var entryFiles = grunt.file.expandFiles( "entries/*.xml" );
@@ -14,6 +13,11 @@ grunt.initConfig({
 	lint: {
 		grunt: "grunt.js"
 	},
+	// TODO would be useful, but throws broken exceptions when a change is detected
+	watch: {
+		files: "entries/**",
+		tasks: "grunt deploy"
+	},
 	xmllint: {
 		all: [].concat( entryFiles, "cat2tax.xsl", "categories.xml", "entries2html.xsl", "xml2json.xsl" )
 	},
@@ -24,7 +28,7 @@ grunt.initConfig({
 		all: entryFiles
 	},
 	"build-resources": {
-		all: grunt.file.expandFiles( "resources/*" )
+		all: grunt.file.expandFiles( "resources/**" )
 	},
 	wordpress: grunt.utils._.extend({
 		dir: "dist/wordpress"

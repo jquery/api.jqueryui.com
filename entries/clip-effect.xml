@@ -41,5 +41,20 @@
 			<desc>A callback function, executed when the effect completes</desc>
 		</option>
 	</options>
+	<example>
+		<desc>Clip toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
+		<code><![CDATA[
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "click" } );
+});
+]]></code>
+		<html><![CDATA[
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
+]]></html>
+	</example>
 	<category slug="effects"/>
 </entry>

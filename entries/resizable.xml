@@ -213,9 +213,7 @@
 	<example>
 
 		<desc>A simple jQuery UI Resizable.</desc>
-		<inhead><![CDATA[<style type="text/css">
-    #resizable { width: 100px; height: 100px; background: silver; }
-  </style>]]></inhead>
+		<css><![CDATA[#resizable { width: 100px; height: 100px; background: silver; }]]></css>
 		<code><![CDATA[$("#resizable").resizable();]]></code>
 		<html><![CDATA[
 <div id="resizable"></div>

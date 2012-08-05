@@ -139,23 +139,22 @@
 	<example>
 
 		<desc>A simple jQuery UI Selectable.</desc>
-		<inhead><![CDATA[<style type="text/css">
-#selectable .ui-selecting {
-	background: silver;
-}
-#selectable .ui-selected {
-	background: gray;
-}
-</style>
-]]></inhead>
+		<css><![CDATA[
+	#selectable .ui-selecting {
+		background: silver;
+	}
+	#selectable .ui-selected {
+		background: gray;
+	}
+]]></css>
 		<code><![CDATA[$("#selectable").selectable();]]></code>
 		<html><![CDATA[
 <ul id="selectable">
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-<li>Item 4</li>
-<li>Item 5</li>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+	<li>Item 5</li>
 </ul>
 
 ]]></html>

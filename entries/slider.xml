@@ -145,7 +145,8 @@
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
-		<desc>A simple jQuery UI Slider</desc>
+		<desc>A simple jQuery UI Slider.</desc>
+		<css><![CDATA[#slider { margin: 10px; }]]></css>
 		<code><![CDATA[
 $( "#slider" ).slider();
 ]]></code>

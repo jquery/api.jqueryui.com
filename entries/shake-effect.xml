@@ -23,14 +23,18 @@
 		</option>
 	</options>
 	<example>
-		<desc>Shakes 3 times when clicking on the element.</desc>
+		<desc>Shake toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
 		<code><![CDATA[
-$("div").click(function () {
-      $(this).effect("shake", { times:3 }, 300);
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "shake" } );
 });
 ]]></code>
 		<html><![CDATA[
-<div></div>
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
 ]]></html>
 	</example>
 	<category slug="effects"/>

@@ -27,11 +27,13 @@
 
 				When changing this option, you likely need to also change the items option.</desc>
 			<type name="Function" />
+			<!-- FIXME
 			<example>
 				function(response) {
 				  $.getJSON("tooltipcontent.html", response);
 				}
 			</example>
+			-->
 		</option>
 		<option name="disabled" type="Boolean" default="false">
 			<desc>Disables the tooltip if set to true.</desc>
@@ -40,12 +42,14 @@
 			<desc>How to hide the tooltip.</desc>
 			<type name="Boolean" />
 			<type name="Object" />
+			<!-- FIXME
 			<example>
 				{
 					effect: 'explode',
 					delay: 250
 				}
 			</example>
+			-->
 		</option>
 		<option name="items" default="[title]">
 			<desc>
@@ -54,27 +58,33 @@
 				When changing this option, you likely need to also change the content option.
 			</desc>
 			<type name="Selector" />
+			<!-- FIXME
 			<example>
 				'.tooltipped'
 			</example>
+			-->
 		</option>
 		<option name="position" default="{ my: 'left+15 center', at: 'right center', collision: 'flipfit flipfit' }">
 			<desc>Configuration for the Position  utility. The of property defaults to the target element, but can also be overriden.</desc>
 			<type name="Object" />
+			<!-- FIXME
 			<example>
 				{ my: 'center' }
 			</example>
+			-->
 		</option>
 		<option name="show" default="true">
 			<desc>How to show the tooltip.</desc>
 			<type name="Boolean" />
 			<type name="Object" />
+			<!-- FIXME
 			<example>
 				{
 					effect: 'slideDown',
 					delay: 250
 				}
 			</example>
+			-->
 		</option>
 		<option name="tooltipClass" default="null">
 			<desc>
@@ -82,9 +92,11 @@
 				<p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
 			</desc>
 			<type name="String" />
+			<!-- FIXME
 			<example>
 				'ui-state-highlight'
 			</example>
+			-->
 		</option>
 		<option name="track" type="Boolean" default="false">
 			<desc>
@@ -182,8 +194,8 @@
 	});
 ]]></code>
 		<html><![CDATA[<p>
-	<img src="images/st-stephens.jpg" alt="St. Stephen's Cathedral">
-	<img src="images/tower-bridge.jpg" alt="Tower Bridge">
+	<img src="/resources/images/st-stephens.jpg" alt="St. Stephen's Cathedral">
+	<img src="/resources/images/tower-bridge.jpg" alt="Tower Bridge">
 </p>]]></html>
 	</example>
 	<category slug="widgets"/>

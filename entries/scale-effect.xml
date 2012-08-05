@@ -28,25 +28,33 @@
 		</option>
 	</options>
 	<example>
-		<desc>Scale the element to 0%, with the hide method (center vanishing point).</desc>
+		<desc>Scale toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
 		<code><![CDATA[
-$("div").click(function () {
-    $(this).hide("scale", {}, 1000);
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "scale" } );
 });
 ]]></code>
 		<html><![CDATA[
-<div></div>
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
 ]]></html>
 	</example>
 	<example>
-		<desc>Scale the element to 200%, only horizontal.</desc>
+		<desc>Scale toggle, just one direction</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
 		<code><![CDATA[
-$("div").click(function () {
-      $(this).effect("scale", { percent: 200, direction: 'horizontal' }, 1000);
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "scale", percent: 200, direction: "horizontal" } );
 });
 ]]></code>
 		<html><![CDATA[
-<div></div>
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
 ]]></html>
 	</example>
 	<category slug="effects"/>

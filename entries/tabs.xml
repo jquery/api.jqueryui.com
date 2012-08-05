@@ -47,23 +47,27 @@
 			<desc>How to hide a panel.</desc>
 			<type name="Boolean" />
 			<type name="Object" />
+			<!-- FIXME
 			<example>
 				{
 					effect: 'explode',
 					delay: 250
 				}
 			</example>
+			-->
 		</option>
 		<option name="show" default="true">
 			<desc>How to show a panel.</desc>
 			<type name="Boolean" />
 			<type name="Object" />
+			<!-- FIXME
 			<example>
 				{
 					effect: 'slideDown',
 					delay: 250
 				}
 			</example>
+			-->
 		</option>
 	</options>
 	<events>
@@ -277,7 +281,7 @@
     </ul>
     <div id="fragment-1">
         <p>First tab is active by default:</p>
-        <pre><code>$('#example').tabs();</code></pre
+        <pre><code>$('#example').tabs();</code></pre>
     </div>
     <div id="fragment-2">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.

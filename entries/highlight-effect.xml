@@ -32,5 +32,20 @@
 			<desc>The background color used during the animation</desc>
 		</option>
 	</options>
+	<example>
+		<desc>Highlight toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
+		<code><![CDATA[
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "highlight" } );
+});
+]]></code>
+		<html><![CDATA[
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
+]]></html>
+	</example>
 	<category slug="effects"/>
 </entry>

@@ -24,6 +24,7 @@
 	</options>
 	<example>
 		<desc>Size an element to 200 x 60.</desc>
+		<css>div { margin: 0px; width: 100px; height: 80px; background: green; border: 1px solid black; position: relative; }</css>
 		<code><![CDATA[
 $("div").click(function () {
       $(this).effect("size", { to: {width: 200,height: 60} }, 1000);

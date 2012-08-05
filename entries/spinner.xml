@@ -190,7 +190,7 @@
 		</event>
 	</events>
 	<example>
-		<desc>A simple jQuery UI Spinner</desc>
+		<desc>Plain number spinner</desc>
 		<code><![CDATA[
 $( "#spinner" ).spinner();
 ]]></code>

@@ -168,18 +168,20 @@ ui.draggable represents the draggable.</desc>
 	</methods>
 	<example>
 		<desc>Makes the div droppable (a drop target for a draggable).</desc>
-		<inhead><![CDATA[<style type="text/css">
-    #draggable { width: 75px; height: 25px; background: silver; padding: 10px; }
-    #droppable { position: absolute; left: 250px; top: 0; width: 125px; height: 75px; background: gray; color: white; padding: 10px; }
-  </style>]]></inhead>
-		<code><![CDATA[$("#draggable").draggable();
-    $("#droppable").droppable({
-      drop: function() { alert('dropped'); }
-    });]]></code>
+		<css><![CDATA[
+	#draggable { width: 100px; height: 70px; background: silver; }
+	#droppable { position: absolute; left: 250px; top: 0; width: 125px; height: 75px; background: gray; color: white; padding: 10px; }
+]]></css>
+		<code><![CDATA[
+$( "#draggable" ).draggable();
+$( "#droppable" ).droppable({
+	drop: function() {
+		alert( "dropped" );
+	}
+});]]></code>
 		<html><![CDATA[
 <div id="droppable">Drop here</div>
 <div id="draggable">Drag me</div>
-
 ]]></html>
 
 	</example>

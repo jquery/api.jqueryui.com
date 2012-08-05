@@ -521,20 +521,17 @@ then <code>result[0]</code> will contain "hello" and <code>result[1]</code> will
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<example>
-
 		<desc>A simple jQuery UI Sortable.</desc>
 		<code><![CDATA[$("#sortable").sortable();]]></code>
 		<html><![CDATA[
 <ul id="sortable">
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-<li>Item 4</li>
-<li>Item 5</li>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+	<li>Item 5</li>
 </ul>
-
 ]]></html>
-
 	</example>
 	<category slug="interactions"/>
 </entry>

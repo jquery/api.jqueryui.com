@@ -183,6 +183,7 @@ $( "#autocomplete" ).autocomplete({
 });
 ]]></code>
 		<html><![CDATA[
+<label for="autocomplete">Select a programming language: </label>
 <input id="autocomplete">
 ]]></html>
 	</example>

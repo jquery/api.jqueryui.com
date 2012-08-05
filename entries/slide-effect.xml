@@ -23,14 +23,18 @@
 		</option>
 	</options>
 	<example>
-		<desc>Hides the element by sliding it down.</desc>
+		<desc>Slide toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
 		<code><![CDATA[
-$("div").click(function () {
-      $(this).hide("slide", { direction: "down" }, 1000);
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "slide", direction: "up" } );
 });
 ]]></code>
 		<html><![CDATA[
-<div></div>
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
 ]]></html>
 	</example>
 	<category slug="effects"/>

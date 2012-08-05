@@ -32,5 +32,20 @@
 			<desc>The number of pieces to explode, should be a perfect square, any other values are rounded to the nearest square.</desc>
 		</option>
 	</options>
+	<example>
+		<desc>Explode toggle</desc>
+		<css><![CDATA[
+	#toggle { width: 100px; height: 70px; background: silver; }
+]]></css>
+		<code><![CDATA[
+$( document ).click(function() {
+	$( "#toggle" ).toggle( { effect: "explode" } );
+});
+]]></code>
+		<html><![CDATA[
+Click anywhere to toggle the silver box.
+<div id="toggle"></div>
+]]></html>
+	</example>
 	<category slug="effects"/>
 </entry>
