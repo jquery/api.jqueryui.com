@@ -176,15 +176,16 @@
 
 <xsl:template match="desc">
 	<xsl:param name="entry-name"/>
-	<xsl:copy>
-		<xsl:apply-templates select="node()|@*">
-			<xsl:with-param name="entry-name" select="$entry-name"/>
-		</xsl:apply-templates>
-	</xsl:copy>
+	<xsl:apply-templates select="./node()">
+		<xsl:with-param name="entry-name" select="$entry-name"/>
+	</xsl:apply-templates>
 </xsl:template>
 <xsl:template match="placeholder">
 	<xsl:param name="entry-name"/>
 	<xsl:value-of select="$entry-name"/>
+</xsl:template>
+<xsl:template match="code">
+	<xsl:copy-of select="."/>
 </xsl:template>
 
 <!-- arguments -->
@@ -205,7 +206,7 @@
 		<xsl:if test="not(@null)">
 			<xsl:if test="desc">
 				<xsl:text>, </xsl:text>
-				<xsl:value-of select="desc"/>
+				<xsl:copy-of select="desc/node()"/>
 			</xsl:if>
 			<ul>
 				<xsl:apply-templates select="property"/>
@@ -221,7 +222,7 @@
 		<xsl:call-template name="render-types" />
 		<xsl:if test="desc">
 			<xsl:text>, </xsl:text>
-			<xsl:copy-of select="desc"/>
+			<xsl:copy-of select="desc/node()"/>
 		</xsl:if>
 	</li>
 </xsl:template>
