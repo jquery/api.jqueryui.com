@@ -14,10 +14,7 @@
 	</longdesc>
 	<created>1.6</created>
 	<options>
-		<option name="disabled" default="false">
-			<desc>Disables the progressbar if set to <code>true</code>.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="value" default="0">
 			<desc>The value of the progressbar.</desc>
 			<type name="Number" />

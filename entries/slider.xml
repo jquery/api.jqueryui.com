@@ -17,10 +17,7 @@
 			<type name="String" />
 			<type name="Number" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the slider if set to <code>true</code>.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="max" default="100">
 			<desc>The maximum value of the slider.</desc>
 			<type name="Number" />

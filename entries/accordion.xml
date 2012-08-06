@@ -54,10 +54,7 @@
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the accordion if set to <code>true</code>.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="event" default='"click"'>
 			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specificed, separated by a space.</desc>
 			<type name="String" />

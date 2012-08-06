@@ -51,10 +51,7 @@
 			<desc>Tolerance, in milliseconds, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond duration. This can help prevent unintended resizing when clicking on an element.</desc>
 			<type name="Number" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the resizable if set to true.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="distance" default='1'>
 			<desc>Tolerance, in pixels, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond distance. This can help prevent unintended resizing when clicking on an element.</desc>
 			<type name="Number" />

@@ -16,9 +16,7 @@
 				Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
 			<type name="String" />
 		</option>
-		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the spinner if set to <code>true</code>.</desc>
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="icons" type="Object" default='{ down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }'>
 			<desc>
 				Icons to use for buttons, matching an icon defined by the jQuery UI CSS Framework.

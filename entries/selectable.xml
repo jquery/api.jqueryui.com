@@ -21,10 +21,7 @@
 			<desc>Time in milliseconds to define when the selecting should start. It helps preventing unwanted selections when clicking on an element.</desc>
 			<type name="Number" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the selectable if set to true.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="distance" default='0'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until after mouse is dragged beyond distance.</desc>
 			<type name="Number" />

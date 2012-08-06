@@ -37,10 +37,7 @@
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
 			<type name="String" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the dialog if set to <code>true</code>.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="draggable" default="true">
 			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable">jQuery UI Draggable wiget</a> to be included.</desc>
 			<type name="Boolean" />

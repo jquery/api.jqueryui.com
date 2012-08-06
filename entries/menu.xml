@@ -33,9 +33,7 @@
 	</longdesc>
 	<created>1.9</created>
 	<options>
-		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the menu if set to <code>true</code>.</desc>
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="icons" type="Object" default='{ submenu: "ui-icon-carat-1-e" }'>
 			<desc>
 				Icons to use for submenus, matching an icon defined by the jQuery UI CSS Framework.

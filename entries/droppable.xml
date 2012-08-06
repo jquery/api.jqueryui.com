@@ -20,10 +20,7 @@
 			<desc>If set to false, will prevent the ui-droppable class from being added. This may be desired as a performance optimization when calling .droppable() init on many hundreds of elements.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the droppable if set to true.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="greedy" default='false'>
 			<desc>If true, will prevent event propagation on nested droppables.</desc>
 			<type name="Boolean" />

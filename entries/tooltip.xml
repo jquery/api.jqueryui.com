@@ -35,9 +35,7 @@
 			</example>
 			-->
 		</option>
-		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the tooltip if set to true.</desc>
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="hide" default="true">
 			<desc>How to hide the tooltip.</desc>
 			<type name="Boolean" />

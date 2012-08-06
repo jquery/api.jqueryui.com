@@ -47,10 +47,7 @@
 			<desc>Time in milliseconds after mousedown until dragging should start. This option can be used to prevent unwanted drags when clicking on an element.</desc>
 			<type name="Number" />
 		</option>
-		<option name="disabled" default="false">
-			<desc>Disables the draggable if set to <code>true</code>.</desc>
-			<type name="Boolean" />
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="distance" default="1">
 			<desc>Distance in pixels after mousedown the mouse must move before dragging should start. This option can be used to prevent unwanted drags when clicking on an element.</desc>
 			<type name="Number" />
