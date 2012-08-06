@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="widget" namespace="fn" widgetnamespace="ui">
-	<desc>Create stateful jQuery plugins using the same abstraction that all jQuery UI widgets.</desc>
+	<desc>Create stateful jQuery plugins using the same abstraction as all jQuery UI widgets.</desc>
 	<longdesc>
-		<p>You can create new widgets from scratch, using just the <code>$.Widget</code> object as base to inherit from, or you can explicitly inherit from existing jQuery UI or third-party widgets. Defining a widget with the same name as you inherit from even allows you to extend widgets in place.</p>
+		<p>You can create new widgets from scratch, using just the <code>$.Widget</code> object as a base to inherit from, or you can explicitly inherit from existing jQuery UI or third-party widgets. Defining a widget with the same name as you inherit from even allows you to extend widgets in place.</p>
 
-		<p>For now, more details can be found at <a href="https://github.com/scottgonzalez/widget-factory-docs/">github.com/scottgonzalez/widget-factory-docs/</a></p>
+		<p>For now, more details can be found at <a href="https://github.com/scottgonzalez/widget-factory-docs/">github.com/scottgonzalez/widget-factory-docs/</a>.</p>
 	</longdesc>
 	<signature returns="jQuery">
-		<desc>Initialize the widget.</desc>
+		<desc>Initializes the widget.</desc>
 		<argument name="options" type="Options" optional="true">
-			<desc>A map of options to override defaults on initialization.</desc>
+			<desc>A map of options to override defaults on initialization. Multiple objects may be passed, and each will override the previous, just like <a href="//api.jquery.com/jQuery.extend"><code>jQuery.extend</code></a>.</desc>
 		</argument>
 	</signature>
 	<signature>
-		<desc>Call a widget method after initialization.</desc>
+		<desc>Calls a widget method after initialization.</desc>
 		<argument name="method" type="Methods">
 			<desc>The name of the method to call.</desc>
 		</argument>
@@ -23,9 +23,7 @@
 		</argument>
 	</signature>
 	<options>
-		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables the widget if set to true.</desc>
-		</option>
+		<widget-inherit id="widget-disabled" />
 		<option name="hide" default="true">
 			<desc>How to hide the tooltip.</desc>
 			<type name="Boolean" />
@@ -51,7 +49,7 @@
 	</options>
 	<methods>
 		<method name="_create">
-			<desc>This is the widget's constructor.</desc>
+			<desc>The <code>_create</code> method is the widget's constructor.</desc>
 		</method>
 		<method name="_init">
 			<desc>
@@ -60,18 +58,18 @@
 			</desc>
 		</method>
 		<method name="_destroy">
-			<desc>The <code>destroy()</code> method cleans up all common data, events, etc. and then delegates out to <code>_destroy()</code> for custom cleanup. </desc>
+			<desc>The public <a href="#method-destroy"><code>destroy</code></a> method cleans up all common data, events, etc. and then delegates out to <code>_destroy</code> for custom, widget-specific, cleanup.</desc>
 		</method>
 		<method name="_setOptions">
 			<desc>
-				Called with a hash of key/value pairs to set whenever the <code>option()</code> method is called, regardless of the form in which option() was called.
+				Called with a hash of key/value pairs to set whenever the <a href="#method-option"><code>option</code></a> method is called, regardless of the form in which the <code>option</code> method was called.
 				<p>Overriding this is useful if you can defer processor-intensive changes for multiple option changes.</p>
 			</desc>
 			<argument name="options" type="Object"></argument>
 		</method>
 		<method name="_setOption">
 			<desc>
-				Called from <code>_setOptions()</code> for each individual option.
+				Called from the <a href="#method-_setOptions"><code>_setOptions</code></a> method for each individual option.
 				<p>Widget state should be updated based on changes.</p>
 			</desc>
 			<argument name="key" type="String"></argument>
@@ -90,26 +88,30 @@
 		</method>
 		<method name="_off">
 			<desc>
-				Unbinds events from the specified element (required, unlike <code>_on</code>).
-				<p><code>eventName</code> is a string of one or more space-separated events to remove. The widget's event namespace is appended to each when removing events. </p>
+				Unbinds events from the specified element (required, unlike <a href="#method-_on"><code>_on</code></a>).
+				<p><code>eventName</code> is a string of one or more space-separated events to remove. The widget's event namespace is appended to each when removing events.</p>
 			</desc>
 			<argument name="element" type="jQuery"></argument>
 			<argument name="eventName" type="String"></argument>
 		</method>
 		<method name="_super">
-			<desc>Invoke the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.</desc>
+			<desc>Invokes the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.</desc>
 		</method>
 		<method name="_superApply">
-			<desc>Invoke the method of the same name from the parent widget, with the array of arguments. Essentially <code>.apply()</code>.</desc>
+			<desc>Invokes the method of the same name from the parent widget, with the array of arguments. Essentially <code>.apply()</code>.</desc>
 			<argument name="arguments" type="Object"></argument>
 		</method>
 		<method name="_delay" return="Number">
 			<desc>
-				Invoke fn after delay milliseconds. Keeps `this` context correct. Essentially <code>setTimeout()</code>.
+				Invokes the provided function after a specified delay. Keeps <code>this</code> context correct. Essentially <code>setTimeout()</code>.
 				<p>Returns the timeout ID for use with <code>clearTimeout()</code>.</p>
 			</desc>
-			<argument name="fn" type="Function"></argument>
-			<argument name="delay" type="Number"></argument>
+			<argument name="fn" type="Function String">
+				<desc>The function to invoke, can also be the name of a method on the widget.</desc>
+			</argument>
+			<argument name="delay" type="Number" optional="true">
+				<desc>The number of milliseconds to wait before invoking the function. Deafults to <code>0</code>.</desc>
+			</argument>
 		</method>
 		<method name="_hoverable">
 			<desc>
@@ -120,7 +122,7 @@
 		</method>
 		<method name="_focusable">
 			<desc>
-				Sets up <code>element</code> to apply the <code>ui-state-focus</code> class on hover.
+				Sets up <code>element</code> to apply the <code>ui-state-focus</code> class on focus.
 				<p>The event handlers are automatically cleaned up on destroy.</p>
 			</desc>
 			<argument name="element" type="jQuery"></argument>
@@ -131,12 +133,14 @@
 				<p>The option with the name equal to type is invoked as the callback.</p>
 				<p>The event name is the widget name + type.</p>
 			</desc>
-			<argument name="type" type="String" />
+			<argument name="type" type="String">
+				<desc>The <code>type</code> should match the name of a callback option. The full event type will be generated automatically.</desc>
+			</argument>
 			<argument name="event" type="Event" optional="true">
-				<desc>The original event that caused this event to occur; useful for providing context to the listener</desc>
+				<desc>The original event that caused this event to occur; useful for providing context to the listener.</desc>
 			</argument>
 			<argument name="data" type="Object" optional="true">
-				<desc>A hash of data associated with the event</desc>
+				<desc>A hash of data associated with the event.</desc>
 			</argument>
 		</method>
 		<method name="_show">
