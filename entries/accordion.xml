@@ -73,7 +73,7 @@
 				<ul>
 					<li><code>"auto"</code>: All panels will be set to the height of the tallest panel.</li>
 					<li><code>"fill"</code>: Expand to the available height based on the accordion's parent height.</li>
-					<li><code>"content"</code>: each panel will be only as tall as its content.</li>
+					<li><code>"content"</code>: Each panel will be only as tall as its content.</li>
 				</ul>
 			</desc>
 			<type name="String" />
@@ -91,36 +91,54 @@
 	</options>
 	<events>
 		<event name="activate" type="accordionactivate">
-			<desc>Triggered after a panel has been activated (after animation completes).</desc>
+			<desc>Triggered after a panel has been activated (after animation completes). If the accordion was previously collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
-				<property name="newHeader"></property>
-				<property name="oldHeader"></property>
-				<property name="newPanel"></property>
-				<property name="oldPanel"></property>
+				<property name="newHeader" type="jQuery">
+					<desc>The header that was just activated.</desc>
+				</property>
+				<property name="oldHeader" type="jQuery">
+					<desc>The header that was just deactivated.</desc>
+				</property>
+				<property name="newPanel" type="jQuery">
+					<desc>The panel that was just activated.</desc>
+				</property>
+				<property name="oldPanel" type="jQuery">
+					<desc>The panel that was just deactivated.</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="beforeActivate" type="accordionbeforeactivate">
-			<desc>Triggered directly after a panel is activated. Can be cancelled to prevent the panel from activating.</desc>
+			<desc>Triggered directly after a panel is activated. Can be canceled to prevent the panel from activating.If the accordion is currently collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
-				<property name="newHeader"></property>
-				<property name="oldHeader"></property>
-				<property name="newPanel"></property>
-				<property name="oldPanel"></property>
+				<property name="newHeader" type="jQuery">
+					<desc>The header that is about to be activated.</desc>
+				</property>
+				<property name="oldHeader" type="jQuery">
+					<desc>The header that is about to be deactivated.</desc>
+				</property>
+				<property name="newPanel" type="jQuery">
+					<desc>The panel that is about to be activated.</desc>
+				</property>
+				<property name="oldPanel" type="jQuery">
+					<desc>The panel that is about to be deactivated.</desc>
+				</property>
 			</argument>
 		</event>
 		<event name="create">
-			<desc>
-				Triggered when the accordion is created.
-			</desc>
+			<desc>Triggered when the accordion is created. If the accordion is collapsed, <code>ui.header</code> and <code>ui.panel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
-				<property name="header"></property>
-				<property name="panel"></property>
+				<property name="header" type="jQuery">
+					<desc>The active header.</desc>
+				</property>
+				<property name="panel" type="jQuery">
+					<desc>The active panel.</desc>
+				</property>
 			</argument>
 		</event>
 	</events>
@@ -158,8 +176,7 @@ $( "#accordion" ).accordion();
 		<p>
 		Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
 		purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-		velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-		suscipit faucibus urna.
+		velit, faucibus interdum tellus libero ac justo.
 		</p>
 	</div>
 	<h3>Section 3</h3>
@@ -175,20 +192,6 @@ $( "#accordion" ).accordion();
 			<li>List item two</li>
 			<li>List item three</li>
 		</ul>
-	</div>
-	<h3>Section 4</h3>
-	<div>
-		<p>
-		Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-		et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-		faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-		mauris vel est.
-		</p>
-		<p>
-		Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-		Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-		inceptos himenaeos.
-		</p>
 	</div>
 </div>
 ]]></html>
