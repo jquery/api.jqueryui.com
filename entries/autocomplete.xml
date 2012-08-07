@@ -11,7 +11,7 @@
 
 		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
-	<created>1.8</created>
+	<added>1.8</added>
 	<options>
 		<option name="appendTo" type="Selector" default='"body"'>
 			<desc>Which element the menu should be appended to. Override this when the autocomplete is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>

@@ -8,6 +8,7 @@
 		<p>This is a standalone jQuery plugin and has no dependencies on other jQuery UI components.</p>
 		<p>This plugin extends jQuery's built-in <a href="//api.jquery.com/position">position</a> getter method. If you forget to include this plugin, code calling <code>.position()</code> won't fail directly, as the method still exists, but it'll just retrieve the position instead of setting it.</p>
 	</longdesc>
+	<added>1.8</added>
 	<signature>
 		<argument name="options" type="Options"></argument>
 	</signature>

@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>The jQuery UI Droppable plugin makes selected elements droppable (meaning they accept being dropped on by draggables). You can specify which (individually) or which kind of draggables each will accept.</p>
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="accept" default='"*"'>
 			<desc>All draggables that match the selector will be accepted. If a function is specified, the function will be called for each draggable on the page (passed as the first argument to the function), to provide a custom filter. The function should return true if the draggable should be accepted.</desc>

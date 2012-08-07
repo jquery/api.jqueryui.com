@@ -12,7 +12,7 @@
 
 		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
-	<created>1.6</created>
+	<added>1.6</added>
 	<options>
 		<widget-inherit id="widget-disabled" />
 		<option name="value" default="0">

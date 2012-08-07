@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>Make the selected elements draggable by mouse. If you want not just drag, but drag-and-drop, see the <a href="/droppable">jQuery UI Droppable plugin</a>, which provides a drop target for draggables.</p>
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="addClasses" default="true">
 			<desc>If set to <code>false</code>, will prevent the <code>ui-draggable</code> class from being added. This may be desired as a performance optimization when calling <code>.draggable()</code> on hundreds of elements.</desc>

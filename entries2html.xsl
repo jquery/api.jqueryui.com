@@ -17,6 +17,9 @@
 	<xsl:for-each select="//entry">
 		<xsl:variable name="number-general-examples" select="count(example)"/>
 		<xsl:variable name="entry-name" select="@name"/>
+		<xsl:if test="./added">
+			<span class="versionAdded">version added: <xsl:value-of select="added" /></span>
+		</xsl:if>
 		<article>
 			<xsl:copy-of select="desc/node()"/>
 			<nav>
