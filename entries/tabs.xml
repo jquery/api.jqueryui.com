@@ -75,7 +75,7 @@
 			</argument>
 		</event>
 		<event name="beforeActivate" type="accordionbeforeactivate">
-			<desc>Triggered directly after a tab is activated. Can be canceled to prevent the tab from activating.If the tabs are currently collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
+			<desc>Triggered directly after a tab is activated. Can be canceled to prevent the tab from activating. If the tabs are currently collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
