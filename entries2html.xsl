@@ -104,9 +104,9 @@
 									<strong>Default: </strong>
 									<xsl:value-of select="@default"/>
 								</p>
-								<p>
+								<div>
 									<xsl:copy-of select="desc/node()"/>
-								</p>
+								</div>
 								<xsl:if test="type/desc">
 									Multiple types supported:
 									<ul>
@@ -134,11 +134,11 @@
 						<xsl:for-each select="methods/method">
 							<li id="method-{@name}">
 								<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each> )</h3>
-								<p>
+								<div>
 									<xsl:apply-templates select="desc">
 										<xsl:with-param name="entry-name" select="$entry-name"/>
 									</xsl:apply-templates>
-								</p>
+								</div>
 								<xsl:call-template name="arguments"/>
 							</li>
 						</xsl:for-each>
@@ -154,11 +154,11 @@
 						<xsl:for-each select="events/event">
 							<li id="event-{@name}">
 								<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each> )</h3>
-								<p>
+								<div>
 									<xsl:apply-templates select="desc">
 										<xsl:with-param name="entry-name" select="$entry-name"/>
 									</xsl:apply-templates>
-								</p>
+								</div>
 								<xsl:call-template name="arguments"/>
 							</li>
 						</xsl:for-each>
