@@ -186,7 +186,9 @@
 	<xsl:param name="entry-name"/>
 	<xsl:value-of select="$entry-name"/>
 </xsl:template>
-<xsl:template match="code">
+<!-- This makes elements inside <desc> get copied over properly.
+There's probably a better way to do this. -->
+<xsl:template match="*">
 	<xsl:copy-of select="."/>
 </xsl:template>
 
