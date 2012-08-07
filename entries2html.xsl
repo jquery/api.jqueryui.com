@@ -182,14 +182,14 @@
 		<xsl:with-param name="entry-name" select="$entry-name"/>
 	</xsl:apply-templates>
 </xsl:template>
+<!-- This makes elements inside <desc> get copied over properly.
+There's probably a better way to do this. -->
+<xsl:template match="desc/*">
+	<xsl:copy-of select="."/>
+</xsl:template>
 <xsl:template match="placeholder">
 	<xsl:param name="entry-name"/>
 	<xsl:value-of select="$entry-name"/>
-</xsl:template>
-<!-- This makes elements inside <desc> get copied over properly.
-There's probably a better way to do this. -->
-<xsl:template match="*">
-	<xsl:copy-of select="."/>
 </xsl:template>
 
 <!-- arguments -->
