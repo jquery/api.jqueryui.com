@@ -129,15 +129,7 @@
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the tooltip is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="open" type="tooltipopen">
 			<desc>
 				Triggered when a tooltip is shown, triggered on focusin or mouseover.

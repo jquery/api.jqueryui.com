@@ -71,15 +71,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the tabs widget is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="beforeActivate" type="tabsselect">
 			<desc>Triggered directly after a tab is activated. Can be cancelled to prevent the tab from activating.</desc>
 			<argument name="event" type="Event">

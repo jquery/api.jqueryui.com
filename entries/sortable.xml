@@ -122,15 +122,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the sortable is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="start" type="sortstart">
 			<desc>This event is triggered when sorting starts.</desc>
 			<argument name="event" type="Event">

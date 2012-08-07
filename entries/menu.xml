@@ -177,15 +177,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="create">
-			<desc>
-				Triggered when the menu is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="focus" type="menufocus">
 			<desc>
 				Triggered when a menu gains focus or when any menu item is activated.

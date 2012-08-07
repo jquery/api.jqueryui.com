@@ -30,15 +30,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				Triggered when the button is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 	</events>
 	<methods>
 		<widget-inherit id="widget-destroy" />

@@ -48,15 +48,7 @@
 
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the droppable is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="activate" type="dropactivate">
 			<desc>This event is triggered any time an accepted draggable starts dragging. This can be useful if you want to make the droppable 'light up' when it can be dropped on.</desc>
 			<argument name="event" type="Event">

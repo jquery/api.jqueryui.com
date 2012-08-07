@@ -141,13 +141,7 @@
 		<widget-inherit id="widget-widget" />
 	</methods>
 	<events>
-		<event name="create">
-			<desc>Triggered when the spinner is created.</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="start" type="spinstart">
 			<desc>
 				Triggered before a spin. Can be canceled, preventing the spin from occurring.

@@ -28,13 +28,7 @@
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
-		<event name="create">
-			<desc>Triggered when the progressbar is created.</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="complete" type="progressbarcomplete">
 			<desc>Triggered when the value of the progressbar reaches the maximum value.</desc>
 			<argument name="event" type="Event">

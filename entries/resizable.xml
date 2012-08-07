@@ -96,15 +96,7 @@
 
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the resizable is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="start" type="resizestart">
 			<desc>This event is triggered at the start of a resize operation.</desc>
 			<argument name="event" type="Event">

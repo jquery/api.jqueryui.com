@@ -84,15 +84,7 @@
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="create">
-			<desc>
-				Triggered when the autocomplete is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="focus" type="autocompletefocus">
 			<desc>
 				Triggered when focus is moved to an item (not selecting). The default action is to replace the text field's value with the value of the focused item, though only if the event was triggered by a keyboard interaction.

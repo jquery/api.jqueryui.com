@@ -43,15 +43,7 @@
 
 	</options>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the selectable is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="selected" type="selectableselected">
 			<desc>This event is triggered at the end of the select operation, on each element added to the selection.</desc>
 			<argument name="event" type="Event">

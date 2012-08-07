@@ -161,15 +161,7 @@
 		</method>
 	</methods>
 	<events>
-		<event name="create">
-			<desc>
-				This event is triggered when the <entryname/> is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 	</events>
 	<category slug="utilities"/>
 </entry>

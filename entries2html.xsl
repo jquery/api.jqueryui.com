@@ -152,7 +152,9 @@
 							<li id="event-{@name}">
 								<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each> )</h3>
 								<p>
-									<xsl:copy-of select="desc/node()"/>
+									<xsl:apply-templates select="desc">
+										<xsl:with-param name="entry-name" select="$entry-name"/>
+									</xsl:apply-templates>
 								</p>
 								<xsl:call-template name="arguments"/>
 							</li>

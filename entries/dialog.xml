@@ -111,15 +111,7 @@
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="create">
-			<desc>
-				Triggered when the dialog is created.
-			</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<widget-inherit id="widget-create" />
 		<event name="open" type="dialogopen">
 			<desc>Triggered when the dialog is opened.</desc>
 			<argument name="event" type="Event">
