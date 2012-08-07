@@ -28,7 +28,7 @@
 			<type name="Boolean" />
 			<type name="Array" />
 		</option>
-		<option name="event" type="String" default='"click"'>
+		<option name="event" default='"click"'>
 			<desc>The type of event that the tabs should react to in order to activate the tab. To activate on hover, use <code>"mouseover"</code>.</desc>
 			<type name="String" />
 		</option>
