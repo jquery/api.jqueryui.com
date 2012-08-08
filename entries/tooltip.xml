@@ -25,13 +25,6 @@
 
 				When changing this option, you likely need to also change the <a href="#option-items"><code>items</code></a> option.</desc>
 			<type name="Function" />
-			<!-- FIXME
-			<example>
-				function(response) {
-				  $.getJSON("tooltipcontent.html", response);
-				}
-			</example>
-			-->
 		</option>
 		<widget-inherit id="widget-disabled" />
 		<option name="hide" default="true">
