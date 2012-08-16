@@ -252,8 +252,8 @@ There's probably a better way to do this. -->
 <xsl:template name="example-code"></xsl:template>
 
 <!--
-	Render type(s) for a parameter or argument element.
-	Type can either by a @type attribute or one or more <type> child elements.
+	Render type(s) for an argument element.
+	Type can either be a @type attribute or one or more <type> child elements.
 -->
 <xsl:template name="render-types">
 	<xsl:if test="@type and type">
@@ -312,14 +312,15 @@ There's probably a better way to do this. -->
 		- the return element is optional
 	-->
 	<xsl:when test="$typename = 'Function'">
-		<text>Function(</text>
-			<xsl:for-each select="argument">
-				<xsl:if test="position() &gt; 1">, </xsl:if>
-				<xsl:value-of select="@name" />
-				<xsl:text>: </xsl:text>
-				<xsl:call-template name="render-types" />
-			</xsl:for-each>
-		<text>)</text>
+		<xsl:text>Function(</xsl:text>
+		<xsl:for-each select="argument">
+			<xsl:if test="position() &gt; 1">, </xsl:if>
+			<xsl:value-of select="@name" />
+			<xsl:text>: </xsl:text>
+			<xsl:call-template name="render-types" />
+		</xsl:for-each>
+		<xsl:text>)</xsl:text>
+
 		<!-- display return type if present -->
 		<xsl:if test="return or @return">
 			=>
