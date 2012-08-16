@@ -236,33 +236,17 @@ There's probably a better way to do this. -->
 
 <!-- examples -->
 <xsl:template match="example">
-	<xsl:param name="number-examples" />
+	<xsl:param name="number-examples"/>
 	<h4>
 		<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
-		<span class="desc">
-			<xsl:value-of select="desc"/>
-		</span>
+		<span class="desc"><xsl:value-of select="desc"/></span>
 	</h4>
 	<pre>
-		<xsl:call-template name="example-code">
-			<xsl:with-param name="name" select="//entry/@name"/>
-			<xsl:with-param name="css" select="css/text()"/>
-			<xsl:with-param name="html" select="html/text()"/>
-			<xsl:with-param name="code" select="code/text()"/>
-		</xsl:call-template>
+		<xsl:call-template name="example-code"/>
 	</pre>
 	<xsl:if test="html">
 		<h4>Demo:</h4>
-		<div>
-			<xsl:choose>
-				<xsl:when test="html">
-					<xsl:attribute name="class">demo code-demo</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="class">demo</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+		<div class="demo code-demo"></div>
 	</xsl:if>
 </xsl:template>
 <xsl:template name="example-code"></xsl:template>
