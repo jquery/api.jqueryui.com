@@ -4,7 +4,6 @@
 <xsl:output method="html" omit-xml-declaration="yes"/>
 
 <xsl:template name="example-code">
-	<code data-linenum="true">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -21,7 +20,6 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code>
 </xsl:template>
 
 </xsl:stylesheet>

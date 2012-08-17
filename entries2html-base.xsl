@@ -15,13 +15,29 @@
 	}
 </script>
 	<xsl:for-each select="//entry">
-		<xsl:variable name="number-general-examples" select="count(example)"/>
 		<xsl:variable name="entry-name" select="@name"/>
+		<xsl:variable name="entry-name-trans" select="translate($entry-name,'$., ()/{}','s---')"/>
+		<xsl:variable name="entry-type" select="@type"/>
+		<xsl:variable name="entry-index" select="position()"/>
+		<xsl:variable name="entry-pos" select="concat($entry-name-trans,$entry-index)"/>
+		<xsl:variable name="number-examples" select="count(example)"/>
+
 		<xsl:if test="./added">
-			<span class="versionAdded">version added: <xsl:value-of select="added" /></span>
+			<span class="versionAdded">version added: <xsl:value-of select="added"/></span>
 		</xsl:if>
+
 		<article>
+			<xsl:attribute name="id">
+				<xsl:value-of select="$entry-pos"/>
+			</xsl:attribute>
+			<xsl:attribute name="class">
+				<xsl:value-of select="concat('entry ', $entry-type)"/>
+			</xsl:attribute>
+
+			<xsl:call-template name="entry-title"/>
+
 			<xsl:copy-of select="desc/node()"/>
+
 			<nav>
 				<ul>
 					<xsl:if test="longdesc">
@@ -166,17 +182,91 @@
 				</section>
 			</xsl:if>
 			<xsl:if test="example">
-				<section id="examples">
+				<section class="entry-examples">
+					<xsl:attribute name="id">
+						<xsl:text>entry-examples</xsl:text>
+						<xsl:if test="$entry-index &gt; 1">
+							<xsl:text>-</xsl:text><xsl:value-of select="$entry-index - 1"/>
+						</xsl:if>
+					</xsl:attribute>
+
 					<header>
-						<h2 class="underline">Example<xsl:if test="$number-general-examples &gt; 1">s</xsl:if></h2>
+						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if></h2>
 					</header>
+
 					<xsl:apply-templates select="example">
-						<xsl:with-param name="number-examples" select="$number-general-examples" />
+						<xsl:with-param name="entry-index" select="$entry-index"/>
+						<xsl:with-param name="number-examples" select="$number-examples"/>
 					</xsl:apply-templates>
 				</section>
 			</xsl:if>
 		</article>
 	</xsl:for-each>
+</xsl:template>
+
+<xsl:template name="entry-title">
+	<xsl:param name="entry-type" select="@type"/>
+	<xsl:param name="entry-name" select="@name"/>
+
+	<h2 class="section-title">
+		<xsl:choose>
+			<xsl:when test="$entry-type='method'">
+				<span class="name">
+					<xsl:if test="not(contains($entry-name, '.')) and not(contains($entry-name, '{')) and $entry-name != 'jQuery'">.</xsl:if>
+					<xsl:value-of select="@name"/>
+					<xsl:text>(</xsl:text>
+					<xsl:if test="signature/argument"><xsl:text> </xsl:text>
+						<xsl:variable name="sig-arg-num" select="count(signature[1]/argument)"/>
+						<xsl:for-each select="signature[1]/argument">
+							<xsl:if test="@optional"> [</xsl:if>
+							<xsl:if test="position() &gt; 1">
+								<xsl:text>, </xsl:text>
+							</xsl:if>
+							<xsl:value-of select="@name"/>
+							<xsl:if test="@optional">] </xsl:if>
+						</xsl:for-each>
+						<xsl:text> </xsl:text>
+					</xsl:if>
+					<xsl:text>)</xsl:text>
+				</span>
+				<xsl:text> </xsl:text>
+				<span class="returns">
+					<xsl:if test="@return != ''">
+						<xsl:text>Returns: </xsl:text>
+						<a class="return" href="http://api.jquery.com/Types/#{@return}">
+							<xsl:value-of select="@return"/>
+						</a>
+					</xsl:if>
+				</span>
+			</xsl:when>
+			<xsl:when test="$entry-type='selector'">
+				<span>
+					<xsl:value-of select="@name"/>
+					<xsl:text> selector</xsl:text>
+				</span>
+			</xsl:when>
+			<xsl:when test="$entry-type='property'">
+				<span>
+					<xsl:value-of select="@name"/>
+				</span>
+				<xsl:text> </xsl:text>
+				<span class="returns">
+					<xsl:if test="@return != ''">
+						<xsl:text>Returns: </xsl:text>
+						<a class="return" href="http://api.jquery.com/Types/#{@return}">
+							<xsl:value-of select="@return"/>
+						</a>
+					</xsl:if>
+				</span>
+			</xsl:when>
+			<xsl:when test="$entry-type='Widget'">
+				<span>
+					<xsl:value-of select="@name"/>
+					<xsl:text> widget</xsl:text>
+				</span>
+			</xsl:when>
+		</xsl:choose>
+	</h2>
 </xsl:template>
 
 <xsl:template match="desc">
@@ -236,18 +326,45 @@ There's probably a better way to do this. -->
 
 <!-- examples -->
 <xsl:template match="example">
+	<xsl:param name="entry-index"/>
 	<xsl:param name="number-examples"/>
-	<h4>
-		<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
-		<span class="desc"><xsl:value-of select="desc"/></span>
-	</h4>
-	<pre>
-		<xsl:call-template name="example-code"/>
-	</pre>
-	<xsl:if test="html">
-		<h4>Demo:</h4>
-		<div class="demo code-demo"></div>
-	</xsl:if>
+
+	<div class="entry-example">
+		<xsl:attribute name="id">
+			<xsl:text>example-</xsl:text>
+			<xsl:if test="$entry-index &gt; 1">
+				<xsl:value-of select="$entry-index - 1"/>
+				<xsl:text>-</xsl:text>
+			</xsl:if>
+			<xsl:value-of select="position() - 1"/>
+		</xsl:attribute>
+
+		<h4>
+			<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
+			<span class="desc"><xsl:value-of select="desc"/></span>
+		</h4>
+		<pre><code data-linenum="true">
+			<xsl:choose>
+				<xsl:when test="html">
+					<xsl:call-template name="example-code"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:copy-of select="code/text()"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</code></pre>
+
+		<xsl:if test="html">
+			<h4>Demo:</h4>
+			<div class="demo code-demo">
+				<xsl:if test="height">
+					<xsl:attribute name="data-height">
+						<xsl:value-of select="height"/>
+					</xsl:attribute>
+				</xsl:if>
+			</div>
+		</xsl:if>
+	</div>
 </xsl:template>
 <xsl:template name="example-code"></xsl:template>
 
