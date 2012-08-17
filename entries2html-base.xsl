@@ -1,19 +1,32 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-
 <xsl:output method="html" omit-xml-declaration="yes"/>
 
 <xsl:template match="/">
-<script>
-	{
-		"title": <xsl:call-template name="escape-string"><xsl:with-param name="s" select="//entry/@name"/></xsl:call-template>,
-		"excerpt": <xsl:call-template name="escape-string"><xsl:with-param name="s" select="//entry[1]/desc/text()|//entry[1]/desc/*"/></xsl:call-template>,
+	<script>{
+		"title":
+			<xsl:call-template name="escape-string">
+				<xsl:with-param name="s" select="//entry/@name"/>
+			</xsl:call-template>,
+		"excerpt":
+			<xsl:call-template name="escape-string">
+				<xsl:with-param name="s" select="//entry[1]/desc/text()|//entry[1]/desc/*"/>
+			</xsl:call-template>,
 		"termSlugs": {
 			"category": [
-				<xsl:for-each select="//entry/category"><xsl:if test="position() &gt; 1"><xsl:text>,</xsl:text></xsl:if>"<xsl:value-of select="@slug"/>"</xsl:for-each>
+				<xsl:for-each select="//entry/category">
+					<xsl:if test="position() &gt; 1"><xsl:text>,</xsl:text></xsl:if>
+					<xsl:text>"</xsl:text>
+					<xsl:value-of select="@slug"/>
+					<xsl:text>"</xsl:text>
+				</xsl:for-each>
 			]
 		}
-	}
-</script>
+	}</script>
+
+	<xsl:if test="count(//entry) &gt; 1">
+		<xsl:call-template name="toc"/>
+	</xsl:if>
+
 	<xsl:for-each select="//entry">
 		<xsl:variable name="entry-name" select="@name"/>
 		<xsl:variable name="entry-name-trans" select="translate($entry-name,'$., ()/{}','s---')"/>
