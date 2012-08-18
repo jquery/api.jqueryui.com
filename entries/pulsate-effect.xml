@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="pulsate" namespace="effect" type="effect">
+	<title>Pulsate Effect</title>
 	<desc>
 		The pulsate effect hides or shows an element by pulsing it in or out.
 	</desc>

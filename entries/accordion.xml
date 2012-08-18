@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="accordion" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Accordion Widget</title>
 	<desc>Convert a pair of headers and content panels into an accordion.</desc>
 	<longdesc>
 		<p>Make the selected elements Accordion widgets.</p>

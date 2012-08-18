@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="autocomplete" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Autocomplete Widget</title>
 	<desc>Autocomplete enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</desc>
 	<longdesc>
 		<p>By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>

@@ -5,7 +5,7 @@
 	<script>{
 		"title":
 			<xsl:call-template name="escape-string">
-				<xsl:with-param name="s" select="//entry/@name"/>
+				<xsl:with-param name="s" select="//entry/title/text()"/>
 			</xsl:call-template>,
 		"excerpt":
 			<xsl:call-template name="escape-string">

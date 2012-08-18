@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="widget" namespace="fn" widgetnamespace="ui">
+	<title>jQuery.widget</title>
 	<desc>Create stateful jQuery plugins using the same abstraction as all jQuery UI widgets.</desc>
 	<longdesc>
 		<p>You can create new widgets from scratch, using just the <code>$.Widget</code> object as a base to inherit from, or you can explicitly inherit from existing jQuery UI or third-party widgets. Defining a widget with the same name as you inherit from even allows you to extend widgets in place.</p>

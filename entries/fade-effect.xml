@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="fade" namespace="effect" type="effect">
+	<title>Fade Effect</title>
 	<desc>
 		The fade effect hides or shows an element by fading it.
 	</desc>

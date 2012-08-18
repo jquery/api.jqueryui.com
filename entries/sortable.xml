@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="sortable" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Sortable Widget</title>
 	<desc>Reorder elements in a list or grid using the mouse</desc>
 	<longdesc>
 		<p>The jQuery UI Sortable plugin makes selected elements sortable by dragging with the mouse.</p>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="datepicker" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Datepicker Widget</title>
 	<desc>Select a date from a popup or inline calendar</desc>
 	<longdesc>
 		<p>The jQuery UI Datepicker is a highly configurable plugin that adds datepicker functionality to your pages. You can customize the date format and language, restrict the selectable date ranges and add in buttons and other navigation options easily.</p>

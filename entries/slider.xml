@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="slider" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Slider Widget</title>
 	<desc>Drag a handle to select a numeric value.</desc>
 	<longdesc>
 		<p>The jQuery UI Slider plugin makes selected elements into sliders. There are various options such as multiple handles and ranges. The handle can be moved with the mouse or the arrow keys.</p>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="scale" namespace="effect" type="effect">
+	<title>Scale Effect</title>
 	<desc>
 		Shrink or grow an element by a percentage factor.
 	</desc>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="draggable" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Draggable Widget</title>
 	<desc>Allow mouse interactions with elements, moving them around.</desc>
 	<longdesc>
 		<p>Make the selected elements draggable by mouse. If you want not just drag, but drag-and-drop, see the <a href="/droppable">jQuery UI Droppable plugin</a>, which provides a drop target for draggables.</p>

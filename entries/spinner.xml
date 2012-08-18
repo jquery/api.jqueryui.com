@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="spinner" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Spinner Widget</title>
 	<desc>
 		Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
 	</desc>

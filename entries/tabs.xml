@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="tabs" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Tabs Widget</title>
 	<desc>A single content area with multiple panels, each associated with a header in a list.</desc>
 	<longdesc>
 		<p>Tabs are generally used to break content into multiple sections that can be swapped to save space, much like an accordion.</p>

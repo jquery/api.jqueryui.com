@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="resizable" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Resizable Widget</title>
 	<desc>Change the size of an element using the mouse</desc>
 	<longdesc>
 		<p>The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.</p>

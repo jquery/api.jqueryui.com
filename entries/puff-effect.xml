@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="puff" namespace="effect" type="effect">
+	<title>Puff Effect</title>
 	<desc>
 		Creates a puff effect by scaling the element up and hiding it at the same time.
 	</desc>

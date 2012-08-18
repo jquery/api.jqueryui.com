@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="progressbar" namespace="fn" type="Widget" widgetnamespace="ui">
+	<title>Progressbar Widget</title>
 	<desc>Display status of a determinate process.</desc>
 	<longdesc>
 		<p>

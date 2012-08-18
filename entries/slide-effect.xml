@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="slide" namespace="effect" type="effect">
+	<title>Slide Effect</title>
 	<desc>Slides the element out of the viewport.</desc>
 	<options>
 		<option name="direction" type="String" default="both">

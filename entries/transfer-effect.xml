@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="transfer" namespace="effect" type="effect">
+	<title>Transfer Effect</title>
 	<desc>Transfers the outline of an element to another element</desc>
 	<longdesc>
 		Very useful when trying to visualize interaction between two elements.
