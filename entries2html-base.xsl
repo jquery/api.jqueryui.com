@@ -51,68 +51,23 @@
 
 			<xsl:copy-of select="desc/node()"/>
 
-			<nav>
-				<ul>
-					<xsl:if test="longdesc">
-						<li><a href="#overview">Overview</a></li>
-					</xsl:if>
-					<xsl:if test="options">
-						<li>
-							<a href="#options">Options</a>
-							<ul>
-								<xsl:for-each select="options/option">
-									<li>
-										<a href="#option-{@name}">
-											<xsl:value-of select="@name"/>
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</li>
-					</xsl:if>
-					<xsl:if test="methods">
-						<li>
-							<a href="#methods">Methods</a>
-							<ul>
-								<xsl:for-each select="methods/method">
-									<li>
-										<a href="#method-{@name}">
-											<xsl:value-of select="@name"/>
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</li>
-					</xsl:if>
-					<xsl:if test="events">
-						<li>
-							<a href="#events">Events</a>
-							<ul>
-								<xsl:for-each select="events/event">
-									<li>
-										<a href="#event-{@name}">
-											<xsl:value-of select="@name"/>
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</li>
-					</xsl:if>
-					<xsl:if test="example">
-						<li><a href="#examples">Examples</a></li>
-					</xsl:if>
-				</ul>
-			</nav>
-			<xsl:if test="longdesc">
-				<section id="overview">
-					<header>
-						<h2 class="underline">Overview</h2>
-					</header>
-					<p>
-						<xsl:copy-of select="longdesc/node()"/>
-					</p>
-				</section>
+			<xsl:if test="normalize-space(longdesc/*)">
+				<div class="longdesc">
+					<xsl:copy-of select="longdesc/*" />
+				</div>
 			</xsl:if>
+
+			<xsl:if test="note">
+				<h3>Additional Notes:</h3>
+				<div class="longdesc">
+					<ul>
+						<xsl:for-each select="note">
+							<li><xsl:apply-templates select="."/></li>
+						</xsl:for-each>
+					</ul>
+				</div>
+			</xsl:if>
+
 			<xsl:if test="options">
 				<section id="options">
 					<header>
