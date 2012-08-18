@@ -204,7 +204,7 @@
 					</xsl:attribute>
 
 					<header>
-						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if></h2>
+						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if>:</h2>
 					</header>
 
 					<xsl:apply-templates select="example">
@@ -376,6 +376,13 @@ There's probably a better way to do this. -->
 					</xsl:attribute>
 				</xsl:if>
 			</div>
+		</xsl:if>
+
+		<xsl:if test="results">
+			<h4>Result:</h4>
+			<pre><code class="results">
+				<xsl:value-of select="results"/>
+			</code></pre>
 		</xsl:if>
 	</div>
 </xsl:template>
