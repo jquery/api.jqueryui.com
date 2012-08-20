@@ -289,29 +289,20 @@
 				</h4>
 
 				<xsl:for-each select="argument">
-					<xsl:variable name="name" select="@name"/>
-					<xsl:choose>
-						<!-- TODO: get rid of Option -->
-						<xsl:when test="@type='Option'">
-							<div class="options">
-								<xsl:apply-templates select="../../options/option[@name=$name]"/>
+					<p class="argument">
+						<strong><xsl:value-of select="@name"/>: </strong>
+						<xsl:call-template name="render-types"/>
+						<xsl:text>
+						</xsl:text>
+						<xsl:if test="@default">
+							<div class="default-value">
+								<strong>Default: </strong>
+								<xsl:value-of select="@default"/>
 							</div>
-						</xsl:when>
-						<xsl:otherwise>
-							<p class="argument">
-								<strong><xsl:value-of select="$name"/>: </strong>
-								<xsl:call-template name="render-types"/>
-								<xsl:text>
-								</xsl:text>
-								<xsl:copy-of select="desc/text()|desc/*"/>
-							</p>
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:if test="option">
-						<div class="options">
-							<xsl:apply-templates select="option"/>
-						</div>
-					</xsl:if>
+						</xsl:if>
+						<xsl:copy-of select="desc/text()|desc/*"/>
+					</p>
+					<xsl:apply-templates select="property"/>
 				</xsl:for-each>
 			</li>
 		</xsl:for-each>
@@ -404,61 +395,6 @@
 			</ul>
 		</section>
 	</xsl:if>
-</xsl:template>
-
-<xsl:template match="desc">
-	<xsl:param name="entry-name"/>
-	<xsl:apply-templates select="./node()">
-		<xsl:with-param name="entry-name" select="$entry-name"/>
-	</xsl:apply-templates>
-</xsl:template>
-<!-- This makes elements inside <desc> get copied over properly.
-There's probably a better way to do this. -->
-<xsl:template match="desc/*">
-	<xsl:copy-of select="."/>
-</xsl:template>
-<xsl:template match="desc/placeholder">
-	<xsl:param name="entry-name"/>
-	<xsl:value-of select="$entry-name"/>
-</xsl:template>
-
-<!-- arguments -->
-<xsl:template name="arguments">
-	<xsl:if test="argument">
-		<xsl:text> </xsl:text>
-		<ul>
-			<xsl:apply-templates select="argument"/>
-		</ul>
-	</xsl:if>
-</xsl:template>
-<!-- TODO consider optional arguments -->
-<xsl:template match="argument">
-	<li>
-		<xsl:value-of select="@name"/>
-		<xsl:text>: </xsl:text>
-		<xsl:call-template name="render-types" />
-		<xsl:if test="not(@null)">
-			<xsl:if test="desc">
-				<xsl:text>, </xsl:text>
-				<xsl:copy-of select="desc/node()"/>
-			</xsl:if>
-			<ul>
-				<xsl:apply-templates select="property"/>
-			</ul>
-		</xsl:if>
-	</li>
-</xsl:template>
-<!-- argument properties -->
-<xsl:template match="argument/property">
-	<li>
-		<xsl:value-of select="@name"/>
-		<xsl:text>: </xsl:text>
-		<xsl:call-template name="render-types" />
-		<xsl:if test="desc">
-			<xsl:text>, </xsl:text>
-			<xsl:copy-of select="desc/node()"/>
-		</xsl:if>
-	</li>
 </xsl:template>
 
 <!-- examples -->
@@ -610,6 +546,65 @@ There's probably a better way to do this. -->
 		</xsl:for-each>
 		<xsl:text> </xsl:text>
 	</xsl:if>)
+</xsl:template>
+
+
+
+
+
+<xsl:template match="desc">
+	<xsl:param name="entry-name"/>
+	<xsl:apply-templates select="./node()">
+		<xsl:with-param name="entry-name" select="$entry-name"/>
+	</xsl:apply-templates>
+</xsl:template>
+<!-- This makes elements inside <desc> get copied over properly.
+There's probably a better way to do this. -->
+<xsl:template match="desc/*">
+	<xsl:copy-of select="."/>
+</xsl:template>
+<xsl:template match="desc/placeholder">
+	<xsl:param name="entry-name"/>
+	<xsl:value-of select="$entry-name"/>
+</xsl:template>
+
+<!-- arguments -->
+<xsl:template name="arguments">
+	<xsl:if test="argument">
+		<xsl:text> </xsl:text>
+		<ul>
+			<xsl:apply-templates select="argument"/>
+		</ul>
+	</xsl:if>
+</xsl:template>
+<!-- TODO consider optional arguments -->
+<xsl:template match="argument">
+	<li>
+		<xsl:value-of select="@name"/>
+		<xsl:text>: </xsl:text>
+		<xsl:call-template name="render-types" />
+		<xsl:if test="not(@null)">
+			<xsl:if test="desc">
+				<xsl:text>, </xsl:text>
+				<xsl:copy-of select="desc/node()"/>
+			</xsl:if>
+			<ul>
+				<xsl:apply-templates select="property"/>
+			</ul>
+		</xsl:if>
+	</li>
+</xsl:template>
+<!-- argument properties -->
+<xsl:template match="argument/property">
+	<li>
+		<xsl:value-of select="@name"/>
+		<xsl:text>: </xsl:text>
+		<xsl:call-template name="render-types" />
+		<xsl:if test="desc">
+			<xsl:text>, </xsl:text>
+			<xsl:copy-of select="desc/node()"/>
+		</xsl:if>
+	</li>
 </xsl:template>
 
 <!-- escape-string, from xml2json.xsl -->
