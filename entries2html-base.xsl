@@ -172,6 +172,60 @@
 	</xsl:for-each>
 </xsl:template>
 
+<xsl:template name="toc">
+	<div class="toc">
+		<h4><span>Contents:</span></h4>
+		<ul class="toc-list">
+			<xsl:for-each select="//entry">
+				<xsl:variable name="entry-name-trans" select="translate(@name,'$., ()/{}','s---')" />
+				<xsl:variable name="entry-url" select="concat('#',$entry-name-trans,position())"/>
+				<xsl:choose>
+					<xsl:when test="@type='method'">
+						<xsl:call-template name="toc-method">
+							<xsl:with-param name="entry-url" select="$entry-url"/>
+						</xsl:call-template>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:call-template name="toc-basic">
+							<xsl:with-param name="entry-url" select="$entry-url"/>
+						</xsl:call-template>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
+		</ul>
+	</div>
+</xsl:template>
+
+<xsl:template name="toc-basic">
+	<xsl:param name="entry-url"/>
+	<li><a href="{$entry-url}"><xsl:value-of select="@name"/></a></li>
+</xsl:template>
+
+<xsl:template name="toc-method">
+	<xsl:param name="entry-url"/>
+	<xsl:variable name="entry-name" select="@name"/>
+
+	<li>
+		<a href="{$entry-url}">
+			<xsl:for-each select="signature[1]">
+				<xsl:call-template name="method-signature">
+					<xsl:with-param name="method-name" select="$entry-name"/>
+				</xsl:call-template>
+			</xsl:for-each>
+		</a>
+
+		<ul>
+			<xsl:for-each select="signature">
+				<li>
+					<xsl:call-template name="method-signature">
+						<xsl:with-param name="method-name" select="$entry-name"/>
+					</xsl:call-template>
+				</li>
+			</xsl:for-each>
+		</ul>
+	</li>
+</xsl:template>
+
 <xsl:template name="entry-title">
 	<xsl:param name="entry-type" select="@type"/>
 	<xsl:param name="entry-name" select="@name"/>
@@ -180,22 +234,11 @@
 		<xsl:choose>
 			<xsl:when test="$entry-type='method'">
 				<span class="name">
-					<xsl:if test="not(contains($entry-name, '.')) and not(contains($entry-name, '{')) and $entry-name != 'jQuery'">.</xsl:if>
-					<xsl:value-of select="@name"/>
-					<xsl:text>(</xsl:text>
-					<xsl:if test="signature/argument"><xsl:text> </xsl:text>
-						<xsl:variable name="sig-arg-num" select="count(signature[1]/argument)"/>
-						<xsl:for-each select="signature[1]/argument">
-							<xsl:if test="@optional"> [</xsl:if>
-							<xsl:if test="position() &gt; 1">
-								<xsl:text>, </xsl:text>
-							</xsl:if>
-							<xsl:value-of select="@name"/>
-							<xsl:if test="@optional">] </xsl:if>
-						</xsl:for-each>
-						<xsl:text> </xsl:text>
-					</xsl:if>
-					<xsl:text>)</xsl:text>
+					<xsl:for-each select="signature[1]">
+						<xsl:call-template name="method-signature">
+							<xsl:with-param name="method-name" select="$entry-name"/>
+						</xsl:call-template>
+					</xsl:for-each>
 				</span>
 				<xsl:text> </xsl:text>
 				<span class="returns">
@@ -235,6 +278,123 @@
 			</xsl:when>
 		</xsl:choose>
 	</h2>
+</xsl:template>
+
+<xsl:template name="entry-body">
+	<p class="desc"><strong>Description: </strong> <xsl:value-of select="desc"/></p>
+	<xsl:choose>
+		<xsl:when test="@type='selector'">
+			<xsl:call-template name="entry-body-selector"/>
+		</xsl:when>
+		<xsl:when test="@type='property'">
+			<xsl:call-template name="entry-body-property"/>
+		</xsl:when>
+		<xsl:when test="@type='method'">
+			<xsl:call-template name="entry-body-method"/>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="entry-body-selector">
+	<ul class="signatures">
+		<li class="signature">
+			<h4 class="name">
+				<xsl:if test="signature/added">
+					<span class="versionAdded">
+						version added:
+						<a href="/category/version/{signature/added}/">
+							<xsl:value-of select="signature/added"/>
+						</a>
+					</span>
+				</xsl:if>
+				<xsl:text>jQuery( "</xsl:text><xsl:value-of select="sample"/><xsl:text>" )</xsl:text>
+			</h4>
+
+			<xsl:for-each select="signature/argument">
+				<p class="argument">
+					<strong><xsl:value-of select="@name"/>: </strong>
+					<xsl:copy-of select="desc/text()|desc/*"/>
+				</p>
+			</xsl:for-each>
+		</li>
+	</ul>
+</xsl:template>
+
+<xsl:template name="entry-body-property">
+	<ul class="signatures">
+		<li class="signature">
+			<h4 class="name">
+				<xsl:if test="signature/added">
+					<span class="versionAdded">
+						version added:
+						<a href="/category/version/{signature/added}/">
+							<xsl:value-of select="added"/>
+						</a>
+					</span>
+				</xsl:if>
+				<xsl:value-of select="@name"/>
+			</h4>
+		</li>
+	</ul>
+</xsl:template>
+
+<xsl:template name="entry-body-method">
+	<xsl:variable name="entry-name" select="@name"/>
+	<xsl:variable name="entry-name-trans" select="translate($entry-name,'$., ()/{}','s---')"/>
+
+	<ul class="signatures">
+		<xsl:for-each select="signature">
+			<li class="signature">
+				<xsl:attribute name="id">
+					<xsl:value-of select="$entry-name-trans"/>
+					<xsl:for-each select="argument">
+						<xsl:variable name="arg-name" select="translate(@name, ' ,.)(', '--')"/>
+						<xsl:text>-</xsl:text><xsl:value-of select="$arg-name"/>
+					</xsl:for-each>
+				</xsl:attribute>
+
+				<h4 class="name">
+					<xsl:if test="./added">
+						<span class="versionAdded">
+							version added:
+							<a href="/category/version/{added}/">
+								<xsl:value-of select="added"/>
+							</a>
+						</span>
+					</xsl:if>
+					<xsl:call-template name="method-signature">
+						<xsl:with-param name="method-name" select="$entry-name"/>
+					</xsl:call-template>
+				</h4>
+
+				<xsl:for-each select="argument">
+					<xsl:variable name="name" select="@name"/>
+					<xsl:choose>
+						<!-- TODO: get rid of Option -->
+						<xsl:when test="@type='Option'">
+							<div class="options">
+								<xsl:apply-templates select="../../options/option[@name=$name]"/>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<p class="argument">
+								<strong><xsl:value-of select="$name"/>: </strong>
+								<xsl:call-template name="render-types"/>
+								<xsl:text>
+								</xsl:text>
+								<xsl:copy-of select="desc/text()|desc/*"/>
+							</p>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:if test="option">
+						<div class="options">
+							<xsl:apply-templates select="option"/>
+						</div>
+					</xsl:if>
+				</xsl:for-each>
+			</li>
+		</xsl:for-each>
+	</ul>
 </xsl:template>
 
 <xsl:template match="desc">
@@ -424,6 +584,23 @@ There's probably a better way to do this. -->
 		<a href="http://api.jquery.com/Types#{$typename}"><xsl:value-of select="$typename" /></a>
 	</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="method-signature">
+	<xsl:param name="method-name"/>
+
+	<xsl:if test="not(contains($method-name, '.')) and $method-name != 'jQuery'">.</xsl:if>
+	<xsl:value-of select="$method-name"/>(
+	<xsl:if test="argument">
+		<xsl:text> </xsl:text>
+		<xsl:for-each select="argument">
+			<xsl:if test="@optional"> [</xsl:if>
+			<xsl:if test="position() &gt; 1"><xsl:text>, </xsl:text></xsl:if>
+			<xsl:value-of select="@name"/>
+			<xsl:if test="@optional"><xsl:text> ]</xsl:text></xsl:if>
+		</xsl:for-each>
+		<xsl:text> </xsl:text>
+	</xsl:if>)
 </xsl:template>
 
 <!-- escape-string, from xml2json.xsl -->
