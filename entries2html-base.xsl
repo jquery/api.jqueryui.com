@@ -498,14 +498,17 @@
 		- the return element is optional
 	-->
 	<xsl:when test="$typename = 'Function'">
-		<xsl:text>Function(</xsl:text>
-		<xsl:for-each select="argument">
-			<xsl:if test="position() &gt; 1">, </xsl:if>
-			<xsl:value-of select="@name" />
-			<xsl:text>: </xsl:text>
-			<xsl:call-template name="render-types" />
-		</xsl:for-each>
-		<xsl:text>)</xsl:text>
+		<a href="http://api.jquery.com/Types/#Function">Function</a>(
+		<xsl:if test="argument">
+			<xsl:text> </xsl:text>
+			<xsl:for-each select="argument">
+				<xsl:if test="position() &gt; 1">, </xsl:if>
+				<xsl:value-of select="@name"/>
+				<xsl:text>: </xsl:text>
+				<xsl:call-template name="render-types"/>
+			</xsl:for-each>
+			<xsl:text> </xsl:text>
+		</xsl:if>)
 
 		<!-- display return type if present -->
 		<xsl:if test="return or @return">
@@ -565,10 +568,6 @@
 		</xsl:if>
 	</li>
 </xsl:template>
-
-
-
-
 
 <xsl:template match="desc">
 	<xsl:param name="entry-name"/>
