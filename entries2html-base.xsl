@@ -248,7 +248,7 @@ There's probably a better way to do this. -->
 <xsl:template match="desc/*">
 	<xsl:copy-of select="."/>
 </xsl:template>
-<xsl:template match="placeholder">
+<xsl:template match="desc/placeholder">
 	<xsl:param name="entry-name"/>
 	<xsl:value-of select="$entry-name"/>
 </xsl:template>
