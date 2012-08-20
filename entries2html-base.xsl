@@ -288,22 +288,7 @@
 					</xsl:call-template>
 				</h4>
 
-				<xsl:for-each select="argument">
-					<p class="argument">
-						<strong><xsl:value-of select="@name"/>: </strong>
-						<xsl:call-template name="render-types"/>
-						<xsl:text>
-						</xsl:text>
-						<xsl:if test="@default">
-							<div class="default-value">
-								<strong>Default: </strong>
-								<xsl:value-of select="@default"/>
-							</div>
-						</xsl:if>
-						<xsl:copy-of select="desc/text()|desc/*"/>
-					</p>
-					<xsl:apply-templates select="property"/>
-				</xsl:for-each>
+				<xsl:call-template name="arguments"/>
 			</li>
 		</xsl:for-each>
 	</ul>
@@ -363,7 +348,11 @@
 			<ul>
 				<xsl:for-each select="methods/method">
 					<li id="method-{@name}">
-						<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:if test="@optional">[</xsl:if><xsl:value-of select="@name"/><xsl:if test="@optional">]</xsl:if></xsl:for-each> )</h3>
+						<h3>
+							<xsl:call-template name="method-signature">
+								<xsl:with-param name="method-name" select="@name"/>
+							</xsl:call-template>
+						</h3>
 						<div>
 							<xsl:apply-templates select="desc">
 								<xsl:with-param name="entry-name" select="$entry-name"/>
@@ -548,6 +537,35 @@
 	</xsl:if>)
 </xsl:template>
 
+<xsl:template name="arguments">
+	<xsl:if test="argument">
+		<ul>
+			<xsl:apply-templates select="argument"/>
+		</ul>
+	</xsl:if>
+</xsl:template>
+<!-- arguments and properties are rendered the same way and nest -->
+<xsl:template match="argument|property">
+	<li>
+		<div>
+			<strong><xsl:value-of select="@name"/></strong>
+			<xsl:if test="@default">(default: <xsl:value-of select="@default"/>)</xsl:if>
+		</div>
+		<div>Type: <xsl:call-template name="render-types"/></div>
+		<div>
+			<xsl:apply-templates select="desc"/>
+			<xsl:if test="@added"> (added <xsl:value-of select="@added"/>)</xsl:if>
+			<xsl:if test="@deprecated"> (deprecated <xsl:value-of select="@deprecated"/>)</xsl:if>
+			<xsl:if test="@removed"> (removed <xsl:value-of select="@removed"/>)</xsl:if>
+		</div>
+		<xsl:if test="property">
+			<ul>
+				<xsl:apply-templates select="property"/>
+			</ul>
+		</xsl:if>
+	</li>
+</xsl:template>
+
 
 
 
@@ -558,53 +576,13 @@
 		<xsl:with-param name="entry-name" select="$entry-name"/>
 	</xsl:apply-templates>
 </xsl:template>
-<!-- This makes elements inside <desc> get copied over properly.
-There's probably a better way to do this. -->
+<!-- This makes elements inside <desc> get copied over properly -->
 <xsl:template match="desc/*">
 	<xsl:copy-of select="."/>
 </xsl:template>
 <xsl:template match="desc/placeholder">
 	<xsl:param name="entry-name"/>
 	<xsl:value-of select="$entry-name"/>
-</xsl:template>
-
-<!-- arguments -->
-<xsl:template name="arguments">
-	<xsl:if test="argument">
-		<xsl:text> </xsl:text>
-		<ul>
-			<xsl:apply-templates select="argument"/>
-		</ul>
-	</xsl:if>
-</xsl:template>
-<!-- TODO consider optional arguments -->
-<xsl:template match="argument">
-	<li>
-		<xsl:value-of select="@name"/>
-		<xsl:text>: </xsl:text>
-		<xsl:call-template name="render-types" />
-		<xsl:if test="not(@null)">
-			<xsl:if test="desc">
-				<xsl:text>, </xsl:text>
-				<xsl:copy-of select="desc/node()"/>
-			</xsl:if>
-			<ul>
-				<xsl:apply-templates select="property"/>
-			</ul>
-		</xsl:if>
-	</li>
-</xsl:template>
-<!-- argument properties -->
-<xsl:template match="argument/property">
-	<li>
-		<xsl:value-of select="@name"/>
-		<xsl:text>: </xsl:text>
-		<xsl:call-template name="render-types" />
-		<xsl:if test="desc">
-			<xsl:text>, </xsl:text>
-			<xsl:copy-of select="desc/node()"/>
-		</xsl:if>
-	</li>
 </xsl:template>
 
 <!-- escape-string, from xml2json.xsl -->
