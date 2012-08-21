@@ -306,42 +306,39 @@
 			<header>
 				<h2 class="underline">Options</h2>
 			</header>
-			<ul>
-				<xsl:for-each select="options/option">
-					<xsl:variable name="number-option-examples" select="count(example)" />
-					<li id="option-{@name}">
-						<h3>
-							<xsl:value-of select="@name"/>
-						</h3>
-						<p>
-							<strong>Type: </strong>
-							<xsl:call-template name="render-types" />
-						</p>
-						<p>
-							<strong>Default: </strong>
-							<xsl:value-of select="@default"/>
-						</p>
-						<div>
-							<xsl:apply-templates select="desc">
-								<xsl:with-param name="entry-name" select="$entry-name"/>
-							</xsl:apply-templates>
-						</div>
-						<xsl:if test="type/desc">
-							Multiple types supported:
-							<ul>
-								<xsl:for-each select="type/desc">
-									<li>
-										<strong><xsl:value-of select="../@name"/></strong>: <xsl:copy-of select="node()"/>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</xsl:if>
-						<xsl:apply-templates select="example">
-							<xsl:with-param name="number-examples" select="$number-option-examples" />
+			<xsl:for-each select="options/option">
+				<div id="option-{@name}">
+					<h3>
+						<xsl:value-of select="@name"/>
+					</h3>
+					<div>
+						<strong>Type: </strong><xsl:call-template name="render-types"/>
+					</div>
+					<div>
+						<strong>Default: </strong><xsl:value-of select="@default"/>
+					</div>
+					<div>
+						<xsl:apply-templates select="desc">
+							<xsl:with-param name="entry-name" select="$entry-name"/>
 						</xsl:apply-templates>
-					</li>
-				</xsl:for-each>
-			</ul>
+					</div>
+					<xsl:if test="type/desc">
+						<strong>Multiple types supported:</strong>
+						<ul>
+							<xsl:for-each select="type/desc">
+								<li>
+									<strong><xsl:value-of select="../@name"/></strong>
+									<xsl:text>: </xsl:text>
+									<xsl:copy-of select="node()"/>
+								</li>
+							</xsl:for-each>
+						</ul>
+					</xsl:if>
+					<xsl:apply-templates select="example">
+						<xsl:with-param name="number-examples" select="count(example)"/>
+					</xsl:apply-templates>
+				</div>
+			</xsl:for-each>
 		</section>
 	</xsl:if>
 	<xsl:if test="methods">
@@ -546,7 +543,7 @@
 	<li>
 		<div>
 			<strong><xsl:value-of select="@name"/></strong>
-			<xsl:if test="@default">(default: <xsl:value-of select="@default"/>)</xsl:if>
+			<xsl:if test="@default"> (default: <xsl:value-of select="@default"/>)</xsl:if>
 		</div>
 		<div>Type: <xsl:call-template name="render-types"/></div>
 		<div>
