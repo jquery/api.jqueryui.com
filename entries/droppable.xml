@@ -150,10 +150,7 @@ ui.draggable represents the draggable.</desc>
 		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>

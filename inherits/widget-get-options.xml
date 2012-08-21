@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<method name="option" return="Object">
-	<desc>
-		Gets an object containing key/value pairs representing the current <placeholder name="title"/> options hash.
-	</desc>
-</method>

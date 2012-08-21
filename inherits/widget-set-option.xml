@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<method name="option" return="jQuery">
-	<desc>
-		Sets the value of the <placeholder name="title"/> option associated with the specified <code>optionName</code>.
-	</desc>
-	<argument name="optionName" type="String"></argument>
-	<argument name="value" type="Object"></argument>
-</method>

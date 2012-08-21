@@ -265,10 +265,7 @@
 		<method name="open">
 			<desc>Opens the dialog.</desc>
 		</method>
-		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>

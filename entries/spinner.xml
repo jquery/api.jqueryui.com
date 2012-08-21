@@ -92,10 +92,7 @@
 		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="pageDown">
 			<desc>
 				Decrements the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is decremented.

@@ -154,10 +154,7 @@
 		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="search">
 			<desc>Triggers a <a href="#event-search"><code>search</code></a> event and invokes the data source if the event is not canceled. Can be used by a selectbox-like button to open the suggestions when clicked. When invoked with no parameters, the current input's value is used. Can be called with an empty string and <code>minLength: 0</code> to display all items.</desc>
 			<argument name="value" type="String" optional="true">

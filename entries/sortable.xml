@@ -467,10 +467,7 @@
 		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Refresh the sortable items. Custom trigger the reloading of all sortable items, causing new items to be recognized.</desc>
 		</method>

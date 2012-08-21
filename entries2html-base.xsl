@@ -349,15 +349,17 @@
 			<header>
 				<h2 class="underline">Methods</h2>
 			</header>
-			<ul>
-				<xsl:for-each select="methods/method">
-					<li id="method-{@name}">
+			<xsl:for-each select="methods/method">
+				<xsl:variable name="method-name" select="@name"/>
+				<div id="method-{$method-name}">
+					<xsl:for-each select="signature | self::node()[count(signature) = 0]">
 						<xsl:call-template name="widget-method-event">
 							<xsl:with-param name="entry-name" select="$entry-name"/>
+							<xsl:with-param name="method-name" select="$method-name"/>
 						</xsl:call-template>
-					</li>
-				</xsl:for-each>
-			</ul>
+					</xsl:for-each>
+				</div>
+			</xsl:for-each>
 		</section>
 	</xsl:if>
 	<xsl:if test="events">
@@ -365,15 +367,14 @@
 			<header>
 				<h2 class="underline">Events</h2>
 			</header>
-			<ul>
-				<xsl:for-each select="events/event">
-					<li id="event-{@name}">
-						<xsl:call-template name="widget-method-event">
-							<xsl:with-param name="entry-name" select="$entry-name"/>
-						</xsl:call-template>
-					</li>
-				</xsl:for-each>
-			</ul>
+			<xsl:for-each select="events/event">
+				<div id="event-{@name}">
+					<xsl:call-template name="widget-method-event">
+						<xsl:with-param name="entry-name" select="$entry-name"/>
+						<xsl:with-param name="method-name" select="@name"/>
+					</xsl:call-template>
+				</div>
+			</xsl:for-each>
 		</section>
 	</xsl:if>
 </xsl:template>
@@ -579,10 +580,11 @@
 
 <xsl:template name="widget-method-event">
 	<xsl:param name="entry-name"/>
+	<xsl:param name="method-name"/>
 
 	<h3>
 		<xsl:call-template name="method-signature">
-			<xsl:with-param name="method-name" select="@name"/>
+			<xsl:with-param name="method-name" select="$method-name"/>
 		</xsl:call-template>
 	</h3>
 	<div>
