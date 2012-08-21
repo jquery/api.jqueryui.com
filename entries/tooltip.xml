@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="tooltip" namespace="fn" type="Widget" widgetnamespace="ui">
+<entry name="tooltip" namespace="fn" type="widget" widgetnamespace="ui">
 	<title>Tooltip Widget</title>
 	<desc>Customizable, themeable tooltips, replacing native tooltips.</desc>
 	<longdesc>

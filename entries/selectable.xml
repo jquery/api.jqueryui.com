@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="selectable" namespace="fn" type="Widget" widgetnamespace="ui">
+<entry name="selectable" namespace="fn" type="widget" widgetnamespace="ui">
 	<title>Selectable Widget</title>
 	<desc>Use the mouse to select individual or a group of elements</desc>
 	<longdesc>

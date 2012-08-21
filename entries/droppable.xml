@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="droppable" namespace="fn" type="Widget" widgetnamespace="ui">
+<entry name="droppable" namespace="fn" type="widget" widgetnamespace="ui">
 	<title>Droppable Widget</title>
 	<desc>Create targets for draggable elements</desc>
 	<longdesc>

@@ -128,6 +128,7 @@
 			<xsl:for-each select="signature[1]">
 				<xsl:call-template name="method-signature">
 					<xsl:with-param name="method-name" select="$entry-name"/>
+					<xsl:with-param name="dot" select="true()"/>
 				</xsl:call-template>
 			</xsl:for-each>
 		</a>
@@ -137,6 +138,7 @@
 				<li>
 					<xsl:call-template name="method-signature">
 						<xsl:with-param name="method-name" select="$entry-name"/>
+						<xsl:with-param name="dot" select="true()"/>
 					</xsl:call-template>
 				</li>
 			</xsl:for-each>
@@ -155,6 +157,7 @@
 					<xsl:for-each select="signature[1]">
 						<xsl:call-template name="method-signature">
 							<xsl:with-param name="method-name" select="$entry-name"/>
+							<xsl:with-param name="dot" select="true()"/>
 						</xsl:call-template>
 					</xsl:for-each>
 				</span>
@@ -188,7 +191,7 @@
 					</xsl:if>
 				</span>
 			</xsl:when>
-			<xsl:when test="$entry-type='Widget'">
+			<xsl:when test="$entry-type='widget'">
 				<span>
 					<xsl:value-of select="@name"/>
 					<xsl:text> widget</xsl:text>
@@ -210,7 +213,7 @@
 		<xsl:when test="@type='method'">
 			<xsl:call-template name="entry-body-method"/>
 		</xsl:when>
-		<xsl:when test="@type='Widget'">
+		<xsl:when test="@type='widget'">
 			<xsl:call-template name="entry-body-widget"/>
 		</xsl:when>
 	</xsl:choose>
@@ -285,6 +288,7 @@
 					</xsl:if>
 					<xsl:call-template name="method-signature">
 						<xsl:with-param name="method-name" select="$entry-name"/>
+						<xsl:with-param name="dot" select="true()"/>
 					</xsl:call-template>
 				</h4>
 
@@ -348,17 +352,9 @@
 			<ul>
 				<xsl:for-each select="methods/method">
 					<li id="method-{@name}">
-						<h3>
-							<xsl:call-template name="method-signature">
-								<xsl:with-param name="method-name" select="@name"/>
-							</xsl:call-template>
-						</h3>
-						<div>
-							<xsl:apply-templates select="desc">
-								<xsl:with-param name="entry-name" select="$entry-name"/>
-							</xsl:apply-templates>
-						</div>
-						<xsl:call-template name="arguments"/>
+						<xsl:call-template name="widget-method-event">
+							<xsl:with-param name="entry-name" select="$entry-name"/>
+						</xsl:call-template>
 					</li>
 				</xsl:for-each>
 			</ul>
@@ -372,13 +368,9 @@
 			<ul>
 				<xsl:for-each select="events/event">
 					<li id="event-{@name}">
-						<h3><xsl:value-of select="@name"/>( <xsl:for-each select="argument"><xsl:if test="position() &gt; 1">, </xsl:if><xsl:value-of select="@name"/></xsl:for-each> )</h3>
-						<div>
-							<xsl:apply-templates select="desc">
-								<xsl:with-param name="entry-name" select="$entry-name"/>
-							</xsl:apply-templates>
-						</div>
-						<xsl:call-template name="arguments"/>
+						<xsl:call-template name="widget-method-event">
+							<xsl:with-param name="entry-name" select="$entry-name"/>
+						</xsl:call-template>
 					</li>
 				</xsl:for-each>
 			</ul>
@@ -435,7 +427,7 @@
 		</xsl:if>
 	</div>
 </xsl:template>
-<xsl:template name="example-code"></xsl:template>
+<xsl:template name="example-code"/>
 
 <!--
 	Render type(s) for an argument element.
@@ -525,8 +517,9 @@
 
 <xsl:template name="method-signature">
 	<xsl:param name="method-name"/>
+	<xsl:param name="dot" select="false()"/>
 
-	<xsl:if test="not(contains($method-name, '.')) and $method-name != 'jQuery'">.</xsl:if>
+	<xsl:if test="$dot and not(contains($method-name, '.')) and $method-name != 'jQuery'">.</xsl:if>
 	<xsl:value-of select="$method-name"/>(
 	<xsl:if test="argument">
 		<xsl:text> </xsl:text>
@@ -582,6 +575,22 @@
 			</ul>
 		</xsl:if>
 	</li>
+</xsl:template>
+
+<xsl:template name="widget-method-event">
+	<xsl:param name="entry-name"/>
+
+	<h3>
+		<xsl:call-template name="method-signature">
+			<xsl:with-param name="method-name" select="@name"/>
+		</xsl:call-template>
+	</h3>
+	<div>
+		<xsl:apply-templates select="desc">
+			<xsl:with-param name="entry-name" select="$entry-name"/>
+		</xsl:apply-templates>
+	</div>
+	<xsl:call-template name="arguments"/>
 </xsl:template>
 
 <xsl:template match="desc">
