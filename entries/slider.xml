@@ -18,7 +18,7 @@
 			<type name="String" />
 			<type name="Number" />
 		</option>
-		<widget-inherit id="widget-disabled" />
+		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="max" default="100">
 			<desc>The maximum value of the slider.</desc>
 			<type name="Number" />
@@ -50,7 +50,7 @@
 		</option>
 	</options>
 	<events>
-		<widget-inherit id="widget-create" />
+		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="slidestart">
 			<desc>Triggered when the user starts sliding.</desc>
 			<argument name="event" type="Event">
@@ -112,13 +112,13 @@
 
 	</events>
 	<methods>
-		<widget-inherit id="widget-destroy" />
-		<widget-inherit id="widget-disable" />
-		<widget-inherit id="widget-enable" />
-		<widget-inherit id="widget-get-options" />
-		<widget-inherit id="widget-get-option" />
-		<widget-inherit id="widget-set-option" />
-		<widget-inherit id="widget-set-options" />
+		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Gets or sets the value of the slider. For single handle sliders.</desc>
 			<argument name="value" type="Number" optional="true">
@@ -134,7 +134,7 @@
 				<desc></desc>
 			</argument>
 		</method>
-		<widget-inherit id="widget-widget" />
+		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Slider.</desc>

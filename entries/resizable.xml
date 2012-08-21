@@ -52,7 +52,7 @@
 			<desc>Tolerance, in milliseconds, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond duration. This can help prevent unintended resizing when clicking on an element.</desc>
 			<type name="Number" />
 		</option>
-		<widget-inherit id="widget-disabled" />
+		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" default='1'>
 			<desc>Tolerance, in pixels, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond distance. This can help prevent unintended resizing when clicking on an element.</desc>
 			<type name="Number" />
@@ -97,7 +97,7 @@
 
 	</options>
 	<events>
-		<widget-inherit id="widget-create" />
+		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="resizestart">
 			<desc>This event is triggered at the start of a resize operation.</desc>
 			<argument name="event" type="Event">
@@ -191,14 +191,14 @@
 
 	</events>
 	<methods>
-		<widget-inherit id="widget-destroy" />
-		<widget-inherit id="widget-disable" />
-		<widget-inherit id="widget-enable" />
-		<widget-inherit id="widget-get-options" />
-		<widget-inherit id="widget-get-option" />
-		<widget-inherit id="widget-set-option" />
-		<widget-inherit id="widget-set-options" />
-		<widget-inherit id="widget-widget" />
+		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-get-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-get-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-set-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-set-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 

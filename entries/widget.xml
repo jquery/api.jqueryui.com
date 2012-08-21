@@ -24,7 +24,7 @@
 		</argument>
 	</signature>
 	<options>
-		<widget-inherit id="widget-disabled" />
+		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="hide" default="true">
 			<desc>How to hide the tooltip.</desc>
 			<type name="Boolean" />
@@ -166,7 +166,7 @@
 		</method>
 	</methods>
 	<events>
-		<widget-inherit id="widget-create" />
+		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<category slug="utilities"/>
 </entry>
