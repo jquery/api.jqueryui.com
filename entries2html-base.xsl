@@ -1,6 +1,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:output method="html" omit-xml-declaration="yes"/>
 
+<!-- Set this to true to display links to /category/version/{version} -->
+<xsl:variable name="version-category-links" select="false()"/>
+
 <xsl:template match="/">
 	<script>{
 		"title":
@@ -321,6 +324,7 @@
 						<xsl:apply-templates select="desc">
 							<xsl:with-param name="entry-name" select="$entry-name"/>
 						</xsl:apply-templates>
+						<xsl:call-template name="version-details"/>
 					</div>
 					<xsl:if test="type/desc">
 						<strong>Multiple types supported:</strong>
@@ -548,24 +552,7 @@
 		<div>Type: <xsl:call-template name="render-types"/></div>
 		<div>
 			<xsl:apply-templates select="desc"/>
-			<xsl:if test="@added">
-				<xsl:text> </xsl:text>
-				<strong>(added <a href="/category/version/{@added}/">
-					<xsl:value-of select="@added"/>
-				</a>)</strong>
-			</xsl:if>
-			<xsl:if test="@deprecated">
-				<xsl:text> </xsl:text>
-				<strong>(deprecated <a href="/category/version/{@deprecated}/">
-					<xsl:value-of select="@deprecated"/>
-				</a>)</strong>
-			</xsl:if>
-			<xsl:if test="@removed">
-				<xsl:text> </xsl:text>
-				<strong>(removed <a href="/category/version/{@removed}/">
-					<xsl:value-of select="@removed"/>
-				</a>)</strong>
-			</xsl:if>
+			<xsl:call-template name="version-details"/>
 		</div>
 		<xsl:if test="property">
 			<ul>
@@ -573,6 +560,48 @@
 			</ul>
 		</xsl:if>
 	</li>
+</xsl:template>
+
+<xsl:template name="version-details">
+	<xsl:if test="@added">
+		<xsl:text> </xsl:text>
+		<xsl:choose>
+			<xsl:when test="$version-category-links">
+				<strong>(added <a href="/category/version/{@added}/">
+					<xsl:value-of select="@added"/>
+				</a>)</strong>
+			</xsl:when>
+			<xsl:otherwise>
+				<strong>(added <xsl:value-of select="@added"/>)</strong>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:if>
+	<xsl:if test="@deprecated">
+		<xsl:text> </xsl:text>
+		<xsl:choose>
+			<xsl:when test="$version-category-links">
+				<strong>(deprecated <a href="/category/version/{@deprecated}/">
+					<xsl:value-of select="@deprecated"/>
+				</a>)</strong>
+			</xsl:when>
+			<xsl:otherwise>
+				<strong>(deprecated <xsl:value-of select="@deprecated"/>)</strong>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:if>
+	<xsl:if test="@removed">
+		<xsl:text> </xsl:text>
+		<xsl:choose>
+			<xsl:when test="$version-category-links">
+				<strong>(removed <a href="/category/version/{@removed}/">
+					<xsl:value-of select="@removed"/>
+				</a>)</strong>
+			</xsl:when>
+			<xsl:otherwise>
+				<strong>(removed <xsl:value-of select="@removed"/>)</strong>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template name="widget-method-event">
@@ -588,6 +617,7 @@
 		<xsl:apply-templates select="desc">
 			<xsl:with-param name="entry-name" select="$entry-name"/>
 		</xsl:apply-templates>
+		<xsl:call-template name="version-details"/>
 	</div>
 	<xsl:call-template name="arguments"/>
 </xsl:template>
