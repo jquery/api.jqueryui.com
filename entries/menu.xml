@@ -165,23 +165,23 @@
 			<desc>
 				Triggered when the menu loses focus.
 			</desc>
-			<argument name="event" type="Event"></argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>
 						The currently active menu item.
 					</desc>
 				</property>
 			</argument>
 		</event>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="focus" type="menufocus">
 			<desc>
 				Triggered when a menu gains focus or when any menu item is activated.
 			</desc>
-			<argument name="event" type="Event"></argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>
 						The currently active menu item.
 					</desc>
@@ -192,9 +192,9 @@
 			<desc>
 				Triggered when a menu item is selected.
 			</desc>
-			<argument name="event" type="Event"></argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>
 						The currently active menu item.
 					</desc>

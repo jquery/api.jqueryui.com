@@ -104,39 +104,24 @@
 	<events>
 		<event name="beforeClose" type="dialogbeforeclose">
 			<desc>Triggered when a dialog is about to close. If canceled, the dialog will not close.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="open" type="dialogopen">
 			<desc>Triggered when the dialog is opened.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="focus" type="dialogfocus">
 			<desc>Triggered when the dialog gains focus.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="dragStart" type="dialogdragstart">
 			<desc>Triggered when the user starts dragging the dialog.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="position" type="Object">
 					<desc>The current CSS position of the dialog.</desc>
 				</property>
@@ -147,11 +132,8 @@
 		</event>
 		<event name="drag" type="dialogdrag">
 			<desc>Triggered while the dialog is being dragged.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="position" type="Object">
 					<desc>The current CSS position of the dialog.</desc>
 				</property>
@@ -162,11 +144,8 @@
 		</event>
 		<event name="dragStop" type="dialogdragstop">
 			<desc>Triggered after the dialog has been dragged.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="position" type="Object">
 					<desc>The current CSS position of the dialog.</desc>
 				</property>
@@ -177,11 +156,8 @@
 		</event>
 		<event name="resizeStart" type="dialogresizestart">
 			<desc>Triggered when the user starts resizing the dialog.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="orginalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
@@ -198,11 +174,8 @@
 		</event>
 		<event name="resize" type="dialogresize">
 			<desc>Triggered while the dialog is being resized.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="orginalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
@@ -219,11 +192,8 @@
 		</event>
 		<event name="resizeStop" type="dialogresizestop">
 			<desc>Triggered after the dialog has been resized.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="orginalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
@@ -240,12 +210,8 @@
 		</event>
 		<event name="close" type="dialogclose">
 			<desc>Triggered when the dialog is closed.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 	</events>
 	<methods>

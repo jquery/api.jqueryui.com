@@ -128,14 +128,11 @@
 		</option>
 	</options>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="dragstart">
 			<desc>Triggered when dragging starts.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper that's being dragged.</desc>
 				</property>
@@ -149,11 +146,8 @@
 		</event>
 		<event name="drag" type="drag">
 			<desc>Triggered while the mouse is moved during the dragging.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper that's being dragged.</desc>
 				</property>
@@ -167,11 +161,8 @@
 		</event>
 		<event name="stop" type="dragstop">
 			<desc>Triggered when dragging stops.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper that's being dragged.</desc>
 				</property>
@@ -183,7 +174,6 @@
 				</property>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

@@ -65,82 +65,58 @@
 	<events>
 		<event name="change" type="autocompletechange">
 			<desc>Triggered when the field is blurred, if the value has changed.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>The item selected from the menu, if any. Otherwise the property is <code>null</code>.</desc>
 				</property>
 			</argument>
 		</event>
 		<event name="close" type="autocompleteclose">
 			<desc>Triggered when the menu is hidden. Not every <code>close</code> event will be accompanied by a <code>change</code> event.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="focus" type="autocompletefocus">
 			<desc>
 				Triggered when focus is moved to an item (not selecting). The default action is to replace the text field's value with the value of the focused item, though only if the event was triggered by a keyboard interaction.
 				<p>Canceling this event prevents the value from being updated, but does not prevent the menu item from being focused.</p>
 			</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>The focused item.</desc>
 				</property>
 			</argument>
 		</event>
 		<event name="open" type="autocompleteopen">
 			<desc>Triggered when the suggestion menu is opened or updated.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="response" type="autocompleteresponse">
 			<desc>Triggered after a search completes, before the menu is shown. Useful for local manipulation of suggestion data, where a custom <a href="#option-source"><code>source</code></a> option callback is not required. This event is always triggered when a search completes, even if the menu will not be shown because there are no results or the Autocomplete is disabled.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="content">
+				<property name="content" type="Array">
 					<desc>Contains the response data and can be modified to change the results that will be shown. This data is already normalized, so if you modify the data, make sure to include both <code>value</code> and <code>label</code> properties for each item.</desc>
 				</property>
 			</argument>
 		</event>
 		<event name="search" type="autocompletesearch">
 			<desc>Triggered before a search is performed, after <a href="#option-minLength"><code>minLength</code></a> and <a href="#option-delay"><code>delay</code></a> are met. If canceled, then no request will be started and no items suggested.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="select" type="autocompleteselect">
 			<desc>
 				Triggered when an item is selected from the menu. The default action is to replace the text field's value with the value of the selected item.
 				<p>Canceling this event prevents the value from being updated, but does not prevent the menu from closing.</p>
 			</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
-				<property name="item">
+				<property name="item" type="jQuery">
 					<desc>The selected item.</desc>
 				</property>
 			</argument>

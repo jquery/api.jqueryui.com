@@ -138,23 +138,20 @@
 		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="spinstart">
 			<desc>
 				Triggered before a spin. Can be canceled, preventing the spin from occurring.
 			</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="spin" type="spin">
 			<desc>
 				Triggered during increment/decrement (to determine direction of spin compare current value with <code>ui.value</code>).
 				<p>Can be canceled, preventing the value from being updated.</p>
 			</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="value" type="Number">
 					<desc>The new value to be set, unless the event is cancelled.</desc>
@@ -163,19 +160,15 @@
 		</event>
 		<event name="stop" type="spinstop">
 			<desc>Triggered after a spin.</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="change" type="spinchange">
 			<desc>
 				Triggered when the value of the spinner has changed and the input is no longer focused.
 			</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 	</events>
 	<example>

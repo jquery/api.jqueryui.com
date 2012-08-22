@@ -97,14 +97,11 @@
 
 	</options>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="resizestart">
 			<desc>This event is triggered at the start of a resize operation.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="element" type="jQuery">
 					<desc>The jQuery object representing the element to be resized</desc>
 				</property>
@@ -130,11 +127,8 @@
 		</event>
 		<event name="resize" type="resize">
 			<desc>This event is triggered during the resize, on the drag of the resize handler.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="element" type="jQuery">
 					<desc>The jQuery object representing the element to be resized</desc>
 				</property>
@@ -160,11 +154,8 @@
 		</event>
 		<event name="stop" type="resizestop">
 			<desc>This event is triggered at the end of a resize operation.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="element" type="jQuery">
 					<desc>The jQuery object representing the element to be resized</desc>
 				</property>
@@ -188,7 +179,6 @@
 				</property>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

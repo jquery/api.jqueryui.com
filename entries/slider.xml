@@ -49,13 +49,11 @@
 		</option>
 	</options>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="slidestart">
 			<desc>Triggered when the user starts sliding.</desc>
-			<argument name="event" type="Event">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
 				</property>
@@ -66,10 +64,8 @@
 		</event>
 		<event name="slide" type="slide">
 			<desc>Triggered on every mouse move during slide. The value provided in the event as <code>ui.value</code> represents the value that the handle will have as a result of the current movement. Canceling the event will prevent the handle from moving and the handle will continue to have its previous value.</desc>
-			<argument name="event" type="Event">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
 				</property>
@@ -83,10 +79,8 @@
 		</event>
 		<event name="change" type="slidechange">
 			<desc>Triggered after the user slides a handle, if the value has changed; or if the value is changed programmatically via the <a href="#method-value"><code>value</code></a> method.</desc>
-			<argument name="event" type="Event">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was changed.</desc>
 				</property>
@@ -97,8 +91,7 @@
 		</event>
 		<event name="stop" type="slidestop">
 			<desc>Triggered after the user slides a handle.</desc>
-			<argument name="event" type="Event">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was moved.</desc>
@@ -108,7 +101,6 @@
 				</property>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

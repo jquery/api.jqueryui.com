@@ -49,14 +49,11 @@
 
 	</options>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="activate" type="dropactivate">
 			<desc>This event is triggered any time an accepted draggable starts dragging. This can be useful if you want to make the droppable 'light up' when it can be dropped on.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="draggable" type="jQuery">
 				  <desc>current draggable element</desc>
 				</property>
@@ -73,11 +70,8 @@
 		</event>
 		<event name="deactivate" type="dropdeactivate">
 			<desc>This event is triggered any time an accepted draggable stops dragging.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="draggable" type="jQuery">
 				  <desc>current draggable element</desc>
 				</property>
@@ -94,11 +88,8 @@
 		</event>
 		<event name="over" type="dropover">
 			<desc>This event is triggered as an accepted draggable is dragged 'over' (within the tolerance of) this droppable.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="draggable" type="jQuery">
 				  <desc>current draggable element</desc>
 				</property>
@@ -115,21 +106,14 @@
 		</event>
 		<event name="out" type="dropout">
 			<desc>This event is triggered when an accepted draggable is dragged out (within the tolerance of) this droppable.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object"/>
 		</event>
 		<event name="drop" type="drop">
 			<desc>This event is triggered when an accepted draggable is dropped 'over' (within the tolerance of) this droppable. In the callback, $(this) represents the droppable the draggable is dropped on.
 ui.draggable represents the draggable.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="draggable" type="jQuery">
 				  <desc>current draggable element</desc>
 				</property>
@@ -144,7 +128,6 @@ ui.draggable represents the draggable.</desc>
 				</property>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

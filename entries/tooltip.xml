@@ -86,13 +86,12 @@
 		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="open" type="tooltipopen">
 			<desc>
 				Triggered when a tooltip is shown, triggered on <code>focusin</code> or <code>mouseover</code>.
 			</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="tooltip" type="jQuery">
 					<desc>The generated tooltip element.</desc>
@@ -103,8 +102,7 @@
 			<desc>
 				Triggered when a tooltip is closed, triggered on <code>focusout</code> or <code>mouseleave</code>.
 			</desc>
-			<argument name="event" type="Event" null="true">
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="tooltip" type="jQuery">
 					<desc>The generated tooltip element.</desc>

@@ -123,14 +123,11 @@
 		</option>
 	</options>
 	<events>
-		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start" type="sortstart">
 			<desc>This event is triggered when sorting starts.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -153,11 +150,8 @@
 		</event>
 		<event name="sort" type="sort">
 			<desc>This event is triggered during sorting.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -180,11 +174,8 @@
 		</event>
 		<event name="change" type="sortchange">
 			<desc>This event is triggered during sorting, but only when the DOM position has changed.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -207,11 +198,8 @@
 		</event>
 		<event name="beforeStop" type="sortbeforestop">
 			<desc>This event is triggered when sorting stops, but when the placeholder/helper is still available.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -234,11 +222,8 @@
 		</event>
 		<event name="stop" type="sortstop">
 			<desc>This event is triggered when sorting has stopped.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -261,11 +246,8 @@
 		</event>
 		<event name="update" type="sortupdate">
 			<desc>This event is triggered when the user stopped sorting and the DOM position has changed.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -288,11 +270,8 @@
 		</event>
 		<event name="receive" type="sortreceive">
 			<desc>This event is triggered when a connected sortable list has received an item from another list.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -315,11 +294,8 @@
 		</event>
 		<event name="remove" type="sortremove">
 			<desc>This event is triggered when a sortable item has been dragged out from the list and into another.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -342,11 +318,8 @@
 		</event>
 		<event name="over" type="sortover">
 			<desc>This event is triggered when a sortable item is moved into a connected list.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -369,11 +342,8 @@
 		</event>
 		<event name="out" type="sortout">
 			<desc>This event is triggered when a sortable item is moved away from a connected list.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -396,11 +366,8 @@
 		</event>
 		<event name="activate" type="sortactivate">
 			<desc>This event is triggered when using connected lists, every connected list on drag start receives it.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -423,11 +390,8 @@
 		</event>
 		<event name="deactivate" type="sortdeactivate">
 			<desc>This event is triggered when sorting was stopped, is propagated to all possible connected lists.</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
+			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<desc></desc>
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper being sorted</desc>
 				</property>
@@ -448,7 +412,6 @@
 				</property>
 			</argument>
 		</event>
-
 	</events>
 	<methods>
 		<method name="cancel">
