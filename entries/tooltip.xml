@@ -27,7 +27,7 @@
 				When changing this option, you likely need to also change the <a href="#option-items"><code>items</code></a> option.</desc>
 			<type name="Function" />
 		</option>
-		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="hide" default="true">
 			<desc>How to hide the tooltip.</desc>
 			<type name="Boolean" />
@@ -72,9 +72,9 @@
 				<desc>What triggered the tooltip to close.</desc>
 			</argument>
 		</method>
-		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="open">
 			<desc>
 				Programmatically open a tooltip. If the widget's element is the target, the event argument is optional. Otherwise you have to pass an event object with the <code>currentTarget</code> property pointing at the target.
@@ -83,11 +83,11 @@
 				<desc>What triggered the tooltip to open.</desc>
 			</argument>
 		</method>
-		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<events>
-		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="open" type="tooltipopen">
 			<desc>
 				Triggered when a tooltip is shown, triggered on <code>focusin</code> or <code>mouseover</code>.

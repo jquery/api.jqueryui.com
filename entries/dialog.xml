@@ -38,7 +38,7 @@
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="draggable" default="true">
 			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable">jQuery UI Draggable wiget</a> to be included.</desc>
 			<type name="Boolean" />
@@ -112,7 +112,7 @@
 				<desc></desc>
 			</argument>
 		</event>
-		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="open" type="dialogopen">
 			<desc>Triggered when the dialog is opened.</desc>
 			<argument name="event" type="Event">
@@ -253,9 +253,9 @@
 		<method name="close">
 			<desc>Closes the dialog.</desc>
 		</method>
-		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="isOpen">
 			<desc>Returns <code>true</code> if the dialog is currently open.</desc>
 		</method>
@@ -265,8 +265,8 @@
 		<method name="open">
 			<desc>Opens the dialog.</desc>
 		</method>
-		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Dialog</desc>

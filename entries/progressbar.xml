@@ -15,7 +15,7 @@
 	</longdesc>
 	<added>1.6</added>
 	<options>
-		<xi:include href="../inherits/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="value" default="0">
 			<desc>The value of the progressbar.</desc>
 			<type name="Number" />
@@ -29,7 +29,7 @@
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
-		<xi:include href="../inherits/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="complete" type="progressbarcomplete">
 			<desc>Triggered when the value of the progressbar reaches the maximum value.</desc>
 			<argument name="event" type="Event">
@@ -39,17 +39,17 @@
 		</event>
 	</events>
 	<methods>
-		<xi:include href="../inherits/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../inherits/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Gets or sets the current value of the progressbar.</desc>
 			<argument name="value" type="Number" optional="true">
 				<desc></desc>
 			</argument>
 		</method>
-		<xi:include href="../inherits/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Progressbar</desc>
