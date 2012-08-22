@@ -494,7 +494,8 @@
 		- the return element is optional
 	-->
 	<xsl:when test="$typename = 'Function'">
-		<a href="http://api.jquery.com/Types/#Function">Function</a>(
+		<a href="http://api.jquery.com/Types/#Function">Function</a>
+		<xsl:text>(</xsl:text>
 		<xsl:if test="argument">
 			<xsl:text> </xsl:text>
 			<xsl:for-each select="argument">
@@ -504,7 +505,8 @@
 				<xsl:call-template name="render-types"/>
 			</xsl:for-each>
 			<xsl:text> </xsl:text>
-		</xsl:if>)
+		</xsl:if>
+		<xsl:text>)</xsl:text>
 
 		<!-- display return type if present -->
 		<xsl:if test="return or @return">
