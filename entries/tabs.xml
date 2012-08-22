@@ -7,9 +7,8 @@
 		<p>Tabs are generally used to break content into multiple sections that can be swapped to save space, much like an accordion.</p>
 
 		<p>The content for each tab panel can be defined in-page or can be loaded via Ajax; both are handled automatically based on the <code>href</code> of the anchor associated with the tab. By default tabs are activated on click, but the events can be changed to hover via the <a href="#option-event"><code>event</code></a> option.</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
 		<option name="active" default="0">

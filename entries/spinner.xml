@@ -7,9 +7,8 @@
 	</desc>
 	<longdesc>
 		<p>Spinner wraps a text input, adds two buttons to increment and decrement the current value, along with handling key events for the same purpose. It delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
 		<option name="culture" default="null">

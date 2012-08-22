@@ -6,8 +6,8 @@
 	<longdesc>
 		<p>The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.</p>
 		<p>All callbacks (start,stop,resize) receive two arguments: The original browser event and a prepared ui object.</p>
-		<p>This interaction requires some functional CSS, otherwise it won't work. If you build a custom theme, use the interaction's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
 		<option name="alsoResize" default='false'>

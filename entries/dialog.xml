@@ -9,9 +9,8 @@
 		<p>If the content length exceeds the maximum height, a scrollbar will automatically appear.</p>
 
 		<p>A bottom button bar and semi-transparent modal overlay layer are common options that can be added.</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
 		<option name="autoOpen" default="true">

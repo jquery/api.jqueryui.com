@@ -15,9 +15,8 @@
 		<p>A fade animation is used by default to show and hide the tooltip, making the appearance a bit more organic, compared to just toggling the visiblity. This can be customized with the <a href="#option-show"><code>show</code></a> and <a href="#option-hide"><code>hide</code></a> options.</p>
 
 		<p>The <a href="#option-items"><code>items</code></a> and <a href="#option-content"><code>content</code></a> options need to stay in-sync. If you change one of them, you need to change the other.</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
 		<option name="content" default="function returning the title attribute">

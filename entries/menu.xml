@@ -29,9 +29,8 @@
 		<p>If you use a structure other than <code>&lt;ul></code>/<code>&lt;li></code>, including using the same element for the menu and the menu items, use the <a href="#option-menus"><code>menus</code></a> option to specify a way to differentiate the two elements, e.g., <code>menus: "div.menuElement"</code>.</p>
 
 		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
 		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

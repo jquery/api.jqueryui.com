@@ -48,9 +48,8 @@
 		<code>$.datepicker.setDefaults($.datepicker.regional[""]);</code>
 		<p>And can then override an individual datepicker for a specific locale:</p>
 		<code>$(selector).datepicker($.datepicker.regional['fr']);</code>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
 		<option name="altField" type="Selector, jQuery, Element" default='""'>

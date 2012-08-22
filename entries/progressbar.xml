@@ -10,9 +10,8 @@
 		<p>
 			This is a determinate progress bar, meaning that it should only be used in situations where the system can accurately update the current status. A determinate progress bar should never fill from left to right, then loop back to empty for a single process &#8212; if the actual status cannot be calculated, an indeterminate progress bar or spinner animation is a better way to provide user feedback.
 		</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.6</added>
 	<options>
 		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

@@ -17,10 +17,9 @@
 ]]></pre>
 
 		<p>Accordions support arbitrary markup, but each content panel must always be the next sibling after its associated header. See the <a href="#option-header"><code>header</code></a> option for information on how to use custom markup structures.</p>
-		<p>The panels can be activated programmatically by setting the <a href="#option-active"><code>active</code></a> option..</p>
-
-		<p>This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.</p>
+		<p>The panels can be activated programmatically by setting the <a href="#option-active"><code>active</code></a> option.</p>
 	</longdesc>
+	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
 		<option name="active" default="0">
