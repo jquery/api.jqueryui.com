@@ -315,10 +315,12 @@
 						<xsl:value-of select="@name"/>
 					</h3>
 					<div>
-						<strong>Type: </strong><xsl:call-template name="render-types"/>
+						<strong>Type: </strong>
+						<xsl:call-template name="render-types"/>
 					</div>
 					<div>
-						<strong>Default: </strong><xsl:value-of select="@default"/>
+						<strong>Default: </strong>
+						<code><xsl:value-of select="@default"/></code>
 					</div>
 					<div>
 						<xsl:apply-templates select="desc">
