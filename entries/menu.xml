@@ -80,9 +80,9 @@
 				<desc>Indicates whether all sub-menus should be closed or only sub-menus below and including the menu that is or contains the target of the triggering event.</desc>
 			</argument>
 		</method>
-		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="expand">
 			<desc>
 				Opens the sub-menu below the currently active item, if one exists.
@@ -158,7 +158,7 @@
 				<desc>What triggered the selection.</desc>
 			</argument>
 		</method>
-		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<events>
 		<event name="blur" type="menublur">

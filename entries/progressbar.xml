@@ -34,9 +34,9 @@
 		</event>
 	</events>
 	<methods>
-		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Gets or sets the current value of the progressbar.</desc>
@@ -44,7 +44,7 @@
 				<desc></desc>
 			</argument>
 		</method>
-		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Progressbar</desc>

@@ -195,10 +195,7 @@
 				</span>
 			</xsl:when>
 			<xsl:when test="$entry-type='widget'">
-				<span>
-					<xsl:value-of select="@name"/>
-					<xsl:text> widget</xsl:text>
-				</span>
+				<span><xsl:value-of select="title"/></span>
 			</xsl:when>
 		</xsl:choose>
 	</h2>

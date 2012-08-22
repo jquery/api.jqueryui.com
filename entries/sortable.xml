@@ -427,9 +427,9 @@
 				will cancel the change. Useful in the 'receive' callback.
 			</desc>
 		</method>
-		<xi:include href="../includes/widget-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Refresh the sortable items. Custom trigger the reloading of all sortable items, causing new items to be recognized.</desc>
@@ -468,7 +468,7 @@ and do
 then <code>result[0]</code> will contain "hello" and <code>result[1]</code> will contain "goodbye".
 			</desc>
 		</method>
-		<xi:include href="../includes/widget-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A simple jQuery UI Sortable.</desc>

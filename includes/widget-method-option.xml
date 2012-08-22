@@ -6,7 +6,7 @@
 	<signature>
 		<desc>Gets the value currently associated with the specified <code>optionName</code>.</desc>
 		<argument name="optionName" type="String">
-			<desc>The name ofthe option to get.</desc>
+			<desc>The name of the option to get.</desc>
 		</argument>
 	</signature>
 	<signature>
