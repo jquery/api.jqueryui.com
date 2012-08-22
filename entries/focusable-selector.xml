@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<entry type="selector" name="focusable" return="">
+	<title>:focusable() Selector</title>
+	<sample>:focusable</sample>
+	<signature/>
+	<desc>Selects elements which can be focused.</desc>
+	<category slug="selectors"/>
+</entry>

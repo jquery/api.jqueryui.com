@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entry type="method" name="focus" return="jQuery">
+	<title>.focus()</title>
+	<desc>Asynchronously set focus to an element.</desc>
+	<signature>
+		<argument name="delay" type="Number">
+			<desc>The number of milliseconds to wait before setting focus.</desc>
+		</argument>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the element has been focused.</desc>
+		</argument>
+	</signature>
+	<longdesc>
+		<p>This signature is in addition to the <a href="http://api.jquery.com/focus">signatures provided by jQuery core</a>.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>

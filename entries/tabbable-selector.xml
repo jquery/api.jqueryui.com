@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<entry type="selector" name="tabbable" return="">
+	<title>:tabbable() Selector</title>
+	<sample>:tabbable</sample>
+	<signature/>
+	<desc>Selects elements which the user can focus via tabbing.</desc>
+	<category slug="selectors"/>
+</entry>

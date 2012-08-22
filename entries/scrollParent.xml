@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<entry type="method" name="scrollParent" return="jQuery">
+	<title>.scrollParent()</title>
+	<desc>Get the closest ancestor element that is scrollable.</desc>
+	<signature/>
+	<category slug="methods"/>
+</entry>

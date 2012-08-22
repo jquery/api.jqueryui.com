@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<entry type="selector" name="data" return="">
+	<title>:data() Selector</title>
+	<sample>:data(key)</sample>
+	<signature>
+		<argument name="key" type="String">
+			<desc>The data key.</desc>
+		</argument>
+	</signature>
+	<desc>Selects elements which have data stored under the specified key.</desc>
+	<longdesc>
+		<p>The expression <code>$( "div:data(foo)")</code> matches a <code>&lt;div&gt;</code> if it has data stored via <code>.data( "foo", value )</code>.</p>
+	</longdesc>
+	<category slug="selectors"/>
+</entry>
