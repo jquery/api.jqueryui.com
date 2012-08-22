@@ -524,7 +524,8 @@
 	<xsl:param name="dot" select="false()"/>
 
 	<xsl:if test="$dot and not(contains($method-name, '.')) and $method-name != 'jQuery'">.</xsl:if>
-	<xsl:value-of select="$method-name"/>(
+	<xsl:value-of select="$method-name"/>
+	<xsl:text>(</xsl:text>
 	<xsl:if test="argument">
 		<xsl:text> </xsl:text>
 		<xsl:for-each select="argument">
@@ -534,7 +535,8 @@
 			<xsl:if test="@optional"><xsl:text> ]</xsl:text></xsl:if>
 		</xsl:for-each>
 		<xsl:text> </xsl:text>
-	</xsl:if>)
+	</xsl:if>
+	<xsl:text>)</xsl:text>
 </xsl:template>
 
 <xsl:template name="arguments">
