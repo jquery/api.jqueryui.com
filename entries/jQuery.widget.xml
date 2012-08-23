@@ -91,7 +91,7 @@
 		<title>Base Widget</title>
 		<desc>The base widget used by the widget factory.</desc>
 		<options>
-			<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<option name="hide" default="null">
 				<desc>If and how to animate the hiding of an element.</desc>
 				<type name="Boolean">

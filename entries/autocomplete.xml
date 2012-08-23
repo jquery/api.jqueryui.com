@@ -21,7 +21,7 @@
 		<option name="delay" type="Integer" default="300">
 			<desc>The delay in milliseconds between when a keystroke occurs and when a search is performed. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.</desc>
 		</option>
-		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="minLength" type="Integer" default="1">
 			<desc>The minimum number of characters a user must type before a search is performed. Zero is useful for local data with just a few items, but a higher value should be used when a single character search could match a few thousand items.</desc>
 		</option>

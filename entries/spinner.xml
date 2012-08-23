@@ -15,7 +15,7 @@
 				Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }'>
 			<desc>
 				Icons to use for buttons, matching an icon defined by the jQuery UI CSS Framework.

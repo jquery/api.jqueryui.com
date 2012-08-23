@@ -20,7 +20,7 @@
 			<desc>Time in milliseconds to define when the selecting should start. It helps preventing unwanted selections when clicking on an element.</desc>
 			<type name="Number" />
 		</option>
-		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" default='0'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until after mouse is dragged beyond distance.</desc>
 			<type name="Number" />

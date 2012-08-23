@@ -20,7 +20,7 @@
 			<desc>If set to false, will prevent the ui-droppable class from being added. This may be desired as a performance optimization when calling .droppable() init on many hundreds of elements.</desc>
 			<type name="Boolean" />
 		</option>
-		<xi:include href="../includes/widget-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="greedy" default='false'>
 			<desc>If true, will prevent event propagation on nested droppables.</desc>
 			<type name="Boolean" />
