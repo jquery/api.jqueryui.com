@@ -127,12 +127,18 @@
 		</method>
 		<method name="value">
 			<desc>
-				Gets or sets the current value. Without the value parameter, returns the current value as a parsed number. Otherwise, sets the value.
-				<p>If the <code>value</code> parameter is a string, its parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</p>
+				Gets or sets the current value as a number.
 			</desc>
-			<argument name="value" type="Number" optional="true">
-				<desc>The value to set.</desc>
-			</argument>
+			<signature>
+				<desc>Gets the current value as a number. The value is parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</desc>
+			</signature>
+			<signature>
+				<argument name="value">
+					<desc>The value to set. If passed as a string, the value is parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</desc>
+					<type name="Number"/>
+					<type name="String"/>
+				</argument>
+			</signature>
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
