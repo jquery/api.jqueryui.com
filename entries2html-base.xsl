@@ -636,8 +636,8 @@
 	<xsl:copy-of select="."/>
 </xsl:template>
 <xsl:template match="desc/placeholder">
-	<xsl:param name="entry-name"/>
-	<xsl:value-of select="$entry-name"/>
+	<xsl:variable name="name" select="@name"/>
+	<xsl:value-of select="ancestor::entry/@*[name()=$name]"/>
 </xsl:template>
 
 <!-- escape-string, from xml2json.xsl -->

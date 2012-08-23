@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <method name="option" return="jQuery">
 	<desc>
-		Sets one or more options for the <placeholder name="title"/>.
+		Sets one or more options for the <placeholder name="name"/>.
 	</desc>
 	<signature>
 		<desc>Gets the value currently associated with the specified <code>optionName</code>.</desc>
