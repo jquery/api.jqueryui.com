@@ -3,17 +3,16 @@
 	<title>Accordion Widget</title>
 	<desc>Convert a pair of headers and content panels into an accordion.</desc>
 	<longdesc>
-		<p>Make the selected elements Accordion widgets.</p>
 		<p>The markup of your accordion container needs pairs of headers and content panels:</p>
 
-		<pre><![CDATA[
+		<pre><code data-linenum="true"><![CDATA[
 <div id="accordion">
 	<h3>First header</h3>
 	<div>First content panel</div>
 	<h3>Second header</h3>
 	<div>Second content panel</div>
 </div>
-]]></pre>
+]]></code></pre>
 
 		<p>Accordions support arbitrary markup, but each content panel must always be the next sibling after its associated header. See the <a href="#option-header"><code>header</code></a> option for information on how to use custom markup structures.</p>
 		<p>The panels can be activated programmatically by setting the <a href="#option-active"><code>active</code></a> option.</p>
@@ -157,29 +156,21 @@ $( "#accordion" ).accordion();
 <div id="accordion">
 	<h3>Section 1</h3>
 	<div>
-		<p>
-		Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-		ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-		amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-		odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-		</p>
+		<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+		Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+		condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+		Nam mi. Proin viverra leo ut odio.</p>
 	</div>
 	<h3>Section 2</h3>
 	<div>
-		<p>
-		Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-		purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-		velit, faucibus interdum tellus libero ac justo.
-		</p>
+		<p>Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+		Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+		faucibus interdum tellus libero ac justo.</p>
 	</div>
 	<h3>Section 3</h3>
 	<div>
-		<p>
-		Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-		Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-		ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-		lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-		</p>
+		<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+		Quisque lobortis.Phasellus pellentesque purus in massa.</p>
 		<ul>
 			<li>List item one</li>
 			<li>List item two</li>
