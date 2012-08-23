@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry type="selector" name="data" return="">
+<entry type="selector" name="data">
 	<title>:data() Selector</title>
 	<sample>:data(key)</sample>
 	<signature>

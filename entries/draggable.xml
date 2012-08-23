@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="draggable" namespace="fn" type="widget" widgetnamespace="ui">
+<entry name="draggable" type="widget">
 	<title>Draggable Widget</title>
 	<desc>Allow mouse interactions with elements, moving them around.</desc>
 	<longdesc>

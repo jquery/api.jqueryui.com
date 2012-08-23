@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="datepicker" namespace="fn" type="widget" widgetnamespace="ui">
+<entry name="datepicker" type="widget">
 	<title>Datepicker Widget</title>
 	<desc>Select a date from a popup or inline calendar</desc>
 	<longdesc>
