@@ -19,21 +19,15 @@
 				</dl>
 			</desc>
 		</option>
-		<option name="duration" type="Number" default="400">
-			<desc>The number of ms the animation will run for</desc>
-		</option>
-		<option name="easing" type="String" default='"swing"'>
-			<desc>The easing function to use</desc>
-		</option>
-		<option name="complete" type="function">
-			<desc>A callback function, executed when the effect completes</desc>
-		</option>
 		<option name="size" type="Number|String" default="15">
 			<desc>The size of the "folded" element, can be a number representing px, or a string containing a percentage I.E. "50%"</desc>
 		</option>
 		<option name="horizFirst" type="Boolean" default="false">
 			<desc>If the horizontal direction happens first when hiding. Remember, showing inverts hiding.</desc>
 		</option>
+		<xi:include href="../includes/animatino-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animatino-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animatino-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<example>
 		<desc>Fold toggle</desc>

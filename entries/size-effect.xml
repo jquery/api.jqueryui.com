@@ -12,15 +12,9 @@
 		<option name="scale" type="String" default="both">
 			<desc>Which areas of the element will be resized: 'both', 'box', 'content' Box resizes the border and padding of the element Content resizes any content inside of the element.</desc>
 		</option>
-		<option name="duration" type="Number" default="400">
-			<desc>The number of ms the animation will run for</desc>
-		</option>
-		<option name="easing" type="String" default="swing">
-			<desc>The easing function to use</desc>
-		</option>
-		<option name="complete" type="function">
-			<desc>A callback function, executed when the effect completes</desc>
-		</option>
+		<xi:include href="../includes/animatino-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animatino-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animatino-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<example>
 		<desc>Size an element to 200 x 60.</desc>
