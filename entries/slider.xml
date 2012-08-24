@@ -107,19 +107,43 @@
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
-			<desc>Gets or sets the value of the slider. For single handle sliders.</desc>
-			<argument name="value" type="Number" optional="true">
-				<desc></desc>
-			</argument>
+			<desc>Get or set the value of the slider.</desc>
+			<signature return="Number">
+				<desc>Get the value of the slider.</desc>
+			</signature>
+			<signature>
+				<desc>Set the value of the slider.</desc>
+				<argument name="value" type="Number">
+					<desc>The value to set.</desc>
+				</argument>
+			</signature>
 		</method>
 		<method name="values">
-			<desc>Number</desc>
-			<argument name="index" type="Integer">
-				<desc></desc>
-			</argument>
-			<argument name="value" type="Number" optional="true">
-				<desc></desc>
-			</argument>
+			<desc>Get or set the handle value(s).</desc>
+			<signature return="Array">
+				<desc>Get the value for all handles.</desc>
+			</signature>
+			<signature return="Number">
+				<desc>Get the value for the specified handle.</desc>
+				<argument name="index" type="Integer">
+					<desc>The zero-based index of the handle.</desc>
+				</argument>
+			</signature>
+			<signature>
+				<desc>Set the value for the specified handle.</desc>
+				<argument name="index" type="Integer">
+					<desc>The zero-based index of the handle.</desc>
+				</argument>
+				<argument name="value" type="Number">
+					<desc>The value to set.</desc>
+				</argument>
+			</signature>
+			<signature>
+				<desc>Set the value for all handles.</desc>
+				<argument name="values" type="Array">
+					<desc>The values to set.</desc>
+				</argument>
+			</signature>
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
