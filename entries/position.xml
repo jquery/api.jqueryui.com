@@ -54,7 +54,7 @@
 		</argument>
 	</signature>
 	<example>
-		<desc>Clicking on the green element transfers to the other.</desc>
+		<desc>A simple jQuery UI Position example.</desc>
 		<css><![CDATA[
 	.positionDiv {
 		position: absolute;
