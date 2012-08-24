@@ -47,9 +47,21 @@
 			<type name="Number" />
 			<type name="String" />
 		</option>
-		<option name="hide" default="null">
-			<desc>The effect to be used when the dialog is closed.</desc>
-			<type name="String" />
+		<option name="show" default="null">
+			<desc>If and how to animate the hiding of the dialog.</desc>
+			<type name="Number">
+				<desc>
+					The dialog will fade out while animating the height and width for the specified duration.
+				</desc>
+			</type>
+			<type name="String">
+				<desc>
+					The dialog will be hidden using the specified jQuery UI effect. See the <a href="/category/effects/">list of effects</a> for possible values.
+				</desc>
+			</type>
+			<type name="Object">
+				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+			</type>
 		</option>
 		<option name="maxHeight" default="false">
 			<desc>The maximum height to which the dialog can be resized, in pixels.</desc>
@@ -81,8 +93,20 @@
 			<type name="Boolean" />
 		</option>
 		<option name="show" default="null">
-			<desc>The effect to be used when the dialog is opened.</desc>
-			<type name="String" />
+			<desc>If and how to animate the showing of the dialog.</desc>
+			<type name="Number">
+				<desc>
+					The dialog will fade in while animating the height and width for the specified duration.
+				</desc>
+			</type>
+			<type name="String">
+				<desc>
+					The dialog will be shown using the specified jQuery UI effect. See the <a href="/category/effects/">list of effects</a> for possible values.
+				</desc>
+			</type>
+			<type name="Object">
+				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+			</type>
 		</option>
 		<option name="stack" default="true">
 			<desc>Specifies whether the dialog will stack on top of other dialogs. This will cause the dialog to move to the front of other dialogs when it gains focus.</desc>
