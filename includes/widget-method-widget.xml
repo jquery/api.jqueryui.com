@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<method name="widget">
+<method name="widget" return="jQuery">
 	<desc>
 		Returns a <code>jQuery</code> object containing the element.
 	</desc>

@@ -3,13 +3,13 @@
 	<desc>
 		Sets one or more options for the <placeholder name="name"/>.
 	</desc>
-	<signature>
+	<signature return="Object">
 		<desc>Gets the value currently associated with the specified <code>optionName</code>.</desc>
 		<argument name="optionName" type="String">
 			<desc>The name of the option to get.</desc>
 		</argument>
 	</signature>
-	<signature>
+	<signature return="PlainObject">
 		<desc>Gets an object containing key/value pairs representing the current <placeholder name="title"/> options hash.</desc>
 	</signature>
 	<signature>
