@@ -332,7 +332,7 @@
 								<li>
 									<strong><xsl:value-of select="../@name"/></strong>
 									<xsl:text>: </xsl:text>
-									<xsl:copy-of select="node()"/>
+									<xsl:apply-templates select="."/>
 								</li>
 							</xsl:for-each>
 						</ul>

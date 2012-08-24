@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="tabs" type="widget">
+<entry name="tabs" type="widget" animated-element="panel">
 	<title>Tabs Widget</title>
 	<desc>A single content area with multiple panels, each associated with a header in a list.</desc>
 	<longdesc>
@@ -42,16 +42,8 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="hide" default="true">
-			<desc>How to hide a panel.</desc>
-			<type name="Boolean" />
-			<type name="Object" />
-		</option>
-		<option name="show" default="true">
-			<desc>How to show a panel.</desc>
-			<type name="Boolean" />
-			<type name="Object" />
-		</option>
+		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<event name="activate" type="accordionactivate">

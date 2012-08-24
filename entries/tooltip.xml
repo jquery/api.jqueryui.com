@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="tooltip" type="widget">
+<entry name="tooltip" type="widget" animated-element="tooltip">
 	<title>Tooltip Widget</title>
 	<desc>Customizable, themeable tooltips, replacing native tooltips.</desc>
 	<longdesc>
@@ -26,11 +26,7 @@
 			<type name="Function" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="hide" default="true">
-			<desc>How to hide the tooltip.</desc>
-			<type name="Boolean" />
-			<type name="Object" />
-		</option>
+		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="items" default="[title]">
 			<desc>
 				A selector indicating which items should show tooltips. Customize if you're using something other then the title attribute for the tooltip content, or if you need a different selector for event delegation.
@@ -43,11 +39,7 @@
 			<desc>Configuration for the Position utility. The <code>of</code> property defaults to the target element, but can also be overriden.</desc>
 			<type name="Object" />
 		</option>
-		<option name="show" default="true">
-			<desc>How to show the tooltip.</desc>
-			<type name="Boolean" />
-			<type name="Object" />
-		</option>
+		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="tooltipClass" default="null">
 			<desc>
 				A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
