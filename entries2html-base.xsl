@@ -164,15 +164,7 @@
 						</xsl:call-template>
 					</xsl:for-each>
 				</span>
-				<xsl:text> </xsl:text>
-				<span class="returns">
-					<xsl:if test="@return != ''">
-						<xsl:text>Returns: </xsl:text>
-						<a class="return" href="http://api.jquery.com/Types/#{@return}">
-							<xsl:value-of select="@return"/>
-						</a>
-					</xsl:if>
-				</span>
+				<xsl:call-template name="return-value"/>
 			</xsl:when>
 			<xsl:when test="$entry-type='selector'">
 				<span>
@@ -184,15 +176,7 @@
 				<span>
 					<xsl:value-of select="@name"/>
 				</span>
-				<xsl:text> </xsl:text>
-				<span class="returns">
-					<xsl:if test="@return != ''">
-						<xsl:text>Returns: </xsl:text>
-						<a class="return" href="http://api.jquery.com/Types/#{@return}">
-							<xsl:value-of select="@return"/>
-						</a>
-					</xsl:if>
-				</span>
+				<xsl:call-template name="return-value"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<span><xsl:value-of select="title"/></span>
@@ -457,29 +441,6 @@
 	</xsl:if>
 </xsl:template>
 
-<xsl:template name="render-return-types">
-	<xsl:if test="@return and return">
-		<strong>ERROR: Use <i>either</i> @return or return element</strong>
-	</xsl:if>
-
-	<!-- return attribute -->
-	<xsl:if test="@return">
-		<xsl:call-template name="render-type">
-			<xsl:with-param name="typename" select="@return" />
-		</xsl:call-template>
-	</xsl:if>
-
-	<!-- a return element -->
-	<xsl:if test="return">
-		<xsl:for-each select="return">
-			<xsl:if test="position() &gt; 1">
-				<strong>ERROR: A single return element is expected</strong>
-			</xsl:if>
-			<xsl:call-template name="render-types" />
-		</xsl:for-each>
-	</xsl:if>
-</xsl:template>
-
 <!-- Render a single type -->
 <xsl:template name="render-type">
 	<xsl:param name="typename"/>
@@ -516,6 +477,41 @@
 		<a href="http://api.jquery.com/Types#{$typename}"><xsl:value-of select="$typename" /></a>
 	</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="render-return-types">
+	<xsl:if test="@return and return">
+		<strong>ERROR: Use <i>either</i> @return or return element</strong>
+	</xsl:if>
+
+	<!-- return attribute -->
+	<xsl:if test="@return">
+		<xsl:call-template name="render-type">
+			<xsl:with-param name="typename" select="@return" />
+		</xsl:call-template>
+	</xsl:if>
+
+	<!-- a return element -->
+	<xsl:if test="return">
+		<xsl:for-each select="return">
+			<xsl:if test="position() &gt; 1">
+				<strong>ERROR: A single return element is expected</strong>
+			</xsl:if>
+			<xsl:call-template name="render-types" />
+		</xsl:for-each>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template name="return-value">
+	<xsl:if test="@return != ''">
+		<xsl:text> </xsl:text>
+		<span class="returns">
+			<xsl:text>Returns: </xsl:text>
+			<a class="return" href="http://api.jquery.com/Types/#{@return}">
+				<xsl:value-of select="@return"/>
+			</a>
+		</span>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template name="method-signature">
@@ -615,6 +611,7 @@
 		<xsl:call-template name="method-signature">
 			<xsl:with-param name="method-name" select="$method-name"/>
 		</xsl:call-template>
+		<xsl:call-template name="return-value"/>
 	</h3>
 	<div>
 		<xsl:apply-templates select="desc">
