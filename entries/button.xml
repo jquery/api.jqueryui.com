@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="button" type="widget">
+<entry name="button" type="widget" widget-element="element visually representing the button">
 	<title>Button Widget</title>
 	<desc>Themable buttons and button sets.</desc>
 	<longdesc>

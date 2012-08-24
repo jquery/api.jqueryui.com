@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="slider" type="widget">
+<entry name="slider" type="widget" widget-element="slider">
 	<title>Slider Widget</title>
 	<desc>Drag a handle to select a numeric value.</desc>
 	<longdesc>

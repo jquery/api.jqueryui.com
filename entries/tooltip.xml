@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="tooltip" type="widget" animated-element="tooltip">
+<entry name="tooltip" type="widget" animated-element="tooltip" widget-element="original element">
 	<title>Tooltip Widget</title>
 	<desc>Customizable, themeable tooltips, replacing native tooltips.</desc>
 	<longdesc>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="progressbar" type="widget">
+<entry name="progressbar" type="widget" widget-element="progressbar">
 	<title>Progressbar Widget</title>
 	<desc>Display status of a determinate process.</desc>
 	<longdesc>

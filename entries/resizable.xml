@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="resizable" type="widget">
+<entry name="resizable" type="widget" widget-element="resizable element">
 	<title>Resizable Widget</title>
 	<desc>Change the size of an element using the mouse</desc>
 	<longdesc>

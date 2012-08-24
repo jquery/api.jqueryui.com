@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="tabs" type="widget" animated-element="panel">
+<entry name="tabs" type="widget" animated-element="panel" widget-element="tabs container">
 	<title>Tabs Widget</title>
 	<desc>A single content area with multiple panels, each associated with a header in a list.</desc>
 	<longdesc>

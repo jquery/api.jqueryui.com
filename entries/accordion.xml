@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="accordion" type="widget">
+<entry name="accordion" type="widget" widget-element="accordion">
 	<title>Accordion Widget</title>
 	<desc>Convert a pair of headers and content panels into an accordion.</desc>
 	<longdesc>

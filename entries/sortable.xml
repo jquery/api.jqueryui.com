@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="sortable" type="widget">
+<entry name="sortable" type="widget" widget-element="sortable element">
 	<title>Sortable Widget</title>
 	<desc>Reorder elements in a list or grid using the mouse</desc>
 	<longdesc>

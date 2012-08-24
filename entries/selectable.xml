@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="selectable" type="widget">
+<entry name="selectable" type="widget" widget-element="selectable element">
 	<title>Selectable Widget</title>
 	<desc>Use the mouse to select individual or a group of elements</desc>
 	<longdesc>

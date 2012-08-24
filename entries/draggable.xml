@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="draggable" type="widget">
+<entry name="draggable" type="widget" widget-element="draggable element">
 	<title>Draggable Widget</title>
 	<desc>Allow mouse interactions with elements, moving them around.</desc>
 	<longdesc>

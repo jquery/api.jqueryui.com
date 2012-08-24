@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="menu" type="widget">
+<entry name="menu" type="widget" widget-element="menu">
 	<title>Menu Widget</title>
 	<desc>
 		Themeable menu with mouse and keyboard interactions for navigation.
