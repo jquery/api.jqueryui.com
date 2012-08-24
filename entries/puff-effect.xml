@@ -4,7 +4,9 @@
 	<desc>
 		Creates a puff effect by scaling the element up and hiding it at the same time.
 	</desc>
-	<longdesc>This is the only effect without a separate file, it shares a file with the scale effect.</longdesc>
+	<longdesc>
+		<p>This is the only effect without a separate file, it shares a file with the scale effect.</p>
+	</longdesc>
 	<options>
 		<option name="mode" type="String" default="hide">
 			<desc>The mode of the effect. Can be "show" or "hide"</desc>

@@ -3,7 +3,7 @@
 	<title>Transfer Effect</title>
 	<desc>Transfers the outline of an element to another element</desc>
 	<longdesc>
-		Very useful when trying to visualize interaction between two elements.
+		<p>Very useful when trying to visualize interaction between two elements.</p>
 		<p>The transfer element iself has the class name "ui-effects-transfer", and needs to be styled by you, for example by adding a background or border.</p>
 	</longdesc>
 	<options>

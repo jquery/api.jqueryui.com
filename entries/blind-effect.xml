@@ -5,7 +5,7 @@
 		The blind effect hides or shows an element by wrapping the element in a container, and "pulling the blinds"
 	</desc>
 	<longdesc>
-		The container has <code>overflow:hidden</code> applied, so height changes affect what's visible.
+		<p>The container has <code>overflow: hidden</code> applied, so height changes affect what's visible.</p>
 	</longdesc>
 	<options>
 		<option name="mode" type="String" default='"hide"'>
