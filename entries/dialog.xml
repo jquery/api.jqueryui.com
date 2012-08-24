@@ -17,12 +17,13 @@
 			<type name="Boolean" />
 		</option>
 		<option name="buttons" default="{}">
-			<desc>Specifies which buttons should be displayed on the dialog. The keys are the button labels and the values are the callbacks for when the associated button is clicked. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
-			<type name="Object" />
-		</option>
-		<option name="buttons" default="[]">
-			<desc>Specifies which buttons should be displayed on the dialog. Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button.</desc>
-			<type name="Array" />
+			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
+			<type name="Object">
+				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
+			</type>
+			<type name="Array">
+				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button.</desc>
+			</type>
 		</option>
 		<option name="closeOnEscape" default="true">
 			<desc>Specifies whether the dialog should close when it has focus and the user presses the esacpe (ESC) key.</desc>
