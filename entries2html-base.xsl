@@ -194,9 +194,9 @@
 					</xsl:if>
 				</span>
 			</xsl:when>
-			<xsl:when test="$entry-type='widget'">
+			<xsl:otherwise>
 				<span><xsl:value-of select="title"/></span>
-			</xsl:when>
+			</xsl:otherwise>
 		</xsl:choose>
 	</h2>
 </xsl:template>
