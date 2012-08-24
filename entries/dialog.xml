@@ -236,9 +236,13 @@
 	<example>
 		<desc>A simple jQuery UI Dialog</desc>
 		<code><![CDATA[
-$( "#dialog" ).dialog();
+$( "#dialog" ).dialog({ autoOpen: false });
+$( "#opener" ).click(function() {
+	$( "#dialog" ).dialog( "open" );
+});
 ]]></code>
 		<html><![CDATA[
+<button id="opener">open the dialog</button>
 <div id="dialog" title="Dialog Title">I'm a dialog</div>
 ]]></html>
 	</example>
