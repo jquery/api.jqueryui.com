@@ -5,7 +5,7 @@
 	<deprecated>1.9</deprecated>
 	<signature/>
 	<longdesc>
-		<p>Disabled text selection is bad. Don't use this.</p>
+		<p>Disabling text selection is bad. Don't use this.</p>
 	</longdesc>
 	<category slug="methods"/>
 </entry>
