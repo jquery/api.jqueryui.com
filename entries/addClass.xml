@@ -7,7 +7,7 @@
 	</longdesc>
 	<signature>
 		<argument name="className" type="String">
-			<desc>One or more class names to be added to the class attribute of each matched element.</desc>
+			<desc>One or more class names (space separated) to be added to the class attribute of each matched element.</desc>
 		</argument>
 		<xi:include href="../includes/animation-argument-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/animation-argument-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

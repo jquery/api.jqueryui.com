@@ -7,7 +7,7 @@
 	</longdesc>
 	<signature>
 		<argument name="className" type="String">
-			<desc>One or more class names to be toggled for each element in the matched set.</desc>
+			<desc>One or more class names (space separated) to be toggled for each element in the matched set.</desc>
 		</argument>
 		<xi:include href="../includes/animation-argument-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/animation-argument-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
