@@ -291,6 +291,7 @@
 				<h2 class="underline">Options</h2>
 			</header>
 			<xsl:for-each select="options/option">
+				<xsl:sort select="@name"/>
 				<div id="option-{@name}">
 					<h3>
 						<xsl:value-of select="@name"/>
@@ -334,6 +335,7 @@
 				<h2 class="underline">Methods</h2>
 			</header>
 			<xsl:for-each select="methods/method">
+				<xsl:sort select="@name"/>
 				<xsl:variable name="method-name" select="@name"/>
 				<div id="method-{$method-name}">
 					<xsl:for-each select="signature | self::node()[count(signature) = 0]">
@@ -352,6 +354,7 @@
 				<h2 class="underline">Events</h2>
 			</header>
 			<xsl:for-each select="events/event">
+				<xsl:sort select="@name"/>
 				<div id="event-{@name}">
 					<xsl:call-template name="widget-method-event">
 						<xsl:with-param name="entry-name" select="$entry-name"/>
