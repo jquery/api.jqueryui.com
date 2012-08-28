@@ -39,9 +39,9 @@
 		<option name="times" type="Number" default="5">
 			<desc>The number of times the element will bounce.  When used with hide or show, there is an extra "half" bounce for the fade in/out</desc>
 		</option>
-		<xi:include href="../includes/animatino-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animatino-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animatino-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<example>
 		<desc>Bounce toggle</desc>
