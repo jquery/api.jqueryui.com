@@ -55,7 +55,7 @@
 
 			<xsl:if test="normalize-space(longdesc/*)">
 				<div class="longdesc">
-					<xsl:copy-of select="longdesc/*" />
+					<xsl:apply-templates select="longdesc"/>
 				</div>
 			</xsl:if>
 
@@ -625,17 +625,21 @@
 	<xsl:call-template name="arguments"/>
 </xsl:template>
 
-<xsl:template match="desc">
+<!-- <desc> and <longdesc> support <placeholder name="foo"> to replace the
+placeholder with @foo from the <entry> -->
+<xsl:template match="desc|longdesc">
 	<xsl:param name="entry-name"/>
 	<xsl:apply-templates select="./node()">
 		<xsl:with-param name="entry-name" select="$entry-name"/>
 	</xsl:apply-templates>
 </xsl:template>
-<!-- This makes elements inside <desc> get copied over properly -->
-<xsl:template match="desc/*">
-	<xsl:copy-of select="."/>
+<!-- This makes elements and attributes get copied over properly -->
+<xsl:template match="desc//*|desc//@*|longdesc//*|longdesc//@*">
+	<xsl:copy>
+		<xsl:apply-templates select="@* | node()"/>
+	</xsl:copy>
 </xsl:template>
-<xsl:template match="desc/placeholder">
+<xsl:template match="//placeholder">
 	<xsl:variable name="name" select="@name"/>
 	<xsl:value-of select="ancestor::entry/@*[name()=$name]"/>
 </xsl:template>
