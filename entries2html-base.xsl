@@ -51,44 +51,46 @@
 			</xsl:attribute>
 
 			<xsl:call-template name="entry-title"/>
-			<xsl:call-template name="entry-body"/>
+			<div class="entry-wrapper">
+				<xsl:call-template name="entry-body"/>
 
-			<xsl:if test="normalize-space(longdesc/*)">
-				<div class="longdesc">
-					<xsl:apply-templates select="longdesc"/>
-				</div>
-			</xsl:if>
+				<xsl:if test="normalize-space(longdesc/*)">
+					<div class="longdesc">
+						<xsl:apply-templates select="longdesc"/>
+					</div>
+				</xsl:if>
 
-			<xsl:if test="note">
-				<h3>Additional Notes:</h3>
-				<div class="longdesc">
-					<ul>
-						<xsl:for-each select="note">
-							<li><xsl:call-template name="note"/></li>
-						</xsl:for-each>
-					</ul>
-				</div>
-			</xsl:if>
+				<xsl:if test="note">
+					<h3>Additional Notes:</h3>
+					<div class="longdesc">
+						<ul>
+							<xsl:for-each select="note">
+								<li><xsl:call-template name="note"/></li>
+							</xsl:for-each>
+						</ul>
+					</div>
+				</xsl:if>
 
-			<xsl:if test="example">
-				<section class="entry-examples">
-					<xsl:attribute name="id">
-						<xsl:text>entry-examples</xsl:text>
-						<xsl:if test="$entry-index &gt; 1">
-							<xsl:text>-</xsl:text><xsl:value-of select="$entry-index - 1"/>
-						</xsl:if>
-					</xsl:attribute>
+				<xsl:if test="example">
+					<section class="entry-examples">
+						<xsl:attribute name="id">
+							<xsl:text>entry-examples</xsl:text>
+							<xsl:if test="$entry-index &gt; 1">
+								<xsl:text>-</xsl:text><xsl:value-of select="$entry-index - 1"/>
+							</xsl:if>
+						</xsl:attribute>
 
-					<header>
-						<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if>:</h2>
-					</header>
+						<header>
+							<h2 class="underline">Example<xsl:if test="$number-examples &gt; 1">s</xsl:if>:</h2>
+						</header>
 
-					<xsl:apply-templates select="example">
-						<xsl:with-param name="entry-index" select="$entry-index"/>
-						<xsl:with-param name="number-examples" select="$number-examples"/>
-					</xsl:apply-templates>
-				</section>
-			</xsl:if>
+						<xsl:apply-templates select="example">
+							<xsl:with-param name="entry-index" select="$entry-index"/>
+							<xsl:with-param name="number-examples" select="$number-examples"/>
+						</xsl:apply-templates>
+					</section>
+				</xsl:if>
+			</div>
 		</article>
 	</xsl:for-each>
 </xsl:template>
