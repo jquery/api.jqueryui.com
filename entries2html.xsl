@@ -22,4 +22,19 @@
 &lt;/html&gt;
 </xsl:template>
 
+<!-- <template name="core-link"/> will generate a link to the documentation for
+the method of the same name from jQuery core -->
+<xsl:template match="//placeholder[@name = 'core-link']">
+	<a>
+		<xsl:attribute name="href">
+			<xsl:value-of select="concat('http://api.jquery.com/', ancestor::entry/@name)"/>
+		</xsl:attribute>
+		<code>
+			<xsl:text>.</xsl:text>
+			<xsl:value-of select="ancestor::entry/@name"/>
+			<xsl:text>()</xsl:text>
+		</code>
+	</a>
+</xsl:template>
+
 </xsl:stylesheet>

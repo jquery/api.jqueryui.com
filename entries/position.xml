@@ -6,7 +6,7 @@
 		<p>The jQuery UI <code>.position()</code> method allows you to position an element relative to the window, document, another element, or the cursor/mouse, without worrying about offset parents.</p>
 		<p><em>Note: jQuery UI does not support positioning hidden elements.</em></p>
 		<p>This is a standalone jQuery plugin and has no dependencies on other jQuery UI components.</p>
-		<p>This plugin extends jQuery's built-in <a href="//api.jquery.com/position">.position()</a> method. If you forget to include this plugin, code calling <code>.position()</code> won't fail directly, as the method still exists, but it'll just retrieve the position instead of setting it.</p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.8</added>
 	<signature>

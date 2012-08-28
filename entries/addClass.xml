@@ -4,6 +4,7 @@
 	<desc>Adds the specified class(es) to each of the set of matched elements while animating all style changes.</desc>
 	<longdesc>
 		<xi:include href="../includes/class-animation-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<signature>
 		<argument name="className" type="String">

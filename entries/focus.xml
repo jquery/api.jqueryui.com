@@ -11,7 +11,7 @@
 		</argument>
 	</signature>
 	<longdesc>
-		<p>This signature is in addition to the <a href="http://api.jquery.com/focus">signatures provided by jQuery core</a>.</p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<category slug="methods"/>
 </entry>
