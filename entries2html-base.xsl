@@ -639,6 +639,9 @@ placeholder with @foo from the <entry> -->
 		<xsl:apply-templates select="@* | node()"/>
 	</xsl:copy>
 </xsl:template>
+<!-- <xi:include> will add an xml:base attribute, so we strip it out -->
+<xsl:template match="//@xml:base"/>
+<!-- replace the <placeholder> with the associated attribute from the entry -->
 <xsl:template match="//placeholder">
 	<xsl:variable name="name" select="@name"/>
 	<xsl:value-of select="ancestor::entry/@*[name()=$name]"/>
