@@ -4,32 +4,27 @@
 	<desc>
 		Creates a puff effect by scaling the element up and hiding it at the same time.
 	</desc>
-	<longdesc>
-		<p>This is the only effect without a separate file, it shares a file with the scale effect.</p>
-	</longdesc>
-	<options>
-		<option name="mode" type="String" default="hide">
-			<desc>The mode of the effect. Can be "show" or "hide"</desc>
-		</option>
-		<option name="percent" type="Number" default="150">
+	<arguments>
+		<argument name="percent" type="Number" default="150">
 			<desc>The percentage to scale to.</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
+		</argument>
+	</arguments>
 	<example>
-		<desc>Puff toggle</desc>
+		<desc>Toggle a div using the puff effect.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "puff" } );
+	$( "#toggle" ).toggle( "puff" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to toggle the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

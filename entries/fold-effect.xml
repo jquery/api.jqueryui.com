@@ -4,43 +4,36 @@
 	<desc>
 		The fold effect hides or shows an element by folding it.
 	</desc>
-	<options>
-		<option name="mode" type="String" default='"hide"'>
-			<desc>
-				<p>UI Effect Mode</p>
-				<p>Possible Values: </p>
-				<dl>
-					<dt>hide</dt>
-					<dd>Hides the element.</dd>
-					<dt>show</dt>
-					<dd>Shows the element.</dd>
-					<dt>toggle</dt>
-					<dd>Will use <code>hide</code> or <code>show</code> depending on the current visibility of the element</dd>
-				</dl>
-			</desc>
-		</option>
-		<option name="size" type="Number|String" default="15">
-			<desc>The size of the "folded" element, can be a number representing px, or a string containing a percentage I.E. "50%"</desc>
-		</option>
-		<option name="horizFirst" type="Boolean" default="false">
-			<desc>If the horizontal direction happens first when hiding. Remember, showing inverts hiding.</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
+	<arguments>
+		<argument name="size" default="15">
+			<desc>The size of the "folded" element.</desc>
+			<type name="Number">
+				<desc>The size of the fold in pixels.</desc>
+			</type>
+			<type name="String">
+				<desc>A percentage of the element's dimention, e.g., <code>"50%"</code>.</desc>
+			</type>
+		</argument>
+		<argument name="horizFirst" type="Boolean" default="false">
+			<desc>Whether the horizontal direction happens first when hiding. Remember, showing inverts hiding.</desc>
+		</argument>
+	</arguments>
 	<example>
-		<desc>Fold toggle</desc>
+		<desc>Toggle a div using the fold effect.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "fold" } );
+	$( "#toggle" ).toggle( "fold" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to toggle the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

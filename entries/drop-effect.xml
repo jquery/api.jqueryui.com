@@ -4,49 +4,30 @@
 	<desc>
 		The drop effect hides or shows an element fading in/out and sliding in a direction.
 	</desc>
-	<options>
-		<option name="mode" type="String" default='"hide"'>
+	<arguments>
+		<argument name="direction" type="String" default='"left"'>
 			<desc>
-				<p>UI Effect Mode</p>
-				<p>Possible Values: </p>
-				<dl>
-					<dt>hide</dt>
-					<dd>Hides the element by dropping in the direction</dd>
-					<dt>show</dt>
-					<dd>Shows the element by undropping from the direction. This seems inverted from the hide.</dd>
-					<dt>toggle</dt>
-					<dd>Will use <code>hide</code> or <code>show</code> depending on the current visibility of the element</dd>
-				</dl>
+				<p>The direction the element will fall to hide the element, or the direction from which the element will be revealed.</p>
+				<p>Possible Values: <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>.</p>
 			</desc>
-		</option>
-		<option name="direction" type="String" default='"left"'>
-			<desc>
-				<p>The direction the element will fall to "hide" the element, or the direction from which the element will be revealed.</p>
-				<p>Possible Values</p>
-				<dl>
-					<dt>up</dt>
-					<dt>down</dt>
-					<dt>left</dt>
-					<dt>right</dt>
-				</dl>
-			</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
+		</argument>
+	</arguments>
 	<example>
-		<desc>Drop toggle</desc>
+		<desc>Toggle a div using the drop effect.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "drop" } );
+	$( "#toggle" ).toggle( "drop" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to toggle the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

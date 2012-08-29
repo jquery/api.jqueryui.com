@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<option name="duration" default="400">
-	<desc>A string or number determining how long the animation will run.</desc>
-	<type name="Number"/>
-	<type name="String"/>
-</option>

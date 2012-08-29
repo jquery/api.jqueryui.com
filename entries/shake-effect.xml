@@ -2,32 +2,33 @@
 <entry name="shake" type="effect">
 	<title>Shake Effect</title>
 	<desc>Shakes the element multiple times, vertically or horizontally.</desc>
-	<options>
-		<option name="direction" type="String" default="both">
-			<desc>The direction of the effect. Can be "left", "right", "up", "down".</desc>
-		</option>
-		<option name="distance" type="Number" default="20">
+	<arguments>
+		<argument name="direction" type="String" default='"both"'>
+			<desc>The direction of the effect. Possible values: <code>"left"</code>, <code>"right"</code>, <code>"up"</code>, <code>"down"</code>.</desc>
+		</argument>
+		<argument name="distance" type="Number" default="20">
 			<desc>Distance to shake.</desc>
-		</option>
-		<option name="times" type="Number" default="3">
+		</argument>
+		<argument name="times" type="Number" default="3">
 			<desc>Times to shake.</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
+		</argument>
+	</arguments>
 	<example>
-		<desc>Shake toggle</desc>
+		<desc>Shake a div.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "shake" } );
+	$( "#toggle" ).effect( "shake" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to shake the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

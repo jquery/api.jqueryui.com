@@ -4,37 +4,22 @@
 	<desc>
 		The fade effect hides or shows an element by fading it.
 	</desc>
-	<options>
-		<option name="mode" type="String" default='"hide"'>
-			<desc>
-				<p>UI Effect Mode</p>
-				<p>Possible Values: </p>
-				<dl>
-					<dt>hide</dt>
-					<dd>Hides the element.</dd>
-					<dt>show</dt>
-					<dd>Shows the element.</dd>
-					<dt>toggle</dt>
-					<dd>Will use <code>hide</code> or <code>show</code> depending on the current visibility of the element</dd>
-				</dl>
-			</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
 	<example>
-		<desc>Fade toggle</desc>
+		<desc>Toggle a div using the fade effect.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "fade" } );
+	$( "#toggle" ).toggle( "fade" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to toggle the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

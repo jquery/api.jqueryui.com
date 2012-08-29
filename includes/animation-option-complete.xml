@@ -1,4 +1,0 @@
-<?xml verion="1.0"?>
-<option name="complete" type="Function">
-	<desc>A function to call once the animation is complete.</desc>
-</option>

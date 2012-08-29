@@ -4,40 +4,27 @@
 	<desc>
 		The explode effect hides or shows an element by splitting it into pieces.
 	</desc>
-	<options>
-		<option name="mode" type="String" default='"hide"'>
-			<desc>
-				<p>UI Effect Mode</p>
-				<p>Possible Values: </p>
-				<dl>
-					<dt>hide</dt>
-					<dd>Hides the element.</dd>
-					<dt>show</dt>
-					<dd>Shows the element.</dd>
-					<dt>toggle</dt>
-					<dd>Will use <code>hide</code> or <code>show</code> depending on the current visibility of the element</dd>
-				</dl>
-			</desc>
-		</option>
-		<option name="pieces" type="Number" default="9">
+	<arguments>
+		<argument name="pieces" type="Number" default="9">
 			<desc>The number of pieces to explode, should be a perfect square, any other values are rounded to the nearest square.</desc>
-		</option>
-		<xi:include href="../includes/animation-option-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/animation-option-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</options>
+		</argument>
+	</arguments>
 	<example>
-		<desc>Explode toggle</desc>
+		<desc>Toggle a div using the explode effect.</desc>
 		<css><![CDATA[
-	#toggle { width: 100px; height: 70px; background: silver; }
+	#toggle {
+		width: 100px;
+		height: 100px;
+		background: #ccc;
+	}
 ]]></css>
 		<code><![CDATA[
 $( document ).click(function() {
-	$( "#toggle" ).toggle( { effect: "explode" } );
+	$( "#toggle" ).toggle( "explode" );
 });
 ]]></code>
 		<html><![CDATA[
-Click anywhere to toggle the silver box.
+<p>Click anywhere to toggle the box.</p>
 <div id="toggle"></div>
 ]]></html>
 	</example>

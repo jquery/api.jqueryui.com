@@ -204,6 +204,9 @@
 		<xsl:when test="@type='widget'">
 			<xsl:call-template name="entry-body-widget"/>
 		</xsl:when>
+		<xsl:when test="@type='effect'">
+			<xsl:call-template name="entry-body-effect"/>
+		</xsl:when>
 	</xsl:choose>
 </xsl:template>
 
@@ -376,6 +379,30 @@
 	</xsl:if>
 </xsl:template>
 
+<xsl:template name="entry-body-effect">
+	<ul class="signatures">
+		<li class="signature">
+			<h4 class="name">
+				<xsl:if test="signature/added">
+					<span class="versionAdded">
+						version added:
+						<a href="/category/version/{signature/added}/">
+							<xsl:value-of select="added"/>
+						</a>
+					</span>
+				</xsl:if>
+				<xsl:value-of select="@name"/>
+			</h4>
+
+			<xsl:if test="arguments">
+				<ul><xsl:for-each select="arguments/argument">
+					<xsl:apply-templates select="."/>
+				</xsl:for-each></ul>
+			</xsl:if>
+		</li>
+	</ul>
+</xsl:template>
+
 <!-- examples -->
 <xsl:template match="example">
 	<xsl:param name="entry-index"/>
@@ -393,7 +420,7 @@
 
 		<h4>
 			<xsl:if test="$number-examples &gt; 1">Example: </xsl:if>
-			<span class="desc"><xsl:value-of select="desc"/></span>
+			<span class="desc"><xsl:apply-templates select="desc"/></span>
 		</h4>
 		<pre><code data-linenum="true">
 			<xsl:choose>
