@@ -99,5 +99,6 @@ $( document ).mousemove(function( event ) {
 </div>
 ]]></html>
 	</example>
-	<category slug="utilities"/>
+	<category slug="methods"/>
+	<category slug="overrides"/>
 </entry>

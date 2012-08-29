@@ -22,4 +22,5 @@
 	<category name="Widgets" slug="widgets"/>
 	<category name="Methods" slug="methods"/>
 	<category name="Selectors" slug="selectors"/>
+	<category name="Method Overrides" slug="overrides"/>
 </categories>
