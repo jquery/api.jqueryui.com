@@ -246,6 +246,12 @@
 				</xsl:if>
 				<xsl:value-of select="@name"/>
 			</h4>
+
+			<xsl:if test="properties">
+				<ul><xsl:for-each select="properties/property">
+					<xsl:apply-templates select="."/>
+				</xsl:for-each></ul>
+			</xsl:if>
 		</li>
 	</ul>
 </xsl:template>
