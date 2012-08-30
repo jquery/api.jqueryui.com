@@ -32,7 +32,7 @@
 			<desc>
 				If and how to animate changing panels:
 				<ul>
-					<li><code>String</code>: Name of easing to use with default duration.</li>
+					<li><code>String</code>: Name of <a href="/easings/">easing</a> to use with default duration.</li>
 					<li><code>Number</code>: Duration in milliseconds with default easing.</li>
 					<li><code>Object</code>: Animation settings with <code>easing</code> and <code>duration</code> properties.
 						<ul>

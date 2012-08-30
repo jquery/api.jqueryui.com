@@ -25,7 +25,7 @@
 			<type name="String" />
 		</option>
 		<option name="animateEasing" default='"swing"'>
-			<desc>Easing effect for animating.</desc>
+			<desc><a href="/easings/">Easing</a> effect for animating.</desc>
 			<type name="String" />
 		</option>
 		<option name="aspectRatio" default='false'>
