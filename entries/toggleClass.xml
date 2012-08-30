@@ -18,6 +18,7 @@
 		<xi:include href="../includes/animation-argument-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</signature>
 	<example>
+		<height>220</height>
 		<desc>Toggles the class "big-blue" for the matched elements.</desc>
 		<css><![CDATA[
 	div {

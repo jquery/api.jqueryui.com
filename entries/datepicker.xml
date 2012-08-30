@@ -282,7 +282,7 @@
 
 	</methods>
 	<example>
-
+		<height>300</height>
 		<desc>A simple jQuery UI Datepicker.</desc>
 		<code><![CDATA[$("#datepicker").datepicker();]]></code>
 		<html><![CDATA[

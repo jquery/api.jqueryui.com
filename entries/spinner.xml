@@ -177,6 +177,7 @@
 		</event>
 	</events>
 	<example>
+		<height>50</height>
 		<desc>Plain number spinner</desc>
 		<code><![CDATA[
 $( "#spinner" ).spinner();

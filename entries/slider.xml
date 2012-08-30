@@ -148,6 +148,7 @@
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
+		<height>50</height>
 		<desc>A simple jQuery UI Slider.</desc>
 		<css><![CDATA[#slider { margin: 10px; }]]></css>
 		<code><![CDATA[
