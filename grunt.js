@@ -25,7 +25,7 @@ grunt.initConfig({
 		all: [].concat( entryFiles, "categories.xml" )
 	},
 	"build-pages": {
-		all: grunt.file.expandFiles( "page/**" )
+		all: grunt.file.expandFiles( "pages/**" )
 	},
 	"build-xml-entries": {
 		all: entryFiles
