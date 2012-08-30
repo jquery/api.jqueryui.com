@@ -40,10 +40,6 @@
 		<xsl:variable name="entry-pos" select="concat($entry-name-trans,$entry-index)"/>
 		<xsl:variable name="number-examples" select="count(example)"/>
 
-		<xsl:if test="./added">
-			<span class="versionAdded">version added: <xsl:value-of select="added"/></span>
-		</xsl:if>
-
 		<article>
 			<xsl:attribute name="id">
 				<xsl:value-of select="$entry-pos"/>
@@ -186,6 +182,9 @@
 				<span><xsl:value-of select="title"/></span>
 			</xsl:otherwise>
 		</xsl:choose>
+		<xsl:if test="./added">
+			<span class="versionAdded">version added: <xsl:value-of select="added"/></span>
+		</xsl:if>
 	</h2>
 </xsl:template>
 
