@@ -5,7 +5,7 @@
 	<deprecated>1.9</deprecated>
 	<signature/>
 	<longdesc>
-		<p>The <code>.enableSelection()</code> method can be used to re-enable selection of text that was disabled via <a href="/disableSelection"><code>.disableSelection()</code></a>.</p>
+		<p>The <code>.enableSelection()</code> method can be used to re-enable selection of text that was disabled via <a href="/disableSelection/"><code>.disableSelection()</code></a>.</p>
 	</longdesc>
 	<category slug="methods"/>
 </entry>
