@@ -5,7 +5,7 @@
 		The explode effect hides or shows an element by splitting it into pieces.
 	</desc>
 	<arguments>
-		<argument name="pieces" type="Number" default="9">
+		<argument name="pieces" type="Integer" default="9">
 			<desc>The number of pieces to explode, should be a perfect square, any other values are rounded to the nearest square.</desc>
 		</argument>
 	</arguments>
