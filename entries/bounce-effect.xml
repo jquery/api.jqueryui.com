@@ -8,7 +8,7 @@
 		<argument name="distance" type="Number" default="20">
 			<desc>The distance of the largest "bounce" in pixels.</desc>
 		</argument>
-		<argument name="times" type="Number" default="5">
+		<argument name="times" type="Integer" default="5">
 			<desc>The number of times the element will bounce. When used with hide or show, there is an extra "half" bounce for the fade in/out.</desc>
 		</argument>
 	</arguments>
