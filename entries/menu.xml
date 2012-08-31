@@ -45,7 +45,7 @@
 			<desc>Selector for the elements that serve as the menu container, including sub-menus.</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "top left", at: "top right" }'>
-			<desc>Identifies the position of submenus in relation to the associated parent menu item. The <code>of</code> option defaults to the parent menu item, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of submenus in relation to the associated parent menu item. The <code>of</code> option defaults to the parent menu item, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 		<option name="role" type="String" default='"menu"'>
 			<desc>Customize the ARIA roles used for the menu and menu items. The default uses <code>"menuitem"</code> for items. Setting the <code>role</code> option to <code>"listbox"</code> will use <code>"option"</code> for items. If set to <code>null</code>, no roles will be set, which is useful if the menu is being controlled by another element that is maintaining focus.</desc>
@@ -146,7 +146,7 @@
 		</method>
 		<method name="refresh">
 			<desc>
-				Initializes sub-menus and menu items that have not already been initialized. New menu items, including sub-menus can be added to the menu or all of the contents of the menu can be replaced and then initialized with the <code>refresh</code> method.
+				Initializes sub-menus and menu items that have not already been initialized. New menu items, including sub-menus can be added to the menu or all of the contents of the menu can be replaced and then initialized with the <code>refresh()</code> method.
 			</desc>
 		</method>
 		<method name="select">
