@@ -15,11 +15,11 @@
 		</longdesc>
 		<category slug="methods"/>
 	</entry>
-	<entry type="method" name="zIndex" return="Number">
+	<entry type="method" name="zIndex" return="Integer">
 		<title>.zIndex()</title>
 		<desc>Set the z-index for an element.</desc>
 		<signature>
-			<argument name="zIndex" type="Number">
+			<argument name="zIndex" type="Integer">
 				<desc>The z-index to set.</desc>
 			</argument>
 		</signature>
