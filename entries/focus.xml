@@ -3,7 +3,7 @@
 	<title>.focus()</title>
 	<desc>Asynchronously set focus to an element.</desc>
 	<signature>
-		<argument name="delay" type="Number">
+		<argument name="delay" type="Integer">
 			<desc>The number of milliseconds to wait before setting focus.</desc>
 		</argument>
 		<argument name="callback" type="Function" optional="true">
