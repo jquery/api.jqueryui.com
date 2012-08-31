@@ -10,10 +10,8 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
-		<option name="culture" default="null">
-			<desc>
-				Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
-			<type name="String" />
+		<option name="culture" type="String" default="null">
+			<desc>Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }'>
@@ -26,64 +24,46 @@
 			</desc>
 		</option>
 		<option name="incremental" default="true">
-			<desc>
-				Controls the number of steps taken when holding down a spin button.
-				<ul>
-					<li>
-						a boolean
-						<ul>
-							<li>When set to <code>true</code>, the stepping delta will increase when spun incessantly.</li>
-							<li>When set to <code>false</code>, all steps are equal (as defined by the <a href="#option-step"><code>step</code></a> option).</li>
-						</ul>
-					</li>
-					<li>
-						a function
-						<ul>
-							<li>Receives one parameter: the number of spins that have occurred.</li>
-							<li>Must return the number of steps that should occur for the current spin.</li>
-						</ul>
-					</li>
-				</ul>
-			</desc>
-			<type name="Boolean" />
-			<type name="Function" />
+			<desc>Controls the number of steps taken when holding down a spin button.</desc>
+			<type name="Boolean">
+				<desc>When set to <code>true</code>, the stepping delta will increase when spun incessantly. When set to <code>false</code>, all steps are equal (as defined by the <a href="#option-step"><code>step</code></a> option).</desc>
+			</type>
+			<type name="Function">
+				<desc>Receives one parameter: the number of spins that have occurred. Must return the number of steps that should occur for the current spin.</desc>
+			</type>
 		</option>
 		<option name="max" default="null">
-			<desc>
-				The maximum allowed value.
-				<p>The element's <code>max</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>max</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
-				<p>If <code>null</code>, there is no maximum enforced.</p>
-			</desc>
-			<type name="Number" />
-			<type name="String" />
+			<desc>The maximum allowed value. The element's <code>max</code> attribute is used if it exists and the option is not explicitly set. If <code>null</code>, there is no maximum enforced.</desc>
+			<type name="Number">
+				<desc>The maximum value.</desc>
+			</type>
+			<type name="String">
+				<desc>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>max</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options; otherwise it will fall back to the native <code>parseFloat()</code> method.</desc>
+			</type>
 		</option>
 		<option name="min" default="null">
-			<desc>
-				The minimum allowed value.
-				<p>The element's <code>min</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>min</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
-				<p>If <code>null</code>, there is no minimum enforced.</p>
-			</desc>
-			<type name="Number" />
-			<type name="String" />
+			<desc>The minimum allowed value. The element's <code>min</code> attribute is used if it exists and the option is not explicitly set. If <code>null</code>, there is no minimum enforced.</desc>
+			<type name="Number">
+				<desc>The minimum value.</desc>
+			</type>
+			<type name="String">
+				<desc>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>min</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options; otherwise it will fall back to the native <code>parseFloat()</code> method.</desc>
+			</type>
 		</option>
-		<option name="numberFormat" default="null">
+		<option name="numberFormat" type="String" default="null">
 			<desc>Format of numbers passed to  <a href="https://github.com/jquery/globalize"><code>Globalize</code></a>, if available. Most common are <code>"n"</code> for a decimal number and <code>"C"</code> for a currency value. Also see the <a href="#option-culture"><code>culture</code></a> option.</desc>
-			<type name="String" />
 		</option>
-		<option name="page" default="null">
+		<option name="page" type="Number" default="null">
 			<desc>The number of steps to take when paging via the <a href="#method-pageUp"><code>pageUp</code></a>/<a href="#method-pageDown"><code>pageDown</code></a> methods.</desc>
-			<type name="Number" />
 		</option>
 		<option name="step" default="null">
-			<desc>
-				The size of the step to take when spinning via buttons or via the <a href="#method-stepUp"><code>stepUp</code></a>/<a href="#method-stepDown"><code>stepDown</code></a> methods.
-				<p>The element's <code>step</code> attribute is used if it exists and the option is not explicitly set.</p>
-				<p>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>step</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</p>
-			</desc>
-			<type name="Number" />
-			<type name="String" />
+			<desc>The size of the step to take when spinning via buttons or via the <a href="#method-stepUp"><code>stepUp()</code></a>/<a href="#method-stepDown"><code>stepDown()</code></a> methods. The element's <code>step</code> attribute is used if it exists and the option is not explicitly set.</desc>
+			<type name="Number">
+				<desc>The size of the step.</desc>
+			</type>
+			<type name="String">
+				<desc>If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>step</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.</desc>
+			</type>
 		</option>
 	</options>
 	<methods>
@@ -129,7 +109,7 @@
 			<desc>
 				Gets or sets the current value as a number.
 			</desc>
-			<signature>
+			<signature return="Number">
 				<desc>Gets the current value as a number. The value is parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</desc>
 			</signature>
 			<signature>
