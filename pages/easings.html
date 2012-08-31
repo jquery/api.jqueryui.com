@@ -2,10 +2,11 @@
 	"title": "Easings"
 }</script>
 
-<p>Easing functions specify the speed at which an animation progresses at different points within the animation. jQuery core ships with two easings: <code>linear</code> which progresses at a constant pace throughout the animation, and <code>swing</code> which progresses slightly slower at the beginning and end of the animation than it does in the middle of the animation. jQuery UI provides several additional easing functions, ranging from variations on the swing behavior to customized effects such as bouncing.<p>
+<p>Easing functions specify the speed at which an animation progresses at different points within the animation. jQuery core ships with two easings: <code>linear</code>, which progresses at a constant pace throughout the animation, and <code>swing</code> (jQuery core's default easing), which progresses slightly slower at the beginning and end of the animation than it does in the middle of the animation. jQuery UI provides several additional easing functions, ranging from variations on the swing behavior to customized effects such as bouncing.<p>
 
-<p>Some easings will result in negative values during the animation. Depending on the properties that are being animated, the actual value may be clamped at zero. For example, you can animate <code>left</code> to a negative value, but you cannot animate <code>height</code> to a negative value.</p>
+<p>Some easings will result in negative values during the animation. Depending on the properties that are being animated, the actual value may be clamped at zero. For example, you can animate <code>left</code> to a negative value, but you cannot animate <code>height</code> or <code>opacity</code> to a negative value.</p>
 
 <p>The best way to understand how an easing will affect an animation is to see the equation graphed over time. See below for a graph of all animations available in jQuery UI.</p>
 
 <iframe src="/resources/easing-graph.html" width="100%" height="700"></iframe>
+<category slug="utilities"/>
