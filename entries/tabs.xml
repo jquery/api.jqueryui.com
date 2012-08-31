@@ -12,26 +12,31 @@
 	<options>
 		<option name="active" default="0">
 			<desc>
-				The zero-based index of the panel that is active (open). A negative value select panels going backward from the last panel.
-				<p>When the <a href="#option-collapsible"><code>collapsible</code></a> option is set to <code>true</code>, a value of <code>false</code> closes all panels; otherwise nothing happens.</p>
+				Which panel is currently open.
 			</desc>
-			<type name="Boolean" />
-			<type name="Number" />
+			<type name="Boolean">
+				<desc>Setting <code>active</code> to <code>false</code> will collapse all panels. This requires the <a href="#option-collapsible"><code>collapsible</code></a> option to be <code>true</code>.</desc>
+			</type>
+			<type name="Integer">
+				<desc>The zero-based index of the panel that is active (open). A negative value selects panels going backward from the last panel.</desc>
+			</type>
 		</option>
-		<option name="collapsible" default="false">
+		<option name="collapsible" type="Boolean" default="false">
 			<desc>When set to <code>true</code>, the active panel can be closed.</desc>
-			<type name="Boolean" />
 		</option>
 		<option name="disabled" default="false">
-			<desc>When set to <code>true</code> or <code>false</code>, all panels will be disabled or enabled, respectively. Can also be set to an array containing the indexes of the tabs (zero-based) that should be disabled, e.g., <code>[ 0, 2 ]</code> would disable the first and third tab.</desc>
-			<type name="Boolean" />
-			<type name="Array" />
+			<desc>Which tabs are disabled.</desc> 
+			<type name="Boolean">
+				<desc>Enable or disable all tabs.</desc>
+			</type>
+			<type name="Array">
+				<desc>An array containing the zero-based indexes of the tabs that should be disabled, e.g., <code>[ 0, 2 ]</code> would disable the first and third tab.</desc>
+			</type>
 		</option>
-		<option name="event" default='"click"'>
+		<option name="event" type="String" default='"click"'>
 			<desc>The type of event that the tabs should react to in order to activate the tab. To activate on hover, use <code>"mouseover"</code>.</desc>
-			<type name="String" />
 		</option>
-		<option name="heightStyle" default='"auto"'>
+		<option name="heightStyle" type="String" default='"auto"'>
 			<desc>
 				Controls the height of the tabs widget and each panel. Possible values:
 				<ul>
@@ -40,7 +45,6 @@
 					<li><code>"content"</code>: Each panel will be only as tall as its content.</li>
 				</ul>
 			</desc>
-			<type name="String" />
 		</option>
 		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
@@ -132,23 +136,39 @@
 			<desc>
 				Disables a tab. The selected tab cannot be disabled. To disable more than one tab at once, set the <a href="#option-disabled"><code>disabled</code></a> option: <code>$( "#tabs" ).tabs( "option", "disabled", [ 1, 2, 3 ] )</code>.
 			</desc>
-			<argument name="index" type="Number, String">
-				<desc>The zero-based index of the tab to be disabled. Instead of an index, the <code>href</code> of the tab may be passed.</desc>
+			<argument name="index">
+				<desc>Which tab to disable.</desc>
+				<type name="Number">
+					<desc>The zero-based index of the tab to disable.</desc>
+				</type>
+				<type name="String">
+					<desc>The <code>href</code> of the tab to disable.</desc>
+				</type>
 			</argument>
 		</method>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="enable">
-			<desc>
-				Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.
-			</desc>
-			<argument name="index" type="Number, String">
-				<desc>The zero-based index of the tab to be enabled. Instead of an index, the <code>href</code> of the tab may be passed.</desc>
+			<desc>Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.</desc>
+			<argument name="index">
+				<desc>Which tab to enable.</desc>
+				<type name="Number">
+					<desc>The zero-based index of the tab to enable.</desc>
+				</type>
+				<type name="String">
+					<desc>The <code>href</code> of the tab to enable.</desc>
+				</type>
 			</argument>
 		</method>
 		<method name="load">
 			<desc>Loads the panel content of a remote tab.</desc>
-			<argument name="index" type="Number, String">
-				<desc>The zero-baesd index of the tab the be loaded. Instead of an index, the <code>href</code> of the tab may be passed.</desc>
+			<argument name="index">
+				<desc>Which tab to load.</desc>
+				<type name="Number">
+					<desc>The zero-based index of the tab to load.</desc>
+				</type>
+				<type name="String">
+					<desc>The <code>href</code> of the tab to load.</desc>
+				</type>
 			</argument>
 		</method>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
