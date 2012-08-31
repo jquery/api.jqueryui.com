@@ -42,6 +42,7 @@
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
+		<height>100</height>
 		<desc>A simple jQuery UI Button</desc>
 		<code><![CDATA[
 $( "button" ).button();
@@ -51,6 +52,7 @@ $( "button" ).button();
 ]]></html>
 	</example>
 	<example>
+		<height>100</height>
 		<desc>A simple jQuery UI Buttonset</desc>
 		<code><![CDATA[
 $( "#radio" ).buttonset();

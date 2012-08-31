@@ -35,6 +35,7 @@
 		</argument>
 	</signature>
 	<example>
+		<height>200</height>
 		<desc>Hide a div using the drop effect.</desc>
 		<css><![CDATA[
 	div {

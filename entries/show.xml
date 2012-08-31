@@ -35,6 +35,7 @@
 		</argument>
 	</signature>
 	<example>
+		<height>150</height>
 		<desc>Show a div using the fold effect.</desc>
 		<css><![CDATA[
 	div {

@@ -102,6 +102,7 @@
 		</event>
 	</events>
 	<example>
+		<height>80</height>
 		<desc>Create a tooltip on the document, using event delegation for all elements with a title attribute.</desc>
 		<code><![CDATA[
 	$( document ).tooltip();
@@ -113,6 +114,7 @@
 </p>]]></html>
 	</example>
 	<example>
+		<height>300</height>
 		<desc>Create a tooltip on the paragraph element, matching all images with an alt attribute. Use the alt attribute as the tooltip's content for each image.</desc>
 		<code><![CDATA[
 $( "p" ).tooltip({

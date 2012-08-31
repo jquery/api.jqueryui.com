@@ -12,6 +12,7 @@
 		<p><em>Note: Elements with a negative tab index are <a href="/focusable-selector/"><code>:focusable</code></a>, but not <code>:tabbable</code>.</em></p>
 	</longdesc>
 	<example>
+		<height>150</height>
 		<desc>Select tabbable elements and highlight them with a red border.</desc>
 		<css><![CDATA[
 	input {

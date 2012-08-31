@@ -15,6 +15,7 @@
 		</argument>
 	</arguments>
 	<example>
+		<height>150</height>
 		<desc>Clicking on the green element transfers to the other.</desc>
 		<css><![CDATA[
 	div.green {
