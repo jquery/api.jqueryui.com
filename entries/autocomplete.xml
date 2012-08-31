@@ -28,7 +28,7 @@
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }'>
 			<desc>Identifies the position of the suggestions menu in relation to the associated input element. The <code>of</code> option defaults to the input element, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
-		<option name="source" default='none, must be specified'>
+		<option name="source" default="none; must be specified">
 			<desc>
 				Defines the data to use, must be specified.
 				<p>Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>
@@ -47,9 +47,9 @@
 				<desc>When a string is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must provide JSONP). The Autocomplete plugin does not filter the results, instead the request parameter <code>term</code> gets added to the URL, which the server-side script should use for filtering the results. The data itself can be in the same format as the local data described above.</desc>
 			</type>
 			<type name="Function">
-				<argument name="request" type="Object" />
+				<argument name="request" type="Object"/>
 				<argument name="response" type="Function">
-					<argument name="data" type="Object" />
+					<argument name="data" type="Object"/>
 				</argument>
 				<desc>
 					The third variation, a callback, provides the most flexibility and can be used to connect any data source to Autocomplete. The callback gets two arguments:
