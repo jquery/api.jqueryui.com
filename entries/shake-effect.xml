@@ -9,7 +9,7 @@
 		<argument name="distance" type="Number" default="20">
 			<desc>Distance to shake.</desc>
 		</argument>
-		<argument name="times" type="Number" default="3">
+		<argument name="times" type="Integer" default="3">
 			<desc>Times to shake.</desc>
 		</argument>
 	</arguments>
