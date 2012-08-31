@@ -13,7 +13,7 @@
 	<added>1.0</added>
 	<options>
 		<option name="autoOpen" default="true">
-			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open</code></a> method is called.</desc>
+			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="buttons" default="{}">
@@ -39,13 +39,17 @@
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="draggable" default="true">
-			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable">jQuery UI Draggable wiget</a> to be included.</desc>
+			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable wiget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="height" default='"auto"'>
-			<desc>The height of the dialog, in pixels. Specifying <code>"auto"</code> is also supported to make the dialog adjust based on its content.</desc>
-			<type name="Number" />
-			<type name="String" />
+			<desc>The height of the dialog.</desc>
+			<type name="Number">
+				<desc>The height in pixels.</desc>
+			</type>
+			<type name="String">
+				<desc>The only supported string value is <code>"auto"</code> which will allow the dialog height to adjust based on its content.</desc>
+			</type>
 		</option>
 		<option name="show" default="null">
 			<desc>If and how to animate the hiding of the dialog.</desc>
@@ -96,7 +100,7 @@
 			</type>
 		</option>
 		<option name="resizable" default="true">
-			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable">jQuery UI Resizable widget</a> to be included.</desc>
+			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="show" default="null">
@@ -129,7 +133,7 @@
 		</option>
 		<option name="zIndex" default="1000">
 			<desc>The starting z-index for the dialog.</desc>
-			<type name="Number" />
+			<type name="Integer" />
 		</option>
 	</options>
 	<events>
@@ -252,8 +256,8 @@
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<method name="isOpen">
-			<desc>Returns <code>true</code> if the dialog is currently open.</desc>
+		<method name="isOpen" return="Boolean">
+			<desc>Whether the dialog is currently open.</desc>
 		</method>
 		<method name="moveToTop">
 			<desc>Moves the dialog to the top of the dialog stack.</desc>
