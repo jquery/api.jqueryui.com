@@ -5,7 +5,7 @@
 		The pulsate effect hides or shows an element by pulsing it in or out.
 	</desc>
 	<arguments>
-		<argument name="times" type="Number" default="5">
+		<argument name="times" type="Integer" default="5">
 			<desc>The number of times the element should pulse. An extra half pulse is added for hide/show.</desc>
 		</argument>
 	</arguments>
