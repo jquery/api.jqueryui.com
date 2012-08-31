@@ -39,7 +39,7 @@
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Gets or sets the current value of the progressbar.</desc>
-			<signature>
+			<signature return="Number">
 				<desc>Gets the current value of the progressbar.</desc>
 			</signature>
 			<signature>
