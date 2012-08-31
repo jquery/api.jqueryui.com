@@ -14,7 +14,7 @@
 		<argument name="percent" type="Number">
 			<desc>The percentage to scale to.</desc>
 		</argument>
-		<argument name="scale" type="String" default="both">
+		<argument name="scale" type="String" default='"both"'>
 			<desc>Which areas of the element will be resized: <code>"both"</code>, <code>"box"</code>, <code>"content"</code>. Box resizes the border and padding of the element; content resizes any content inside of the element.</desc>
 		</argument>
 	</arguments>
