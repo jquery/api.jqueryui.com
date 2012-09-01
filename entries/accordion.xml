@@ -40,7 +40,7 @@
 				<desc>Duration in milliseconds with default easing.</desc>
 			</type>
 			<type name="String">
-				<desc> Name of <a href="/easings/">easing</a> to use with default duration.</desc>
+				<desc>Name of <a href="/easings/">easing</a> to use with default duration.</desc>
 			</type>
 			<type name="Object">
 				<desc>Animation settings with <code>easing</code> and <code>duration</code> properties.
