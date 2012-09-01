@@ -11,9 +11,19 @@
 			<desc>If set to <code>false</code>, will prevent the <code>ui-draggable</code> class from being added. This may be desired as a performance optimization when calling <code>.draggable()</code> on hundreds of elements.</desc>
 		</option>
 		<option name="appendTo" default='"parent"'>
-			<desc>The element passed to or selected by the <a href="#option-appendTo"><code>appendTo</code></a> option will be used as the draggable helper's container during dragging. By default, the helper is appended to the same container as the draggable.</desc>
-			<type name="Element"/>
-			<type name="Selector"/>
+			<desc>Which element the draggable helper should be appended to while dragging.</desc>
+			<type name="jQuery">
+				<desc>A jQuery object containing the element to append the helper to.</desc>
+			</type>
+			<type name="Element">
+				<desc>The element to append the helper to.</desc>
+			</type>
+			<type name="Selector">
+				<desc>A selector specifying which element to append the helper to.</desc>
+			</type>
+			<type name="String">
+				<desc>The string <code>"parent"</code> will cause the helper to be a sibling of the draggable.</desc>
+			</type>
 		</option>
 		<option name="axis" type="String" default="false">
 			<desc>Constrains dragging to either the horizontal (x) or vertical (y) axis. Possible values: <code>"x"</code>, <code>"y"</code>.</desc>
