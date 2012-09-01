@@ -104,7 +104,9 @@
 		background: #999;
 	}
 ]]></css>
-		<code><![CDATA[$("#selectable").selectable();]]></code>
+		<code><![CDATA[
+$( "#selectable" ).selectable();
+]]></code>
 		<html><![CDATA[
 <ul id="selectable">
 	<li>Item 1</li>
