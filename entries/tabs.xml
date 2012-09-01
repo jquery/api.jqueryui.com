@@ -131,33 +131,41 @@
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="disable">
-			<desc>
-				Disables a tab. The selected tab cannot be disabled. To disable more than one tab at once, set the <a href="#option-disabled"><code>disabled</code></a> option: <code>$( "#tabs" ).tabs( "option", "disabled", [ 1, 2, 3 ] )</code>.
-			</desc>
-			<argument name="index">
-				<desc>Which tab to disable.</desc>
-				<type name="Number">
-					<desc>The zero-based index of the tab to disable.</desc>
-				</type>
-				<type name="String">
-					<desc>The <code>href</code> of the tab to disable.</desc>
-				</type>
-			</argument>
+			<signature>
+				<desc>Disables all tabs.</desc>
+			</signature>
+			<signature>
+				<desc>
+					Disables a tab. The selected tab cannot be disabled. To disable more than one tab at once, set the <a href="#option-disabled"><code>disabled</code></a> option: <code>$( "#tabs" ).tabs( "option", "disabled", [ 1, 2, 3 ] )</code>.
+				</desc>
+				<argument name="index">
+					<desc>Which tab to disable.</desc>
+					<type name="Number">
+						<desc>The zero-based index of the tab to disable.</desc>
+					</type>
+					<type name="String">
+						<desc>The <code>href</code> of the tab to disable.</desc>
+					</type>
+				</argument>
+			</signature>
 		</method>
-		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="enable">
-			<desc>Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.</desc>
-			<argument name="index">
-				<desc>Which tab to enable.</desc>
-				<type name="Number">
-					<desc>The zero-based index of the tab to enable.</desc>
-				</type>
-				<type name="String">
-					<desc>The <code>href</code> of the tab to enable.</desc>
-				</type>
-			</argument>
+			<signature>
+				<desc>Enables all tabs.</desc>
+			</signature>
+			<signature>
+				<desc>Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.</desc>
+				<argument name="index">
+					<desc>Which tab to enable.</desc>
+					<type name="Number">
+						<desc>The zero-based index of the tab to enable.</desc>
+					</type>
+					<type name="String">
+						<desc>The <code>href</code> of the tab to enable.</desc>
+					</type>
+				</argument>
+			</signature>
 		</method>
 		<method name="load">
 			<desc>Loads the panel content of a remote tab.</desc>
