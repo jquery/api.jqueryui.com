@@ -12,39 +12,43 @@
 	<options>
 		<option name="animate" default="false">
 			<desc>Whether to slide the handle smoothly when the user clicks on the slider track. Also accepts any valid <a href="//api.jquery.com/animate/#duration">animation duration</a>.</desc>
-			<type name="Boolean" />
-			<type name="String" />
-			<type name="Number" />
+			<type name="Boolean">
+				<desc>When set to <code>true</code>, the handle will animate with the default duration.</desc>
+			</type>
+			<type name="String">
+				<desc>The name of a speed, such as <code>"fast"</code> or <code>"slow"</code>.</desc>
+			</type>
+			<type name="Number">
+				<desc>The duration of the animation, in milliseconds.</desc>
+			</type>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="max" default="100">
+		<option name="max" type="Number" default="100">
 			<desc>The maximum value of the slider.</desc>
-			<type name="Number" />
 		</option>
-		<option name="min" default="0">
+		<option name="min" type="Number" default="0">
 			<desc>The minimum value of the slider.</desc>
-			<type name="Number" />
 		</option>
-		<option name="orientation" default='"horizontal"'>
+		<option name="orientation" type="String" default='"horizontal"'>
 			<desc>Determines whether the slider handles move horizontally (min on left, max on right) or vertically (min on bottom, max on top). Possible values: <code>"horizontal"</code>, <code>"vertical"</code>.</desc>
-			<type name="String" />
 		</option>
 		<option name="range" default="false">
-			<desc>If set to <code>true</code>, the slider will detect if you have two handles and create a stylable range element between these two. Two other possible values are <code>"min"</code> and <code>"max"</code>. A min range goes from the slider min to one handle. A max range goes from one handle to the slider max.</desc>
-			<type name="Boolean" />
-			<type name="String" />
+			<desc>Whether the slider represents a range.</desc>
+			<type name="Boolean">
+				<desc>If set to <code>true</code>, the slider will detect if you have two handles and create a stylable range element between these two.</desc>
+			</type>
+			<type name="String">
+				<desc>Either <code>"min"</code> or <code>"max"</code>. A min range goes from the slider min to one handle. A max range goes from one handle to the slider max.</desc>
+			</type>
 		</option>
-		<option name="step" default="1">
+		<option name="step" type="Number" default="1">
 			<desc>Determines the size or amount of each interval or step the slider takes between the min and max. The full specified value range of the slider (max - min) should be evenly divisible by the step.</desc>
-			<type name="Number" />
 		</option>
-		<option name="value" default="0">
+		<option name="value" type="Number" default="0">
 			<desc>Determines the value of the slider, if there's only one handle. If there is more than one handle, determines the value of the first handle.</desc>
-			<type name="Number" />
 		</option>
-		<option name="values" default='null'>
+		<option name="values" type="Array" default='null'>
 			<desc>This option can be used to specify multiple handles. If the <a href="#option-range"><code>range</code></a> option is set to <code>true</code>, the length of <code>values</code> should be 2.</desc>
-			<type name="Array" />
 		</option>
 	</options>
 	<events>
