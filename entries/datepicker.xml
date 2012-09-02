@@ -254,39 +254,41 @@
 	<methods>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="dialog">
-			<desc>Function</desc>
-			<argument name="date" type="String or Date">
-				<desc></desc>
+			<desc>Opens the datepicker in a dialog box.</desc>
+			<argument name="date">
+				<desc>The initial date.</desc>
+				<type name="String"/>
+				<type name="Date"/>
 			</argument>
 			<argument name="onSelect" type="Function" optional="true">
-				<desc></desc>
+				<desc>A callback function when a date is selected. The function receives the date text and date picker instance as parameters.</desc>
 			</argument>
 			<argument name="settings" type="Options" optional="true">
-				<desc></desc>
+				<desc>The new settings for the date picker.</desc>
 			</argument>
 			<argument name="pos" type="Number[2] or MouseEvent" optional="true">
-				<desc></desc>
+				<desc>The position of the top/left of the dialog as <code>[x, y]</code> or a <code>MouseEvent</code> that contains the coordinates. If not specified the dialog is centered on the screen.</desc>
 			</argument>
 		</method>
-		<method name="isDisabled">
+		<method name="isDisabled" return="Boolean">
 			<desc>Determine whether a date picker has been disabled.</desc>
 		</method>
 		<method name="hide">
 			<desc>Close a previously opened date picker.</desc>
 		</method>
 		<method name="show">
-			<desc>Call up a previously attached date picker. If the datepicker is attached to an input, the input must be visible for the datepicker to be shown.</desc>
+			<desc>Open the date picker. If the datepicker is attached to an input, the input must be visible for the datepicker to be shown.</desc>
 		</method>
 		<method name="refresh">
-			<desc>Redraw a date picker, after having made some external modifications.</desc>
+			<desc>Redraw the date picker, after having made some external modifications.</desc>
 		</method>
-		<method name="getDate">
-			<desc>Returns the current date for the datepicker or null if no date has been selected.</desc>
+		<method name="getDate" return="Date">
+			<desc>Returns the current date for the datepicker or <code>null</code> if no date has been selected.</desc>
 		</method>
 		<method name="setDate">
-			<desc>Sets the current date for the datepicker. The new date may be a Date object or a string in the current [[UI/Datepicker#option-dateFormat|date format]] (e.g. '01/26/2009'), a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null to clear the selected date.</desc>
+			<desc>Sets the date for the datepicker. The new date may be a <code>Date</code> object or a string in the current <a href="#option-dateFormat">date format</a> (e.g., <code>"01/26/2009"</code>), a number of days from today (e.g., <code>+7</code>) or a string of values and periods (<code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, <code>"d"</code> for days, e.g., <code>"+1m +7d"</code>), or <code>null</code> to clear the selected date.</desc>
 			<argument name="date" type="Date">
-				<desc>The new current date.</desc>
+				<desc>The new date.</desc>
 			</argument>
 		</method>
 	</methods>
