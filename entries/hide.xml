@@ -15,25 +15,7 @@
 		<xi:include href="../includes/animation-argument-duration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/animation-argument-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</signature>
-	<signature>
-		<argument name="options" type="Object">
-			<desc>All animation settings. The only required property is <code>effect</code>.</desc>
-			<property name="effect" type="String">
-				<desc>A string indicating which <a href="/category/effect/">effect</a> to use for the transition.</desc>
-			</property>
-			<property name="easing" type="String">
-				<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
-			</property>
-			<property name="duration">
-				<desc>A string or number determining how long the animation will run.</desc>
-				<type name="Number"/>
-				<type name="String"/>
-			</property>
-			<property name="complete" type="Function">
-				<desc>A function to call once the animation is complete.</desc>
-			</property>
-		</argument>
-	</signature>
+	<xi:include href="../includes/animation-signature-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	<example>
 		<height>200</height>
 		<desc>Hide a div using the drop effect.</desc>
