@@ -6,6 +6,17 @@
 	</desc>
 	<longdesc>
 		<p>Spinner wraps a text input, adds two buttons to increment and decrement the current value, along with handling key events for the same purpose. It delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
+
+		<h3>Keyboard interaction</h3>
+
+		<ul>
+			<li>UP: Increment the value by one step.</li>
+			<li>DOWN: Decrement the value by one step.</li>
+			<li>PAGE UP: Increment the value by one page.</li>
+			<li>PAGE DOWN: Decrement the value by one page.</li>
+		</ul>
+
+		<p>Focus stays in the text field, even after using the mouse to click one of the spin buttons.</p>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.9</added>
