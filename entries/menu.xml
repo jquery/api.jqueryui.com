@@ -28,6 +28,21 @@
 		<p>If you use a structure other than <code>&lt;ul></code>/<code>&lt;li></code>, including using the same element for the menu and the menu items, use the <a href="#option-menus"><code>menus</code></a> option to specify a way to differentiate the two elements, e.g., <code>menus: "div.menuElement"</code>.</p>
 
 		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
+
+		<h3>Keyboard interaction</h3>
+
+		<ul>
+			<li>ENTER/SPACE: Invoke the focused menu item's action, which may be opening a submenu.</li>
+			<li>UP: Move focus to the previous menu item.</li>
+			<li>DOWN: Move focus to the next menu item.</li>
+			<li>RIGHT: Open the submenu, if available.</li>
+			<li>LEFT: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+			<li>ESCAPE: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+		</ul>
+
+		<p>Typing a letter moves focus to the first item whose title starts with that character. Repeating the same character cycles through matching items. Typing more characters within the one second timer matches those characters.</p>
+
+		<p>Disabled items can receive keyboard focus, but do not allow any other interaction.</p>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.9</added>
