@@ -7,7 +7,7 @@
 
 		<p>By default, the datepicker calendar opens in a small overlay when the associated text field gains focus. For an inline calendar, simply attach the datepicker to a div or span.</p>
 
-		<h3>Keyboard navigation</h3>
+		<h3>Keyboard interaction</h3>
 		<p>While the datepicker is open, the following key commands are available:</p>
 		<ul>
 			<li>PAGE UP: Move to the previous month.</li>

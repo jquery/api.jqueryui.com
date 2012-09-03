@@ -17,7 +17,7 @@
 		<p>Accordions support arbitrary markup, but each content panel must always be the next sibling after its associated header. See the <a href="#option-header"><code>header</code></a> option for information on how to use custom markup structures.</p>
 		<p>The panels can be activated programmatically by setting the <a href="#option-active"><code>active</code></a> option.</p>
 
-		<h3>Keyboard navigation</h3>
+		<h3>Keyboard interaction</h3>
 
 		<p>When focus is on a header, the following key commands are available:</p>
 		<ul>

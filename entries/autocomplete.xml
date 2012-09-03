@@ -9,7 +9,7 @@
 
 		<p>You can pull data in from a local or remote source: Local is good for small data sets, e.g., an address book with 50 entries; remote is necessary for big data sets, such as a database with hundreds or millions of entries to select from. To find out more about customizing the data soure, see the documentation for the <a href="#option-source"><code>source</code></a> option.</p>
 
-		<h3>Keyboard navigation</h3>
+		<h3>Keyboard interaction</h3>
 
 		<p>When the menu is open, the following key commands are available:</p>
 		<ul>
