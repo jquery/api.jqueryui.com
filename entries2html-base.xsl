@@ -496,7 +496,9 @@
 	<!-- elements. Render each type, comma seperated -->
 	<xsl:if test="type">
 		<xsl:for-each select="type">
-			<xsl:if test="position() &gt; 1">, </xsl:if>
+			<xsl:if test="position() &gt; 1">
+				<xsl:text> or </xsl:text>
+			</xsl:if>
 			<xsl:call-template name="render-type">
 				<xsl:with-param name="typename" select="@name" />
 			</xsl:call-template>
@@ -516,18 +518,7 @@
 	-->
 	<xsl:when test="$typename = 'Function'">
 		<a href="http://api.jquery.com/Types/#Function">Function</a>
-		<xsl:text>(</xsl:text>
-		<xsl:if test="argument">
-			<xsl:text> </xsl:text>
-			<xsl:for-each select="argument">
-				<xsl:if test="position() &gt; 1">, </xsl:if>
-				<xsl:value-of select="@name"/>
-				<xsl:text>: </xsl:text>
-				<xsl:call-template name="render-types"/>
-			</xsl:for-each>
-			<xsl:text> </xsl:text>
-		</xsl:if>
-		<xsl:text>)</xsl:text>
+		<xsl:call-template name="render-type-function"/>
 
 		<!-- display return type if present -->
 		<xsl:if test="return or @return">
@@ -540,6 +531,28 @@
 		<a href="http://api.jquery.com/Types#{$typename}"><xsl:value-of select="$typename" /></a>
 	</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="render-type-function">
+	<xsl:text>(</xsl:text>
+	<xsl:if test="argument">
+		<xsl:text> </xsl:text>
+		<xsl:for-each select="argument">
+			<xsl:if test="position() &gt; 1">, </xsl:if>
+			<a href="http://api.jquery.com/Types#{@type}">
+				<xsl:value-of select="@type"/>
+			</a>
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="@name"/>
+			<xsl:if test="@type = 'Function'">
+				<xsl:call-template name="render-type-function"/>
+			</xsl:if>
+			<!--<xsl:text>: </xsl:text>
+			<xsl:call-template name="render-types"/>-->
+		</xsl:for-each>
+		<xsl:text> </xsl:text>
+	</xsl:if>
+	<xsl:text>)</xsl:text>
 </xsl:template>
 
 <xsl:template name="render-return-types">
