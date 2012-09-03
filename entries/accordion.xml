@@ -16,6 +16,22 @@
 
 		<p>Accordions support arbitrary markup, but each content panel must always be the next sibling after its associated header. See the <a href="#option-header"><code>header</code></a> option for information on how to use custom markup structures.</p>
 		<p>The panels can be activated programmatically by setting the <a href="#option-active"><code>active</code></a> option.</p>
+
+		<h3>Keyboard navigation</h3>
+
+		<p>When focus is on a header, the following key commands are available:</p>
+		<ul>
+			<li>UP/LEFT - Move focus to the previous header. If on first header, moves focus to last header.</li>
+			<li>DOWN/RIGHT - Move focus to the next header. If on last header, moves focus to first header.</li>
+			<li>HOME - Move focus to the first header.</li>
+			<li>END - Move focus to the last header.</li>
+			<li>SPACE/ENTER - Activate panel associated with focused header.</li>
+		</ul>
+
+		<p>When focus is in a panel:</p>
+		<ul>
+			<li>CTRL+UP: Move focus to associated header.</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>
