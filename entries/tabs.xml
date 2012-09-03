@@ -6,6 +6,27 @@
 		<p>Tabs are generally used to break content into multiple sections that can be swapped to save space, much like an accordion.</p>
 
 		<p>The content for each tab panel can be defined in-page or can be loaded via Ajax; both are handled automatically based on the <code>href</code> of the anchor associated with the tab. By default tabs are activated on click, but the events can be changed to hover via the <a href="#option-event"><code>event</code></a> option.</p>
+
+		<h3>Keyboard interaction</h3>
+
+		<p>When focus is on a tab, the following key commands are available:</p>
+		<ul>
+			<li>UP/LEFT: Move focus to the previous tab. If on first tab, moves focus to last tab. Activate focused tab after a short delay.</li>
+			<li>DOWN/RIGHT: Move focus to the next tab. If on last tab, moves focus to first tab. Activate focused tab after a short delay.</li>
+			<li>HOME: Move focus to the first tab. Activate focused tab after a short delay.</li>
+			<li>END: Move focus to the last tab. Activate focused tab after a short delay.</li>
+			<li>SPACE: Activate panel associated with focused tab.</li>
+			<li>ENTER: Activate or toggle panel associated with focused tab.</li>
+			<li>ALT+PAGE UP: Move focus to the previous tab and immediately activate.</li>
+			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
+		</ul>
+
+		<p>When focus is in a panel, the following key commands are available:</p>
+		<ul>
+			<li>CTRL+UP: Move focus to associated tab.</li>
+			<li>ALT+PAGE UP: Move focus to the previous tab and immediately activate.</li>
+			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>
