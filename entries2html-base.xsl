@@ -40,6 +40,10 @@
 		<xsl:variable name="entry-pos" select="concat($entry-name-trans,$entry-index)"/>
 		<xsl:variable name="number-examples" select="count(example)"/>
 
+		<xsl:if test="$entry-type='widget'">
+			<xsl:call-template name="widget-quick-nav"/>
+		</xsl:if>
+
 		<article>
 			<xsl:attribute name="id">
 				<xsl:value-of select="$entry-pos"/>
@@ -297,30 +301,6 @@
 <xsl:template name="entry-body-widget">
 	<xsl:variable name="entry-name" select="@name"/>
 
-	<section class="quick-nav">
-		<header>
-			<h2>QuickNav</h2>
-		</header>
-
-		<h3>Options</h3>
-		<xsl:for-each select="options/option">
-			<xsl:variable name="name" select="@name"/>
-			<div><a href="#option-{$name}"><xsl:value-of select="$name"/></a></div>
-		</xsl:for-each>
-
-		<h3>Methods</h3>
-		<xsl:for-each select="methods/method">
-			<xsl:variable name="name" select="@name"/>
-			<div><a href="#method-{$name}"><xsl:value-of select="$name"/></a></div>
-		</xsl:for-each>
-
-		<h3>Events</h3>
-		<xsl:for-each select="events/event">
-			<xsl:variable name="name" select="@name"/>
-			<div><a href="#event-{$name}"><xsl:value-of select="$name"/></a></div>
-		</xsl:for-each>
-	</section>
-
 	<xsl:if test="options">
 		<section id="options">
 			<header>
@@ -424,6 +404,38 @@
 			</xsl:if>
 		</li>
 	</ul>
+</xsl:template>
+
+<xsl:template name="widget-quick-nav">
+	<section class="quick-nav">
+		<header>
+			<h2>QuickNav</h2>
+		</header>
+
+		<div class="quick-nav-section">
+			<h3>Options</h3>
+			<xsl:for-each select="options/option">
+				<xsl:variable name="name" select="@name"/>
+				<div><a href="#option-{$name}"><xsl:value-of select="$name"/></a></div>
+			</xsl:for-each>
+		</div>
+
+		<div class="quick-nav-section">
+			<h3>Methods</h3>
+			<xsl:for-each select="methods/method">
+				<xsl:variable name="name" select="@name"/>
+				<div><a href="#method-{$name}"><xsl:value-of select="$name"/></a></div>
+			</xsl:for-each>
+		</div>
+
+		<div class="quick-nav-section">
+			<h3>Events</h3>
+			<xsl:for-each select="events/event">
+				<xsl:variable name="name" select="@name"/>
+				<div><a href="#event-{$name}"><xsl:value-of select="$name"/></a></div>
+			</xsl:for-each>
+		</div>
+	</section>
 </xsl:template>
 
 <!-- examples -->
