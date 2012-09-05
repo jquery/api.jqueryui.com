@@ -360,19 +360,23 @@
 			<xsl:for-each select="methods/method">
 				<xsl:sort select="@name"/>
 				<xsl:variable name="method-name" select="@name"/>
+				<xsl:variable name="method-position" select="position()"/>
 				<div id="method-{$method-name}">
-					<xsl:attribute name="class">
-						<xsl:text>api-item</xsl:text>
-						<xsl:if test="position() = 1">
-							<xsl:text> first-item</xsl:text>
-						</xsl:if>
-					</xsl:attribute>
 
 					<xsl:for-each select="signature | self::node()[count(signature) = 0]">
-						<xsl:call-template name="widget-method-event">
-							<xsl:with-param name="entry-name" select="$entry-name"/>
-							<xsl:with-param name="method-name" select="$method-name"/>
-						</xsl:call-template>
+						<div>
+							<xsl:attribute name="class">
+								<xsl:text>api-item</xsl:text>
+								<xsl:if test="$method-position = 1 and position() = 1">
+									<xsl:text> first-item</xsl:text>
+								</xsl:if>
+							</xsl:attribute>
+
+							<xsl:call-template name="widget-method-event">
+								<xsl:with-param name="entry-name" select="$entry-name"/>
+								<xsl:with-param name="method-name" select="$method-name"/>
+							</xsl:call-template>
+						</div>
 					</xsl:for-each>
 				</div>
 			</xsl:for-each>
