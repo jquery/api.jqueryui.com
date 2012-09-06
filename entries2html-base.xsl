@@ -318,12 +318,12 @@
 
 					<h3>
 						<xsl:value-of select="@name"/>
+						<span class="option-type">
+							<strong>Type: </strong>
+							<xsl:call-template name="render-types"/>
+						</span>
 					</h3>
-					<div>
-						<strong>Type: </strong>
-						<xsl:call-template name="render-types"/>
-					</div>
-					<div>
+					<div class="default">
 						<strong>Default: </strong>
 						<code><xsl:value-of select="@default"/></code>
 					</div>
@@ -584,8 +584,6 @@
 			<xsl:if test="@type = 'Function'">
 				<xsl:call-template name="render-type-function"/>
 			</xsl:if>
-			<!--<xsl:text>: </xsl:text>
-			<xsl:call-template name="render-types"/>-->
 		</xsl:for-each>
 		<xsl:text> </xsl:text>
 	</xsl:if>
@@ -600,7 +598,7 @@
 	<!-- return attribute -->
 	<xsl:if test="@return">
 		<xsl:call-template name="render-type">
-			<xsl:with-param name="typename" select="@return" />
+			<xsl:with-param name="typename" select="@return"/>
 		</xsl:call-template>
 	</xsl:if>
 
@@ -610,7 +608,7 @@
 			<xsl:if test="position() &gt; 1">
 				<strong>ERROR: A single return element is expected</strong>
 			</xsl:if>
-			<xsl:call-template name="render-types" />
+			<xsl:call-template name="render-types"/>
 		</xsl:for-each>
 	</xsl:if>
 </xsl:template>
