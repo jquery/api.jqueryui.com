@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <entry type="selector" name="tabbable">
-	<title>:tabbable() Selector</title>
+	<title>:tabbable Selector</title>
 	<sample>:tabbable</sample>
 	<signature/>
 	<desc>Selects elements which the user can focus via tabbing.</desc>
