@@ -10,10 +10,10 @@
 		</argument>
 	</signature>
 	<signature return="PlainObject">
-		<desc>Gets an object containing key/value pairs representing the current <placeholder name="title"/> options hash.</desc>
+		<desc>Gets an object containing key/value pairs representing the current <placeholder name="name"/> options hash.</desc>
 	</signature>
 	<signature>
-		<desc>Sets the value of the <placeholder name="title"/> option associated with the specified <code>optionName</code>.</desc>
+		<desc>Sets the value of the <placeholder name="name"/> option associated with the specified <code>optionName</code>.</desc>
 		<argument name="optionName" type="String">
 			<desc>The name of the option to set.</desc>
 		</argument>
@@ -22,7 +22,7 @@
 		</argument>
 	</signature>
 	<signature>
-		<desc>Sets one or more options for the <placeholder name="title"/>.</desc>
+		<desc>Sets one or more options for the <placeholder name="name"/>.</desc>
 		<argument name="options" type="Object">
 			<desc>A map of option-value pairs to set.</desc>
 		</argument>
