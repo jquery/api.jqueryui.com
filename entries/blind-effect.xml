@@ -11,7 +11,7 @@
 		<argument name="direction" type="String" default='"up"'>
 			<desc>
 				<p>The direction the blind will be pulled to hide the element, or the direction from which the element will be revealed.</p>
-				<p>Possible Values: <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>, <code>vertical</code>, <code>horizontal</code>.</p>
+				<p>Possible Values: <code>vertical</code>, <code>horizontal</code>.</p>
 			</desc>
 		</argument>
 	</arguments>
