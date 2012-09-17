@@ -22,9 +22,9 @@
   ],
   "dependencies": {
     "grunt": "0.3.x",
-    "grunt-clean": "0.1.0",
-    "grunt-wordpress": "1.0.0",
-    "grunt-jquery-content": "0.2.2"
+    "grunt-clean": "0.3.0",
+    "grunt-wordpress": "1.0.3",
+    "grunt-jquery-content": "0.5.x"
   },
   "devDependencies": {},
   "keywords": []

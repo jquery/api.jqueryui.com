@@ -1,27 +1,31 @@
 <categories>
-	<category name="Effects" slug="effects">
-		<desc>
-			<p>Effects include extensions to jQuery's built-in animate method, providing support for animating colors and doing transitions from one class to another.</p>
-			<div class="longdesc">
-				<p>For class transitions, <code>addClass(class)</code>, <code>removeClass(class)</code>, <code>toggleClass(class)</code> and <code>toggleClass(switch)</code> are each extended to accept three additional parameters: <code>speed</code>, <code>easing</code> (optional), and <code>callback</code>.</p>
-				<p>In addition, a <code>switchClass</code> method is added, alllowing you to visually transition from one class to another. (This functionality is often described as 'animateClass'.)</p>
-				<pre><code>$(elem).switchClass('currentClass','newClass',500,'easeOutBounce',function(){
-	  console.log('transition is done!');
-	});</code></pre>
-				<p>Similar to the extension of the class-related methods, the <code>show</code>, <code>hide</code> and <code>toggle</code> methods are extended. Each can now accept configuration for the effects listed below, as <code>effect</code> (what effect to use, like "blind", <code>options</code> (effect specific configuration), <code>duration</code>, and <code>callback</code>. For effects like <code>transfer</code>, where neither a show nor hide happens, you can use the underlying <code>effect</code> method directly. The signature is the same.</p>
-				<p>For color animation support, jQuery UI bundles the <a href="https://github.com/jquery/jquery-color">jquery-color plugin</a>. The plugin extends jQuery's <code>animate</code> method with support for animating the following properties: <code>backgroundColor, borderBottomColor, borderLeftColor, borderRightColor, borderTopColor, color, outlineColor</code></p>
-				<p>Effects also add, to jQuery's built-in linear and swing transitions, a bunch of easings. The full list: <code>linear, swing, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint, easeInExpo, easeOutExpo, easeInOutExpo, easeInSine, easeOutSine, easeInOutSine, easeInCirc, easeOutCirc, easeInOutCirc, easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce</code></p>
-			</div>
-		</desc>
-	</category>
-	<category name="Interactions" slug="interactions">
-		<desc></desc>
-	</category>
 	<category name="Uncategorized" slug="uncategorized"/>
-	<category name="Utilities" slug="utilities">
-		<desc></desc>
+	<category name="Effects" slug="effects">
+		<desc><![CDATA[
+			<p>jQuery UI adds quite a bit of functionality on top of <a href="http://api.jquery.com/category/effects/">jQuery's built-in effects</a>. jQuery UI adds support for animating colors and class transitions, as well as providing several additional <a href="/easings/">easings</a>. In addition, a full suite of custom effects are available for use when showing and hiding elements or just to add some visual appeal.</p>
+		]]></desc>
 	</category>
 	<category name="Widgets" slug="widgets">
-		<desc></desc>
+		<desc><![CDATA[
+			<p>Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the <a href="/jQuery.widget/">widget factory</a> documentation for more details.</p>
+		]]></desc>
 	</category>
+	<category name="Interactions" slug="interactions">
+		<desc><![CDATA[
+			<p>jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.</p>
+		]]></desc>
+	</category>
+	<category name="Utilities" slug="utilities"/>
+	<category name="Methods" slug="methods">
+		<desc><![CDATA[
+			<p>Although jQuery UI is mostly comprised of <a href="/category/widgets/">widgets</a>, <a href="/category/interactions/">interactions</a>, and <a href="/category/effects/">effects</a>, there are also a few simple methods that are added for convenience.</p>
+		]]></desc>
+	</category>
+	<category name="Selectors" slug="selectors"/>
+	<category name="Method Overrides" slug="overrides">
+		<desc><![CDATA[
+			<p>jQuery UI overrides several built-in jQuery methods in order to provide additional functionality. When using these overrides, it's important to make sure that jQuery UI is loaded. If jQuery UI is not loaded, the methods will still exist, but the expected functionality will not be available, resulting in bugs that may be hard to track down.</p>
+		]]></desc>
+	</category>
+	<category name="All" slug="all"/>
 </categories>
