@@ -2,9 +2,7 @@
 <entry type="method" name="disableSelection" return="jQuery">
 	<title>.disableSelection()</title>
 	<desc>Disable selection of text content within the set of matched elements.</desc>
-	<signature>
-		<deprecated>1.9</deprecated>
-	</signature>
+	<signature added="1.6" deprecated="1.9"/>
 	<longdesc>
 		<p>Disabling text selection is bad. Don't use this.</p>
 	</longdesc>
