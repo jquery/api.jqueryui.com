@@ -38,4 +38,5 @@ $( ":data(color)" ).each(function() {
 ]]></code>
 	</example>
 	<category slug="selectors"/>
+	<category slug="core"/>
 </entry>

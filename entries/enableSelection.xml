@@ -7,4 +7,5 @@
 		<p>The <code>.enableSelection()</code> method can be used to re-enable selection of text that was disabled via <a href="/disableSelection/"><code>.disableSelection()</code></a>.</p>
 	</longdesc>
 	<category slug="methods"/>
+	<category slug="core"/>
 </entry>

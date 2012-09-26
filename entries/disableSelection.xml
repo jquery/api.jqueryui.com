@@ -7,4 +7,5 @@
 		<p>Disabling text selection is bad. Don't use this.</p>
 	</longdesc>
 	<category slug="methods"/>
+	<category slug="core"/>
 </entry>
