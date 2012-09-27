@@ -113,12 +113,12 @@
 					The public <a href="#method-destroy"><code>destroy()</code></a> method cleans up all common data, events, etc. and then delegates out to <code>_destroy()</code> for custom, widget-specific, cleanup.
 				</desc>
 			</method>
-			<method name="_getCreateEventData" returns="Object">
+			<method name="_getCreateEventData" return="Object">
 				<desc>
 					All widgets trigger the <a href="#event-create"><code>create</code></a> event. By default, no data is provided in the event, but this method can return an object which will be passed as the <code>create</code> event's data.
 				</desc>
 			</method>
-			<method name="_getCreateOptions" returns="Object">
+			<method name="_getCreateOptions" return="Object">
 				<desc>
 					This method allows the widget to define a custom method for defining options during instantiation. This user-provided options override the options returned by this method which override the default options.
 				</desc>
