@@ -9,5 +9,5 @@
 		<p>The <code>.removeUniqueId()</code> will remove ids that were set by <a href="/uniqueId"><code>.uniqueId()</code></a>. Calling <code>.removeUniqueId()</code> on an element that did not have its id set by <code>.uniqueId()</code> will have no affect, even if the element has an id.</p>
 	</longdesc>
 	<category slug="methods"/>
-	<category slug="core"/>
+	<category slug="ui-core"/>
 </entry>

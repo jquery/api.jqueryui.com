@@ -33,5 +33,5 @@ $( ":focusable" ).css( "border-color", "red" );
 ]]></code>
 	</example>
 	<category slug="selectors"/>
-	<category slug="core"/>
+	<category slug="ui-core"/>
 </entry>

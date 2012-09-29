@@ -27,9 +27,14 @@
 			<p>jQuery UI overrides several built-in jQuery methods in order to provide additional functionality. When using these overrides, it's important to make sure that jQuery UI is loaded. If jQuery UI is not loaded, the methods will still exist, but the expected functionality will not be available, resulting in bugs that may be hard to track down.</p>
 		]]></desc>
 	</category>
-	<category name="Core" slug="core">
+	<category name="UI Core" slug="ui-core">
 		<desc><![CDATA[
 			<p>Functionality provided by jquery.ui.core.js.</p>
+		]]></desc>
+	</category>
+	<category name="Effects Core" slug="effects-core">
+		<desc><![CDATA[
+			<p>Functionality provided by jquery.ui.effect.js.</p>
 		]]></desc>
 	</category>
 	<category name="All" slug="all"/>

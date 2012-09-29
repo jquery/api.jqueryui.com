@@ -42,5 +42,6 @@ $( "div" ).click(function() {
 ]]></code>
 	</example>
 	<category slug="effects"/>
+	<category slug="effects-core"/>
 	<category slug="overrides"/>
 </entry>

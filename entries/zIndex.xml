@@ -14,7 +14,7 @@
 			</code></pre>
 		</longdesc>
 		<category slug="methods"/>
-		<category slug="core"/>
+		<category slug="ui-core"/>
 	</entry>
 	<entry type="method" name="zIndex" return="Integer">
 		<title>.zIndex()</title>
@@ -28,6 +28,6 @@
 			<p>This is equivalent to <code>.css( "zIndex", zIndex )</code>.</p>
 		</longdesc>
 		<category slug="methods"/>
-		<category slug="core"/>
+		<category slug="ui-core"/>
 	</entry>
 </entries>

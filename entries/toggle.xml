@@ -39,5 +39,6 @@ $( "button" ).click(function() {
 	</example>
 	<category slug="methods"/>
 	<category slug="effects"/>
+	<category slug="effects-core"/>
 	<category slug="overrides"/>
 </entry>
