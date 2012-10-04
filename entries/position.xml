@@ -101,4 +101,5 @@ $( document ).mousemove(function( event ) {
 	</example>
 	<category slug="methods"/>
 	<category slug="overrides"/>
+	<category slug="utilities"/>
 </entry>
