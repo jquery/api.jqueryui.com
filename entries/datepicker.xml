@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="datepicker" type="widget">
+<entry name="datepicker" type="widget" widget-element="datepicker">
 	<title>Datepicker Widget</title>
 	<desc>Select a date from a popup or inline calendar</desc>
 	<longdesc>
@@ -291,6 +291,8 @@
 				<desc>The new date.</desc>
 			</argument>
 		</method>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<height>300</height>
