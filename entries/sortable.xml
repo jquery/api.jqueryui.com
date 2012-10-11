@@ -4,6 +4,7 @@
 	<desc>Reorder elements in a list or grid using the mouse.</desc>
 	<longdesc>
 		<p>The jQuery UI Sortable plugin makes selected elements sortable by dragging with the mouse.</p>
+		<p><em>Note: In order to sort table rows, the <code>tbody</code> must be made sortable, not the <code>table</code>.</em></p>
 	</longdesc>
 	<added>1.0</added>
 	<options>
