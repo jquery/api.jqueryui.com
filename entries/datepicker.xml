@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="datepicker" type="widget">
+<entry name="datepicker" type="widget" widget-element="generated wrapper">
 	<title>Datepicker Widget</title>
 	<desc>Select a date from a popup or inline calendar</desc>
 	<longdesc>
@@ -285,12 +285,14 @@
 		<method name="getDate" return="Date">
 			<desc>Returns the current date for the datepicker or <code>null</code> if no date has been selected.</desc>
 		</method>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="setDate">
 			<desc>Sets the date for the datepicker. The new date may be a <code>Date</code> object or a string in the current <a href="#option-dateFormat">date format</a> (e.g., <code>"01/26/2009"</code>), a number of days from today (e.g., <code>+7</code>) or a string of values and periods (<code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, <code>"d"</code> for days, e.g., <code>"+1m +7d"</code>), or <code>null</code> to clear the selected date.</desc>
 			<argument name="date" type="Date">
 				<desc>The new date.</desc>
 			</argument>
 		</method>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<height>300</height>
