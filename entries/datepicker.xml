@@ -291,6 +291,9 @@
 				<desc>The new date.</desc>
 			</argument>
 		</method>
+		<method name="widget">
+			<desc>Returns a <code>jQuery</code> object containing the datepicker div.</desc>
+		</method>
 	</methods>
 	<example>
 		<height>300</height>
