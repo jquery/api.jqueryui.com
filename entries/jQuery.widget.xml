@@ -258,7 +258,7 @@
 					<desc>Callback to invoke after the element has been fully shown.</desc>
 				</argument>
 			</method>
-			<method name="_show">
+			<method name="_hide">
 				<desc>
 					Hides an element immediately, using built-in animation methods, or using custom effects.
 					See the <a href="#option-hide">hide</a> option for possible <code>option</code> values.
