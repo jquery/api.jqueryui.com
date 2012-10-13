@@ -74,6 +74,7 @@
 						<li>A <code>request</code> object, with a single <code>term</code> property, which refers to the value currently in the text input. For example, if the user enters <code>"new yo"</code> in a city field, the Autocomplete term will equal <code>"new yo"</code>.</li>
 						<li>A <code>response</code> callback, which expects a single argument: the data to suggest to the user. This data should be filtered based on the provided term, and can be in any of the formats described above for simple local data. It's important when providing a custom source callback to handle errors during the request. You must always call the <code>response</code> callback even if you encounter an error. This ensures that the widget always has the correct state.</li>
 					</ul>
+					<p>When filtering data locally, you can make use of the built-in <code>$.ui.autocomplete.escapeRegex</code> function. It'll take a single string argument and escape all regex characters, making the result safe to pass to <code>new RegExp()</code>.</p>
 				</desc>
 			</type>
 		</option>
@@ -161,6 +162,24 @@
 		<code><![CDATA[
 $( "#autocomplete" ).autocomplete({
 	source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+});
+]]></code>
+		<html><![CDATA[
+<label for="autocomplete">Select a programming language: </label>
+<input id="autocomplete">
+]]></html>
+	</example>
+	<example>
+		<desc>Using a custom source callback to match only the beginning of terms</desc>
+		<code><![CDATA[
+var tags = [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ];
+$( "#autocomplete" ).autocomplete({
+	source: function( request, response ) {
+	        var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+	        response( $.grep( tags, function( item ){
+	            return matcher.test( item );
+	        }) );
+	    }
 });
 ]]></code>
 		<html><![CDATA[
