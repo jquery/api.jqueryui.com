@@ -13,6 +13,10 @@ grunt.initConfig({
 	lint: {
 		grunt: "grunt.js"
 	},
+	watch: {
+		files: entryFiles,
+		tasks: "deploy"
+	},
 	xmllint: {
 		all: [].concat( entryFiles, "categories.xml", "entries2html.xsl", "notes.xsl" )
 	},
