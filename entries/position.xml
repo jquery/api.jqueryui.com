@@ -12,7 +12,7 @@
 	<signature>
 		<argument name="options" type="Object">
 			<property name="my" default='"center"'>
-				<desc>Defines which position <strong>on the element being positioned</strong> to align with the target element: "horizontal vertical" alignment. A single value such as <code>"right"</code> will be normalized to <code>"right center"</code>, <code>"top"</code> will be normalized to <code>"center top"</code> (following CSS convention). Acceptable horizontal values: <code>"left"</code>, <code>"center"</code>, <code>"right"</code>. Acceptable vertical values: <code>"top"</code>, <code>"center"</code>, <code>"bottom"</code>. Example: <code>"left top"</code> or <code>"center center"</code>. Each dimension can also contain offsets, in pixels or percent, e.g., <code>"right+10 top-25%"</code>. Perecentage offsets are relative to the element being positioned.</desc>
+				<desc>Defines which position <strong>on the element being positioned</strong> to align with the target element: "horizontal vertical" alignment. A single value such as <code>"right"</code> will be normalized to <code>"right center"</code>, <code>"top"</code> will be normalized to <code>"center top"</code> (following CSS convention). Acceptable horizontal values: <code>"left"</code>, <code>"center"</code>, <code>"right"</code>. Acceptable vertical values: <code>"top"</code>, <code>"center"</code>, <code>"bottom"</code>. Example: <code>"left top"</code> or <code>"center center"</code>. Each dimension can also contain offsets, in pixels or percent, e.g., <code>"right+10 top-25%"</code>. Percentage offsets are relative to the element being positioned.</desc>
 				<type name="String"/>
 			</property>
 			<property name="at" default='"center"'>
