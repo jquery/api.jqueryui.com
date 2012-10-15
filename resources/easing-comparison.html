@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Effects - Easing Comparison demo</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<style>
+	body {
+		font-size: 62.5%;
+		font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	}
+	#tracks {
+		margin: 0 150px;
+	}
+	#tracks div {
+		border: 2px solid #eee;
+		padding: 8px;
+		height: 20px;
+		margin: 14px;
+		position: relative;
+		font-size: 1.1em;
+	}
+	#tracks .box {
+		padding: 5px;
+		left: 5px;
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		background: red;
+		border-radius: 50%;
+	}
+	#tracks .label {
+		padding-left: 24px;
+		font-size: 1.1em;
+		line-height: 20px;
+	}
+	</style>
+	<script>
+	$(function() {
+		function addEasing( easing ) {
+			var box = $( "<span>" )
+				.addClass( "box" )
+				.data( "easing", easing );
+			var label = $( "<span>" )
+				.addClass( "label" )
+				.text( easing );
+			$( "<div>")
+				.append( box )
+				.append( label )
+				.appendTo( tracks );
+		}
+
+		var addForm = $( "#add-easing" ),
+			addSelect = addForm.find( "select" ),
+			tracks = $( "#tracks" ),
+			startButton = $( "#start-race" );
+
+		$.each( $.easing, function( name ) {
+			$( "<option>" ).text( name ).appendTo( addSelect );
+		});
+		addSelect.change(function() {
+			addEasing( this.value );
+		});
+
+		addForm.submit(function( event ) {
+			event.preventDefault();
+			addEasing( addSelect.val() );
+		});
+
+		tracks.on( "click", "div", function() {
+			$( this ).remove();
+		});
+
+		startButton.click(function() {
+			tracks.find( "span" ).each(function() {
+				var car = $( this );
+				car
+					.stop( true, true )
+					.css({
+						left: 5
+					})
+					.animate({
+						left: tracks.width() - car.width() - 50
+					}, 2500, car.data( "easing" ) )
+					.delay( 300 )
+					.animate({
+						left: 5
+					}, 2500, car.data( "easing" ) );
+			});
+		});
+
+		addEasing( "linear" );
+		addEasing( "swing" );
+		addEasing( "easeOutBounce" );
+	});
+	</script>
+</head>
+<body>
+
+<div id="add-easing">
+	Select an easing here, click track below to remove
+	<select ></select>
+</div>
+
+<div id="tracks">
+</div>
+<button id="start-race">Start The Race</button>
+
+<div class="demo-description">
+	<p></p>
+</div>
+
+</body>
+</html>

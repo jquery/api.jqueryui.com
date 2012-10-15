@@ -14,7 +14,7 @@ grunt.initConfig({
 		grunt: "grunt.js"
 	},
 	watch: {
-		files: entryFiles,
+		files: entryFiles.concat( grunt.file.expandFiles( "resources/**") ),
 		tasks: "deploy"
 	},
 	xmllint: {
