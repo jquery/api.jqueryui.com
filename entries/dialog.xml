@@ -51,7 +51,7 @@
 				<desc>The only supported string value is <code>"auto"</code> which will allow the dialog height to adjust based on its content.</desc>
 			</type>
 		</option>
-		<option name="show" default="null">
+		<option name="hide" default="null">
 			<desc>If and how to animate the hiding of the dialog.</desc>
 			<type name="Number">
 				<desc>
