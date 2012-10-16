@@ -44,61 +44,61 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
-		<option name="altField" default='""'>
+		<option name="altField" default='""' example-value='"#actualDate"'>
 			<desc>An input element that is to be updated with the selected date from the datepicker. Use the <a href="#option-altFormat"><code>altFormat</code></a> option to change the format of the date within this field. Leave as blank for no alternate field.</desc>
 			<type name="Selector"/>
 			<type name="jQuery"/>
 			<type name="Element"/>
 		</option>
-		<option name="altFormat" type="String" default='""'>
+		<option name="altFormat" type="String" default='""' example-value='"yy-mm-dd"'>
 			<desc>The <a href="#option-dateFormat"><code>dateFormat</code></a> to be used for the <a href="#option-altField"><code>altField</code></a> option. This allows one date format to be shown to the user for selection purposes, while a different format is actually sent behind the scenes. For a full list of the possible formats see the [[UI/Datepicker/formatDate|formatDate]] function</desc>
 		</option>
-		<option name="appendText" type="String" default='""'>
+		<option name="appendText" type="String" default='""' example-value='"(yyyy-mm-dd)"'>
 			<desc>The text to display after each date field, e.g., to show the required format.</desc>
 		</option>
-		<option name="autoSize" type="Boolean" default="false">
+		<option name="autoSize" type="Boolean" default="false" example-value='true'>
 			<desc>Set to <code>true</code> to automatically resize the input field to accommodate dates in the current <a href="#option-dateFormat"><code>dateFormat</code></a>.</desc>
 		</option>
-		<option name="buttonImage" type="String" default='""'>
+		<option name="buttonImage" type="String" default='""' example-value='"/images/datepicker.gif"'>
 			<desc>The URL for the popup button image. If set, the <a href="#option-buttonText"><code>buttonText</code></a> option becomes the <code>alt</code> value and is not directly displayed.</desc>
 		</option>
-		<option name="buttonImageOnly" type="Boolean" default="false">
+		<option name="buttonImageOnly" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the button image should be rendered by itself instead of inside a button element.</desc>
 		</option>
-		<option name="buttonText" type="String" default='"..."'>
+		<option name="buttonText" type="String" default='"..."' example-value='"Choose"'>
 			<desc>The text to display on the trigger button. Use in conjunction with the <a href="#option-showOn"><code>showOn</code></a> option set to <code>"button"</code> or <code>"both"</code>.</desc>
 		</option>
-		<option name="calculateWeek" type="Function" default="jQuery.datepicker.iso8601Week">
+		<option name="calculateWeek" type="Function" default="jQuery.datepicker.iso8601Week" example-value='myWeekCalc'>
 			<desc>A function to calculate the week of the year for a given date. The default implementation uses the ISO 8601 definition: weeks start on a Monday; the first week of the year contains the first Thursday of the year.</desc>
 		</option>
-		<option name="changeMonth" type="Boolean" default="false">
+		<option name="changeMonth" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the month should be rendered as a dropdown instead of text.</desc>
 		</option>
-		<option name="changeYear" type="Boolean" default="false">
+		<option name="changeYear" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the year should be rendered as a dropdown instead of text. Use the <a href="#option-yearRange"><code>yearRange</code></a> option to control which years are made available for selection.</desc>
 		</option>
-		<option name="closeText" type="String" default='"Done"'>
+		<option name="closeText" type="String" default='"Done"' example-value='"X"'>
 			<desc>The text to display for the close link. Use the <a href="#option-showButtonPanel"><code>showButtonPanel</code></a> option to display this button.</desc>
 		</option>
-		<option name="constrainInput" type="Boolean" default="true">
+		<option name="constrainInput" type="Boolean" default="true" example-value='false'>
 			<desc>When <code>true</code>, entry in the input field is constrained to those characters allowed by the current <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
-		<option name="currentText" type="String" default='"Today"'>
+		<option name="currentText" type="String" default='"Today"' example-value='"Now"'>
 			<desc>The text to display for the current day link. Use the <a href="#option-showButtonPanel"><code>showButtonPanel</code></a> option to display this button.</desc>
 		</option>
-		<option name="dateFormat" type="String" default='"mm/dd/yy"'>
+		<option name="dateFormat" type="String" default='"mm/dd/yy"' example-value='"yy-mm-dd"'>
 			<desc>The format for parsed and displayed dates. For a full list of the possible formats see the <code>[[UI/Datepicker/formatDate|formatDate]]</code> function.</desc>
 		</option>
-		<option name="dayNames" type="Array" default='[ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]'>
+		<option name="dayNames" type="Array" default='[ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]' example-value='["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]'>
 			<desc>The list of long day names, starting from Sunday, for use as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
-		<option name="dayNamesMin" type="Array" default='[ "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" ]'>
+		<option name="dayNamesMin" type="Array" default='[ "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" ]' example-value='["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"]'>
 			<desc>The list of minimised day names, starting from Sunday, for use as column headers within the datepicker.</desc>
 		</option>
-		<option name="dayNamesShort" type="Array" default='[ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]'>
+		<option name="dayNamesShort" type="Array" default='[ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]' example-value='["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]'>
 			<desc>The list of abbreviated day names, starting from Sunday, for use as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
-		<option name="defaultDate" default="null">
+		<option name="defaultDate" default="null" example-value='+7'>
 			<desc>Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current <code>[[UI/Datepicker#option-dateFormat|dateFormat]]</code>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.</desc>
 			<type name="Date">
 				<desc>A date object containing the default date.</desc>
@@ -110,24 +110,24 @@
 				<desc>A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.</desc>
 			</type>
 		</option>
-		<option name="duration" default='"normal"'>
+		<option name="duration" default='"normal"' example-value='"slow"'>
 			<desc>Control the speed at which the datepicker appears, it may be a time in milliseconds or a string representing one of the three predefined speeds ("slow", "normal", "fast").</desc>
 			<type nmae="Number"/>
 			<type name="String"/>
 		</option>
-		<option name="firstDay" type="Integer" default="0">
+		<option name="firstDay" type="Integer" default="0" example-value='1'>
 			<desc>Set the first day of the week: Sunday is <code>0</code>, Monday is <code>1</code>, etc.</desc>
 		</option>
-		<option name="gotoCurrent" type="Boolean" default="false">
+		<option name="gotoCurrent" type="Boolean" default="false" example-value='true'>
 			<desc>When <code>true</code>, the current day link moves to the currently selected date instead of today.</desc>
 		</option>
-		<option name="hideIfNoPrevNext" type="Boolean" default="false">
+		<option name="hideIfNoPrevNext" type="Boolean" default="false" example-value='true'>
 			<desc>Normally the previous and next links are disabled when not applicable (see the <a href="#option-minDate"><code>minDate</code></a> and <a href="#option-maxDate"><code>maxDate</code></a> options). You can hide them altogether by setting this attribute to <code>true</code>.</desc>
 		</option>
-		<option name="isRTL" type="Boolean" default="false">
+		<option name="isRTL" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the current language is drawn from right to left.</desc>
 		</option>
-		<option name="maxDate" default="null">
+		<option name="maxDate" default="null" example-value='"+1m +1w"'>
 			<desc>The maximum selectable date. When set to <code>null</code>, there is no maximum.</desc>
 			<type name="Date">
 				<desc>A date object containing the maximum date.</desc>
@@ -139,7 +139,7 @@
 				<desc>A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.</desc>
 			</type>
 		</option>
-		<option name="minDate" default="null">
+		<option name="minDate" default="null" example-value='new Date(2007, 1 - 1, 1)'>
 			<desc>The minimum selectable date. When set to <code>null</code>, there is no minimum.</desc>
 			<type name="Date">
 				<desc>A date object containing the minimum date.</desc>
@@ -151,19 +151,19 @@
 				<desc>A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.</desc>
 			</type>
 		</option>
-		<option name="monthNames" type="Array" default='[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]'>
+		<option name="monthNames" type="Array" default='[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]' example-value='["Januar","Februar","Marts","April","Maj","Juni","Juli","August","September","Oktober","November","December"]'>
 			<desc>The list of full month names, for use as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
-		<option name="monthNamesShort" type="Array" default='[ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]'>
+		<option name="monthNamesShort" type="Array" default='[ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]' example-value='["Jan","Feb","Mar","Apr","Maj","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]'>
 			<desc>The list of abbreviated month names, as used in the month header on each datepicker and as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
-		<option name="navigationAsDateFormat" type="Boolean" default="false">
+		<option name="navigationAsDateFormat" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the <a href="#option-prevText"><code>prevText</code></a> and <a href="#option-nextText"><code>nextText</code></a> options should be parsed as dates by the <code>[[UI/Datepicker/formatDate|formatDate]]</code> function, allowing them to display the target month names for example.</desc>
 		</option>
-		<option name="nextText" type="String" default='"Next"'>
+		<option name="nextText" type="String" default='"Next"' example-value='"Later"'>
 			<desc>The text to display for the next month link. With the standard ThemeRoller styling, this value is replaced by an icon.</desc>
 		</option>
-		<option name="numberOfMonths" default="1">
+		<option name="numberOfMonths" default="1" example-value='[2, 3]'>
 			<desc>The number of months to show at once.</desc>
 			<type name="Number">
 				<desc>The number of months to display in a single row.</desc>
@@ -172,13 +172,13 @@
 				<desc>An array defining the number of rows and columns to display.</desc>
 			</type>
 		</option>
-		<option name="prevText" type="String" default='"Prev"'>
+		<option name="prevText" type="String" default='"Prev"' example-value='"Earlier"'>
 			<desc>The text to display for the previous month link. With the standard ThemeRoller styling, this value is replaced by an icon.</desc>
 		</option>
-		<option name="selectOtherMonths" type="Boolean" default="false">
+		<option name="selectOtherMonths" type="Boolean" default="false" example-value='true'>
 			<desc>Whether days in other months shown before or after the current month are selectable. This only applies if the <a href="#option-showOtherMonths"><code>showOtherMonths</code></a> option is set to <code>true</code>.</desc>
 		</option>
-		<option name="shortYearCutoff" default='"+10"'>
+		<option name="shortYearCutoff" default='"+10"' example-value='50'>
 			<desc>The cutoff year for determining the century for a date (used in conjunction with <code>[[UI/Datepicker#option-dateFormat|dateFormat]]</code> 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.</desc>
 			<type name="Number">
 				<desc>A value between <code>0</code> and <code>99</code> indicating the cutoff year.</desc>
@@ -187,40 +187,40 @@
 				<desc>A relative number of years from the current year, e.g., <code>"+3"</code> or <code>"-5"</code>.</desc>
 			</type>
 		</option>
-		<option name="showAnim" type="String" default='"show"'>
+		<option name="showAnim" type="String" default='"show"' example-value='"fold"'>
 			<desc>The name of the animation used to show and hide the datepicker. Use <code>"show"</code> (the default), <code>"slideDown"</code>, <code>"fadeIn"</code>, any of the <a href="/category/effects/">jQuery UI effects</a>. Set to an empty string to disable animation.</desc>
 		</option>
-		<option name="showButtonPanel" type="Boolean" default="false">
+		<option name="showButtonPanel" type="Boolean" default="false" example-value='true'>
 			<desc>Whether to show the button panel.</desc>
 		</option>
-		<option name="showCurrentAtPos" type="Number" default="0">
+		<option name="showCurrentAtPos" type="Number" default="0" example-value='3'>
 			<desc>When displaying multiple months via the <a href="#option-numberOfMonths"><code>numberOfMonths</code></a> option, the <code>showCurrentAtPos</code> option defines which position to display the current month in.</desc>
 		</option>
-		<option name="showMonthAfterYear" type="Boolean" default="false">
+		<option name="showMonthAfterYear" type="Boolean" default="false" example-value='true'>
 			<desc>Whether to show the month after the year in the header.</desc>
 		</option>
-		<option name="showOn" type="String" default='"focus"'>
+		<option name="showOn" type="String" default='"focus"' example-value='"both"'>
 			<desc>When the datepicker should appear. The datepicker can appear when the field receives focus (<code>"focus"</code>), when a button is clicked (<code>"button"</code>), or when either event occurs (<code>"both"</code>).</desc>
 		</option>
-		<option name="showOptions" type="Object" default="{}">
+		<option name="showOptions" type="Object" default="{}" example-value='{direction: "up"}'>
 			<desc>If using one of the jQuery UI effects for the <a href="#option-showAnim"><code>showAnim</code></a> option, you can provide additional settings for that animation via this option.</desc>
 		</option>
-		<option name="showOtherMonths" type="Boolean" default="false">
+		<option name="showOtherMonths" type="Boolean" default="false" example-value='true'>
 			<desc>Whether to display dates in other months (non-selectable) at the start or end of the current month. To make these days selectable use the <a href="#option-selectOtherMonths"><code>selectOtherMonths</code></a> option.</desc>
 		</option>
-		<option name="showWeek" type="Boolean" default="false">
+		<option name="showWeek" type="Boolean" default="false" example-value='true'>
 			<desc>When <code>true</code>, a column is added to show the week of the year. The <a href="#option-calculateWeek"><code>calculateWeek</code></a> option determines how the week of the year is calculated. You may also want to change the <a href="#option-firstDay"><code>firstDay</code></a> option.</desc>
 		</option>
-		<option name="stepMonths" type="Number" default="1">
+		<option name="stepMonths" type="Number" default="1" example-value='3'>
 			<desc>Set how many months to move when clicking the previous/next links.</desc>
 		</option>
-		<option name="weekHeader" type="String" default='"Wk"'>
+		<option name="weekHeader" type="String" default='"Wk"' example-value='"W"'>
 			<desc>The text to display for the week of the year column heading. Use the <a href="#option-showWeek"><code>showWeek</code></a> option to display this column.</desc>
 		</option>
-		<option name="yearRange" type="String" default='"c-10:c+10"'>
+		<option name="yearRange" type="String" default='"c-10:c+10"' example-value='2002:2012'>
 			<desc>The range of years displayed in the year drop-down: either relative to today's year (<code>"-nn:+nn"</code>), relative to the currently selected year (<code>"c-nn:c+nn"</code>), absolute (<code>"nnnn:nnnn"</code>), or combinations of these formats (<code>"nnnn:-nn"</code>). Note that this option only affects what appears in the drop-down, to restrict which dates may be selected use the <a href="#option-minDate"><code>minDate</code></a> and/or <a href="#option-maxDate"><code>maxDate</code></a> options.</desc>
 		</option>
-		<option name="yearSuffix" type="String" default='""'>
+		<option name="yearSuffix" type="String" default='""' example-value='"CE"'>
 			<desc>Additional text to display after the year in the month headers.</desc>
 		</option>
 
