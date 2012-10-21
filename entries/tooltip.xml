@@ -62,22 +62,16 @@
 	<methods>
 		<method name="close">
 			<desc>
-				Closes a tooltip. If the widget's element is the target, the event argument is optional. Otherwise you have to pass an event object with the <code>currentTarget</code> property pointing at the target.
+				Closes a tooltip. This is only intended to be called for non-delegated tooltips.
 			</desc>
-			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the tooltip to close.</desc>
-			</argument>
 		</method>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="open">
 			<desc>
-				Programmatically open a tooltip. If the widget's element is the target, the event argument is optional. Otherwise you have to pass an event object with the <code>currentTarget</code> property pointing at the target.
+				Programmatically open a tooltip. This is only intended to be called for non-delegated tooltips.
 			</desc>
-			<argument name="event" type="Event" optional="true">
-				<desc>What triggered the tooltip to open.</desc>
-			</argument>
 		</method>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
