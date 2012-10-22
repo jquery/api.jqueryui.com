@@ -29,23 +29,23 @@
 	<note id="functional-css"/>
 	<added>1.8</added>
 	<options>
-		<option name="appendTo" type="Selector" default='"body"'>
+		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"'>
 			<desc>Which element the menu should be appended to. Override this when the autocomplete is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
 		</option>
-		<option name="autoFocus" type="Boolean" default="false">
+		<option name="autoFocus" type="Boolean" default="false" example-value="true">
 			<desc>If set to <code>true</code> the first item will automatically be focused when the menu is shown.</desc>
 		</option>
-		<option name="delay" type="Integer" default="300">
+		<option name="delay" type="Integer" default="300" example-value="500">
 			<desc>The delay in milliseconds between when a keystroke occurs and when a search is performed. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="minLength" type="Integer" default="1">
+		<option name="minLength" type="Integer" default="1" example-value="0">
 			<desc>The minimum number of characters a user must type before a search is performed. Zero is useful for local data with just a few items, but a higher value should be used when a single character search could match a few thousand items.</desc>
 		</option>
-		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }'>
+		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "right top", at: "right bottom" }'>
 			<desc>Identifies the position of the suggestions menu in relation to the associated input element. The <code>of</code> option defaults to the input element, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
-		<option name="source" default="none; must be specified">
+		<option name="source" default="none; must be specified" example-value='[ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]'>
 			<desc>
 				Defines the data to use, must be specified.
 				<p>Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>

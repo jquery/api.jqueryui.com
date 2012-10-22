@@ -36,7 +36,7 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
-		<option name="active" default="0">
+		<option name="active" default="0" example-value="2">
 			<desc>
 				Which panel is currently open.
 			</desc>
@@ -47,7 +47,7 @@
 				<desc>The zero-based index of the panel that is active (open). A negative value selects panels going backward from the last panel.</desc>
 			</type>
 		</option>
-		<option name="animate" default="{}">
+		<option name="animate" default="{}" example-value='"bounceslide"'>
 			<desc>If and how to animate changing panels.</desc>
 			<type name="Boolean">
 				<desc>A value of <code>false</code> will disable animations.</desc>
@@ -67,19 +67,19 @@
 				</desc>
 			</type>
 		</option>
-		<option name="collapsible" type="Boolean" default="false">
+		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="event" type="String" default='"click"'>
+		<option name="event" type="String" default='"click"' example-value='"mouseover"'>
 			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specificed, separated by a space.</desc>
 		</option>
-		<option name="header" type="Selector" default='"> li > :first-child,> :not(li):even"'>
+		<option name="header" type="Selector" default='"> li > :first-child,> :not(li):even"' example-value='"h3"'>
 			<desc>
 				<p>Selector for the header element, applied via <code>.find()</code> on the main accordion element. Content panels must be the sibling immedately after their associated headers.</p>
 			</desc>
 		</option>
-		<option name="heightStyle" type="String" default='"auto"'>
+		<option name="heightStyle" type="String" default='"auto"' example-value='"fill"'>
 			<desc>
 				<p>Controls the height of the accordion and each panel. Possible values:</p>
 				<ul>
@@ -89,7 +89,7 @@
 				</ul>
 			</desc>
 		</option>
-		<option name="icons" type="Object" default='{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }'>
+		<option name="icons" type="Object" default='{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }' example-value='{ "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }'>
 			<desc>
 				<p>Icons to use for headers, matching an icon defined by the jQuery UI CSS Framework. Set to <code>false</code> to have no icons displayed.</p>
 				<ul>
