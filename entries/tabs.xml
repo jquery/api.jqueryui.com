@@ -57,7 +57,7 @@
 		<option name="event" type="String" default='"click"'>
 			<desc>The type of event that the tabs should react to in order to activate the tab. To activate on hover, use <code>"mouseover"</code>.</desc>
 		</option>
-		<option name="heightStyle" type="String" default='"auto"'>
+		<option name="heightStyle" type="String" default='"content"'>
 			<desc>
 				Controls the height of the tabs widget and each panel. Possible values:
 				<ul>
