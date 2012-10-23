@@ -29,6 +29,15 @@
 
 		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
 
+		<p>To add icons to the menu, include them in the markup:</p>
+
+		<pre><![CDATA[
+<ul id="menu">
+	<li><a href="#"><span class="ui-icon ui-icon-disk"></span>Save</a></li>
+</ul>
+]]></pre>
+		<p>Menu automatically adds the necessary padding to items without icons.</p>
+
 		<h3>Keyboard interaction</h3>
 
 		<ul>
