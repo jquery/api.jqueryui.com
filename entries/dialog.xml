@@ -93,7 +93,7 @@
 				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 			</type>
 			<type name="String">
-				<desc>A string representing the position within the viewport. Possible values: <code>"center"</code>, <code>"left"</code>, <code>"right"</code>, <code>"top"</code>, <code>"botom"</code>.</desc>
+				<desc>A string representing the position within the viewport. Possible values: <code>"center"</code>, <code>"left"</code>, <code>"right"</code>, <code>"top"</code>, <code>"bottom"</code>.</desc>
 			</type>
 			<type name="Array">
 				<desc>An array containing an <em>x, y</em> coordinate pair in pixel offset from the top left corner of the viewport or the name of a possible string value.</desc>
