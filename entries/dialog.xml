@@ -12,11 +12,11 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
-		<option name="autoOpen" default="true">
+		<option name="autoOpen" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="buttons" default="{}">
+		<option name="buttons" default="{}" example-value='{ Ok: function() { $( this ).dialog( "close" ); } }'>
 			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
 			<type name="Object">
 				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
@@ -25,24 +25,24 @@
 				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button.</desc>
 			</type>
 		</option>
-		<option name="closeOnEscape" default="true">
+		<option name="closeOnEscape" default="true" example-value="false">
 			<desc>Specifies whether the dialog should close when it has focus and the user presses the esacpe (ESC) key.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="closeText" default='"close"'>
+		<option name="closeText" default='"close"' example-value='"hide"'>
 			<desc>Specifies the text for the close button. Note that the close text is visibly hidden when using a standard theme.</desc>
 			<type name="String" />
 		</option>
-		<option name="dialogClass" default='""'>
+		<option name="dialogClass" default='""' example-value='"alert"'>
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
 			<type name="String" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="draggable" default="true">
+		<option name="draggable" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable wiget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="height" default='"auto"'>
+		<option name="height" default='"auto"' example-value="400">
 			<desc>The height of the dialog.</desc>
 			<type name="Number">
 				<desc>The height in pixels.</desc>
@@ -51,7 +51,7 @@
 				<desc>The only supported string value is <code>"auto"</code> which will allow the dialog height to adjust based on its content.</desc>
 			</type>
 		</option>
-		<option name="hide" default="null">
+		<option name="hide" default="null" example-value='"explode"'>
 			<desc>If and how to animate the hiding of the dialog.</desc>
 			<type name="Number">
 				<desc>
@@ -67,27 +67,27 @@
 				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
 			</type>
 		</option>
-		<option name="maxHeight" default="false">
+		<option name="maxHeight" default="false" example-value="600">
 			<desc>The maximum height to which the dialog can be resized, in pixels.</desc>
 			<type name="Number" />
 		</option>
-		<option name="maxWidth" default="false">
+		<option name="maxWidth" default="false" example-value="600">
 			<desc>The maximum width to which the dialog can be resized, in pixels.</desc>
 			<type name="Number" />
 		</option>
-		<option name="minHeight" default="150">
+		<option name="minHeight" default="150" example-value="200">
 			<desc>The minimum height to which the dialog can be resized, in pixels.</desc>
 			<type name="Number" />
 		</option>
-		<option name="minWidth" default="150">
+		<option name="minWidth" default="150" example-value="200">
 			<desc>The minimum width to which the dialog can be resized, in pixels.</desc>
 			<type name="Number" />
 		</option>
-		<option name="modal" default="false">
+		<option name="modal" default="false" example-value="true">
 			<desc>If set to <code>true</code>, the dialog will have modal behavior; other items on the page will be disabled, i.e., cannot be interacted with. Modal dialogs create an overlay below the dialog but above other page elements.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="position" default='{ my: "center", at: "center", of: window }'>
+		<option name="position" default='{ my: "center", at: "center", of: window }' example-value='{ my: "left top", at: "left bottom", of: button }'>
 			<desc>Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.</desc>
 			<type name="Object">
 				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
@@ -99,11 +99,11 @@
 				<desc>An array containing an <em>x, y</em> coordinate pair in pixel offset from the top left corner of the viewport or the name of a possible string value.</desc>
 			</type>
 		</option>
-		<option name="resizable" default="true">
+		<option name="resizable" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="show" default="null">
+		<option name="show" default="null" example-value='"slow"'>
 			<desc>If and how to animate the showing of the dialog.</desc>
 			<type name="Number">
 				<desc>
@@ -119,19 +119,19 @@
 				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
 			</type>
 		</option>
-		<option name="stack" default="true">
+		<option name="stack" default="true" example-value="false">
 			<desc>Specifies whether the dialog will stack on top of other dialogs. This will cause the dialog to move to the front of other dialogs when it gains focus.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="title" default='""'>
+		<option name="title" default='""' example-value='"Dialog Title"'>
 			<desc>Specifies the title of the dialog. Any valid HTML may be set as the title. The title can also be specified by the <code>title</code> attribute on the dialog source element.</desc>
 			<type name="String" />
 		</option>
-		<option name="width" default="300">
+		<option name="width" default="300" example-value="500">
 			<desc>The width of the dialog, in pixels.</desc>
 			<type name="Number" />
 		</option>
-		<option name="zIndex" default="1000">
+		<option name="zIndex" default="1000" example-value="20">
 			<desc>The starting z-index for the dialog.</desc>
 			<type name="Integer" />
 		</option>
