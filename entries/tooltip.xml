@@ -117,23 +117,5 @@
 	<input title="Input help">
 </p>]]></html>
 	</example>
-	<example>
-		<height>300</height>
-		<desc>Create a tooltip on the paragraph element, matching all images with an alt attribute. Use the alt attribute as the tooltip's content for each image.</desc>
-		<code><![CDATA[
-$( "p" ).tooltip({
-	items: "img[alt]",
-	content: function() {
-		return $( this ).attr( "alt" );
-	}
-});
-]]></code>
-		<html><![CDATA[
-<p>
-	<img src="/resources/images/st-stephens.jpg" alt="St. Stephen's Cathedral">
-	<img src="/resources/images/tower-bridge.jpg" alt="Tower Bridge">
-</p>
-]]></html>
-	</example>
 	<category slug="widgets"/>
 </entry>
