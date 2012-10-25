@@ -8,23 +8,23 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
-		<option name="autoRefresh" type="Boolean" default="true">
+		<option name="autoRefresh" type="Boolean" default="true" example-value='false'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many items, you may want to set this to false and call the <a href="#method-refresh"><code>refresh()</code></a> method manually.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"'>
+		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='a,.cancel'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
 		</option>
-		<option name="delay" type="Integer" default="0">
+		<option name="delay" type="Integer" default="0" example-value='150'>
 			<desc>Time in milliseconds to define when the selecting should start. This helps prevent unwanted selections when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="distance" type="Number" default="0">
+		<option name="distance" type="Number" default="0" example-value='30'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until the mouse has been dragged beyond the specified distance.</desc>
 		</option>
-		<option name="filter" type="Selector" default='"*"'>
+		<option name="filter" type="Selector" default='"*"' example-value='li'>
 			<desc>The matching child elements will be made selectees (able to be selected).</desc>
 		</option>
-		<option name="tolerance" type="String" default='"touch"'>
+		<option name="tolerance" type="String" default='"touch"' example-value='"fit"'>
 			<desc>
 				Specifies which mode to use for testing whether the lasso should select an item. Possible values:
 				<ul>
