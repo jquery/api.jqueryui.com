@@ -41,8 +41,12 @@
 			</desc>
 			<type name="Selector" />
 		</option>
-		<option name="position" default='{ my: "left+15 center", at: "right center", collision: "flipfit" }' example-value='{ my: "center top", at: "center bottom+5" }'>
-			<desc>Configuration for the Position utility. The <code>of</code> property defaults to the target element, but can also be overriden.</desc>
+		<option name="position" default='{ my: "left top+15", at: "left bottom", collision: "flipfit" }' example-value='{ my: "left+15 center", at: "right center" }'>
+			<desc>
+				<p>Configuration for the Position utility. The <code>of</code> property defaults to the target element, but can also be overriden.</p>
+
+				<p><em>Note: In 1.9.0, the default value was <code>{ my: "left+15 center", at: "right center", collision: "flipfit" }</code>, but this was changed to more closely match native tooltip positioning.</em></p>
+			</desc>
 			<type name="Object" />
 		</option>
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
