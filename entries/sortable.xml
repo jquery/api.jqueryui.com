@@ -8,7 +8,7 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="appendTo" default='"parent"'>
+		<option name="appendTo" default='"parent"' example-value='document.body'>
 			<desc>Defines where the helper that moves with the mouse is being appended to during the drag (for example, to resolve overlap/zIndex issues).</desc>
 			<type name="jQuery">
 				<desc>A jQuery object containing the element to append the helper to.</desc>
@@ -23,16 +23,16 @@
 				<desc>The string <code>"parent"</code> will cause the helper to be a sibling of the sortable item.</desc>
 			</type>
 		</option>
-		<option name="axis" type="String" default='false'>
+		<option name="axis" type="String" default='false' example-value='"x"'>
 			<desc>If defined, the items can be dragged only horizontally or vertically. Possible values: <code>"x"</code>, <code>"y"</code>.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='":input,button"'>
+		<option name="cancel" type="Selector" default='":input,button"' example-value='"a,button"'>
 			<desc>Prevents sorting if you start on elements matching the selector.</desc>
 		</option>
-		<option name="connectWith" type="Selector" default='false'>
+		<option name="connectWith" type="Selector" default='false' example-value='"#shopping-cart"'>
 			<desc>A selector of other sortable elements that the items from this list should be connected to. This is a one-way relationship, if you want the items to be connected in both directions, the <code>connectWith</code> option must be set on both sortable elements.</desc>
 		</option>
-		<option name="containment" default="false">
+		<option name="containment" default="false" example-value='"parent"'>
 			<desc>
 				<p>Defines a bounding box that the sortable items are contrained to while dragging.</p>
 
@@ -48,37 +48,37 @@
 				<desc>A string identifying an element to use as the container. Possible values: <code>"parent"</code>, <code>"document"</code>, <code>"window"</code>.</desc>
 			</type>
 		</option>
-		<option name="cursor" type="String" default='"auto"'>
+		<option name="cursor" type="String" default='"auto"' example-value='"move"'>
 			<desc>Defines the cursor that is being shown while sorting.</desc>
 		</option>
-		<option name="cursorAt" type="Object" default="false">
+		<option name="cursorAt" type="Object" default="false" example-value='{ left: 5 }'>
 			<desc>Moves the sorting element or helper so the cursor always appears to drag from the same position. Coordinates can be given as a hash using a combination of one or two keys: <code>{ top, left, right, bottom }</code>.</desc>
 		</option>
-		<option name="delay" type="Integer" default="0">
+		<option name="delay" type="Integer" default="0" example-value='150'>
 			<desc>Time in milliseconds to define when the sorting should start. Adding a delay helps preventing unwanted drags when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="distance" type="Number" default="1">
+		<option name="distance" type="Number" default="1" example-value='5'>
 			<desc>Tolerance, in pixels, for when sorting should start. If specified, sorting will not start until after mouse is dragged beyond distance. Can be used to allow for clicks on elements within a handle.</desc>
 		</option>
-		<option name="dropOnEmpty" type="Boolean" default="true">
+		<option name="dropOnEmpty" type="Boolean" default="true" example-value='false'>
 			<desc>If <code>false</code>, items from this sortable can't be dropped on an empty connect sortable (see the <a href="#option-connectWith"><code>connectWith</code></a> option.</desc>
 		</option>
-		<option name="forceHelperSize" type="Boolean" default="false">
+		<option name="forceHelperSize" type="Boolean" default="false" example-value='true'>
 			<desc>If <code>true</code>, forces the helper to have a size.</desc>
 		</option>
-		<option name="forcePlaceholderSize" type="Boolean" default="false">
+		<option name="forcePlaceholderSize" type="Boolean" default="false" example-value='true'>
 			<desc>If true, forces the placeholder to have a size.</desc>
 		</option>
-		<option name="grid" type="Array" default="false">
+		<option name="grid" type="Array" default="false" example-value='[ 20, 10 ]'>
 			<desc>Snaps the sorting element or helper to a grid, every x and y pixels. Array values: <code>[ x, y ]</code>.</desc>
 		</option>
-		<option name="handle" default="false">
+		<option name="handle" default="false" example-value='".handle"'>
 			<desc>Restricts sort start click to the specified element.</desc>
 			<type name="Selector"/>
 			<type name="Element"/>
 		</option>
-		<option name="helper" default='"original"'>
+		<option name="helper" default='"original"' example-value='"clone"'>
 			<desc>Allows for a helper element to be used for dragging display.</desc>
 			<type name="String">
 				<desc>If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.</desc>
@@ -87,16 +87,16 @@
 				<desc>A function that will return a DOMElement to use while dragging. The function receives the event and the element being sorted.</desc>
 			</type>
 		</option>
-		<option name="items" type="Selector" default='"> *"'>
+		<option name="items" type="Selector" default='"> *"' example-value='"> li"'>
 			<desc>Specifies which items inside the element should be sortable.</desc>
 		</option>
-		<option name="opacity" type="Number" default="false">
+		<option name="opacity" type="Number" default="false" example-value='0.5'>
 			<desc>Defines the opacity of the helper while sorting. From <code>0.01</code> to <code>1</code>.</desc>
 		</option>
-		<option name="placeholder" type="String" default="false">
+		<option name="placeholder" type="String" default="false" example-value='"sortable-placeholder"'>
 			<desc>A class name that gets applied to the otherwise white space.</desc>
 		</option>
-		<option name="revert" default="false">
+		<option name="revert" default="false" example-value='true'>
 			<desc>Whether the sortable items should revert to their new positions using a smooth animation.</desc>
 			<type name="Boolean">
 				<desc>When set to <code>true</code>, the items will animate with the default duration.</desc>
@@ -105,16 +105,16 @@
 				<desc>The duration for the animation, in milliseconds.</desc>
 			</type>
 		</option>
-		<option name="scroll" type="Boolean" default="true">
+		<option name="scroll" type="Boolean" default="true" example-value='false'>
 			<desc>If set to true, the page scrolls when coming to an edge.</desc>
 		</option>
-		<option name="scrollSensitivity" type="Number" default="20">
+		<option name="scrollSensitivity" type="Number" default="20" example-value='10'>
 			<desc>Defines how near the mouse must be to an edge to start scrolling.</desc>
 		</option>
-		<option name="scrollSpeed" type="Number" default="20">
+		<option name="scrollSpeed" type="Number" default="20" example-value='40'>
 			<desc>The speed at which the window should scroll once the mouse pointer gets within the <a href="#option-scrollSensitivity"><code>scrollSensitivity</code></a> distance.</desc>
 		</option>
-		<option name="tolerance" type="String" default='"intersect"'>
+		<option name="tolerance" type="String" default='"intersect"' example-value='"pointer"'>
 			<desc>
 				Specifies which mode to use for testing whether the item being moved is hovering over another item. Possible values:
 				<ul>
@@ -123,7 +123,7 @@
 				</ul>
 			</desc>
 		</option>
-		<option name="zIndex" type="Integer" default="1000">
+		<option name="zIndex" type="Integer" default="1000" example-value='9999'>
 			<desc>Z-index for element/helper while being sorted.</desc>
 		</option>
 	</options>
