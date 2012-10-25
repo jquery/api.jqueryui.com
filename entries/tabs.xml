@@ -31,7 +31,7 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
-		<option name="active" default="0">
+		<option name="active" default="0" example-value="1">
 			<desc>
 				Which panel is currently open.
 			</desc>
@@ -42,11 +42,11 @@
 				<desc>The zero-based index of the panel that is active (open). A negative value selects panels going backward from the last panel.</desc>
 			</type>
 		</option>
-		<option name="collapsible" type="Boolean" default="false">
+		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>When set to <code>true</code>, the active panel can be closed.</desc>
 		</option>
-		<option name="disabled" default="false">
-			<desc>Which tabs are disabled.</desc> 
+		<option name="disabled" default="false" example-value="[ 0, 2 ]">
+			<desc>Which tabs are disabled.</desc>
 			<type name="Boolean">
 				<desc>Enable or disable all tabs.</desc>
 			</type>
@@ -54,10 +54,10 @@
 				<desc>An array containing the zero-based indexes of the tabs that should be disabled, e.g., <code>[ 0, 2 ]</code> would disable the first and third tab.</desc>
 			</type>
 		</option>
-		<option name="event" type="String" default='"click"'>
+		<option name="event" type="String" default='"click"' example-value='"mouseover"'>
 			<desc>The type of event that the tabs should react to in order to activate the tab. To activate on hover, use <code>"mouseover"</code>.</desc>
 		</option>
-		<option name="heightStyle" type="String" default='"content"'>
+		<option name="heightStyle" type="String" default='"content"' example-value='"fill"'>
 			<desc>
 				Controls the height of the tabs widget and each panel. Possible values:
 				<ul>
