@@ -7,7 +7,7 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="accept" default='"*"'>
+		<option name="accept" default='"*"' example-value='".special"'>
 			<desc>Controls which draggable elements are accepted by the droppable.</desc>
 			<type name="Selector">
 				<desc>A selector indicating which draggable elements are accepted.</desc>
@@ -16,23 +16,23 @@
 				<desc>A function that will be called for each draggable on the page (passed as the first argument to the function). The function must return <code>true</code> if the draggable should be accepted.</desc>
 			</type>
 		</option>
-		<option name="activeClass" type="String" default="false">
+		<option name="activeClass" type="String" default="false" example-value='"ui-state-highlight"'>
 			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being dragged.</desc>
 		</option>
-		<option name="addClasses" type="Boolean" default="true">
+		<option name="addClasses" type="Boolean" default="true" example-value="false">
 			<desc>If set to <code>false</code>, will prevent the <code>ui-droppable</code> class from being added. This may be desired as a performance optimization when calling <code>.droppable()</code> init on hundreds of elements.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="greedy" type="Boolean" default="false">
+		<option name="greedy" type="Boolean" default="false" example-value="true">
 			<desc>By default, when an element is dropped on nested droppables, each droppable will receive the element. However, by setting this option to <code>true</code>, any parent droppables will not receive the element.</desc>
 		</option>
-		<option name="hoverClass" type="String" default="false">
+		<option name="hoverClass" type="String" default="false" example-value='"drop-hover"'>
 			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being hovered over the droppable.</desc>
 		</option>
-		<option name="scope" type="String" default='"default"'>
+		<option name="scope" type="String" default='"default"' example-value='"tasks"'>
 			<desc>Used to group sets of draggable and droppable items, in addition to the <a href="#option-accept"><code>accept</code></a> option. A draggable with the same scope value as a droppable will be accepted.</desc>
 		</option>
-		<option name="tolerance" type="String" default='"intersect"'>
+		<option name="tolerance" type="String" default='"intersect"' example-value='"fit"'>
 			<desc>
 				Specifies which mode to use for testing whether a draggable is hovering over a droppable. Possible values:
 				<ul>
