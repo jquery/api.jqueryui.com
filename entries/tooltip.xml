@@ -18,7 +18,7 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
-		<option name="content" default="function returning the title attribute">
+		<option name="content" default="function returning the title attribute" example-value='"Awesome title!"'>
 			<desc>
 				<p>The content of the tooltip.</p>
 
@@ -33,7 +33,7 @@
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="items" default="[title]">
+		<option name="items" default="[title]" example-value='"img[alt]"'>
 			<desc>
 				<p>A selector indicating which items should show tooltips. Customize if you're using something other then the title attribute for the tooltip content, or if you need a different selector for event delegation.</p>
 
@@ -41,19 +41,19 @@
 			</desc>
 			<type name="Selector" />
 		</option>
-		<option name="position" default='{ my: "left+15 center", at: "right center", collision: "flipfit" }'>
+		<option name="position" default='{ my: "left+15 center", at: "right center", collision: "flipfit" }' example-value='{ my: "center top", at: "center bottom+5" }'>
 			<desc>Configuration for the Position utility. The <code>of</code> property defaults to the target element, but can also be overriden.</desc>
 			<type name="Object" />
 		</option>
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="tooltipClass" default="null">
+		<option name="tooltipClass" default="null" example-value='"custom-tooltip-styling"'>
 			<desc>
 				A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
 				<p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="track" type="Boolean" default="false">
+		<option name="track" type="Boolean" default="false" example-value="true">
 			<desc>
 				Whether the tooltip should track (follow) the mouse.
 			</desc>
