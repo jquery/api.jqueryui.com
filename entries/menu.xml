@@ -92,7 +92,7 @@
 				<desc>What triggered the menu to collapse.</desc>
 			</argument>
 		</method>
-		<method name="collapseAll">
+		<method name="collapseAll" example-params='null, true'>
 			<desc>
 				Closes all open sub-menus.
 			</desc>
@@ -110,27 +110,27 @@
 			<desc>
 				Opens the sub-menu below the currently active item, if one exists.
 			</desc>
-			<argument name="event" type="Event" optional="false">
+			<argument name="event" type="Event" optional="true">
 				<desc>What triggered the menu to expand.</desc>
 			</argument>
 		</method>
-		<method name="focus">
+		<method name="focus" example-params='null, menu.find( ".ui-menu-item:last" )'>
 			<desc>
 				Activates a particular menu item, begins opening any sub-menu if present and triggers the menu's <a href="#event-focus"><code>focus</code></a> event.
 			</desc>
-			<argument name="event" type="Event" optional="false">
+			<argument name="event" type="Event" optional="true">
 				<desc>What triggered the menu item to gain focus.</desc>
 			</argument>
-			<argument name="item" type="jQuery" optional="false">
+			<argument name="item" type="jQuery">
 				<desc>The menu item to focus/activate.</desc>
 			</argument>
 		</method>
-		<method name="isFirstItem">
+		<method name="isFirstItem" example-return-var="firstItem">
 			<desc>
 				Returns a boolean value stating whether or not the currently active item is the first item in the menu.
 			</desc>
 		</method>
-		<method name="isLastItem">
+		<method name="isLastItem" example-return-var="lastItem">
 			<desc>
 				Returns a boolean value stating whether or not the currently active item is the last item in the menu.
 			</desc>

@@ -156,7 +156,7 @@
 			<signature>
 				<desc>Disables all tabs.</desc>
 			</signature>
-			<signature>
+			<signature example-params='1'>
 				<desc>
 					Disables a tab. The selected tab cannot be disabled. To disable more than one tab at once, set the <a href="#option-disabled"><code>disabled</code></a> option: <code>$( "#tabs" ).tabs( "option", "disabled", [ 1, 2, 3 ] )</code>.
 				</desc>
@@ -175,7 +175,7 @@
 			<signature>
 				<desc>Enables all tabs.</desc>
 			</signature>
-			<signature>
+			<signature example-params='1'>
 				<desc>Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.</desc>
 				<argument name="index">
 					<desc>Which tab to enable.</desc>
@@ -188,7 +188,7 @@
 				</argument>
 			</signature>
 		</method>
-		<method name="load">
+		<method name="load" example-params='1'>
 			<desc>Loads the panel content of a remote tab.</desc>
 			<argument name="index">
 				<desc>Which tab to load.</desc>

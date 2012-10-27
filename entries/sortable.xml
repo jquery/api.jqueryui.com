@@ -432,7 +432,7 @@
 		<method name="refreshPositions">
 			<desc>Refresh the cached positions of the sortable items. Calling this method refreshes the cached item positions of all sortables.</desc>
 		</method>
-		<method name="serialize">
+		<method name="serialize" return="String" example-return-var="sorted" example-params='{ key: "sort" }'>
 			<desc>
 				<p>Serializes the sortable's item <code>id</code>s into a form/ajax submittable string. Calling this method produces a hash that can be appended to any url to easily submit a new item order back to the server.</p>
 
@@ -442,18 +442,18 @@
 			</desc>
 			<argument name="options" type="Object">
 				<desc>Options to customize the serialization.</desc>
-				<property name="key" type="String">
+				<property name="key" type="String" default="the part of the attribute in front of the separator">
 					<desc>Replaces <code>part1[]</code> with the specified value.</desc>
 				</property>
-				<property name="attribute" type="String">
+				<property name="attribute" type="String" default='"id"'>
 					<desc>The name of the attribute to use for the values.</desc>
 				</property>
-				<property name="expression" type="RegExp">
+				<property name="expression" type="RegExp" default="/(.+)[-=_](.+)/">
 					<desc>A regular expression used to split the attribute value into key and value parts.</desc>
 				</property>
 			</argument>
 		</method>
-		<method name="toArray">
+		<method name="toArray" return="Array" example-return-var="sortedIDs">
 			<desc>Serializes the sortable's item id's into an array of string.</desc>
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

@@ -112,10 +112,10 @@
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Get or set the value of the slider.</desc>
-			<signature return="Number">
+			<signature return="Number" example-return-var="selection">
 				<desc>Get the value of the slider.</desc>
 			</signature>
-			<signature>
+			<signature example-params="55">
 				<desc>Set the value of the slider.</desc>
 				<argument name="value" type="Number">
 					<desc>The value to set.</desc>
@@ -124,16 +124,16 @@
 		</method>
 		<method name="values">
 			<desc>Get or set the handle value(s).</desc>
-			<signature return="Array">
+			<signature return="Array" example-return-var="values">
 				<desc>Get the value for all handles.</desc>
 			</signature>
-			<signature return="Number">
+			<signature return="Number" example-return-var="value" example-params="0">
 				<desc>Get the value for the specified handle.</desc>
 				<argument name="index" type="Integer">
 					<desc>The zero-based index of the handle.</desc>
 				</argument>
 			</signature>
-			<signature>
+			<signature example-params="0, 55">
 				<desc>Set the value for the specified handle.</desc>
 				<argument name="index" type="Integer">
 					<desc>The zero-based index of the handle.</desc>
@@ -142,7 +142,7 @@
 					<desc>The value to set.</desc>
 				</argument>
 			</signature>
-			<signature>
+			<signature example-params="[ 55, 105 ]">
 				<desc>Set the value for all handles.</desc>
 				<argument name="values" type="Array">
 					<desc>The values to set.</desc>

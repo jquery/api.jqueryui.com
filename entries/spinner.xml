@@ -90,7 +90,7 @@
 				<desc>Number of pages to decrement, defaults to 1.</desc>
 			</argument>
 		</method>
-		<method name="pageUp">
+		<method name="pageUp" example-params='10'>
 			<desc>
 				Increments the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is incremented.
 			</desc>
@@ -107,7 +107,7 @@
 				<desc>Number of steps to decrement, defaults to 1.</desc>
 			</argument>
 		</method>
-		<method name="stepUp">
+		<method name="stepUp" example-params='5'>
 			<desc>
 				Increments the value by the specified number of steps. Without the parameter, a single step is incremented.
 				<p>If the resulting value is above the max, below the min, or reuslts in a step mismatch, the value will be adjusted to the closest valid value.</p>
@@ -120,10 +120,10 @@
 			<desc>
 				Gets or sets the current value as a number.
 			</desc>
-			<signature return="Number">
+			<signature return="Number" example-return-var="value">
 				<desc>Gets the current value as a number. The value is parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</desc>
 			</signature>
-			<signature>
+			<signature example-params='50'>
 				<argument name="value">
 					<desc>The value to set. If passed as a string, the value is parsed based on the <a href="#option-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options.</desc>
 					<type name="Number"/>

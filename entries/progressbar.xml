@@ -39,10 +39,10 @@
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="value">
 			<desc>Gets or sets the current value of the progressbar.</desc>
-			<signature return="Number">
+			<signature return="Number" example-return-var="progressSoFar">
 				<desc>Gets the current value of the progressbar.</desc>
 			</signature>
-			<signature>
+			<signature example-params='50'>
 				<desc>Sets the current value of the progressbar.</desc>
 				<argument name="value" type="Number">
 					<desc>The value to set.</desc>
