@@ -14,6 +14,9 @@
 	<added>1.6</added>
 	<options>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="max" default="0" type="Number" example-value="1024">
+			<desc>The maximum value of the progressbar.</desc>
+		</option>
 		<option name="value" default="0" example-value="25">
 			<desc>The value of the progressbar.</desc>
 			<type name="Number" />
