@@ -5,6 +5,7 @@ var entryFiles = grunt.file.expandFiles( "entries/*.xml" );
 grunt.loadNpmTasks( "grunt-clean" );
 grunt.loadNpmTasks( "grunt-wordpress" );
 grunt.loadNpmTasks( "grunt-jquery-content" );
+grunt.loadNpmTasks( "grunt-check-modules" );
 
 grunt.initConfig({
 	clean: {
@@ -39,7 +40,7 @@ grunt.initConfig({
 
 grunt.registerTask( "default", "build-wordpress" );
 grunt.registerTask( "build", "build-pages build-xml-entries build-xml-categories build-resources build-xml-full" );
-grunt.registerTask( "build-wordpress", "clean lint xmllint build" );
+grunt.registerTask( "build-wordpress", "check-modules clean lint xmllint build" );
 grunt.registerTask( "tidy", "xmllint xmltidy" );
 
 };
