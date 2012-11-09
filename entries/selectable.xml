@@ -8,6 +8,9 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
+		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"'>
+			<desc>Which element the selection helper (the lasso) should be appended to.</desc>
+		</option>
 		<option name="autoRefresh" type="Boolean" default="true" example-value='false'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many items, you may want to set this to false and call the <a href="#method-refresh"><code>refresh()</code></a> method manually.</desc>
 		</option>
