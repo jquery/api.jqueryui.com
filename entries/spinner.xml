@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="spinner" type="widget" widget-element="generated wrapper">
+<entry name="spinner" type="widget" widget-element="generated wrapper" event-prefix="spin">
 	<title>Spinner Widget</title>
 	<desc>
 		Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
@@ -135,14 +135,14 @@
 	</methods>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="start" type="spinstart">
+		<event name="start">
 			<desc>
 				Triggered before a spin. Can be canceled, preventing the spin from occurring.
 			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="spin" type="spin">
+		<event name="spin">
 			<desc>
 				Triggered during increment/decrement (to determine direction of spin compare current value with <code>ui.value</code>).
 				<p>Can be canceled, preventing the value from being updated.</p>
@@ -154,12 +154,12 @@
 				</property>
 			</argument>
 		</event>
-		<event name="stop" type="spinstop">
+		<event name="stop">
 			<desc>Triggered after a spin.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="change" type="spinchange">
+		<event name="change">
 			<desc>
 				Triggered when the value of the spinner has changed and the input is no longer focused.
 			</desc>

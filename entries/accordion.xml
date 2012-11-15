@@ -100,7 +100,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="activate" type="accordionactivate">
+		<event name="activate">
 			<desc>Triggered after a panel has been activated (after animation completes). If the accordion was previously collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -118,7 +118,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="beforeActivate" type="accordionbeforeactivate">
+		<event name="beforeActivate">
 			<desc>Triggered directly before a panel is activated. Can be canceled to prevent the panel from activating. If the accordion is currently collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

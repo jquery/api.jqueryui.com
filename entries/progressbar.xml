@@ -23,13 +23,13 @@
 		</option>
 	</options>
 	<events>
-		<event name="change" type="progressbarchange">
+		<event name="change">
 			<desc>Triggered when the value of the progressbar changes.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="complete" type="progressbarcomplete">
+		<event name="complete">
 			<desc>Triggered when the value of the progressbar reaches the maximum value.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>

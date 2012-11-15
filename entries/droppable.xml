@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="droppable" type="widget" widget-element="droppable element">
+<entry name="droppable" type="widget" widget-element="droppable element" event-prefix="drop">
 	<title>Droppable Widget</title>
 	<desc>Create targets for draggable elements.</desc>
 	<longdesc>
@@ -46,7 +46,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="activate" type="dropactivate">
+		<event name="activate">
 			<desc>Triggered when an accepted draggable starts dragging. This can be useful if you want to make the droppable "light up" when it can be dropped on.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -64,7 +64,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="deactivate" type="dropdeactivate">
+		<event name="deactivate">
 			<desc>Triggered when an accepted draggable stops dragging.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -82,7 +82,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="over" type="dropover">
+		<event name="over">
 			<desc>Triggered when an accepted draggable is dragged over the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -100,12 +100,12 @@
 				</property>
 			</argument>
 		</event>
-		<event name="out" type="dropout">
+		<event name="out">
 			<desc>Triggered when an accepted draggable is dragged out of the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="drop" type="drop">
+		<event name="drop">
 			<desc>Triggered when an accepted draggable is dropped on the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

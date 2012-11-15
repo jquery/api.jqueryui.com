@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="slider" type="widget" widget-element="slider">
+<entry name="slider" type="widget" widget-element="slider" event-prefix="slide">
 	<title>Slider Widget</title>
 	<desc>Drag a handle to select a numeric value.</desc>
 	<longdesc>
@@ -53,7 +53,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="start" type="slidestart">
+		<event name="start">
 			<desc>Triggered when the user starts sliding.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -65,7 +65,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="slide" type="slide">
+		<event name="slide">
 			<desc>Triggered on every mouse move during slide. The value provided in the event as <code>ui.value</code> represents the value that the handle will have as a result of the current movement. Canceling the event will prevent the handle from moving and the handle will continue to have its previous value.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -80,7 +80,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="change" type="slidechange">
+		<event name="change">
 			<desc>Triggered after the user slides a handle, if the value has changed; or if the value is changed programmatically via the <a href="#method-value"><code>value</code></a> method.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -92,7 +92,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="stop" type="slidestop">
+		<event name="stop">
 			<desc>Triggered after the user slides a handle.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

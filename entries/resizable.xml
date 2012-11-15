@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="resizable" type="widget" widget-element="resizable element">
+<entry name="resizable" type="widget" widget-element="resizable element" event-prefix="resize">
 	<title>Resizable Widget</title>
 	<desc>Change the size of an element using the mouse.</desc>
 	<longdesc>
@@ -96,7 +96,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="start" type="resizestart">
+		<event name="start">
 			<desc>This event is triggered at the start of a resize operation.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -123,7 +123,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="resize" type="resize">
+		<event name="resize">
 			<desc>This event is triggered during the resize, on the drag of the resize handler.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -150,7 +150,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="stop" type="resizestop">
+		<event name="stop">
 			<desc>This event is triggered at the end of a resize operation.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="draggable" type="widget" widget-element="draggable element">
+<entry name="draggable" type="widget" widget-element="draggable element" event-prefix="drag">
 	<title>Draggable Widget</title>
 	<desc>Allow elements to be moved using the mouse.</desc>
 	<longdesc>
@@ -145,7 +145,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="start" type="dragstart">
+		<event name="start">
 			<desc>Triggered when dragging starts.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -160,7 +160,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="drag" type="drag">
+		<event name="drag">
 			<desc>Triggered while the mouse is moved during the dragging.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -175,7 +175,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="stop" type="dragstop">
+		<event name="stop">
 			<desc>Triggered when dragging stops.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

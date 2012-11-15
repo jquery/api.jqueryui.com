@@ -80,7 +80,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="change" type="autocompletechange">
+		<event name="change">
 			<desc>Triggered when the field is blurred, if the value has changed.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -89,13 +89,13 @@
 				</property>
 			</argument>
 		</event>
-		<event name="close" type="autocompleteclose">
+		<event name="close">
 			<desc>Triggered when the menu is hidden. Not every <code>close</code> event will be accompanied by a <code>change</code> event.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="focus" type="autocompletefocus">
+		<event name="focus">
 			<desc>
 				Triggered when focus is moved to an item (not selecting). The default action is to replace the text field's value with the value of the focused item, though only if the event was triggered by a keyboard interaction.
 				<p>Canceling this event prevents the value from being updated, but does not prevent the menu item from being focused.</p>
@@ -107,12 +107,12 @@
 				</property>
 			</argument>
 		</event>
-		<event name="open" type="autocompleteopen">
+		<event name="open">
 			<desc>Triggered when the suggestion menu is opened or updated.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="response" type="autocompleteresponse">
+		<event name="response">
 			<desc>Triggered after a search completes, before the menu is shown. Useful for local manipulation of suggestion data, where a custom <a href="#option-source"><code>source</code></a> option callback is not required. This event is always triggered when a search completes, even if the menu will not be shown because there are no results or the Autocomplete is disabled.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -121,12 +121,12 @@
 				</property>
 			</argument>
 		</event>
-		<event name="search" type="autocompletesearch">
+		<event name="search">
 			<desc>Triggered before a search is performed, after <a href="#option-minLength"><code>minLength</code></a> and <a href="#option-delay"><code>delay</code></a> are met. If canceled, then no request will be started and no items suggested.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="select" type="autocompleteselect">
+		<event name="select">
 			<desc>
 				Triggered when an item is selected from the menu. The default action is to replace the text field's value with the value of the selected item.
 				<p>Canceling this event prevents the value from being updated, but does not prevent the menu from closing.</p>

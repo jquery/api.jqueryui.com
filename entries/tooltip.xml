@@ -84,7 +84,7 @@
 	</methods>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="open" type="tooltipopen">
+		<event name="open">
 			<desc>
 				Triggered when a tooltip is shown, triggered on <code>focusin</code> or <code>mouseover</code>.
 			</desc>
@@ -95,7 +95,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="close" type="tooltipclose">
+		<event name="close">
 			<desc>
 				Triggered when a tooltip is closed, triggered on <code>focusout</code> or <code>mouseleave</code>.
 			</desc>

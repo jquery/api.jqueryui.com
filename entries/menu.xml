@@ -184,7 +184,7 @@
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<events>
-		<event name="blur" type="menublur">
+		<event name="blur">
 			<desc>
 				Triggered when the menu loses focus.
 			</desc>
@@ -198,7 +198,7 @@
 			</argument>
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="focus" type="menufocus">
+		<event name="focus">
 			<desc>
 				Triggered when a menu gains focus or when any menu item is activated.
 			</desc>
@@ -211,7 +211,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="select" type="menuselect">
+		<event name="select">
 			<desc>
 				Triggered when a menu item is selected.
 			</desc>

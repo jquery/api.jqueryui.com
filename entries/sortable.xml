@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="sortable" type="widget" widget-element="sortable element">
+<entry name="sortable" type="widget" widget-element="sortable element" event-prefix="sort">
 	<title>Sortable Widget</title>
 	<desc>Reorder elements in a list or grid using the mouse.</desc>
 	<longdesc>
@@ -129,7 +129,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="start" type="sortstart">
+		<event name="start">
 			<desc>This event is triggered when sorting starts.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -153,7 +153,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="sort" type="sort">
+		<event name="sort">
 			<desc>This event is triggered during sorting.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -177,7 +177,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="change" type="sortchange">
+		<event name="change">
 			<desc>This event is triggered during sorting, but only when the DOM position has changed.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -201,7 +201,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="beforeStop" type="sortbeforestop">
+		<event name="beforeStop">
 			<desc>This event is triggered when sorting stops, but when the placeholder/helper is still available.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -225,7 +225,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="stop" type="sortstop">
+		<event name="stop">
 			<desc>This event is triggered when sorting has stopped.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -249,7 +249,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="update" type="sortupdate">
+		<event name="update">
 			<desc>This event is triggered when the user stopped sorting and the DOM position has changed.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -273,7 +273,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="receive" type="sortreceive">
+		<event name="receive">
 			<desc>This event is triggered when a connected sortable list has received an item from another list.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -297,7 +297,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="remove" type="sortremove">
+		<event name="remove">
 			<desc>This event is triggered when a sortable item has been dragged out from the list and into another.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -321,7 +321,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="over" type="sortover">
+		<event name="over">
 			<desc>This event is triggered when a sortable item is moved into a connected list.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -345,7 +345,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="out" type="sortout">
+		<event name="out">
 			<desc>This event is triggered when a sortable item is moved away from a connected list.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -369,7 +369,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="activate" type="sortactivate">
+		<event name="activate">
 			<desc>This event is triggered when using connected lists, every connected list on drag start receives it.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -393,7 +393,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="deactivate" type="sortdeactivate">
+		<event name="deactivate">
 			<desc>This event is triggered when sorting was stopped, is propagated to all possible connected lists.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

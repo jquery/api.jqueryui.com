@@ -137,23 +137,23 @@
 		</option>
 	</options>
 	<events>
-		<event name="beforeClose" type="dialogbeforeclose">
+		<event name="beforeClose">
 			<desc>Triggered when a dialog is about to close. If canceled, the dialog will not close.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="open" type="dialogopen">
+		<event name="open">
 			<desc>Triggered when the dialog is opened.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="focus" type="dialogfocus">
+		<event name="focus">
 			<desc>Triggered when the dialog gains focus.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="dragStart" type="dialogdragstart">
+		<event name="dragStart">
 			<desc>Triggered when the user starts dragging the dialog.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -165,7 +165,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="drag" type="dialogdrag">
+		<event name="drag">
 			<desc>Triggered while the dialog is being dragged.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -177,7 +177,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="dragStop" type="dialogdragstop">
+		<event name="dragStop">
 			<desc>Triggered after the dialog has been dragged.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -189,7 +189,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="resizeStart" type="dialogresizestart">
+		<event name="resizeStart">
 			<desc>Triggered when the user starts resizing the dialog.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -207,7 +207,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="resize" type="dialogresize">
+		<event name="resize">
 			<desc>Triggered while the dialog is being resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -225,7 +225,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="resizeStop" type="dialogresizestop">
+		<event name="resizeStop">
 			<desc>Triggered after the dialog has been resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -243,7 +243,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="close" type="dialogclose">
+		<event name="close">
 			<desc>Triggered when the dialog is closed.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>

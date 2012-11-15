@@ -71,7 +71,7 @@
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
-		<event name="activate" type="tabsactivate">
+		<event name="activate">
 			<desc>Triggered after a tab has been activated (after animation completes). If the tabs were previously collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -89,7 +89,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="beforeActivate" type="tabsbeforeactivate">
+		<event name="beforeActivate">
 			<desc>Triggered directly after a tab is activated. Can be canceled to prevent the tab from activating. If the tabs are currently collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -107,7 +107,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="beforeLoad" type="tabsload">
+		<event name="beforeLoad">
 			<desc>Triggered when a remote tab is about to be loaded, after the <a href="#event-beforeActivate"><code>beforeActivate</code></a> event. Can be canceled to prevent the tab panel from loading content; though the panel will still be activated. This event is triggered just before the Ajax request is made, so modifications can be made to <code>ui.jqXHR</code> and <code>ui.ajaxSettings</code>.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -137,7 +137,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="load" type="tabsload">
+		<event name="load">
 			<desc>Triggered after a remote tab has been loaded.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">

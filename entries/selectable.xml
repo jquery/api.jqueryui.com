@@ -39,7 +39,7 @@
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="selected" type="selectableselected">
+		<event name="selected">
 			<desc>Triggered at the end of the select operation, on each element added to the selection.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -48,7 +48,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="selecting" type="selectableselecting">
+		<event name="selecting">
 			<desc>Triggered during the select operation, on each element added to the selection.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -57,17 +57,17 @@
 				</property>
 			</argument>
 		</event>
-		<event name="start" type="selectablestart">
+		<event name="start">
 			<desc>Triggered at the beginning of the select operation.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="stop" type="selectablestop">
+		<event name="stop">
 			<desc>Triggered at the end of the select operation.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object"/>
 		</event>
-		<event name="unselected" type="selectableunselected">
+		<event name="unselected">
 			<desc>Triggered at the end of the select operation, on each element removed from the selection.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -76,7 +76,7 @@
 				</property>
 			</argument>
 		</event>
-		<event name="unselecting" type="selectableunselecting">
+		<event name="unselecting">
 			<desc>Triggered during the select operation, on each element removed from the selection.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
