@@ -40,7 +40,7 @@
 			</property>
 			<property name="using" default="null">
 				<desc>
-					When specified, the actual property setting is delegated to this callback. Receives two parameters: The first is a hash of <code>top</code> and <code>left</code> values for the position that should be set and can be forwarded to <code>.position()</code> or <code>.animate()</code>.
+					When specified, the actual property setting is delegated to this callback. Receives two parameters: The first is a hash of <code>top</code> and <code>left</code> values for the position that should be set and can be forwarded to <code>.css()</code> or <code>.animate()</code>.
 					<p>The second provides feedback about the position and dimensions of both elements, as well as calculations to their relative position. Both <code>target</code> and <code>element</code> have these properties: <code>element</code>, <code>left</code>, <code>top</code>, <code>width</code>, <code>height</code>. In addition, there's <code>horizontal</code>, <code>vertical</code> and <code>important</code>, giving you twelve potential directions like <code>{ horizontal: "center", vertical: "left", important: "horizontal" }</code>.</p>
 				</desc>
 				<type name="Function"/>
