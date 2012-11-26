@@ -37,7 +37,6 @@
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="draggable" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable wiget</a> to be included.</desc>
 			<type name="Boolean" />
@@ -254,8 +253,6 @@
 			<desc>Closes the dialog.</desc>
 		</method>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="isOpen" return="Boolean" example-return-var="isOpen">
 			<desc>Whether the dialog is currently open.</desc>
 		</method>
