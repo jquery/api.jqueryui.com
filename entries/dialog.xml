@@ -129,21 +129,13 @@
 				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
 			</type>
 		</option>
-		<option name="stack" default="true" example-value="false">
-			<desc>Specifies whether the dialog will stack on top of other dialogs. This will cause the dialog to move to the front of other dialogs when it gains focus.</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="title" default='""' example-value='"Dialog Title"'>
+		<option name="title" default='null' example-value='"Dialog Title"'>
 			<desc>Specifies the title of the dialog. Any valid HTML may be set as the title. The title can also be specified by the <code>title</code> attribute on the dialog source element.</desc>
 			<type name="String" />
 		</option>
 		<option name="width" default="300" example-value="500">
 			<desc>The width of the dialog, in pixels.</desc>
 			<type name="Number" />
-		</option>
-		<option name="zIndex" default="1000" example-value="20">
-			<desc>The starting z-index for the dialog.</desc>
-			<type name="Integer" />
 		</option>
 	</options>
 	<events>
