@@ -43,7 +43,7 @@
 			<desc>Which element the menu should be appended to. Override this when the selectmenu is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
-			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>true</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 	</options>
 	<events>
