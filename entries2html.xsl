@@ -9,7 +9,7 @@
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
 	&lt;title&gt;<xsl:value-of select="//entry/@name"/> demo&lt;/title&gt;
-	&lt;link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"&gt;<xsl:if test="css">
+	&lt;link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"&gt;
 	&lt;link rel="stylesheet" href="http://view.jqueryui.com/selectmenu/themes/base/jquery.ui.selectmenu.css"&gt;<xsl:if test="css">
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
 	&lt;script src="http://code.jquery.com/jquery-1.8.3.js"&gt;&lt;/script&gt;
