@@ -126,6 +126,10 @@ $('#speed').selectmenu();
 	<option value="Faster">Faster</option>
 </select>
 ]]></html>
+	<css><![CDATA[
+	label { display: block; }
+	select { width: 200px; }
+]]></css>
 	</example>
 	<example>
 		<desc>A simple jQuery UI Selectmenu with optgroups</desc>
@@ -145,6 +149,10 @@ $('#files').selectmenu();
 	</optgroup>
 </select>
 ]]></html>
+	<css><![CDATA[
+	label { display: block; }
+	select { width: 200px; }
+]]></css>
 	</example>
 	<example>
 		<desc>A jQuery UI Selectmenu with overflow in pop-up mode</desc>
@@ -178,6 +186,11 @@ withOverflow.selectmenu("menuWidget").addClass("overflow");
 	<option value="19">19</option>
 </select>
 ]]></html>
+	<css><![CDATA[
+	label { display: block; }
+	select { width: 200px; }
+	.overflow { height: 200px; }
+]]></css>
 	</example>
 	<category slug="widgets"/>
 </entry>
