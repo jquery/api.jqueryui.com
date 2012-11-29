@@ -36,22 +36,31 @@
 	<note id="functional-css"/>
 	<added>1.10</added>
 	<options>
-		<option name="dropdown" type="Boolean" default="true" example-value="false">
-			<desc>If set to <code>true</code> the menu will open as a pop-up. Otherwise the menu is opened below the button just like a native select element.</desc>
-		</option>
 		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"'>
 			<desc>Which element the menu should be appended to. Override this when the selectmenu is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
+		</option>
+		<option name="dropdown" type="Boolean" default="true" example-value="false">
+			<desc>If set to <code>true</code> the menu will open as a pop-up. Otherwise the menu is opened below the button just like a native select element.</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
 			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 	</options>
 	<events>
-		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<event name="open">
-			<desc>Triggered when menu is opened.</desc>
+		<event name="change">
+			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire an <code>change</code> event.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="item" type="jQuery">
+					<desc>The active item.</desc>
+				</property>
+			</argument>
+		</event>
+		<event name="close">
+			<desc>Triggered when the menu is hidden.</desc>
 			<argument name="event" type="Event"/>
 		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="focus">
 			<desc>
 				Triggered when an items gains focus.
@@ -62,6 +71,10 @@
 					<desc>The focused item.</desc>
 				</property>
 			</argument>
+		</event>
+		<event name="open">
+			<desc>Triggered when menu is opened.</desc>
+			<argument name="event" type="Event"/>
 		</event>
 		<event name="select">
 			<desc>
@@ -74,41 +87,28 @@
 				</property>
 			</argument>
 		</event>
-		<event name="close">
-			<desc>Triggered when the menu is hidden.</desc>
-			<argument name="event" type="Event"/>
-		</event>
-		<event name="change">
-			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire an <code>change</code> event.</desc>
-			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="item" type="jQuery">
-					<desc>The active item.</desc>
-				</property>
-			</argument>
-		</event>
 	</events>
 	<methods>
-		<method name="open">
-			<desc>Opens the dialog.</desc>
-		</method>
 		<method name="close">
 			<desc>Closes the Selectmenu menu.</desc>
 		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="menuWidget">
+			<desc>Returns a <code>jQuery</code> object containing the menu element.</desc>
+		</method>
+		<method name="open">
+			<desc>Opens the dialog.</desc>
+		</method>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>
 				Parses the original element again and rerenders the menu. New options or optgroups can be added, removed or disabled.
 			</desc>
 		</method>
-		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="widget">
 			<desc>Returns a <code>jQuery</code> object containing the button element.</desc>
-		</method>
-		<method name="menuWidget">
-			<desc>Returns a <code>jQuery</code> object containing the menu element.</desc>
 		</method>
 	</methods>
 	<example>
