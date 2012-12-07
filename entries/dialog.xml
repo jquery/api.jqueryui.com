@@ -23,6 +23,9 @@
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
+		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"' added="1.10">
+			<desc>Which element the dialog should be appended to. Regardless of the value set, the overlay for modal dialogs will always be appended to the body and cover the entire window.</desc>
+		</option>
 		<option name="autoOpen" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
 			<type name="Boolean" />
