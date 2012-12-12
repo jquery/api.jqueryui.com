@@ -42,6 +42,7 @@
 				<desc>When set to <code>true</code>, the stepping delta will increase when spun incessantly. When set to <code>false</code>, all steps are equal (as defined by the <a href="#option-step"><code>step</code></a> option).</desc>
 			</type>
 			<type name="Function">
+				<argument name="count" type="Integer"/>
 				<desc>Receives one parameter: the number of spins that have occurred. Must return the number of steps that should occur for the current spin.</desc>
 			</type>
 		</option>
