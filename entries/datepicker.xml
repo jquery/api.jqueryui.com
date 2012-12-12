@@ -40,6 +40,12 @@
 		<code>$.datepicker.setDefaults( $.datepicker.regional[ "" ] );</code>
 		<p>And can then override an individual datepicker for a specific locale:</p>
 		<code>$( selector ).datepicker( $.datepicker.regional[ "fr" ] );</code>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/category/effects-core/">Effects Core</a> (optional; for use with the <a href="#option-showAnim"><code>showAnim</code></a> option)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>

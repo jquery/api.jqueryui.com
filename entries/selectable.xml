@@ -4,6 +4,13 @@
 	<desc>Use the mouse to select elements, individually or in a group.</desc>
 	<longdesc>
 		<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Elements can also be selected via click or drag while holding the ctrl/meta key, allowing for multiple (non-contiguous) selections.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/mouse/">Mouse Interaction</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>

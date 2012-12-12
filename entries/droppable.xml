@@ -4,6 +4,13 @@
 	<desc>Create targets for draggable elements.</desc>
 	<longdesc>
 		<p>The jQuery UI Droppable plugin makes selected elements droppable (meaning they accept being dropped on by <a href="/draggable/">draggables</a>). You can specify which draggables each will accept.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/mouse/">Mouse Interaction</a></li>
+		</ul>
 	</longdesc>
 	<added>1.0</added>
 	<options>

@@ -8,6 +8,17 @@
 		<p>If the content length exceeds the maximum height, a scrollbar will automatically appear.</p>
 
 		<p>A bottom button bar and semi-transparent modal overlay layer are common options that can be added.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+			<li><a href="/button/">Button</a></li>
+			<li><a href="/draggable/">Draggable</a> (optional; for use with the <a href="#option-draggable"><code>draggable</code></a> option)</li>
+			<li><a href="/resizable/">Resizable</a> (optional; for use with the <a href="#option-resizable"><code>resizable</code></a> option)</li>
+			<li><a href="/category/effects-core/">Effects Core</a> (optional; for use with the <a href="#option-show"><code>show</code></a> and <a href="#option-hide"><code>hide</code></a> options)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>

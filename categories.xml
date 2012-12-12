@@ -34,7 +34,7 @@
 	</category>
 	<category name="Effects Core" slug="effects-core">
 		<desc><![CDATA[
-			<p>Functionality provided by jquery.ui.effect.js.</p>
+			<p>Functionality provided by jquery.ui.effect.js. In addition to the methods listed below, jquery.ui.effect.js also includes several <a href="/easings/">easings</a>.</p>
 		]]></desc>
 	</category>
 	<category name="All" slug="all"/>

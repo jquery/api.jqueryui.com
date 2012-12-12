@@ -27,6 +27,13 @@
 			<li>ALT+PAGE UP: Move focus to the previous tab and immediately activate.</li>
 			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
 		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/category/effects-core/">Effects Core</a> (optional; for use with the <a href="#option-show"><code>show</code></a> and <a href="#option-hide"><code>hide</code></a> options)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>

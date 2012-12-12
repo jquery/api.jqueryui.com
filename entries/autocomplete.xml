@@ -25,6 +25,14 @@
 		<ul>
 			<li>UP/DOWN - Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
 		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+			<li><a href="/menu/">Menu</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.8</added>

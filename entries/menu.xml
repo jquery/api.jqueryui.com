@@ -52,6 +52,13 @@
 		<p>Typing a letter moves focus to the first item whose title starts with that character. Repeating the same character cycles through matching items. Typing more characters within the one second timer matches those characters.</p>
 
 		<p>Disabled items can receive keyboard focus, but do not allow any other interaction.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.9</added>

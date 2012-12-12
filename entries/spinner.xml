@@ -19,6 +19,14 @@
 		</ul>
 
 		<p>Focus stays in the text field, even after using the mouse to click one of the spin buttons.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/button/">Button</a></li>
+			<li><a href="https://github.com/jquery/globalize">Globalize</a> (external, optional; for use with the <a href="#option-culture"><code>culture</code></a> and <a href="#option-numberFormat"><code>numberFormat</code></a> options)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.9</added>

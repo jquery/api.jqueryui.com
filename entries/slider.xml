@@ -6,6 +6,13 @@
 		<p>The jQuery UI Slider plugin makes selected elements into sliders. There are various options such as multiple handles and ranges. The handle can be moved with the mouse or the arrow keys.</p>
 
 		<p>The slider widget will create handle elements with the class <code>ui-slider-handle</code> on initialization. You can specify custom handle elements by creating and appending the elements and adding the <code>ui-slider-handle</code> class before initialization. It will only create the number of handles needed to match the length of <a href="#option-value"><code>value</code></a>/<a href="#option-values"><code>values</code></a>. For example, if you specify <code>values: [ 1, 5, 18 ]</code> and create one custom handle, the plugin will create the other two.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/mouse/">Mouse Interaction</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.5</added>

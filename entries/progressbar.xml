@@ -9,6 +9,12 @@
 		<p>
 			This is a determinate progress bar, meaning that it should only be used in situations where the system can accurately update the current status. A determinate progress bar should never fill from left to right, then loop back to empty for a single process &#8212; if the actual status cannot be calculated, an indeterminate progress bar or spinner animation is a better way to provide user feedback.
 		</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.6</added>

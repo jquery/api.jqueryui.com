@@ -10,6 +10,12 @@
 		<p>In order to group radio buttons, Button also provides an additional widget, called Buttonset. Buttonset is used by selecting a container element (which contains the radio buttons) and calling <code>.buttonset()</code>. Buttonset will also provide visual grouping, and therefore should be used whenever you have a group of buttons. It works by selecting all descendants and applying <code>.button()</code> to them. You can enable and disable a button set, which will enable and disable all contained buttons. Destroying a button set also calls each button's <code>destroy</code> method.</p>
 
 		<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.8</added>
