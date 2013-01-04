@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry type="widget" name="jQuery.ui.mouse">
+<entry type="widget" name="mouse">
 	<title>Mouse Interaction</title>
 	<desc>The base interaction layer.</desc>
 	<longdesc>
