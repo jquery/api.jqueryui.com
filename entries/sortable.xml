@@ -462,6 +462,12 @@
 		</method>
 		<method name="toArray" return="Array" example-return-var="sortedIDs">
 			<desc>Serializes the sortable's item id's into an array of string.</desc>
+			<argument name="options" type="Object">
+				<desc>Options to customize the serialization.</desc>
+				<property name="attribute" type="String" default='"id"'>
+					<desc>The name of the attribute to use for the values.</desc>
+				</property>
+			</argument>
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
