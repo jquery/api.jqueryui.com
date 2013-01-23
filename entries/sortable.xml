@@ -41,7 +41,7 @@
 		</option>
 		<option name="containment" default="false" example-value='"parent"'>
 			<desc>
-				<p>Defines a bounding box that the sortable items are contrained to while dragging.</p>
+				<p>Defines a bounding box that the sortable items are constrained to while dragging.</p>
 
 				<p>Note: The element specified for containment must have a calculated width and height (though it need not be explicit). For example, if you have <code>float: left</code> sortable children and specify <code>containment: "parent"</code> be sure to have <code>float: left</code> on the sortable/parent container as well or it will have <code>height: 0</code>, causing undefined behavior.</p>
 			</desc>
