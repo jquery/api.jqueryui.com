@@ -29,6 +29,7 @@
 		</ul>
 	</longdesc>
 	<note id="functional-css"/>
+	<note id="native-change-warning"/>
 	<added>1.9</added>
 	<options>
 		<option name="culture" type="String" default="null" example-value='"fr"'>
