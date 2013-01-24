@@ -48,6 +48,7 @@
 		</ul>
 	</longdesc>
 	<note id="functional-css"/>
+	<note id="native-change-warning"/>
 	<added>1.0</added>
 	<options>
 		<option name="altField" default='""' example-value='"#actualDate"'>

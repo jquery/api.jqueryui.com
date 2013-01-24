@@ -35,6 +35,7 @@
 		</ul>
 	</longdesc>
 	<note id="functional-css"/>
+	<note id="native-change-warning"/>
 	<added>1.8</added>
 	<options>
 		<option name="appendTo" type="Selector" default="null" example-value='"#someElem"'>
