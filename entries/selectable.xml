@@ -31,7 +31,7 @@
 		<option name="distance" type="Number" default="0" example-value='30'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until the mouse has been dragged beyond the specified distance.</desc>
 		</option>
-		<option name="filter" type="Selector" default='"*"' example-value='li'>
+		<option name="filter" type="Selector" default='"*"' example-value='"li"'>
 			<desc>The matching child elements will be made selectees (able to be selected).</desc>
 		</option>
 		<option name="tolerance" type="String" default='"touch"' example-value='"fit"'>
