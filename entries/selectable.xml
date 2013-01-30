@@ -21,7 +21,7 @@
 		<option name="autoRefresh" type="Boolean" default="true" example-value='false'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many items, you may want to set this to false and call the <a href="#method-refresh"><code>refresh()</code></a> method manually.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='a,.cancel'>
+		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,.cancel"'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
