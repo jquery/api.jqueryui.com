@@ -7,7 +7,7 @@
 	</longdesc>
 	<signature>
 		<argument name="effect" type="String">
-			<desc>A string indicating which <a href="/category/effect/">effect</a> to use for the transition.</desc>
+			<desc>A string indicating which <a href="/category/effects/">effect</a> to use for the transition.</desc>
 		</argument>
 		<argument name="options" type="Object" optional="true">
 			<desc>Effect-specific settings and <a href="/easings/">easing</a>.</desc>
