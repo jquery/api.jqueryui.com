@@ -87,7 +87,7 @@
 		</longdesc>
 		<category slug="utilities"/>
 	</entry>
-	<entry type="widget" name="jQuery.Widget" animated-element="element"
+	<entry type="widget" name="jQuery.Widget" widget-name="widget" animated-element="element"
 		widget-element="original element or other relevant generated element">
 		<title>Base Widget</title>
 		<desc>The base widget used by the widget factory.</desc>
