@@ -136,7 +136,7 @@
 			</type>
 		</option>
 		<option name="title" default='null' example-value='"Dialog Title"'>
-			<desc>Specifies the title of the dialog. Any valid HTML may be set as the title. The title can also be specified by the <code>title</code> attribute on the dialog source element.</desc>
+			<desc>Specifies the title of the dialog. If the value is <code>null</code>, the <code>title</code> attribute on the dialog source element will be used.</desc>
 			<type name="String" />
 		</option>
 		<option name="width" default="300" example-value="500">
