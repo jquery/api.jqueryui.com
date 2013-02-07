@@ -96,7 +96,9 @@
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="pageDown">
 			<desc>
-				Decrements the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is decremented.
+				<p>Decrements the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is decremented.</p>
+				<p>If the resulting value is above the max, below the min, or results in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Invoking <code>pageDown()</code> will cause <a href="#event-start"><code>start</code></a>, <a href="#event-spin"><code>spin</code></a>, and <a href="#event-stop"><code>stop</code></a> events to be triggered.</p>
 			</desc>
 			<argument name="pages" type="Number" optional="true">
 				<desc>Number of pages to decrement, defaults to 1.</desc>
@@ -104,7 +106,9 @@
 		</method>
 		<method name="pageUp" example-params='10'>
 			<desc>
-				Increments the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is incremented.
+				<p>Increments the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is incremented.</p>
+				<p>If the resulting value is above the max, below the min, or results in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Invoking <code>pageUp()</code> will cause <a href="#event-start"><code>start</code></a>, <a href="#event-spin"><code>spin</code></a>, and <a href="#event-stop"><code>stop</code></a> events to be triggered.</p>
 			</desc>
 			<argument name="pages" type="Number" optional="true">
 				<desc>Number of pages to increment, defaults to 1.</desc>
@@ -112,8 +116,9 @@
 		</method>
 		<method name="stepDown">
 			<desc>
-				Decrements the value by the specified number of steps. Without the parameter, a single step is decremented.
-				<p>If the resulting value is above the max, below the min, or reuslts in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Decrements the value by the specified number of steps. Without the parameter, a single step is decremented.</p>
+				<p>If the resulting value is above the max, below the min, or results in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Invoking <code>stepDown()</code> will cause <a href="#event-start"><code>start</code></a>, <a href="#event-spin"><code>spin</code></a>, and <a href="#event-stop"><code>stop</code></a> events to be triggered.</p>
 			</desc>
 			<argument name="steps" type="Number" optional="true">
 				<desc>Number of steps to decrement, defaults to 1.</desc>
@@ -121,8 +126,9 @@
 		</method>
 		<method name="stepUp" example-params='5'>
 			<desc>
-				Increments the value by the specified number of steps. Without the parameter, a single step is incremented.
-				<p>If the resulting value is above the max, below the min, or reuslts in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Increments the value by the specified number of steps. Without the parameter, a single step is incremented.</p>
+				<p>If the resulting value is above the max, below the min, or results in a step mismatch, the value will be adjusted to the closest valid value.</p>
+				<p>Invoking <code>stepUp()</code> will cause <a href="#event-start"><code>start</code></a>, <a href="#event-spin"><code>spin</code></a>, and <a href="#event-stop"><code>stop</code></a> events to be triggered.</p>
 			</desc>
 			<argument name="steps" type="Number" optional="true">
 				<desc>Number of steps to increment, defaults to 1.</desc>
