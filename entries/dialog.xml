@@ -193,7 +193,7 @@
 			<desc>Triggered when the user starts resizing the dialog.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">
@@ -211,7 +211,7 @@
 			<desc>Triggered while the dialog is being resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">
@@ -229,7 +229,7 @@
 			<desc>Triggered after the dialog has been resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">
