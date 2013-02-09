@@ -9,6 +9,32 @@
 
 		<p>A bottom button bar and semi-transparent modal overlay layer are common options that can be added.</p>
 
+		<h3>Hiding the close button</h3>
+
+		<p>In some cases, you may want to hide the close button, for instance, if you have a close button in the button pane. The best way to accomplish this is via CSS. As an example, you can define a simple rule, such as:</p>
+
+		<pre><code>
+			.no-close .ui-dialog-titlebar-close {
+				display: none;
+			}
+		</code></pre>
+
+		<p>Then, you can simply add the <code>no-close</code> class to any dialog in order to hide it's close button:</p>
+
+		<pre><code>
+			$( "#dialog" ).dialog({
+				dialogClass: "no-close",
+				buttons: [
+					{
+						text: "OK",
+						click: function() {
+							$( this ).dialog( "close" );
+						}
+					}
+				]
+			});
+		</code></pre>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
