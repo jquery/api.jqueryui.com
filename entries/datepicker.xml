@@ -25,13 +25,153 @@
 		</ul>
 
 		<h3 id="utility-functions">Utility functions</h3>
+
+		<h4>$.datepicker.setDefaults( settings )</h4>
+		<p>Change the default settings for all date pickers.</p>
+		<p>Use the <a href="#method-option"><code>option()</code></a> method to change settings for individual instances.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Set all date pickers to open on focus or a click on an icon.</p>
+			<pre><code>
+				$.datepicker.setDefaults({
+					showOn: "both",
+					buttonImageOnly: true,
+					buttonImage: "calendar.gif",
+					buttonText: "Calendar"
+				});
+			</code></pre>
+			<p>Set all date pickers to have French text.</p>
+			<pre><code>
+				$.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
+			</code></pre>
+		</div>
+
+		<h4>$.datepicker.formatDate( format, date, settings )</h4>
+		<p>Format a date into a string value with a specified format.</p>
+		<p>The format can be combinations of the following:</p>
 		<ul>
-			<li>$.datepicker.setDefaults( settings ) - Set settings for all datepicker instances.</li>
-			<li>$.datepicker.formatDate( format, date, settings ) - Format a date into a string value with a specified format.</li>
-			<li>$.datepicker.parseDate( format, value, settings )  - Extract a date from a string value with a specified format.</li>
-			<li>$.datepicker.iso8601Week( date ) - Determine the week of the year for a given date: 1 to 53.</li>
-			<li>$.datepicker.noWeekends - Set as beforeShowDay function to prevent selection of weekends.</li>
+			<li>d - day of month (no leading zero)</li>
+			<li>dd - day of month (two digit)</li>
+			<li>o - day of the year (no leading zeros)</li>
+			<li>oo - day of the year (three digit)</li>
+			<li>D - day name short</li>
+			<li>DD - day name long</li>
+			<li>m - month of year (no leading zero)</li>
+			<li>mm - month of year (two digit)</li>
+			<li>M - month name short</li>
+			<li>MM - month name long</li>
+			<li>y - year (two digit)</li>
+			<li>yy - year (four digit)</li>
+			<li>@ - Unix timestamp (ms since 01/01/1970)</li>
+			<li> ! - Windows ticks (100ns since 01/01/0001)</li>
+			<li>'...' - literal text</li>
+			<li>'' - single quote</li>
+			<li>anything else - literal text</li>
 		</ul>
+		<p>There are also a number of predefined standard date formats available from <code>$.datepicker</code>:</p>
+		<ul>
+			<li>ATOM - 'yy-mm-dd' (Same as RFC 3339/ISO 8601)</li>
+			<li>COOKIE - 'D, dd M yy'</li>
+			<li>ISO_8601 - 'yy-mm-dd'</li>
+			<li>RFC_822 - 'D, d M y' (See RFC 822)</li>
+			<li>RFC_850 - 'DD, dd-M-y' (See RFC 850)</li>
+			<li>RFC_1036 - 'D, d M y' (See RFC 1036)</li>
+			<li>RFC_1123 - 'D, d M yy' (See RFC 1123)</li>
+			<li>RFC_2822 - 'D, d M yy' (See RFC 2822)</li>
+			<li>RSS - 'D, d M y' (Same as RFC 822)</li>
+			<li>TICKS - '!'</li>
+			<li>TIMESTAMP - '@'</li>
+			<li>W3C - 'yy-mm-dd' (Same as ISO 8601)</li>
+		</ul>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Display the date in ISO format. Produces "2007-01-26".</p>
+			<pre><code>
+				$.datepicker.formatDate( "yy-mm-dd", new Date( 2007, 1 - 1, 26 ) );
+			</code></pre>
+			<p>Display the date in expanded French format. Produces "Samedi, Juillet 14, 2007".</p>
+			<pre><code>
+				$.datepicker.formatDate( "DD, MM d, yy", new Date( 2007, 7 - 1, 14 ), {
+					dayNamesShort: $.datepicker.regional[ "fr" ].dayNamesShort,
+					dayNames: $.datepicker.regional[ "fr" ].dayNames,
+					monthNamesShort: $.datepicker.regional[ "fr" ].monthNamesShort,
+					monthNames: $.datepicker.regional[ "fr" ].monthNames
+				});
+			</code></pre>
+		</div>
+
+		<h4>$.datepicker.parseDate( format, value, settings )</h4>
+		<p>Extract a date from a string value with a specified format.</p>
+		<p>The format can be combinations of the following:</p>
+		<ul>
+			<li>d - day of month (no leading zero)</li>
+			<li>dd - day of month (two digit)</li>
+			<li>o - day of year (no leading zeros)</li>
+			<li>oo - day of year (three digit)</li>
+			<li>D - day name short</li>
+			<li>DD - day name long</li>
+			<li>m - month of year (no leading zero)</li>
+			<li>mm - month of year (two digit)</li>
+			<li>M - month name short</li>
+			<li>MM - month name long</li>
+			<li>y - year (two digit)</li>
+			<li>yy - year (four digit)</li>
+			<li>@ - Unix timestamp (ms since 01/01/1970)</li>
+			<li> ! - Windows ticks (100ns since 01/01/0001)</li>
+			<li>'...' - literal text</li>
+			<li>'' - single quote</li>
+			<li>anything else - literal text</li>
+		</ul>
+		<p>A number of exceptions may be thrown:</p>
+		<ul>
+			<li>'Invalid arguments' if either format or value is null</li>
+			<li>'Missing number at position nn' if format indicated a numeric value that is not then found</li>
+			<li>'Unknown name at position nn' if format indicated day or month name that is not then found</li>
+			<li>'Unexpected literal at position nn' if format indicated a literal value that is not then found</li>
+			<li>'Invalid date' if the date is invalid, such as '31/02/2007'</li>
+		</ul>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Extract a date in ISO format.</p>
+			<pre><code>
+				$.datepicker.parseDate( "yy-mm-dd", "2007-01-26" );
+			</code></pre>
+			<p>Extract a date in expanded French format.</p>
+			<pre><code>
+				$.datepicker.parseDate( "DD, MM d, yy", "Samedi, Juillet 14, 2007", {
+					shortYearCuroff: 20,
+					dayNamesShort: $.datepicker.regional[ "fr" ].dayNamesShort,
+					dayNames: $.datepicker.regional[ "fr" ].dayNames,
+					monthNamesShort: $.datepicker.regional[ "fr" ].monthNamesShort,
+					monthNames: $.datepicker.regional[ "fr" ].monthNames
+				});
+			</code></pre>
+		</div>
+
+		<h4>$.datepicker.iso8601Week( date )</h4>
+		<p>Determine the week of the year for a given date: 1 to 53.</p>
+		<p>This function uses the ISO 8601 definition of a week: weeks start on a Monday and the first week of the year contains January 4. This means that up to three days from the previous year may be included in the of first week of the current year, and that up to three days from the current year may be included in the last week of the previous year.</p>
+		<p>This function is the default implementation for the <a href="#option-calculateWeek"><code>calculateWeek</code></a> option.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Find the week of the year for a date.</p>
+			<pre><code>
+				$.datepicker.iso8601Week( new Date( 2007, 1 - 1, 26 ) );
+			</code></pre>
+		</div>
+
+		<h4>$.datepicker.noWeekends</h4>
+		<p>Set as beforeShowDay function to prevent selection of weekends.</p>
+		<p>We can provide the <code>noWeekends()</code> function into the <a href="#option-beforeShowDay"><code>beforeShowDay</code></a> option which will calculate all the weekdays and provide an array of <code>true</code>/<code>false</code> values indicating whether a date is selectable.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Set the DatePicker so no weekend is selectable</p>
+			<pre><code>
+				$( "#datepicker" ).datepicker({
+					beforeShowDay: $.datepicker.noWeekends
+				});
+			</code></pre>
+		</div>
 
 		<h3>Localization</h3>
 		<p>Datepicker provides support for localizing its content to cater for different languages and date formats. Each localization is contained within its own file with the language code appended to the name, e.g., <code>jquery.ui.datepicker-fr.js</code> for French. The desired localization file should be included after the main datepicker code. Each localization file adds its settings to the set of available localizations and automatically applies them as defaults for all instances.</p>
