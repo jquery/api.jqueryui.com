@@ -103,7 +103,7 @@
 				</desc>
 			</type>
 			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
 			</type>
 		</option>
 		<option name="maxHeight" default="false" example-value="600">
@@ -158,7 +158,7 @@
 				</desc>
 			</type>
 			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
 			</type>
 		</option>
 		<option name="title" default='null' example-value='"Dialog Title"'>
