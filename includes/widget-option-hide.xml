@@ -15,7 +15,7 @@
 	<type name="String">
 		<desc>
 			The <placeholder name="animated-element"/> will be hidden using the specified effect.
-			The value can either be the name of a built-in jQuery animateion method, such as <code>"slideUp"</code>, or the name of a jQuery UI effect, such as <code>"fold"</code>.
+			The value can either be the name of a built-in jQuery animation method, such as <code>"slideUp"</code>, or the name of a jQuery UI effect, such as <code>"fold"</code>.
 			In either case the effect will be used with the default duration and the default easing.
 		</desc>
 	</type>
