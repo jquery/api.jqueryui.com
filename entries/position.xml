@@ -16,7 +16,7 @@
 				<type name="String"/>
 			</property>
 			<property name="at" default='"center"'>
-				<desc>Defines which position <strong>on the target element</strong> to align the positioned element against: "horizontal vertical" alignment. See the <a href="#option-my"><code>my</code></a> option for full details on possible values. Perecentage offsets are relative to the target element.</desc>
+				<desc>Defines which position <strong>on the target element</strong> to align the positioned element against: "horizontal vertical" alignment. See the <a href="#option-my"><code>my</code></a> option for full details on possible values. Percentage offsets are relative to the target element.</desc>
 				<type name="String"/>
 			</property>
 			<property name="of" default="null">
