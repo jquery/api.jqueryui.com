@@ -84,6 +84,43 @@
 			</code></pre>
 
 			<p>All widgets have a <code>create</code> event which is triggered upon instantiation.</p>
+
+			<h3>Properties</h3>
+
+			<p>All widgets have the following set of properties:</p>
+
+			<ul>
+				<li>
+					<strong>document</strong>: The <code>document</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
+				</li>
+				<li>
+					<strong>element</strong>: A jQuery object containing the element used to instantiate the widget.  If you select multiple elements and call <code>.myWidget()</code>, a separate widget instance will be created for each element.  Therefore, this property will always contain one element.
+				</li>
+				<li>
+					<strong>namespace</strong>: The location on the global jQuery object that the widget's prototype is stored on.  For example a <code>namespace</code> of <code>"ui"</code> indicates that the widget's prototype is stored on <code>$.ui</code>.
+				</li>
+				<li>
+					<strong>options</strong>: An object containing the options currently being used by the widget.  On instantiation, any options provided by the user will automatically be merged with any default values defined in <code>$.myNamespace.myWidget.prototype.options</code>.  User specified options override the defaults.
+				</li>
+				<li>
+					<strong>uuid</strong>: A unique, integer identifier for the widget.
+				</li>
+				<li>
+					<strong>version</strong>: The string version of jQuery UI this widget is using.
+				</li>
+				<li>
+					<strong>widgetEventPrefix</strong>: The prefix prepended to the name of events fired from this widget.  For example the <code>widgetEventPrefix</code> of the <a href="/draggable">draggable widget</a> is <code>"drag"</code>, therefore when a draggable is created, the name of the event fired is <code>"dragcreate"</code>.  By default the <code>widgetEventPrefix</code> of a widget is its name.  <em>Note: This property is deprecated and will be removed in a later release.  Event names will be changed to widgetName:eventName (e.g. <code>"draggable:create"</code>.</em>
+				</li>
+				<li>
+					<strong>widgetFullName</strong>: The full name of the widget including the namespace.  For <code>$.widget( "myNamespace.myWidget", {} )</code>, <code>widgetFullName</code> will be <code>"myNamespace.myWidget"</code>.
+				</li>
+				<li>
+					<strong>widgetName</strong>: The name of the widget.  For  <code>$.widget( "myNamespace.myWidget", {} )</code>, <code>widgetName</code> will be <code>"myWidget"</code>.
+				</li>
+				<li>
+					<strong>window</strong>: The <code>window</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
+				</li>
+			</ul>
 		</longdesc>
 		<category slug="utilities"/>
 	</entry>
