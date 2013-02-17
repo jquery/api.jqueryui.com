@@ -7,7 +7,7 @@
 			<desc>The direction of the effect. Possible values: <code>"left"</code>, <code>"right"</code>, <code>"up"</code>, <code>"down"</code>.</desc>
 		</argument>
 		<argument name="distance" type="Number" default="element's outerWidth">
-			<desc>The distance of the effect. Defaults to either the height or width of the elemenet depending on the <code>direction</code> argument. Can be set to any integer less than the width/height of the element.</desc>
+			<desc>The distance of the effect. Defaults to either the height or width of the element depending on the <code>direction</code> argument. Can be set to any integer less than the width/height of the element.</desc>
 		</argument>
 	</arguments>
 	<example>

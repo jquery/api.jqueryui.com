@@ -205,7 +205,7 @@
 					<type name="String"/>
 				</argument>
 				<argument name="delay" type="Number" optional="true">
-					<desc>The number of milliseconds to wait before invoking the function. Deafults to <code>0</code>.</desc>
+					<desc>The number of milliseconds to wait before invoking the function. Defaults to <code>0</code>.</desc>
 				</argument>
 			</method>
 			<method name="_hoverable">

@@ -5,7 +5,7 @@
 	<signature/>
 	<desc>Selects elements which can be focused.</desc>
 	<longdesc>
-		<p>Some elements are natively focusable, while others require explictly setting a tab index. In all cases, the element must be visible in order to be focusable.</p>
+		<p>Some elements are natively focusable, while others require explicitly setting a tab index. In all cases, the element must be visible in order to be focusable.</p>
 
 		<p>Elements of the following type are focusable if they are not disabled: <code>input</code>, <code>select</code>, <code>textarea</code>, <code>button</code>, and <code>object</code>. Anchors are focusable if they have an <code>href</code> or <code>tabindex</code> attribute. <code>area</code> elements are focusable if they are inside a named map, have an <code>href</code> attribute, and there is a visible image using the map. All other elements are focusable based solely on their <code>tabindex</code> attribute and visibility.</p>
 
