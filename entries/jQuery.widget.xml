@@ -87,7 +87,7 @@
 
 			<h3>Instance</h3>
 
-			<p>The widget's instance is stored using jQuery core's <a href="http://api.jquery.com/jQuery.data/">data method</a> with the widget's full name as the key.  Therefore, you can use the following to retrieve the  progressbar widget's instance object from the element.</p>
+			<p>The widget's instance is stored using jQuery core's <a href="http://api.jquery.com/jQuery.data/">data method</a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
 
 			<pre><code>
 				$( "#elem" ).data( "ui-progressbar" );
