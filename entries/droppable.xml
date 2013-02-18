@@ -31,7 +31,7 @@
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="greedy" type="Boolean" default="false" example-value="true">
-			<desc>By default, when an element is dropped on nested droppables, each droppable will receive the element. However, by setting this option to <code>true</code>, any parent droppables will not receive the element.</desc>
+			<desc>By default, when an element is dropped on nested droppables, each droppable will receive the element. However, by setting this option to <code>true</code>, any parent droppables will not receive the element via the callback method. The <code>drop</code> event will still fire on parents, although the <code>e.target</code> will always be the child.</desc>
 		</option>
 		<option name="hoverClass" type="String" default="false" example-value='"drop-hover"'>
 			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being hovered over the droppable.</desc>
