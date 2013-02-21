@@ -84,6 +84,27 @@
 			</code></pre>
 
 			<p>All widgets have a <code>create</code> event which is triggered upon instantiation.</p>
+
+			<h3>Instance</h3>
+
+			<p>The widget's instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
+
+			<pre><code>
+				$( "#elem" ).data( "ui-progressbar" );
+			</code></pre>
+
+			<p>Whether an element has a given widget bound to it can be determined using the <a href="/data-selector"><code>:data</code></a> selector.</p>
+
+			<pre><code>
+				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
+				$( "#elem" ).is( ":data( 'ui-draggable' )" ); //false
+			</code></pre>
+
+			<p>You can also use <code>:data</code> to get a list of all elements that are instances of a given widget.</p>
+
+			<pre><code>
+				$( ":data( 'ui-progressbar' )" );
+			</code></pre>
 		</longdesc>
 		<category slug="utilities"/>
 	</entry>
