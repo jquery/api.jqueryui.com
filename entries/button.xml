@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="button" type="widget" widget-element="element visually representing the button">
 	<title>Button Widget</title>
-	<desc>Themable buttons and button sets.</desc>
+	<desc>Themeable buttons and button sets.</desc>
 	<longdesc>
 		<p>Button enhances standard form elements like buttons, inputs and anchors to themeable buttons with appropriate hover and active styles.</p>
 
