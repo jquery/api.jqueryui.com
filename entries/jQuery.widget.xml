@@ -213,10 +213,13 @@
 					Binds event handlers to the specified element(s). Delegation is supported via selectors inside the event names, e.g., "<code>click .foo</code>". The <code>_on()</code> method provides several benefits of direct event binding:
 					<ul>
 						<li>Maintains proper <code>this</code> context inside the handlers.</li>
-						<li>Automatically handles disabled widgets: If the widget is disabled or the event occurs on an element with the <code>ui-state-disabled</code> class, the event handler is not invoked.</li>
+						<li>Automatically handles disabled widgets: If the widget is disabled or the event occurs on an element with the <code>ui-state-disabled</code> class, the event handler is not invoked. Can be overridden with the <code>suppressDisabledCheck</code> parameter.</li>
 						<li>Event handlers are automatically namespaced and cleaned up on destroy.</li>
 					</ul>
 				</desc>
+				<argument name="suppressDisabledCheck" type="Boolean" optional="true" default="false">
+					<desc>Whether or not to bypass the disabled check.</desc>
+				</argument>
 				<argument name="element" type="jQuery" optional="true">
 					<desc>Which element(s) to bind the event handlers to. If no element is provided, <code>this.element</code> is used.</desc>
 				</argument>
