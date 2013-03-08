@@ -329,7 +329,7 @@
 			</argument>
 		</event>
 		<event name="over">
-			<desc>This event is triggered when a sortable item is moved into a connected list.</desc>
+			<desc>This event is triggered when a sortable item is moved into a sortable list.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="helper" type="jQuery">
@@ -354,7 +354,7 @@
 		</event>
 		<event name="out">
 			<desc>
-				<p>This event is triggered when a sortable item is moved away from a connected list.</p>
+				<p>This event is triggered when a sortable item is moved away from a sortable list.</p>
 				<p><em>Note: This event is also triggered when a sortable item is dropped.</em></p>
 			</desc>
 			<argument name="event" type="Event"/>
