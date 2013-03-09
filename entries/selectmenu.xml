@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>Selectmenu Widget will act as a proxy back to the original select element, controlling its state for form submission or serialization.</p>
 
-		<p>Selectmenu Widget support both in-place "popup" or drop-down styles. It supports optgroups and custom markup to render specific presentations like multiple lines.</p>
+		<p>It supports optgroups and custom markup to render specific presentations like multiple lines.</p>
 
 		<p>The select or its options can be disabled by adding the <code>disbaled="disabled"</code> attribite to that element.</p>
 
@@ -18,9 +18,8 @@
 			<li>END/PAGE DOWN - Focus last item.</li>
 			<li>HOME/PAGE UP - Focus first item.</li>
 			<li>ESCAPE - Close the select.</li>
-			<li>ENTER - Select the currently focused item and close the select.</li>
+			<li>ENTER/SPACE - Select the currently focused item and close the select.</li>
 			<li>ALT+UP/DOWN - Toggle select.</li>
-			<li>SPACE - Toggle select.</li>
 		</ul>
 
 		<p>When the menu is closed, the following key commands are available:</p>
@@ -30,17 +29,23 @@
 			<li>END/PAGE DOWN - Select last item.</li>
 			<li>HOME/PAGE UP - Select first item.</li>
 			<li>ALT+UP/DOWN - Toggle select.</li>
-			<li>SPACE - Toggle select.</li>
+			<li>SPACE - Open menu.</li>
 		</ul>
 	</longdesc>
 	<note id="functional-css"/>
-	<added>1.10</added>
+	<added>1.11</added>
 	<options>
-		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"'>
-			<desc>Which element the menu should be appended to. Override this when the selectmenu is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
+		<option name="appendTo" type="Selector" default="null" example-value='"#someElem"'>
+			<desc>Which element the menu should be appended to. When the value is <code>null</code>, the parents of the input field will be checked for a class of <code>ui-front</code>. If an element with the <code>ui-front</code> class is found, the menu will be appended to that element. Regardless of the value, if no element is found, the menu will be appended to the body.</desc>
 		</option>
-		<option name="dropdown" type="Boolean" default="true" example-value="false">
-			<desc>If set to <code>true</code> the menu will open as a pop-up. Otherwise the menu is opened below the button just like a native select element.</desc>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="icons" type="Object" default='{ button: "ui-icon-triangle-1-s" }' example-value='{ button: "ui-icon-circle-triangle-s" }'>
+			<desc>
+				Icons to use for button, matching an icon defined by the jQuery UI CSS Framework.
+				<ul>
+					<li>button (string, default: "ui-icon-triangle-1-s")</li>
+				</ul>
+			</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
 			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
@@ -155,12 +160,9 @@ $('#files').selectmenu();
 ]]></css>
 	</example>
 	<example>
-		<desc>A jQuery UI Selectmenu with overflow in pop-up mode</desc>
+		<desc>A jQuery UI Selectmenu with overflow</desc>
 		<code><![CDATA[
-var withOverflow = $('#number').selectmenu({
-	dropdown: false
-});
-withOverflow.selectmenu("menuWidget").addClass("overflow");
+$('#number').selectmenu().selectmenu("menuWidget").addClass("overflow");
 ]]></code>
 		<html><![CDATA[
 <label for="number">Select a number:</label>
