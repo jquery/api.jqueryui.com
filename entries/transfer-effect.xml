@@ -4,7 +4,7 @@
 	<desc>Transfers the outline of an element to another element</desc>
 	<longdesc>
 		<p>Very useful when trying to visualize interaction between two elements.</p>
-		<p>The transfer element iself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
+		<p>The transfer element itself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
 	</longdesc>
 	<arguments>
 		<argument name="className" type="String">

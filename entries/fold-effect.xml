@@ -11,7 +11,7 @@
 				<desc>The size of the fold in pixels.</desc>
 			</type>
 			<type name="String">
-				<desc>A percentage of the element's dimention, e.g., <code>"50%"</code>.</desc>
+				<desc>A percentage of the element's dimension, e.g., <code>"50%"</code>.</desc>
 			</type>
 		</argument>
 		<argument name="horizFirst" type="Boolean" default="false">

@@ -52,6 +52,13 @@
 		<p>Typing a letter moves focus to the first item whose title starts with that character. Repeating the same character cycles through matching items. Typing more characters within the one second timer matches those characters.</p>
 
 		<p>Disabled items can receive keyboard focus, but do not allow any other interaction.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.9</added>
@@ -66,13 +73,19 @@
 			</desc>
 		</option>
 		<option name="menus" type="String" default='"ul"' example-value='"div"'>
-			<desc>Selector for the elements that serve as the menu container, including sub-menus.</desc>
+			<desc>
+				<p>Selector for the elements that serve as the menu container, including sub-menus.</p>
+				<p><em>Note: The <code>menus</code> option should not be changed after initialization. Existing submenus will not be updated.</em></p>
+			</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "right top" }' example-value='{ my: "left top", at: "right-5 top+5" }'>
 			<desc>Identifies the position of submenus in relation to the associated parent menu item. The <code>of</code> option defaults to the parent menu item, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 		<option name="role" type="String" default='"menu"' example-value="null">
-			<desc>Customize the ARIA roles used for the menu and menu items. The default uses <code>"menuitem"</code> for items. Setting the <code>role</code> option to <code>"listbox"</code> will use <code>"option"</code> for items. If set to <code>null</code>, no roles will be set, which is useful if the menu is being controlled by another element that is maintaining focus.</desc>
+			<desc>
+				<p>Customize the ARIA roles used for the menu and menu items. The default uses <code>"menuitem"</code> for items. Setting the <code>role</code> option to <code>"listbox"</code> will use <code>"option"</code> for items. If set to <code>null</code>, no roles will be set, which is useful if the menu is being controlled by another element that is maintaining focus.</p>
+				<p><em>Note: The <code>role</code> option should not be changed after initialization. Existing (sub)menus and menu items will not be updated.</em></p>
+			</desc>
 		</option>
 	</options>
 	<methods>

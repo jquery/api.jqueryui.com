@@ -25,13 +25,153 @@
 		</ul>
 
 		<h3 id="utility-functions">Utility functions</h3>
+
+		<h4 id="utility-setDefaults">$.datepicker.setDefaults( settings )</h4>
+		<p>Change the default settings for all date pickers.</p>
+		<p>Use the <a href="#method-option"><code>option()</code></a> method to change settings for individual instances.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Set all date pickers to open on focus or a click on an icon.</p>
+			<pre><code>
+				$.datepicker.setDefaults({
+					showOn: "both",
+					buttonImageOnly: true,
+					buttonImage: "calendar.gif",
+					buttonText: "Calendar"
+				});
+			</code></pre>
+			<p>Set all date pickers to have French text.</p>
+			<pre><code>
+				$.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
+			</code></pre>
+		</div>
+
+		<h4 id="utility-formatDate">$.datepicker.formatDate( format, date, settings )</h4>
+		<p>Format a date into a string value with a specified format.</p>
+		<p>The format can be combinations of the following:</p>
 		<ul>
-			<li>$.datepicker.setDefaults( settings ) - Set settings for all datepicker instances.</li>
-			<li>$.datepicker.formatDate( format, date, settings ) - Format a date into a string value with a specified format.</li>
-			<li>$.datepicker.parseDate( format, value, settings )  - Extract a date from a string value with a specified format.</li>
-			<li>$.datepicker.iso8601Week( date ) - Determine the week of the year for a given date: 1 to 53.</li>
-			<li>$.datepicker.noWeekends - Set as beforeShowDay function to prevent selection of weekends.</li>
+			<li>d - day of month (no leading zero)</li>
+			<li>dd - day of month (two digit)</li>
+			<li>o - day of the year (no leading zeros)</li>
+			<li>oo - day of the year (three digit)</li>
+			<li>D - day name short</li>
+			<li>DD - day name long</li>
+			<li>m - month of year (no leading zero)</li>
+			<li>mm - month of year (two digit)</li>
+			<li>M - month name short</li>
+			<li>MM - month name long</li>
+			<li>y - year (two digit)</li>
+			<li>yy - year (four digit)</li>
+			<li>@ - Unix timestamp (ms since 01/01/1970)</li>
+			<li> ! - Windows ticks (100ns since 01/01/0001)</li>
+			<li>'...' - literal text</li>
+			<li>'' - single quote</li>
+			<li>anything else - literal text</li>
 		</ul>
+		<p>There are also a number of predefined standard date formats available from <code>$.datepicker</code>:</p>
+		<ul>
+			<li>ATOM - 'yy-mm-dd' (Same as RFC 3339/ISO 8601)</li>
+			<li>COOKIE - 'D, dd M yy'</li>
+			<li>ISO_8601 - 'yy-mm-dd'</li>
+			<li>RFC_822 - 'D, d M y' (See RFC 822)</li>
+			<li>RFC_850 - 'DD, dd-M-y' (See RFC 850)</li>
+			<li>RFC_1036 - 'D, d M y' (See RFC 1036)</li>
+			<li>RFC_1123 - 'D, d M yy' (See RFC 1123)</li>
+			<li>RFC_2822 - 'D, d M yy' (See RFC 2822)</li>
+			<li>RSS - 'D, d M y' (Same as RFC 822)</li>
+			<li>TICKS - '!'</li>
+			<li>TIMESTAMP - '@'</li>
+			<li>W3C - 'yy-mm-dd' (Same as ISO 8601)</li>
+		</ul>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Display the date in ISO format. Produces "2007-01-26".</p>
+			<pre><code>
+				$.datepicker.formatDate( "yy-mm-dd", new Date( 2007, 1 - 1, 26 ) );
+			</code></pre>
+			<p>Display the date in expanded French format. Produces "Samedi, Juillet 14, 2007".</p>
+			<pre><code>
+				$.datepicker.formatDate( "DD, MM d, yy", new Date( 2007, 7 - 1, 14 ), {
+					dayNamesShort: $.datepicker.regional[ "fr" ].dayNamesShort,
+					dayNames: $.datepicker.regional[ "fr" ].dayNames,
+					monthNamesShort: $.datepicker.regional[ "fr" ].monthNamesShort,
+					monthNames: $.datepicker.regional[ "fr" ].monthNames
+				});
+			</code></pre>
+		</div>
+
+		<h4 id="utility-parseDate">$.datepicker.parseDate( format, value, settings )</h4>
+		<p>Extract a date from a string value with a specified format.</p>
+		<p>The format can be combinations of the following:</p>
+		<ul>
+			<li>d - day of month (no leading zero)</li>
+			<li>dd - day of month (two digit)</li>
+			<li>o - day of year (no leading zeros)</li>
+			<li>oo - day of year (three digit)</li>
+			<li>D - day name short</li>
+			<li>DD - day name long</li>
+			<li>m - month of year (no leading zero)</li>
+			<li>mm - month of year (two digit)</li>
+			<li>M - month name short</li>
+			<li>MM - month name long</li>
+			<li>y - year (two digit)</li>
+			<li>yy - year (four digit)</li>
+			<li>@ - Unix timestamp (ms since 01/01/1970)</li>
+			<li> ! - Windows ticks (100ns since 01/01/0001)</li>
+			<li>'...' - literal text</li>
+			<li>'' - single quote</li>
+			<li>anything else - literal text</li>
+		</ul>
+		<p>A number of exceptions may be thrown:</p>
+		<ul>
+			<li>'Invalid arguments' if either format or value is null</li>
+			<li>'Missing number at position nn' if format indicated a numeric value that is not then found</li>
+			<li>'Unknown name at position nn' if format indicated day or month name that is not then found</li>
+			<li>'Unexpected literal at position nn' if format indicated a literal value that is not then found</li>
+			<li>'Invalid date' if the date is invalid, such as '31/02/2007'</li>
+		</ul>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Extract a date in ISO format.</p>
+			<pre><code>
+				$.datepicker.parseDate( "yy-mm-dd", "2007-01-26" );
+			</code></pre>
+			<p>Extract a date in expanded French format.</p>
+			<pre><code>
+				$.datepicker.parseDate( "DD, MM d, yy", "Samedi, Juillet 14, 2007", {
+					shortYearCuroff: 20,
+					dayNamesShort: $.datepicker.regional[ "fr" ].dayNamesShort,
+					dayNames: $.datepicker.regional[ "fr" ].dayNames,
+					monthNamesShort: $.datepicker.regional[ "fr" ].monthNamesShort,
+					monthNames: $.datepicker.regional[ "fr" ].monthNames
+				});
+			</code></pre>
+		</div>
+
+		<h4 id="utility-iso8601Week">$.datepicker.iso8601Week( date )</h4>
+		<p>Determine the week of the year for a given date: 1 to 53.</p>
+		<p>This function uses the ISO 8601 definition of a week: weeks start on a Monday and the first week of the year contains January 4. This means that up to three days from the previous year may be included in the of first week of the current year, and that up to three days from the current year may be included in the last week of the previous year.</p>
+		<p>This function is the default implementation for the <a href="#option-calculateWeek"><code>calculateWeek</code></a> option.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Find the week of the year for a date.</p>
+			<pre><code>
+				$.datepicker.iso8601Week( new Date( 2007, 1 - 1, 26 ) );
+			</code></pre>
+		</div>
+
+		<h4 id="utility-noWeekends">$.datepicker.noWeekends</h4>
+		<p>Set as beforeShowDay function to prevent selection of weekends.</p>
+		<p>We can provide the <code>noWeekends()</code> function into the <a href="#option-beforeShowDay"><code>beforeShowDay</code></a> option which will calculate all the weekdays and provide an array of <code>true</code>/<code>false</code> values indicating whether a date is selectable.</p>
+		<div>
+			<strong>Code examples:</strong>
+			<p>Set the DatePicker so no weekend is selectable</p>
+			<pre><code>
+				$( "#datepicker" ).datepicker({
+					beforeShowDay: $.datepicker.noWeekends
+				});
+			</code></pre>
+		</div>
 
 		<h3>Localization</h3>
 		<p>Datepicker provides support for localizing its content to cater for different languages and date formats. Each localization is contained within its own file with the language code appended to the name, e.g., <code>jquery.ui.datepicker-fr.js</code> for French. The desired localization file should be included after the main datepicker code. Each localization file adds its settings to the set of available localizations and automatically applies them as defaults for all instances.</p>
@@ -40,8 +180,15 @@
 		<code>$.datepicker.setDefaults( $.datepicker.regional[ "" ] );</code>
 		<p>And can then override an individual datepicker for a specific locale:</p>
 		<code>$( selector ).datepicker( $.datepicker.regional[ "fr" ] );</code>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/category/effects-core/">Effects Core</a> (optional; for use with the <a href="#option-showAnim"><code>showAnim</code></a> option)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
+	<note id="native-change-warning"/>
 	<added>1.0</added>
 	<options>
 		<option name="altField" default='""' example-value='"#actualDate"'>
@@ -51,7 +198,7 @@
 			<type name="Element"/>
 		</option>
 		<option name="altFormat" type="String" default='""' example-value='"yy-mm-dd"'>
-			<desc>The <a href="#option-dateFormat"><code>dateFormat</code></a> to be used for the <a href="#option-altField"><code>altField</code></a> option. This allows one date format to be shown to the user for selection purposes, while a different format is actually sent behind the scenes. For a full list of the possible formats see the [[UI/Datepicker/formatDate|formatDate]] function</desc>
+			<desc>The <a href="#option-dateFormat"><code>dateFormat</code></a> to be used for the <a href="#option-altField"><code>altField</code></a> option. This allows one date format to be shown to the user for selection purposes, while a different format is actually sent behind the scenes. For a full list of the possible formats see the <a href="#utility-formatDate"><code>formatDate</code></a> function</desc>
 		</option>
 		<option name="appendText" type="String" default='""' example-value='"(yyyy-mm-dd)"'>
 			<desc>The text to display after each date field, e.g., to show the required format.</desc>
@@ -87,7 +234,7 @@
 			<desc>The text to display for the current day link. Use the <a href="#option-showButtonPanel"><code>showButtonPanel</code></a> option to display this button.</desc>
 		</option>
 		<option name="dateFormat" type="String" default='"mm/dd/yy"' example-value='"yy-mm-dd"'>
-			<desc>The format for parsed and displayed dates. For a full list of the possible formats see the <code>[[UI/Datepicker/formatDate|formatDate]]</code> function.</desc>
+			<desc>The format for parsed and displayed dates. For a full list of the possible formats see the <code><a href="#utility-formatDate"><code>formatDate</code></a></code> function.</desc>
 		</option>
 		<option name="dayNames" type="Array" default='[ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]' example-value='[ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ]'>
 			<desc>The list of long day names, starting from Sunday, for use as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
@@ -99,7 +246,7 @@
 			<desc>The list of abbreviated day names, starting from Sunday, for use as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
 		<option name="defaultDate" default="null" example-value="+7">
-			<desc>Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current <code>[[UI/Datepicker#option-dateFormat|dateFormat]]</code>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.</desc>
+			<desc>Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current <a href="#option-dateFormat"><code>dateFormat</code></a>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.</desc>
 			<type name="Date">
 				<desc>A date object containing the default date.</desc>
 			</type>
@@ -158,7 +305,7 @@
 			<desc>The list of abbreviated month names, as used in the month header on each datepicker and as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
 		<option name="navigationAsDateFormat" type="Boolean" default="false" example-value="true">
-			<desc>Whether the <a href="#option-prevText"><code>prevText</code></a> and <a href="#option-nextText"><code>nextText</code></a> options should be parsed as dates by the <code>[[UI/Datepicker/formatDate|formatDate]]</code> function, allowing them to display the target month names for example.</desc>
+			<desc>Whether the <a href="#option-prevText"><code>prevText</code></a> and <a href="#option-nextText"><code>nextText</code></a> options should be parsed as dates by the <code><a href="#utility-formatDate"><code>formatDate</code></a></code> function, allowing them to display the target month names for example.</desc>
 		</option>
 		<option name="nextText" type="String" default='"Next"' example-value='"Later"'>
 			<desc>The text to display for the next month link. With the standard ThemeRoller styling, this value is replaced by an icon.</desc>
@@ -179,7 +326,7 @@
 			<desc>Whether days in other months shown before or after the current month are selectable. This only applies if the <a href="#option-showOtherMonths"><code>showOtherMonths</code></a> option is set to <code>true</code>.</desc>
 		</option>
 		<option name="shortYearCutoff" default='"+10"' example-value="50">
-			<desc>The cutoff year for determining the century for a date (used in conjunction with <code>[[UI/Datepicker#option-dateFormat|dateFormat]]</code> 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.</desc>
+			<desc>The cutoff year for determining the century for a date (used in conjunction with <a href="#option-dateFormat"><code>dateFormat</code></a> 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.</desc>
 			<type name="Number">
 				<desc>A value between <code>0</code> and <code>99</code> indicating the cutoff year.</desc>
 			</type>

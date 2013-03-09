@@ -8,15 +8,55 @@
 		<p>If the content length exceeds the maximum height, a scrollbar will automatically appear.</p>
 
 		<p>A bottom button bar and semi-transparent modal overlay layer are common options that can be added.</p>
+
+		<h3>Hiding the close button</h3>
+
+		<p>In some cases, you may want to hide the close button, for instance, if you have a close button in the button pane. The best way to accomplish this is via CSS. As an example, you can define a simple rule, such as:</p>
+
+		<pre><code>
+			.no-close .ui-dialog-titlebar-close {
+				display: none;
+			}
+		</code></pre>
+
+		<p>Then, you can simply add the <code>no-close</code> class to any dialog in order to hide it's close button:</p>
+
+		<pre><code>
+			$( "#dialog" ).dialog({
+				dialogClass: "no-close",
+				buttons: [
+					{
+						text: "OK",
+						click: function() {
+							$( this ).dialog( "close" );
+						}
+					}
+				]
+			});
+		</code></pre>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+			<li><a href="/button/">Button</a></li>
+			<li><a href="/draggable/">Draggable</a> (optional; for use with the <a href="#option-draggable"><code>draggable</code></a> option)</li>
+			<li><a href="/resizable/">Resizable</a> (optional; for use with the <a href="#option-resizable"><code>resizable</code></a> option)</li>
+			<li><a href="/category/effects-core/">Effects Core</a> (optional; for use with the <a href="#option-show"><code>show</code></a> and <a href="#option-hide"><code>hide</code></a> options)</li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>
 	<options>
+		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"' added="1.10.0">
+			<desc>Which element the dialog (and overlay, if <a href="#option-modal">modal</a>) should be appended to.</desc>
+		</option>
 		<option name="autoOpen" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="buttons" default="{}" example-value='[ { text: "Ok", click: function() { $( this ).dialog( "close" ); } ]'>
+		<option name="buttons" default="{}" example-value='[ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ]'>
 			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
 			<type name="Object">
 				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
@@ -38,7 +78,7 @@
 			<type name="String" />
 		</option>
 		<option name="draggable" default="true" example-value="false">
-			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable wiget</a> to be included.</desc>
+			<desc>If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable widget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="height" default='"auto"' example-value="400">
@@ -63,7 +103,7 @@
 				</desc>
 			</type>
 			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
 			</type>
 		</option>
 		<option name="maxHeight" default="false" example-value="600">
@@ -87,7 +127,10 @@
 			<type name="Boolean" />
 		</option>
 		<option name="position" default='{ my: "center", at: "center", of: window }' example-value='{ my: "left top", at: "left bottom", of: button }'>
-			<desc>Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.</desc>
+			<desc>
+				<p>Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.</p>
+				<p><em>Note: The <code>String</code> and <code>Array</code> forms are deprecated.</em></p>
+			</desc>
 			<type name="Object">
 				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 			</type>
@@ -115,24 +158,16 @@
 				</desc>
 			</type>
 			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used.</desc>
+				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
 			</type>
 		</option>
-		<option name="stack" default="true" example-value="false">
-			<desc>Specifies whether the dialog will stack on top of other dialogs. This will cause the dialog to move to the front of other dialogs when it gains focus.</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="title" default='""' example-value='"Dialog Title"'>
-			<desc>Specifies the title of the dialog. Any valid HTML may be set as the title. The title can also be specified by the <code>title</code> attribute on the dialog source element.</desc>
+		<option name="title" default='null' example-value='"Dialog Title"'>
+			<desc>Specifies the title of the dialog. If the value is <code>null</code>, the <code>title</code> attribute on the dialog source element will be used.</desc>
 			<type name="String" />
 		</option>
 		<option name="width" default="300" example-value="500">
 			<desc>The width of the dialog, in pixels.</desc>
 			<type name="Number" />
-		</option>
-		<option name="zIndex" default="1000" example-value="20">
-			<desc>The starting z-index for the dialog.</desc>
-			<type name="Integer" />
 		</option>
 	</options>
 	<events>
@@ -192,7 +227,7 @@
 			<desc>Triggered when the user starts resizing the dialog.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">
@@ -210,7 +245,7 @@
 			<desc>Triggered while the dialog is being resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">
@@ -228,7 +263,7 @@
 			<desc>Triggered after the dialog has been resized.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="orginalPosition" type="Object">
+				<property name="originalPosition" type="Object">
 					<desc>The CSS position of the dialog prior to being resized.</desc>
 				</property>
 				<property name="position" type="Object">

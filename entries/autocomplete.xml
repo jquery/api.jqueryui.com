@@ -7,7 +7,7 @@
 
 		<p>This can be used to choose previously selected values, such as entering tags for articles or entering email addresses from an address book. Autocomplete can also be used to populate associated information, such as entering a city name and getting the zip code.</p>
 
-		<p>You can pull data in from a local or remote source: Local is good for small data sets, e.g., an address book with 50 entries; remote is necessary for big data sets, such as a database with hundreds or millions of entries to select from. To find out more about customizing the data soure, see the documentation for the <a href="#option-source"><code>source</code></a> option.</p>
+		<p>You can pull data in from a local or remote source: Local is good for small data sets, e.g., an address book with 50 entries; remote is necessary for big data sets, such as a database with hundreds or millions of entries to select from. To find out more about customizing the data source, see the documentation for the <a href="#option-source"><code>source</code></a> option.</p>
 
 		<h3>Keyboard interaction</h3>
 
@@ -25,12 +25,21 @@
 		<ul>
 			<li>UP/DOWN - Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
 		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+			<li><a href="/menu/">Menu</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
+	<note id="native-change-warning"/>
 	<added>1.8</added>
 	<options>
-		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"'>
-			<desc>Which element the menu should be appended to. Override this when the autocomplete is inside a <code>position: fixed</code> element. Otherwise the popup menu would still scroll with the page.</desc>
+		<option name="appendTo" type="Selector" default="null" example-value='"#someElem"'>
+			<desc>Which element the menu should be appended to. When the value is <code>null</code>, the parents of the input field will be checked for a class of <code>ui-front</code>. If an element with the <code>ui-front</code> class is found, the menu will be appended to that element. Regardless of the value, if no element is found, the menu will be appended to the body.</desc>
 		</option>
 		<option name="autoFocus" type="Boolean" default="false" example-value="true">
 			<desc>If set to <code>true</code> the first item will automatically be focused when the menu is shown.</desc>
@@ -153,7 +162,7 @@
 				<desc></desc>
 			</argument>
 		</method>
-		<method name="widget">
+		<method name="widget" return="jQuery">
 			<desc>Returns a <code>jQuery</code> object containing the menu element. Although the menu items are constantly created and destroyed, the menu element itself is created during initialization and is constantly reused.</desc>
 		</method>
 	</methods>

@@ -4,6 +4,13 @@
 	<desc>Use the mouse to select elements, individually or in a group.</desc>
 	<longdesc>
 		<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Elements can also be selected via click or drag while holding the ctrl/meta key, allowing for multiple (non-contiguous) selections.</p>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/mouse/">Mouse Interaction</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.0</added>
@@ -14,7 +21,7 @@
 		<option name="autoRefresh" type="Boolean" default="true" example-value='false'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many items, you may want to set this to false and call the <a href="#method-refresh"><code>refresh()</code></a> method manually.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='a,.cancel'>
+		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,.cancel"'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
@@ -24,7 +31,7 @@
 		<option name="distance" type="Number" default="0" example-value='30'>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until the mouse has been dragged beyond the specified distance.</desc>
 		</option>
-		<option name="filter" type="Selector" default='"*"' example-value='li'>
+		<option name="filter" type="Selector" default='"*"' example-value='"li"'>
 			<desc>The matching child elements will be made selectees (able to be selected).</desc>
 		</option>
 		<option name="tolerance" type="String" default='"touch"' example-value='"fit"'>
