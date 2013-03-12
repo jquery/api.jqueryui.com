@@ -96,7 +96,7 @@
 				</ul>
 			</desc>
 		</option>
-		<option name="icons" type="Object" default='{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }' example-value='{ "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }'>
+		<option name="icons" type="Object" default='{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }' example-value='{ "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }'>
 			<desc>
 				<p>Icons to use for headers, matching an icon defined by the jQuery UI CSS Framework. Set to <code>false</code> to have no icons displayed.</p>
 				<ul>
