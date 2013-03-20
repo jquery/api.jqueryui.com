@@ -210,6 +210,7 @@
 				</type>
 			</argument>
 		</method>
+		<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Process any tabs that were added or removed directly in the DOM and recompute the height of the tab panels. Results depend on the content and the <a href="#option-heightStyle"><code>heightStyle</code></a> option.</desc>
