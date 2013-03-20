@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<method name="instance">
+	<desc>
+		Retrieves the <placeholder name="name"/>'s instance object.
+	</desc>
+</method>
