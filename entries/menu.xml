@@ -7,7 +7,7 @@
 	<longdesc>
 		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship and each menu item has an anchor. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
 
-		<pre><![CDATA[
+		<pre><code><![CDATA[
 <ul id="menu">
 	<li><a href="#">Item 1</a></li>
 	<li><a href="#">Item 2</a></li>
@@ -23,7 +23,7 @@
 	<li><a href="#">Item 4</a></li>
 	<li><a href="#">Item 5</a></li>
 </ul>
-]]></pre>
+]]></code></pre>
 
 		<p>If you use a structure other than <code>&lt;ul></code>/<code>&lt;li></code>, including using the same element for the menu and the menu items, use the <a href="#option-menus"><code>menus</code></a> option to specify a way to differentiate the two elements, e.g., <code>menus: "div.menuElement"</code>.</p>
 
@@ -31,11 +31,11 @@
 
 		<p>To add icons to the menu, include them in the markup:</p>
 
-		<pre><![CDATA[
+		<pre><code><![CDATA[
 <ul id="menu">
 	<li><a href="#"><span class="ui-icon ui-icon-disk"></span>Save</a></li>
 </ul>
-]]></pre>
+]]></code></pre>
 		<p>Menu automatically adds the necessary padding to items without icons.</p>
 
 		<h3>Keyboard interaction</h3>
