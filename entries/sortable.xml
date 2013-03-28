@@ -33,7 +33,7 @@
 		<option name="axis" type="String" default='false' example-value='"x"'>
 			<desc>If defined, the items can be dragged only horizontally or vertically. Possible values: <code>"x"</code>, <code>"y"</code>.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='":input,button"' example-value='"a,button"'>
+		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,button"'>
 			<desc>Prevents sorting if you start on elements matching the selector.</desc>
 		</option>
 		<option name="connectWith" type="Selector" default='false' example-value='"#shopping-cart"'>
