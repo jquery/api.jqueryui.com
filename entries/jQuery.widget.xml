@@ -109,17 +109,30 @@
 
 			<h3>Instance</h3>
 
-			<p>The widget's instance is stored using <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
+			<p>The widget's instance can be retrieved from a given element using the <a href="#method-instance"><code>instance()</code></a> method.</p>
 
 			<pre><code>
-				$( "#elem" ).data( "ui-progressbar" );
+				$( "#elem" ).progressbar( "instance" );
 			</code></pre>
 
-			<p>Whether an element has a given widget bound to it can be determined using the <a href="/data-selector/"><code>:data</code></a> selector.</p>
+			<p>If the <code>instance()</code> method is called on an element that is not associated with the widget, <code>undefined</code> is returned.</p>
+
+			<pre><code>
+				$( "#not-a-progressbar" ).progressbar( "instance" ); // undefined
+			</code></pre>
+
+			<p>The instance is stored using <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, the <a href="/data-selector/"><code>:data</code></a> selector can also determine whether an element has a given widget bound to it.</p>
 
 			<pre><code>
 				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
 				$( "#elem" ).is( ":data( 'ui-draggable' )" ); // false
+			</code></pre>
+
+			<p>Unlike <code>instance()</code>, <code>:data</code> can be used even if the widget being tested for has not loaded.</p>
+
+			<pre><code>
+				$( "#elem" ).nonExistentWidget( "instance" ); // TypeError
+				$( "#elem" ).is( ":data( 'ui-nonExistentWidget' )" ); // false
 			</code></pre>
 
 			<p>You can also use <code>:data</code> to get a list of all elements that are instances of a given widget.</p>
@@ -181,126 +194,12 @@
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</options>
 		<methods suppress-auto-examples="true">
-			<method name="destroy">
-				<desc>
-					Removes the <placeholder name="name"/> functionality completely. This will return the element back to its pre-init state.
-				</desc>
-				<example>
-					<desc>Destroy the widget when any of its anchors are clicked.</desc>
-					<code><![CDATA[
-this._on( this.element, {
-	"click a": function( event ) {
-		event.preventDefault();
-		this.destroy();
-	}
-});
-]]></code>
-				</example>
-			</method>
-			<method name="disable">
-				<desc>
-					Disables the <placeholder name="name"/>.
-				</desc>
-				<example>
-					<desc>Disable the widget when any of its anchors are clicked.</desc>
-					<code><![CDATA[
-this._on( this.element, {
-	"click a": function( event ) {
-		event.preventDefault();
-		this.disable();
-	}
-});
-]]></code>
-				</example>
-			</method>
-			<method name="enable">
-				<desc>
-					Enables the <placeholder name="name"/>.
-				</desc>
-				<example>
-					<desc>Enable the widget when any of its anchors are clicked.</desc>
-					<code><![CDATA[
-this._on( this.element, {
-	"click a": function( event ) {
-		event.preventDefault();
-		this.enable();
-	}
-});
-]]></code>
-				</example>
-			</method>
-			<method name="option" return="jQuery">
-				<desc>
-					Sets one or more options for the <placeholder name="name"/>.
-				</desc>
-				<signature return="Object" example-return-var="isDisabled" example-params='"disabled"'>
-					<desc>Gets the value currently associated with the specified <code>optionName</code>.</desc>
-					<argument name="optionName" type="String">
-						<desc>The name of the option to get.</desc>
-					</argument>
-					<example>
-						<desc>Retrieve the value of the <code>width</code> option.</desc>
-						<code><![CDATA[
-this.option( "width" );
-]]></code>
-					</example>
-				</signature>
-				<signature return="PlainObject" example-return-var="options">
-					<desc>Gets an object containing key/value pairs representing the current <placeholder name="name"/> options hash.</desc>
-					<example>
-						<desc>Log the key and value of each of the widget's options for debugging.</desc>
-						<code><![CDATA[
-var options = this.option();
-for ( var key in options ) {
-	console.log( key, options[ key ] );
-}
-]]></code>
-					</example>
-				</signature>
-				<signature example-params='"disabled", true'>
-					<desc>Sets the value of the <placeholder name="name"/> option associated with the specified <code>optionName</code>.</desc>
-					<argument name="optionName" type="String">
-						<desc>The name of the option to set.</desc>
-					</argument>
-					<argument name="value" type="Object">
-						<desc>A value to set for the option.</desc>
-					</argument>
-					<example>
-						<desc>Set the <code>width</code> option to <code>500</code>.</desc>
-						<code><![CDATA[
-this.option( "width", 500 );
-]]></code>
-					</example>
-				</signature>
-				<signature example-params="{ disabled: true }">
-					<desc>Sets one or more options for the <placeholder name="name"/>.</desc>
-					<argument name="options" type="Object">
-						<desc>A map of option-value pairs to set.</desc>
-					</argument>
-					<example>
-						<desc>Set the <code>height</code> and <code>width</code> options to <code>500</code>.</desc>
-						<code><![CDATA[
-this.option({
-	width: 500,
-	height: 500
-});
-]]></code>
-					</example>
-				</signature>
-			</method>
-			<method name="widget" return="jQuery" example-return-var="widget">
-				<desc>
-					Returns a <code>jQuery</code> object containing the <placeholder name="widget-element"/>.
-				</desc>
-				<example>
-					<desc>Place a red border around the widget's original element when it's created.</desc>
-					<code><![CDATA[
-_create: function() {
-	this.widget().css( "border", "2px solid red" );
-}
-]]></code>
-				</example>
-			</method>
+			<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<method name="_create">
 				<desc>
 					The <code>_create()</code> method is the widget's constructor.
