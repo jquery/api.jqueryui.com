@@ -87,13 +87,13 @@
 
 			<h3>Instance</h3>
 
-			<p>The widget's instance can be retrieved from a given element using the <a href="#method-instance">instance method</a>.</p>
+			<p>The widget's instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
 
 			<pre><code>
-				$( "#elem" ).progressbar( "instance" );
+				$( "#elem" ).data( "ui-progressbar" );
 			</code></pre>
 
-			<p>The instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the <a href="/data-selector"><code>:data</code></a> selector to determine whether an element has a given widget bound to it.</p>
+			<p>Whether an element has a given widget bound to it can be determined using the <a href="/data-selector"><code>:data</code></a> selector.</p>
 
 			<pre><code>
 				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
@@ -158,7 +158,6 @@
 			<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<method name="_create">
