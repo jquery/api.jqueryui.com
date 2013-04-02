@@ -87,30 +87,17 @@
 
 			<h3>Instance</h3>
 
-			<p>The widget's instance can be retrieved from a given element using the <a href="#method-instance"><code>instance()</code></a> method.</p>
+			<p>The widget's instance can be retrieved from a given element using the <a href="#method-instance">instance method</a>.</p>
 
 			<pre><code>
 				$( "#elem" ).progressbar( "instance" );
 			</code></pre>
 
-			<p>If the <code>instance()</code> method is called on an element that is not associated with the widget, <code>undefined</code> is returned.</p>
-
-			<pre><code>
-				$( "#not-a-progressbar" ).progressbar( "instance" ); // undefined
-			</code></pre>
-
-			<p>The instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, the <a href="/data-selector/"><code>:data</code></a> selector can also determine whether an element has a given widget bound to it.</p>
+			<p>The instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the <a href="/data-selector"><code>:data</code></a> selector to determine whether an element has a given widget bound to it.</p>
 
 			<pre><code>
 				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
-				$( "#elem" ).is( ":data( 'ui-draggable' )" ); // false
-			</code></pre>
-
-			<p>Unlike <code>instance()</code>, <code>:data</code> can be used even if the widget being tested for has not loaded.</p>
-
-			<pre><code>
-				$( "#elem" ).nonExistentWidget( "instance" ); // TypeError
-				$( "#elem" ).is( ":data( 'ui-nonExistentWidget' )" ); // false
+				$( "#elem" ).is( ":data( 'ui-draggable' )" ); //false
 			</code></pre>
 
 			<p>You can also use <code>:data</code> to get a list of all elements that are instances of a given widget.</p>

@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
-<method name="instance" return="Object">
+<method name="instance">
 	<desc>
-		<p>Retrieves the <placeholder name="name"/>'s instance object. If the element does not have an associated instance, <code>undefined</code> is returned.</p>
-
-		<p>Unlike other widget methods, <code>instance()</code> is safe to call on any element after the <placeholder name="name"/> plugin has loaded.</p>
+		Retrieves the <placeholder name="name"/>'s instance object.
 	</desc>
 </method>
