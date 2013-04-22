@@ -73,7 +73,7 @@
 			<desc>Snaps the dragging helper to a grid, every x and y pixels. The array must be of the form <code>[ x, y ]</code>.</desc>
 		</option>
 		<option name="handle" default="false" example-value='"h2"'>
-			<desc>If specified, restricts dragging from starting unless the mousedown occurs on the specified element(s).</desc>
+			<desc>If specified, restricts dragging from starting unless the mousedown occurs on the specified element(s). Only elements that descend from the draggable element are permitted.</desc>
 			<type name="Selector"/>
 			<type name="Element"/>
 		</option>
