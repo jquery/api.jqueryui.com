@@ -189,6 +189,9 @@
 	</longdesc>
 	<note id="functional-css"/>
 	<note id="native-change-warning"/>
+	<note>
+		Creating a datepicker on an input element of type date is not supported due to a UI conflict with the native picker.
+	</note>
 	<added>1.0</added>
 	<options>
 		<option name="altField" default='""' example-value='"#actualDate"'>
