@@ -5,7 +5,7 @@
 			This widget requires some functional CSS, otherwise it won't work. If you build a custom theme, use the widget's specific CSS file as a starting point.
 		</xsl:when>
 		<xsl:when test="@id = 'native-change-warning'">
-			This widget manipulates its element's value programmatically, therefore a native change may not be fired when the element's value changes.
+			This widget manipulates its element's value programmatically, therefore a native change event may not be fired when the element's value changes.
 		</xsl:when>
 	</xsl:choose>
 </xsl:template>
