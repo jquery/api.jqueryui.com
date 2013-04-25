@@ -9,6 +9,22 @@
 
 		<p>A bottom button bar and semi-transparent modal overlay layer are common options that can be added.</p>
 
+		<h3>Focus</h3>
+
+		<p>Upon opening a dialog, focus is automatically moved to the first item that matches the following:</p>
+
+		<ol>
+			<li>The first element within the dialog with the <code>autofocus</code> attribute</li>
+			<li>The first <a href="/tabbable-selector/"><code>:tabbable</code></a> element within the dialog's content</li>
+			<li>The first <a href="/tabbable-selector/"><code>:tabbable</code></a> element within the dialog's buttonpane</li>
+			<li>The dialog's close button</li>
+			<li>The dialog itself</li>
+		</ol>
+
+		<p>While open, the dialog widget ensures that tabbing cycles focus between elements within the dialog itself, not elements outside of it. Modal dialogs additionally prevent mouse users from clicking on elements outside of the dialog.</p>
+
+		<p>Upon closing a dialog, focus is automatically returned to the element that had focus when the dialog was opened.</p>
+
 		<h3>Hiding the close button</h3>
 
 		<p>In some cases, you may want to hide the close button, for instance, if you have a close button in the button pane. The best way to accomplish this is via CSS. As an example, you can define a simple rule, such as:</p>
@@ -19,7 +35,7 @@
 			}
 		</code></pre>
 
-		<p>Then, you can simply add the <code>no-close</code> class to any dialog in order to hide it's close button:</p>
+		<p>Then, you can simply add the <code>no-close</code> class to any dialog in order to hide its close button:</p>
 
 		<pre><code>
 			$( "#dialog" ).dialog({
