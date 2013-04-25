@@ -7,6 +7,9 @@
 		<xsl:when test="@id = 'native-change-warning'">
 			This widget manipulates its element's value programmatically, therefore a native change event may not be fired when the element's value changes.
 		</xsl:when>
+		<xsl:otherwise>
+			<xsl:apply-templates/>
+		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
 </xsl:stylesheet>
