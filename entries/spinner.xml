@@ -30,6 +30,9 @@
 	</longdesc>
 	<note id="functional-css"/>
 	<note id="native-change-warning"/>
+	<note>
+		Creating a spinner on an <code>&lt;input type="number"&gt;</code> is not supported due to a UI conflict with the native spinner.
+	</note>
 	<added>1.9</added>
 	<options>
 		<option name="culture" type="String" default="null" example-value='"fr"'>
