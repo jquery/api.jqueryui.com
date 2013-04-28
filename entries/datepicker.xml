@@ -382,7 +382,13 @@
 		</option>
 		<option name="beforeShowDay" type="Function" default="null">
 			<argument name="date" type="Date"/>
-			<desc>A function takes a date as a parameter and must return an array with <code>[0]</code> equal to <code>true</code>/<code>false</code> indicating whether or not this date is selectable, <code>[1]</code> equal to a CSS class name or <code>""</code> for the default presentation, and <code>[2]</code> an optional popup tooltip for this date. It is called for each day in the datepicker before it is displayed.</desc>
+			<desc>A function that takes a date as a parameter and must return an array with:
+				<ul>
+					<li><code>[0]</code>: <code>true</code>/<code>false</code> indicating whether or not this date is selectable</li>
+					<li><code>[1]</code>: a CSS class name to add to the date's cell or <code>""</code> for the default presentation</li>
+					<li><code>[2]</code>: an optional popup tooltip for this date</li>
+				</ul>
+				The function is called for each day in the datepicker before it is displayed.</desc>
 		</option>
 		<option name="onChangeMonthYear" type="Function" default="null">
 			<argument name="year" type="Integer"/>
