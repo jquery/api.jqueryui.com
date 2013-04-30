@@ -29,13 +29,23 @@
 				$( "#elem" ).progressbar();
 			</code></pre>
 
-			<p>This will initialize each element in the jQuery object, in this case the element with an id of <code>"elem"</code>. Because we called the <code>progressbar()</code> method with no parameters, the widget is initialized with its default options. We can pass a set of options during initialization in order to override the default options.</p>
+			<p>This will initialize each element in the jQuery object, in this case the element with an id of <code>"elem"</code>.</p>
+
+			<h3>Options</h3>
+
+			<p>Because <code>progressbar()</code> was called with no parameters, the widget was initialized with its default options. We can pass a set of options during initialization to override the defaults:</p>
 
 			<pre><code>
 				$( "#elem" ).progressbar({ value: 20 });
 			</code></pre>
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
+
+			<p>The default values are stored on the widget's prototype, therefore we have the ability to override the values that jQuery UI sets. The following changes the default progressbar value to 80:</p>
+
+			<pre><code>
+				$.ui.progressbar.prototype.options.value = 80;
+			</code></pre>
 
 			<p>The options are part of the widget's state, so we can set options after initialization as well. We'll see this later with the option method.</p>
 
