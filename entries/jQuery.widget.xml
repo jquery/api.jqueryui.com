@@ -41,7 +41,7 @@
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
 
-			<p>The default values are stored on the widget's prototype, therefore we have the ability to override the values that jQuery UI sets. The following changes the default progressbar value to 80:</p>
+			<p>The default values are stored on the widget's prototype, therefore we have the ability to override the values that jQuery UI sets. For example, after setting the following, all future progressbar instances will default to a value of 80:</p>
 
 			<pre><code>
 				$.ui.progressbar.prototype.options.value = 80;
