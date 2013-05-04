@@ -14,6 +14,12 @@
 		<xi:include href="../includes/animation-argument-easing.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/animation-argument-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</signature>
+	<signature>
+		<argument name="className" type="String">
+			<desc>One or more class names (space separated) to be removed from the class attribute of each matched element.</desc>
+		</argument>
+		<xi:include href="../includes/class-animation-argument-options.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</signature>
 	<example>
 		<desc>Removes the class "big-blue" from the matched elements.</desc>
 		<css><![CDATA[
