@@ -66,7 +66,10 @@
 	<added>1.0</added>
 	<options>
 		<option name="appendTo" type="Selector" default='"body"' example-value='"#someElem"' added="1.10.0">
-			<desc>Which element the dialog (and overlay, if <a href="#option-modal">modal</a>) should be appended to.</desc>
+			<desc>
+				<p>Which element the dialog (and overlay, if <a href="#option-modal">modal</a>) should be appended to.</p>
+				<div class="warning"><strong>Note:</strong> The <code>appendTo</code> option should not be changed while the dialog is open.</div>
+			</desc>
 		</option>
 		<option name="autoOpen" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
