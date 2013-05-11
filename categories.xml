@@ -37,5 +37,10 @@
 			<p>Functionality provided by jquery.ui.effect.js. In addition to the methods listed below, jquery.ui.effect.js also includes several <a href="/easings/">easings</a>.</p>
 		]]></desc>
 	</category>
+	<category name="Theming" slug="theming">
+		<desc><![CDATA[
+			<p>jQuery UI includes a robust CSS Framework designed for building custom jQuery widgets. The framework includes classes that cover a wide array of common user interface needs, and can be manipulated using <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller</a>. By building your UI components using the jQuery UI CSS Framework, you will be adopting shared markup conventions and allowing for ease of code integration across the plugin community at large.</p>
+		]]></desc>
+	</category>
 	<category name="All" slug="all"/>
 </categories>
