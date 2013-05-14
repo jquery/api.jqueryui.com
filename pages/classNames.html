@@ -1,28 +1,29 @@
-<p>The following CSS class names used by jQuery UI are designed to achieve visual consistency across an application and allow components to be themeable by <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
+<script>{
+	"title": "Class Names"
+}</script>
+
+<p>The following is a list of the CSS class names used by jQuery UI. They are designed to achieve visual consistency across an application and allow components to be themeable by <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
 
 <h3>Layout Helpers</h3>
 <ul>
 	<li>
-		<code>.ui-helper-hidden</code>: Applies display: none to elements.
+		<code>.ui-helper-hidden</code>: Hides content visually and from assistive technologies, such as screen readers.
 	</li>
 	<li>
-		<code>.ui-helper-hidden-accessible</code>: Applies accessible hiding to elements (via absolute positioning off the page).
+		<code>.ui-helper-hidden-accessible</code>: Hides content visually, but leaves it available to assistive technologies.
 	</li>
 	<li>
-		<code>.ui-helper-reset</code>:  A basic style reset for UI elements. Resets things such as padding, margins, text-decoration, list-style, etc.
+		<code>.ui-helper-reset</code>: A basic style reset for DOM nodes. Resets padding, margins, text-decoration, list-style, etc.
 	</li>
 	<li>
 		<code>.ui-helper-clearfix</code>: Applies float wrapping properties to parent elements.
-	</li>
-	<li>
-		<code>.ui-helper-zfix</code>: Applies iframe "fix" css to iframe elements when needed in overlays.
 	</li>
 </ul>
 
 <h3>Widget Containers</h3>
 <ul>
 	<li>
-		<code>.ui-widget</code>: Class to be applied on outer container of all widgets. Applies font family and font size to widget. Also applies same family and 1em font size to child form elements, specifically to combat inheritance issues in Windows browsers.
+		<code>.ui-widget</code>: Class to be applied on outer container of all widgets. Applies font-family and font size to widgets.
 	</li>
 	<li>
 		<code>.ui-widget-header</code>: Class to be applied to header containers. Applies header container styles to an element and its child text, links, and icons.
@@ -41,7 +42,7 @@
 		<code>.ui-state-hover</code>: Class to be applied on mouseover to clickable button-like elements. Applies "clickable hover" container styles to an element and its child text, links, and icons.
 	</li>
 	<li>
-		<code>.ui-state-focus</code>: Class to be applied on keyboard focus to clickable button-like elements. Applies "clickable hover" container styles to an element and its child text, links, and icons.
+		<code>.ui-state-focus</code>: Class to be applied on keyboard focus to clickable button-like elements. Applies "clickable focus" container styles to an element and its child text, links, and icons.
 	</li>
 	<li>
 		<code>.ui-state-active</code>: Class to be applied on mousedown to clickable button-like elements. Applies "clickable active" container styles to an element and its child text, links, and icons.
@@ -63,10 +64,10 @@
 		<code>.ui-state-disabled</code>: Applies a dimmed opacity to disabled UI elements. Meant to be added in addition to an already-styled element.
 	</li>
 	<li>
-		<code>.ui-priority-primary</code>: Class to be applied to a priority-1 button in situations where button hierarchy is needed. Applies bold text.
+		<code>.ui-priority-primary</code>: Class to be applied to a priority-1 button in situations where button hierarchy is needed.
 	</li>
 	<li>
-		<code>.ui-priority-secondary</code>: Class to be applied to a priority-2 button in situations where button hierarchy is needed. Applies normal weight text and slight transparency to element.
+		<code>.ui-priority-secondary</code>: Class to be applied to a priority-2 button in situations where button hierarchy is needed.
 	</li>
 </ul>
 
