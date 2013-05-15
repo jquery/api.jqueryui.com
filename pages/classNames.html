@@ -1,8 +1,12 @@
 <script>{
-	"title": "Class Names"
+	"title": "Class Names",
+	"excerpt": "A list of the class names used by jQuery UI to allow components to be themeable.",
+	"termSlugs": {
+		"category": [ "theming" ]
+	}
 }</script>
 
-<p>The following is a list of the CSS class names used by jQuery UI. They are designed to achieve visual consistency across an application and allow components to be themeable by <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
+<p>The following is a list of the class names used by jQuery UI. The classes are designed to create a visual consistency across an application and allow components to be themeable by <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
 
 <h3>Layout Helpers</h3>
 <ul>
@@ -26,7 +30,7 @@
 <h3>Widget Containers</h3>
 <ul>
 	<li>
-		<code>.ui-widget</code>: Class to be applied on outer container of all widgets. Applies font-family and font size to widgets.
+		<code>.ui-widget</code>: Class to be applied to the outer container of all widgets. Applies font-family and font size to widgets.
 	</li>
 	<li>
 		<code>.ui-widget-header</code>: Class to be applied to header containers. Applies header container styles to an element and its child text, links, and icons.
@@ -79,13 +83,13 @@
 <h4>States and images</h4>
 <ul>
 	<li>
-		<code>.ui-icon</code>: Base class to be applied to an icon element. Sets dimensions to 16px square block, hides inner text, sets background image to "content" state sprite image. Note: <code>ui-icon</code> class will be given a different sprite background image depending on its parent container. For example, a <code>ui-icon</code> element within a <code>ui-state-default</code> container will get colored according to the <code>ui-state-default</code>'s icon color.
+		<code>.ui-icon</code>: Base class to be applied to an icon element. Sets dimensions to a 16px square block, hides inner text, and sets background image to the "content" state sprite image. Note: <code>ui-icon</code> class will be given a different sprite background image depending on its parent container. For example, a <code>ui-icon</code> element within a <code>ui-state-default</code> container will get colored according to the <code>ui-state-default</code>'s icon color.
 	</li>
 </ul>
 
 <h4>Icon types</h4>
 
-<p>After declaring a <code>ui-icon</code> class, you can follow up with a second class describing the type of icon you'd like. Icon classes generally follow a syntax of .ui-icon-{icon type}-{icon sub description}-{direction}.</p>
+<p>After declaring a <code>ui-icon</code> class, you can follow up with a second class describing the type of icon. Icon classes generally follow a syntax of .ui-icon-{icon type}-{icon sub description}-{direction}.</p>
 
 <p>For example, a single triangle icon pointing to the right looks like this: <code>.ui-icon-triangle-1-e</code>. ThemeRoller provides the full set of CSS framework icons in its preview column. Hover over them to see the class name.</p>
 
@@ -113,5 +117,3 @@
 		<code>.ui-widget-shadow</code>: Class to be applied to overlay widget shadow elements. Applies background color/texture, custom corner radius, opacity, top/left offsets and shadow "thickness". Thickness is applied via padding to all sides of a shadow that is set to match the dimensions of the overlay element. Offsets are applied via top and left margins (can be positive or negative).
 	</li>
 </ul>
-
-<category slug="theming"/>
