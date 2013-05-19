@@ -41,7 +41,7 @@
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }' example-value='{ down: "custom-down-icon", up: "custom-up-icon" }'>
 			<desc>
-				Icons to use for buttons, matching an icon defined by the jQuery UI CSS Framework.
+				Icons to use for buttons, matching <a href="/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>.
 				<ul>
 					<li>up (string, default: "ui-icon-triangle-1-n")</li>
 					<li>down (string, default: "ui-icon-triangle-1-s")</li>

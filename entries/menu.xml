@@ -66,7 +66,7 @@
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ submenu: "ui-icon-carat-1-e" }' example-value='{ submenu: "ui-icon-circle-triangle-e" }'>
 			<desc>
-				Icons to use for submenus, matching an icon defined by the jQuery UI CSS Framework.
+				Icons to use for submenus, matching <a href="/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>.
 				<ul>
 					<li>submenu (string, default: "ui-icon-carat-1-e")</li>
 				</ul>
