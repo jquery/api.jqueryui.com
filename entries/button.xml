@@ -22,7 +22,11 @@
 	<options>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" default="{ primary: null, secondary: null }" example-value='{ primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }'>
-			<desc>Icons to display, with or without text (see <a href="#option-text"><code>text</code></a> option). By default, the primary icon is displayed on the left of the label text and the secondary is displayed on the right. The positioning can be controlled via CSS. The value for the <code>primary</code> and <code>secondary</code> properties must be a class name, e.g., <code>"ui-icon-gear"</code>. For using only one icon: <code>icons: { primary: "ui-icon-locked" }</code>. For using two icons: <code>icons: { primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }</code>.</desc>
+			<desc>
+				<p>Icons to display, with or without text (see <a href="#option-text"><code>text</code></a> option). By default, the primary icon is displayed on the left of the label text and the secondary is displayed on the right. The positioning can be controlled via CSS.</p>
+
+				<p>The value for the <code>primary</code> and <code>secondary</code> properties must match <a href="/icons/">an icon class name</a>, e.g., <code>"ui-icon-gear"</code>. For using only one icon: <code>icons: { primary: "ui-icon-locked" }</code>. For using two icons: <code>icons: { primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }</code>.</p>
+			</desc>
 			<type name="Object" />
 		</option>
 		<option name="label" default="null" example-value='"custom label"'>
