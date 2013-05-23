@@ -1,5 +1,6 @@
 <script>{
 	"title": "Stacking Elements",
+	"excerpt": "A pattern for handling z-index and stacking elements.",
 	"termSlugs": {
 		"category": [ "theming" ]
 	}
