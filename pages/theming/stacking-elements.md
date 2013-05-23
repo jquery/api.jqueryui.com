@@ -6,10 +6,10 @@
 }</script>
 
 Widgets that stack, or move in front of other elements, often present challenges
-when placed into real world pages. It's usually easy to either change the z-index
+when placed into real world pages. It's usually easy to either change the `z-index`
 or parent of the stacked element to avoid any collisions on the page. However,
 jQuery UI needs a generic solution that doesn't require manually playing with
-z-index values. This is accomplished via the `ui-front` class, and usually an
+`z-index` values. This is accomplished via the `ui-front` class, and usually an
 accompanying `appendTo` option on stacking widgets.
 
 
