@@ -39,6 +39,6 @@ walk up the DOM from the associated element. For example, the autocomplete menu
 is appended to the DOM, and the walking starts from the associated input element.
   * If an element with the `ui-front` class is found, append to that element.
   * If no element with the `ui-front` class is found, append to the body.
-* The stacking element being appended must have the `ui-front` class and must
-also have `position` set. Using [/position/](.position()) will automatically set
-`position`.
+* The stacking element must also have `position` set to `relative`, `absolute`,
+or `fixed` in order for the `z-index` from the `ui-front` class to be applied.
+Using [/position/](.position()) will automatically set `position`.
