@@ -38,3 +38,11 @@ specifically [`.addClass()`](/addClass/), [`.removeClass()`](/removeClass/),
 [`.toggleClass()`](/toggleClass/), and [`.switchClass()`](/switchClass/). These
 methods will automatically determine which properties need to change and apply
 the appropriate animations.
+
+## Example
+
+```html
+@partial(resources/color-animation.html)
+```
+
+<iframe src="/resources/color-animation.html" width="100%" height="200"></iframe>
