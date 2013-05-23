@@ -35,8 +35,8 @@ should be applied to the stacking element:
 * If a value is provided for the `appendTo` option, then append the stacking
 element to the specified element.
 * If the `appendTo` option is set to `null` (default), then the widget should
-walk up the DOM from the associated element. For example, the autocomplete menu
-is appended to the DOM, and the walking starts from the associated input element.
+walk up the DOM from the associated element. For example, when the autocomplete
+menu is appended to the DOM, the walking starts from the associated input element.
   * If an element with the `ui-front` class is found, append to that element.
   * If no element with the `ui-front` class is found, append to the body.
 * The stacking element must also have `position` set to `relative`, `absolute`,
