@@ -41,4 +41,4 @@ menu is appended to the DOM, the walking starts from the associated input elemen
   * If no element with the `ui-front` class is found, append to the body.
 * The stacking element must also have `position` set to `relative`, `absolute`,
 or `fixed` in order for the `z-index` from the `ui-front` class to be applied.
-Using [/position/](.position()) will automatically set `position`.
+Using [.position()](/position/) will automatically set `position`.
