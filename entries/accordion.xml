@@ -79,11 +79,11 @@
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="event" type="String" default='"click"' example-value='"mouseover"'>
-			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specificed, separated by a space.</desc>
+			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specified, separated by a space.</desc>
 		</option>
 		<option name="header" type="Selector" default='"> li > :first-child,> :not(li):even"' example-value='"h3"'>
 			<desc>
-				<p>Selector for the header element, applied via <code>.find()</code> on the main accordion element. Content panels must be the sibling immedately after their associated headers.</p>
+				<p>Selector for the header element, applied via <code>.find()</code> on the main accordion element. Content panels must be the sibling immediately after their associated headers.</p>
 			</desc>
 		</option>
 		<option name="heightStyle" type="String" default='"auto"' example-value='"fill"'>

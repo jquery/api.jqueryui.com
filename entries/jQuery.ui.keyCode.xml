@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<entry type="property" name="jQuery.ui.keyCode">
+	<title>jQuery.ui.keyCode</title>
+	<desc>A mapping of key code descriptions to their numeric values.</desc>
+	<signature>
+		<property name="BACKSPACE" type="Integer"/>
+		<property name="COMMA" type="Integer"/>
+		<property name="DELETE" type="Integer"/>
+		<property name="DOWN" type="Integer"/>
+		<property name="END" type="Integer"/>
+		<property name="ENTER" type="Integer"/>
+		<property name="ESCAPE" type="Integer"/>
+		<property name="HOME" type="Integer"/>
+		<property name="LEFT" type="Integer"/>
+		<property name="PAGE_DOWN" type="Integer"/>
+		<property name="PAGE_UP" type="Integer"/>
+		<property name="PERIOD" type="Integer"/>
+		<property name="RIGHT" type="Integer"/>
+		<property name="SPACE" type="Integer"/>
+		<property name="TAB" type="Integer"/>
+		<property name="UP" type="Integer"/>
+	</signature>
+	<example>
+		<desc>Test for arrow key presses.</desc>
+		<code><![CDATA[$( document ).on( "keydown", function( event ) {
+	switch( event.keyCode ) {
+		case $.ui.keyCode.LEFT:
+			console.log( "left" );
+			break;
+		case $.ui.keyCode.RIGHT:
+			console.log( "right" );
+			break;
+		case $.ui.keyCode.UP:
+			console.log( "up" );
+			break;
+		case $.ui.keyCode.DOWN:
+			console.log( "down" );
+			break;
+	}
+});]]></code>
+	</example>
+	<category slug="ui-core"/>
+</entry>
