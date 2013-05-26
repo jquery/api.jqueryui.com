@@ -51,9 +51,7 @@
 			});
 		</code></pre>
 
-		<h3 id="theming">Theming</h3>
-
-		<p>The dialog widget uses the <a href="/theming/css-framework">jQuery UI CSS framework</a> to style its look and feel. If dialog specific styling is needed, the following is a list of CSS class names that the dialog widget uses:</p>
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
 			<li><code>ui-dialog</code>: The outer container of the dialog.</li>

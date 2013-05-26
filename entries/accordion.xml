@@ -33,6 +33,15 @@
 			<li>CTRL+UP: Move focus to associated header.</li>
 		</ul>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li><code>ui-accordion</code>: The outer container of the accordion.</li>
+			<li><code>ui-accordion-header</code>: The headers of the accordion.</li>
+			<li><code>ui-accordion-content</code>: The content panels the accordion.</li>
+			<li><code>ui-accordion-icons</code>: Accordion headers that have <a href="#option-icons">icons</a>.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
