@@ -51,6 +51,20 @@
 			});
 		</code></pre>
 
+		<h3 id="theming">Theming</h3>
+
+		<p>The dialog widget uses the <a href="/theming/css-framework">jQuery UI CSS framework</a> to style its look and feel. If dialog specific styling is needed, the following is a list of CSS class names that the dialog widget uses:</p>
+
+		<ul>
+			<li><code>ui-dialog</code>: The outer container of the dialog.</li>
+			<li><code>ui-dialog-titlebar</code>: The title bar containing the dialog's title and close button.</li>
+			<li><code>ui-dialog-title</code>: The container around the textual title of the dialog.</li>
+			<li><code>ui-dialog-titlebar-close</code>: The dialog's close button.</li>
+			<li><code>ui-dialog-content</code>: The container around the dialog's content.</li>
+			<li><code>ui-dialog-buttonpane</code>: The pane that contains the dialog's buttons. This will only be present if the <a href="#option-buttons"><code>buttons</code></a> option is set.</li>
+			<li><code>ui-dialog-buttonset</code>: The container around the buttons themselves.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
