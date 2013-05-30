@@ -26,6 +26,13 @@
 			<li>UP/DOWN - Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
 		</ul>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li><code>ui-autocomplete</code>: The menu used to display matches to the user.</li>
+			<li><code>ui-autocomplete-input</code>: The autocomplete's input element.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
