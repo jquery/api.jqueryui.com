@@ -36,10 +36,13 @@
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
-			<li><code>ui-accordion</code>: The outer container of the accordion.</li>
-			<li><code>ui-accordion-header</code>: The headers of the accordion.</li>
-			<li><code>ui-accordion-content</code>: The content panels the accordion.</li>
-			<li><code>ui-accordion-icons</code>: Accordion headers that have <a href="#option-icons">icons</a>.</li>
+			<li>
+				<code>ui-accordion</code>: The outer container of the accordion.
+				<ul>
+					<li><code>ui-accordion-header</code>: The headers of the accordion. The headers will additionally have a <code>ui-accordion-icons</code> class if they contain <a href="#option-icons">icons</a>.</li>
+					<li><code>ui-accordion-content</code>: The content panels the accordion.</li>
+				</ul>
+			</li>
 		</ul>
 
 		<h3>Dependencies</h3>
