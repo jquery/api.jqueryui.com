@@ -30,7 +30,7 @@
 
 		<ul>
 			<li><code>ui-autocomplete</code>: The menu used to display matches to the user.</li>
-			<li><code>ui-autocomplete-input</code>: The autocomplete's input element.</li>
+			<li><code>ui-autocomplete-input</code>: The autocomplete's <code>&lt;input&gt;</code> element.</li>
 		</ul>
 
 		<h3>Dependencies</h3>
