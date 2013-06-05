@@ -3,6 +3,8 @@
 	<title>Autocomplete Widget</title>
 	<desc>Autocomplete enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</desc>
 	<longdesc>
+		<p>Any field that can receive input can be converted into an Autocomplete, namely, <code>&lt;input&gt;</code> elements, <code>&lt;textarea&gt;</code> elements, and elements with the <code>contenteditable</code> attribute.</p>
+
 		<p>By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>
 
 		<p>This can be used to choose previously selected values, such as entering tags for articles or entering email addresses from an address book. Autocomplete can also be used to populate associated information, such as entering a city name and getting the zip code.</p>
@@ -30,7 +32,7 @@
 
 		<ul>
 			<li><code>ui-autocomplete</code>: The <a href="/menu/#theming">menu</a> used to display matches to the user.</li>
-			<li><code>ui-autocomplete-input</code>: The autocomplete's <code>&lt;input&gt;</code> element.</li>
+			<li><code>ui-autocomplete-input</code>: The autocomplete's input element.</li>
 		</ul>
 
 		<h3>Dependencies</h3>
