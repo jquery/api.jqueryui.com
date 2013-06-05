@@ -26,7 +26,7 @@
 			<li>
 				<code>ui-spinner</code>: The outer container of the spinner.
 				<ul>
-					<li><code>ui-spinner-input</code>: The <code>&lt;input&gt;</code> element that displays the value of the spinner.</li>
+					<li><code>ui-spinner-input</code>: The <code>&lt;input&gt;</code> element that the Spinner widget was instantiated with.</li>
 					<li><code>ui-spinner-button</code>: The button controls used to increment and decrement the spinner's value. The up button will additionally have a <code>ui-spinner-up</code> class and the down button will additionally have a <code>ui-spinner-down</code> class.</li>
 				</ul>
 			</li>

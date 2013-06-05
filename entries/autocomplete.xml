@@ -32,7 +32,7 @@
 
 		<ul>
 			<li><code>ui-autocomplete</code>: The <a href="/menu/#theming">menu</a> used to display matches to the user.</li>
-			<li><code>ui-autocomplete-input</code>: The autocomplete's input element.</li>
+			<li><code>ui-autocomplete-input</code>: The input element that the Autocomplete widget was instantiated with.</li>
 		</ul>
 
 		<h3>Dependencies</h3>

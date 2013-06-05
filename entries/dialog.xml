@@ -64,7 +64,7 @@
 							<li><code>ui-dialog-titlebar-close</code>: The dialog's close button.</li>
 						</ul>
 					</li>
-					<li><code>ui-dialog-content</code>: The container around the dialog's content.</li>
+					<li><code>ui-dialog-content</code>: The container around the dialog's content. This is also the element the widget was instantiated with.</li>
 					<li>
 						<code>ui-dialog-buttonpane</code>: The pane that contains the dialog's buttons. This will only be present if the <a href="#option-buttons"><code>buttons</code></a> option is set.
 						<ul>
