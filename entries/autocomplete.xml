@@ -29,7 +29,7 @@
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
-			<li><code>ui-autocomplete</code>: The menu used to display matches to the user.</li>
+			<li><code>ui-autocomplete</code>: The <a href="/menu/#theming">menu</a> used to display matches to the user.</li>
 			<li><code>ui-autocomplete-input</code>: The autocomplete's <code>&lt;input&gt;</code> element.</li>
 		</ul>
 
