@@ -47,7 +47,7 @@
 		<pre><code><![CDATA[
 <ul id="menu">
 	<li><a href="#">Item 1</a></li>
-	<li></li>
+	<li>-</li>
 	<li><a href="#">Item 2</a></li>
 </ul>
 ]]></code></pre>
