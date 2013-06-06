@@ -261,10 +261,10 @@
 			<desc>Set to <code>true</code> to automatically resize the input field to accommodate dates in the current <a href="#option-dateFormat"><code>dateFormat</code></a>.</desc>
 		</option>
 		<option name="buttonImage" type="String" default='""' example-value='"/images/datepicker.gif"'>
-			<desc>The URL for the popup button image. If set, the <a href="#option-buttonText"><code>buttonText</code></a> option becomes the <code>alt</code> value and is not directly displayed.</desc>
+			<desc>A URL of an image to use to display the datepicker when the <a href="#option-showOn"><code>showOn</code></a> option is set to <code>"button"</code> or <code>"both"</code>. If set, the <a href="#option-buttonText"><code>buttonText</code></a> option becomes the <code>alt</code> value and is not directly displayed.</desc>
 		</option>
 		<option name="buttonImageOnly" type="Boolean" default="false" example-value="true">
-			<desc>Whether the button image should be rendered by itself instead of inside a button element.</desc>
+			<desc>Whether the button image should be rendered by itself instead of inside a button element. This option is only relevant if the <a href="#option-buttonImage"><code>buttonImage</code></a> option has also been set.</desc>
 		</option>
 		<option name="buttonText" type="String" default='"..."' example-value='"Choose"'>
 			<desc>The text to display on the trigger button. Use in conjunction with the <a href="#option-showOn"><code>showOn</code></a> option set to <code>"button"</code> or <code>"both"</code>.</desc>
