@@ -51,6 +51,32 @@
 			});
 		</code></pre>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-dialog</code>: The outer container of the dialog.
+				<ul>
+					<li>
+						<code>ui-dialog-titlebar</code>: The title bar containing the dialog's title and close button.
+						<ul>
+							<li><code>ui-dialog-title</code>: The container around the textual title of the dialog.</li>
+							<li><code>ui-dialog-titlebar-close</code>: The dialog's close button.</li>
+						</ul>
+					</li>
+					<li><code>ui-dialog-content</code>: The container around the dialog's content. This is also the element the widget was instantiated with.</li>
+					<li>
+						<code>ui-dialog-buttonpane</code>: The pane that contains the dialog's buttons. This will only be present if the <a href="#option-buttons"><code>buttons</code></a> option is set.
+						<ul>
+							<li><code>ui-dialog-buttonset</code>: The container around the buttons themselves.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p>Additionally, when the <a href="#option-modal"><code>modal</code></a> option is set, an element with a <code>ui-widget-overlay</code> class name is appended to the <code>&lt;body&gt;</code>.</p>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

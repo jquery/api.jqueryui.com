@@ -11,6 +11,28 @@
 
 		<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-button</code>: The DOM element that represents the button. This element will additionally have one of the following classes depending on the <a href="#option-text">text</a> and <a href="#option-icons">icons</a> option: <code>ui-button-text-only</code>, <code>ui-button-icon-only</code>, <code>ui-button-icons-only</code>, <code>ui-button-text-icons</code>.
+				<ul>
+					<li>
+						<code>ui-button-icon-primary</code>: The element used to display the button's primary icon. This will only be present if a primary icon is provided in the <a href="#option-icons">icons</a> option.
+					</li>
+					<li>
+						<code>ui-button-text</code>: The container around the textual content of the button.
+					</li>
+					<li>
+						<code>ui-button-icon-secondary</code>: The element used to display the button's secondary icon. This will only be present if a secondary icon is provided in the <a href="#option-icons">icons</a> option.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<code>ui-buttonset</code>: The outer container of Buttonsets.
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

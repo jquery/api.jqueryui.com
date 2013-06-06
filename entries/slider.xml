@@ -7,6 +7,18 @@
 
 		<p>The slider widget will create handle elements with the class <code>ui-slider-handle</code> on initialization. You can specify custom handle elements by creating and appending the elements and adding the <code>ui-slider-handle</code> class before initialization. It will only create the number of handles needed to match the length of <a href="#option-value"><code>value</code></a>/<a href="#option-values"><code>values</code></a>. For example, if you specify <code>values: [ 1, 5, 18 ]</code> and create one custom handle, the plugin will create the other two.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-slider</code>: The track of the slider control. This element will additionally have a class name of <code>ui-slider-horizontal</code> or <code>ui-slider-vertical</code> depending on the <a href="#option-orientation"><code>orientation</code></a> of the slider.
+				<ul>
+					<li><code>ui-slider-handle</code>: The slider handles.</li>
+					<li><code>ui-slider-range</code>: The selected range used when the <a href="#option-range"><code>range</code></a> option is set. This element can additionally have a class of <code>ui-slider-range-min</code> or <code>ui-slider-range-max</code> if the <code>range</code> option is set to <code>"min"</code> or <code>"max"</code> respectively.</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

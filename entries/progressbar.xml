@@ -10,6 +10,22 @@
 			A determinate progress bar should only be used in situations where the system can accurately update the current status. A determinate progress bar should never fill from left to right, then loop back to empty for a single process &#8212; if the actual status cannot be calculated, an indeterminate progress bar should be used to provide user feedback.
 		</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-progressbar</code>: The outer container of the progressbar. This element will additionally have a class of <code>ui-progressbar-indeterminate</code> for indeterminate progressbars.
+				<ul>
+					<li>
+						<code>ui-progressbar-value</code>: The element that represents the filled portion of the progressbar.
+						<ul>
+							<li><code>ui-progressbar-overlay</code>: Overlay used to display an animation for indeterminate progressbars.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

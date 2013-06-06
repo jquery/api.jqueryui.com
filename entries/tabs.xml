@@ -28,6 +28,27 @@
 			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
 		</ul>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-tabs</code>: The outer container of the tabs. This element will additionally have a class of <code>ui-tabs-collapsible</code> when the <a href="#option-collapsible"><code>collapsible</code></a> option is set.
+				<ul>
+					<li>
+						<code>ui-tabs-nav</code>: The list of tabs.
+						<ul>
+							<li>The active list item in the nav will have a <code>ui-tabs-active</code> class. Any list item whose associated content is loading via an Ajax call will have a <code>ui-tabs-loading</code> class.
+								<ul>
+									<li><code>ui-tabs-anchor</code>: The anchors used to switch panels.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><code>ui-tabs-panel</code>: The panels associated with the tabs. Only the panel whose corresponding tab is active will be visible.</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

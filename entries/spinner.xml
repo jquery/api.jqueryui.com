@@ -20,6 +20,18 @@
 
 		<p>Focus stays in the text field, even after using the mouse to click one of the spin buttons.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-spinner</code>: The outer container of the spinner.
+				<ul>
+					<li><code>ui-spinner-input</code>: The <code>&lt;input&gt;</code> element that the Spinner widget was instantiated with.</li>
+					<li><code>ui-spinner-button</code>: The button controls used to increment and decrement the spinner's value. The up button will additionally have a <code>ui-spinner-up</code> class and the down button will additionally have a <code>ui-spinner-down</code> class.</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>

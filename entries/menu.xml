@@ -67,6 +67,23 @@
 
 		<p>Disabled items can receive keyboard focus, but do not allow any other interaction.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-menu</code>: The outer container of the menu. This element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
+				<ul>
+					<li>
+						<code>ui-menu-item</code>: The container for individual menu items.
+						<ul>
+							<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+						</ul>
+					</li>
+					<li><code>ui-menu-divider</code>: Divider elements between menu items.</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
