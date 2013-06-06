@@ -29,6 +29,8 @@
 
 		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
 
+		<h3 id="icons">Icons</h3>
+
 		<p>To add icons to the menu, include them in the markup:</p>
 
 		<pre><code><![CDATA[
@@ -37,6 +39,18 @@
 </ul>
 ]]></code></pre>
 		<p>Menu automatically adds the necessary padding to items without icons.</p>
+
+		<h3 id="dividers">Dividers</h3>
+
+		<p>Divider elements can be created by including unlinked menu items that contain only spaces and/or dashes:</p>
+
+		<pre><code><![CDATA[
+<ul id="menu">
+	<li><a href="#">Item 1</a></li>
+	<li>-</li>
+	<li><a href="#">Item 2</a></li>
+</ul>
+]]></code></pre>
 
 		<h3>Keyboard interaction</h3>
 
