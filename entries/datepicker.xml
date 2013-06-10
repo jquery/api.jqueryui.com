@@ -392,7 +392,7 @@
 			<desc>The name of the animation used to show and hide the datepicker. Use <code>"show"</code> (the default), <code>"slideDown"</code>, <code>"fadeIn"</code>, any of the <a href="/category/effects/">jQuery UI effects</a>. Set to an empty string to disable animation.</desc>
 		</option>
 		<option name="showButtonPanel" type="Boolean" default="false" example-value="true">
-			<desc>Whether to show the button panel.</desc>
+			<desc>Whether to display a button pane underneath the calendar. The button pane contains two buttons, a Today button that links to the current day, and a Done button that closes the datepicker. The buttons' text can be customized using the <a href="#option-currentText"><code>currentText</code></a> and <a href="#option-closeText"><code>closeText</code></a> options respectively.</desc>
 		</option>
 		<option name="showCurrentAtPos" type="Number" default="0" example-value="3">
 			<desc>When displaying multiple months via the <a href="#option-numberOfMonths"><code>numberOfMonths</code></a> option, the <code>showCurrentAtPos</code> option defines which position to display the current month in.</desc>
