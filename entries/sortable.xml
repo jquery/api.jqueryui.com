@@ -139,218 +139,47 @@
 		<event name="start">
 			<desc>This event is triggered when sorting starts.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="sort">
 			<desc>This event is triggered during sorting.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="change">
 			<desc>This event is triggered during sorting, but only when the DOM position has changed.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="beforeStop">
 			<desc>This event is triggered when sorting stops, but when the placeholder/helper is still available.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="stop">
 			<desc>This event is triggered when sorting has stopped.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="update">
 			<desc>This event is triggered when the user stopped sorting and the DOM position has changed.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="receive">
 			<desc>This event is triggered when a connected sortable list has received an item from another list.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="remove">
 			<desc>This event is triggered when a sortable item has been dragged out from the list and into another.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="over">
 			<desc>This event is triggered when a sortable item is moved into a sortable list.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="out">
 			<desc>
@@ -358,74 +187,17 @@
 				<p><em>Note: This event is also triggered when a sortable item is dropped.</em></p>
 			</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="activate">
 			<desc>This event is triggered when using connected lists, every connected list on drag start receives it.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="deactivate">
 			<desc>This event is triggered when sorting was stopped, is propagated to all possible connected lists.</desc>
 			<argument name="event" type="Event"/>
-			<argument name="ui" type="Object">
-				<property name="helper" type="jQuery">
-					<desc>The jQuery object representing the helper being sorted</desc>
-				</property>
-				<property name="item" type="jQuery">
-					<desc>The jQuery object representing the current dragged element</desc>
-				</property>
-				<property name="offset" type="Object">
-					<desc>The current absolute position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="position" type="Object">
-					<desc>The current position of the helper represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="originalPosition" type="Object">
-					<desc>The original position of the element represented as <code>{ top, left }</code></desc>
-				</property>
-				<property name="sender" type="jQuery">
-					<desc>The sortable that the item comes from if moving from one sortable to another</desc>
-				</property>
-			</argument>
+			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 	</events>
 	<methods>
