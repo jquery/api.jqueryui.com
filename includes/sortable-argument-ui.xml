@@ -1,0 +1,20 @@
+<argument name="ui" type="Object">
+	<property name="helper" type="jQuery">
+		<desc>The jQuery object representing the helper being sorted.</desc>
+	</property>
+	<property name="item" type="jQuery">
+		<desc>The jQuery object representing the current dragged element.</desc>
+	</property>
+	<property name="offset" type="Object">
+		<desc>The current absolute position of the helper represented as <code>{ top, left }</code>.</desc>
+	</property>
+	<property name="position" type="Object">
+		<desc>The current position of the helper represented as <code>{ top, left }</code>.</desc>
+	</property>
+	<property name="originalPosition" type="Object">
+		<desc>The original position of the element represented as <code>{ top, left }</code>.</desc>
+	</property>
+	<property name="sender" type="jQuery">
+		<desc>The sortable that the item comes from if moving from one sortable to another.</desc>
+	</property>
+</argument>
