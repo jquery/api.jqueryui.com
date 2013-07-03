@@ -154,6 +154,7 @@
 			</ul>
 		</longdesc>
 		<category slug="utilities"/>
+		<category slug="widgets"/>
 	</entry>
 	<entry type="widget" name="jQuery.Widget" widget-name="widget" animated-element="element"
 		widget-element="original element or other relevant generated element">
