@@ -3,7 +3,7 @@
 	<argument name="options" type="Object">
 		<desc>All animation settings. The only required property is <code>effect</code>.</desc>
 		<property name="effect" type="String">
-			<desc>A string indicating which <a href="/category/effect/">effect</a> to use for the transition.</desc>
+			<desc>A string indicating which <a href="/category/effects/">effect</a> to use for the transition.</desc>
 		</property>
 		<property name="easing" type="String" default='"swing"'>
 			<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
