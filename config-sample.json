@@ -1,5 +1,5 @@
 {
-        "url": "dev.api.jqueryui.com",
-        "username": "admin",
-        "password": "secret"
+	"url": "local.api.jqueryui.com/1.9",
+	"username": "admin",
+	"password": "secret"
 }
