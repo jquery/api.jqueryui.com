@@ -40,7 +40,7 @@
 				<code>ui-accordion</code>: The outer container of the accordion.
 				<ul>
 					<li><code>ui-accordion-header</code>: The headers of the accordion. The headers will additionally have a <code>ui-accordion-icons</code> class if they contain <a href="#option-icons"><code>icons</code></a>.</li>
-					<li><code>ui-accordion-content</code>: The content panels the accordion.</li>
+					<li><code>ui-accordion-content</code>: The content panels of the accordion.</li>
 				</ul>
 			</li>
 		</ul>
