@@ -111,7 +111,7 @@
 			</type>
 		</option>
 		<option name="closeOnEscape" default="true" example-value="false">
-			<desc>Specifies whether the dialog should close when it has focus and the user presses the esacpe (ESC) key.</desc>
+			<desc>Specifies whether the dialog should close when it has focus and the user presses the escape (ESC) key.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="closeText" default='"close"' example-value='"hide"'>
