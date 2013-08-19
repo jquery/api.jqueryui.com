@@ -120,7 +120,10 @@
 	</options>
 	<events>
 		<event name="activate">
-			<desc>Triggered after a panel has been activated (after animation completes). If the accordion was previously collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</desc>
+			<desc>
+				<p>Triggered after a panel has been activated (after animation completes). If the accordion was previously collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.</p>
+				<div class="warning"><strong>Note:</strong> Since the <code>activate</code> event is only fired on panel activation, it is not fired for the initial panel when the accordion widget is created. If you need a hook for widget creation use the <a href="#event-create"><code>create</code></a> event.</div>
+			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="newHeader" type="jQuery">
