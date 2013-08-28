@@ -49,16 +49,10 @@
 		<option name="panelTemplate" type="String" default='"&lt;div>&lt;/div>"'>
 			<desc>HTML template from which a new tab panel is created in case of adding a tab with the <a href="#method-add"><code>add()</code></a> method or when creating a panel for a remote tab on the fly.</desc>
 		</option>
-		<option name="selected" default="0">
+		<option name="selected" type="Integer" default="0">
 			<desc>
-				Which panel is currently open.
+				The zero-based index of the panel that is selected (open). Setting <code>selected</code> to <code>-1</code> will collapse all panels. This requires the <a href="#option-collapsible"><code>collapsible</code></a> option to be <code>true</code>.
 			</desc>
-			<type name="Boolean">
-				<desc>Setting <code>selected</code> to <code>false</code> will collapse all panels. This requires the <a href="#option-collapsible"><code>collapsible</code></a> option to be <code>true</code>.</desc>
-			</type>
-			<type name="Integer">
-				<desc>The zero-based index of the panel that is selected (open).</desc>
-			</type>
 		</option>
 		<option name="spinner" type="String" default='"&lt;em>Loading&amp;#8230;&lt;/em>"'>
 			<desc>The HTML content to show in a tab title while remote content is loading. Set this option to an empty string to deactivate the spinner behavior. A span element must be present in the anchor tag of the title for the spinner content to be visible.</desc>
