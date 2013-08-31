@@ -4,8 +4,35 @@
 	<desc>A single content area with multiple panels, each associated with a header in a list.</desc>
 	<longdesc>
 		<p>Tabs are generally used to break content into multiple sections that can be swapped to save space, much like an accordion.</p>
+		<p>Tabs have a particular set of markup that must be used in order for them to work properly:</p>
+		<ul>
+			<li>The tabs themselves must be in either an ordered (<code>&lt;ol></code>) or unordered (<code>&lt;ul></code>) list</li>
+			<li>Each tab "title" must be inside of a list item (<code>&lt;li></code>) and wrapped by an anchor (<code>&lt;a></code>) with an <code>href</code> attribute</li>
+			<li>Each tab panel may be any valid element but it must have an id which corresponds to the hash in the anchor of the associated tab.</li>
+		</ul>
 
 		<p>The content for each tab panel can be defined in-page or can be loaded via Ajax; both are handled automatically based on the <code>href</code> of the anchor associated with the tab. By default tabs are activated on click, but the events can be changed to hover via the <a href="#option-event"><code>event</code></a> option.</p>
+
+		<p>Below is some sample markup:</p>
+
+		<pre><code><![CDATA[
+<div id="tabs">
+	<ul>
+		<li><a href="#fragment-1">One</a></li>
+		<li><a href="#fragment-2">Two</a></li>
+		<li><a href="#fragment-3">Three</a></li>
+	</ul>
+	<div id="fragment-1">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	</div>
+	<div id="fragment-2">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	</div>
+	<div id="fragment-3">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	</div>
+</div>
+]]></code></pre>
 
 		<h3>Keyboard interaction</h3>
 
