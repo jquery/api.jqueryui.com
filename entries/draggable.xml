@@ -112,6 +112,9 @@
 			<type name="String">
 				<desc>If set to <code>"invalid"</code>, revert will only occur if the draggable has not been dropped on a droppable. For <code>"valid"</code>, it's the other way around.</desc>
 			</type>
+			<type name="Function">
+				<desc>A function to determine whether the element should revert to its start position. The function must return <code>true</code> to revert the element.</desc>
+			</type>
 		</option>
 		<option name="revertDuration" type="Number" default="500" example-value="200">
 			<desc>The duration of the revert animation, in milliseconds. Ignored if the <a href="#option-revert"><code>revert</code></a> option is <code>false</code>.</desc>
