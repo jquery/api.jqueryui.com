@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.widget.bridge">
+		<title>Widget Plugin Bridge</title>
+		<signature>
+			<argument name="name" type="String">
+				<desc>The name of the plugin to create.</desc>
+			</argument>
+			<argument name="constructor" type="Function">
+				<desc>The object to instantiate when the plugin is invoked.</desc>
+			</argument>
+		</signature>
+		<desc>Part of the <a href="/jQuery.widget/">jQuery Widget Factory</a> is the <code>jQuery.widget.bridge()</code> method. This acts as the middleman between the object created by <code>$.widget()</code> and the jQuery API.</desc>
+		<longdesc>
+			<p><code>$.widget.bridge()</code> does a few things:</p>
+			<ul>
+				<li>Connects a regular JavaScript constructor to the jQuery API.</li>
+				<li>Automatically creates instances of said object and stores it within the element's <code>$.data</code> cache.</li>
+				<li>Allows calls to public methods.</li>
+				<li>Prevents calls to private methods.</li>
+				<li>Prevents method calls on uninitialized objects.</li>
+				<li>Protects against multiple initializations.</li>
+			</ul>
+			<p>jQuery UI widgets are created using <code>$.widget( "foo.bar", {} );</code> syntax to define an object from which instances will be created.  Given a DOM structure with five <code>.foo</code>'s, <code>$( ".foo" ).bar();</code> will create five instances of your "bar" object. <code>$.widget.bridge()</code> works inside the factory by taking your base "bar" object and giving it a public API. Therefore, you can create instances by writing <code>$( ".foo" ).bar()</code>, and call methods by writing <code>$( ".foo" ).bar( "baz" )</code>.</p>
+			<p>If all you want is one-time initialization and calling methods, your object passed to <code>jQuery.widget.bridge()</code> can be very minimal:</p>
+			<pre><code>
+				var Highlighter = function( options, element ) {
+					this.options = options;
+					this.element = $( element );
+					this._set( 800 );
+				};
+				Highlighter.prototype = {
+					toggle: function() {
+						this._set( this.element.css( "font-weight") === 400 ? 800 : 400 );
+					},
+					_set: function(value) {
+						this.element.css( "font-weight", value );
+					}
+				};
+			</code></pre>
+			<p>All you need here is a function that acts as the constructor, accepting two arguments:</p>
+			<ul>
+				<li><code>options</code>: an object of configuration options</li>
+				<li><code>element</code>: the DOM element this instance was created on</li>
+			</ul>
+			<p>You can then hook this object up as a jQuery plugin using the bridge and use it on any jQuery object:</p>
+			<pre><code>
+				// Hook up the plugin
+				$.widget.bridge( "colorToggle", Highlighter );
+
+				// Initialize it on divs
+				$( "div" ).colorToggle().click(function() {
+					// Call the public method on click
+					$( this ).colorToggle( "toggle" );
+				});
+			</code></pre>
+			<p>To use all the features of the bridge, your object also needs to have an <code>_init()</code> method on the prototype. This will get called whenever the plugin is invoked while an instance already exists. In that case you also need to have an <code>option()</code> method. This will be invoked with the options as the first argument. If there were none, the argument will be an empty object. For a proper implementation of the <code>option</code> method, check out the implementation of <a href="/jQuery.widget/#jQuery-Widget2"><code>$.Widget</code></a>.</p>
+			<p>There is one optional property the bridge will use, if present: If your object's prototype has a <code>widgetFullName</code> property, this will be used as the key for storing and retrieving the instance. Otherwise, the name argument will be used.</p>
+		</longdesc>
+		<category slug="utilities"/>
+		<category slug="widgets"/>
+	</entry>
+</entries>
