@@ -41,6 +41,8 @@
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
 
+			<p>All options passed on init are deep-copied to ensure the objects can be modified later without affecting the widget. Arrays are the only exception, they are referenced as-is. This exception is in place to support data-binding, where the data source has to be kept as a reference.</p>
+
 			<p>The default values are stored on the widget's prototype, therefore we have the ability to override the values that jQuery UI sets. For example, after setting the following, all future progressbar instances will default to a value of 80:</p>
 
 			<pre><code>
