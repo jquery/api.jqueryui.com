@@ -298,12 +298,13 @@
 					<desc>The element(s) to apply the focusable behavior to.</desc>
 				</argument>
 			</method>
-			<method name="_trigger">
+			<method name="_trigger" return="Boolean">
 				<desc>
 					Triggers an event and its associated callback.
 					<p>The option with the name equal to type is invoked as the callback.</p>
 					<p>The event name is the widget name + type.</p>
 					<p><em>Note: When providing data, you must provide all three parameters. If there is no event to pass along, just pass <code>null</code>.</em></p>
+					<p>If the default action is prevented, <code>false</code> will be returned, otherwise <code>true</code>. Preventing the default action happens when the handler returns <code>false</code> or calls <code>event.preventDefault()</code>.</p>
 				</desc>
 				<argument name="type" type="String">
 					<desc>The <code>type</code> should match the name of a callback option. The full event type will be generated automatically.</desc>
