@@ -20,6 +20,8 @@
 
 		<p>Focus stays in the text field, even after using the mouse to click one of the spin buttons.</p>
 
+		<p>When the spinner is not read only (<code>&lt;input readonly&gt;</code>), the user may enter text that causes an invalid value (below min, above max, step mismatch, non-numeric input). Whenever a step is taken, either programmatically or via the step buttons, the value will be forced to a valid value (see the description for <a href="#method-stepUp"><code>stepUp()</code></a> and <a href="#method-stepDown"><code>stepDown()</code></a> for more details).</p>
+
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
