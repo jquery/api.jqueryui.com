@@ -41,6 +41,14 @@
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
 
+			<p>You can pass multiple options arguments. Those arguments will be merged into one object (similar to <a href="http://api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>). This is useful for sharing options between instances, while overriding some settings for each one:</p>
+
+			<pre><code>
+				var options = { modal: true, show: "slow" };
+				$( "#dialog1" ).dialog( options );
+				$( "#dialog2" ).dialog( options, { autoOpen: false });
+			</code></pre>
+
 			<p>All options passed on init are deep-copied to ensure the objects can be modified later without affecting the widget. Arrays are the only exception, they are referenced as-is. This exception is in place to support data-binding, where the data source has to be kept as a reference.</p>
 
 			<p>The default values are stored on the widget's prototype, therefore we have the ability to override the values that jQuery UI sets. For example, after setting the following, all future progressbar instances will default to a value of 80:</p>
