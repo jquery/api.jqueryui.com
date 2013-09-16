@@ -68,7 +68,7 @@
 		<option name="source" default="none; must be specified" example-value='[ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]'>
 			<desc>
 				Defines the data to use, must be specified.
-				<p>Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>
+				<p>Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/src/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>
 			</desc>
 			<type name="Array">
 				<desc>
