@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<div>
+	<h3 id="extension">Extension</h3>
+
+	<p>The <placeholder name="name"/> Widget is built with <a href="/jquery.widget/">widget factory</a> and can be extended. When extending widgets, you have the ability to override or add to the behavior of existing methods.</p>
+
+	<p>All of jQuery UI's widgets expose two types of methods - both of which are available for extension. The first type are methods that can be invoked using the widget's plugin (e.g. <code>$( ".selector" ).<placeholder name="name"/>( "widget" )</code>); these are documented <a href="#methods">here</a>. The second type cannot be invoked using the plugin, but are still considered public API methods that are safe to override. These methods are listed below.</p>
+
+	<p>For more information on widget extension, see <a href="http://learn.jquery.com/jquery-ui/widget-factory/extending-widgets/">Extending Widgets with the Widget Factory</a>.</p>
+</div>

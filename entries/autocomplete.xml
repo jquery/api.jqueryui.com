@@ -42,6 +42,23 @@
 			<li><a href="/position/">Position</a></li>
 			<li><a href="/menu/">Menu</a></li>
 		</ul>
+
+		<xi:include href="../includes/widget-extension.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<ul>
+			<li>
+				<code>_renderItem</code>: Function that controls creating the <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code> elements for each option in autocomplete's menu. The function is passed two arguments: <code>ui</code> - the <code>&lt;ul&gt;</code> element that the <code>&lt;li&gt;</code> must be appended to, and <code>item</code> - an object with <code>label</code> and <code>value</code> properties for the option to display. The function must append the newly created <code>&lt;li&gt;</code> to the <code>ui</code> argument and return it.
+				<pre><code><![CDATA[
+$.widget( "ui.autocomplete", $.ui.autocomplete, {
+	_renderItem: function( ul, item ) {
+		return $( "<li>" )
+			.append( $( "<a>" ).text( item.label ) )
+			.appendTo( ul );
+	}
+});
+]]></code></pre>
+			</li>
+		</ul>
+
 	</longdesc>
 	<note id="functional-css"/>
 	<note id="native-change-warning"/>
