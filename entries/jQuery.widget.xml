@@ -175,7 +175,7 @@
 			<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</options>
-		<methods suppress-examples="true">
+		<methods suppress-auto-examples="true">
 			<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
