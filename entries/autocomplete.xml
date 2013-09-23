@@ -177,6 +177,31 @@
 			<desc>Returns a <code>jQuery</code> object containing the menu element. Although the menu items are constantly created and destroyed, the menu element itself is created during initialization and is constantly reused.</desc>
 		</method>
 	</methods>
+	<extension-points>
+		<method name="_renderItem" return="jQuery">
+			<desc>Method that controls the creation of the <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code> elements for each option in the widget's menu. The method must return a <code>jQuery</code> object containing the newly created <code>&lt;li&gt;</code>.</desc>
+			<argument name="ul" type="jQuery">
+				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
+			</argument>
+			<argument name="item" type="Object">
+				<property name="label" type="String">
+					<desc>The string to display for the item.</desc>
+				</property>
+				<property name="value" type="String">
+					<desc>The value to insert into the input when the item is selected.</desc>
+				</property>
+			</argument>
+			<example>
+				<desc>Add the item's value as a data attribute on the <code>&lt;li&gt;</code>.</desc>
+				<code><![CDATA[
+		return $( "<li>" )
+			.attr( "data-value", item.value )
+			.append( $( "<a>" ).text( item.label ) )
+			.appendTo( ul );
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Autocomplete</desc>
 		<code><![CDATA[
