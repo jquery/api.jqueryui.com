@@ -186,11 +186,27 @@
 					The <code>_create()</code> method is the widget's constructor.
 					There are no parameters, but <code>this.element</code> and <code>this.options</code> are already set.
 				</desc>
+				<example>
+					<desc>Set the background color of the widget's element based on an option.</desc>
+					<code><![CDATA[
+_create: function() {
+	this.element.css( "background-color", this.options.color );
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_destroy">
 				<desc>
 					The public <a href="#method-destroy"><code>destroy()</code></a> method cleans up all common data, events, etc. and then delegates out to <code>_destroy()</code> for custom, widget-specific, cleanup.
 				</desc>
+				<example>
+					<desc>Remove a class from the widget's element when the wiget is destroyed.</desc>
+					<code><![CDATA[
+_destroy: function() {
+	this.element.removeClass( "my-widget" );
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_getCreateEventData" return="Object">
 				<desc>
@@ -289,6 +305,12 @@
 				<argument name="delay" type="Number" optional="true">
 					<desc>The number of milliseconds to wait before invoking the function. Defaults to <code>0</code>.</desc>
 				</argument>
+				<example>
+					<desc>Call the <code>_foo()</code> method on the widget after 100 milliseconds.</desc>
+					<code><![CDATA[
+this._delay( this._foo, 100 );
+]]></code>
+				</example>
 			</method>
 			<method name="_hoverable">
 				<desc>
@@ -307,6 +329,12 @@
 				<argument name="element" type="jQuery">
 					<desc>The element(s) to apply the focusable behavior to.</desc>
 				</argument>
+				<example>
+					<desc>Apply focusable styling to a set of elements within the widget.</desc>
+					<code><![CDATA[
+this._focusable( this.element.find( "my-items" ) );
+]]></code>
+				</example>
 			</method>
 			<method name="_trigger" return="Boolean">
 				<desc>
@@ -325,6 +353,23 @@
 				<argument name="data" type="Object" optional="true">
 					<desc>A hash of data associated with the event.</desc>
 				</argument>
+				<example>
+					<desc>Trigger a <code>search</code> event whenever a key is pressed.</desc>
+					<code><![CDATA[
+this._on( this.element, {
+	keydown: function( event ) {
+
+		// Pass the original event so that the custom search event has
+		// useful information, such as keyCode
+		this._trigger( "search", event, {
+
+			// Pass additional information unique to this event
+			value: this.element.val()
+		});
+	}
+});
+]]></code>
+				</example>
 			</method>
 			<method name="_show">
 				<desc>
@@ -340,6 +385,15 @@
 				<argument name="callback" type="Function" optional="true">
 					<desc>Callback to invoke after the element has been fully shown.</desc>
 				</argument>
+				<example>
+					<desc>Pass along the <code>show</code> option for custom animations.</desc>
+					<code><![CDATA[
+this._show( this.element, this.options.show, function() {
+
+	// Focus an item when the element is fully visible
+	this.mainElement.focus();
+}]]></code>
+				</example>
 			</method>
 			<method name="_hide">
 				<desc>
@@ -355,6 +409,16 @@
 				<argument name="callback" type="Function" optional="true">
 					<desc>Callback to invoke after the element has been fully hidden.</desc>
 				</argument>
+				<example>
+					<desc>Pass along the <code>hide</code> option for custom animations.</desc>
+					<code><![CDATA[
+this._hide( this.element, this.options.hide, function() {
+
+	// Trigger a close event when the element is fully hidden
+	this._trigger( "close" );
+});
+]]></code>
+				</example>
 			</method>
 		</methods>
 		<events>
