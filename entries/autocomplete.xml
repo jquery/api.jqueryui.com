@@ -206,6 +206,29 @@ _renderItem: function( ul, item ) {
 ]]></code>
 			</example>
 		</method>
+		<method name="_renderMenu">
+			<desc>
+				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items that match the user typed term. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>.
+			</desc>
+			<argument name="ul" type="jQuery">
+				<desc>An empty <code>&lt;ul&gt;</code> element to use as the widget's menu.</desc>
+			</argument>
+			<argument name="items" type="Array">
+				<desc>An Array of items that match the user typed term. Each item is an Object with <code>label</code> and <code>value</code> properties.</desc>
+			</argument>
+			<example>
+				<desc>Add a CSS class name to the odd menu items.</desc>
+				<code><![CDATA[
+_renderMenu: function( ul, items ) {
+	var that = this;
+	$.each( items, function( index, item ) {
+		that._renderItemData( ul, item );
+	});
+	$( ul ).find( "li:odd" ).addClass( "odd" );
+}
+]]></code>
+			</example>
+		</method>
 	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Autocomplete</desc>
