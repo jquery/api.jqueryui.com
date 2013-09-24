@@ -179,9 +179,12 @@
 	</methods>
 	<extension-points>
 		<method name="_renderItem" return="jQuery">
-			<desc>Method that controls the creation of the <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code> elements for each option in the widget's menu. The method must return a <code>jQuery</code> object containing the newly created <code>&lt;li&gt;</code>.</desc>
-			<argument name="ul" type="jQuery">
-				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
+			<desc>
+				<p>Method that controls the creation of each option in the widget's menu. The method must create a new element to display the menu item, append it to the menu, and return it.</p>
+				<p><em>Note: At this time the menu item created must contain an <code>&lt;a&gt;</code> element for compatibility with the <a href="/menu/">menu</a> widget. See the example below.</em></p>
+			</desc>
+			<argument name="menu" type="jQuery">
+				<desc>The DOM element that the newly created menu item element must be appended to.</desc>
 			</argument>
 			<argument name="item" type="Object">
 				<property name="label" type="String">
@@ -192,12 +195,14 @@
 				</property>
 			</argument>
 			<example>
-				<desc>Add the item's value as a data attribute on the <code>&lt;li&gt;</code>.</desc>
+				<desc>Use <code>&lt;li&gt;</code> elements with the item's value stored in a <code>data-value</code> attribute.</desc>
 				<code><![CDATA[
-		return $( "<li>" )
-			.attr( "data-value", item.value )
-			.append( $( "<a>" ).text( item.label ) )
-			.appendTo( ul );
+_renderItem: function( menu, item ) {
+	return $( "<li>" )
+		.attr( "data-value", item.value )
+		.append( $( "<a>" ).text( item.label ) )
+		.appendTo( menu );
+}
 ]]></code>
 			</example>
 		</method>
