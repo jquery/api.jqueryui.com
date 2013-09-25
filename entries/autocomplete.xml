@@ -229,6 +229,17 @@ _renderMenu: function( ul, items ) {
 ]]></code>
 			</example>
 		</method>
+		<method name="_resizeMenu">
+			<desc>Method responsible for sizing the menu before it is displayed. The menu element is available at <code>this.menu.element</code>.</desc>
+			<example>
+				<desc>Always display the menu as 500 pixels wide.</desc>
+				<code><![CDATA[
+_resizeMenu: function() {
+	this.menu.element.outerWidth( 500 );
+}
+]]></code>
+			</example>
+		</method>
 	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Autocomplete</desc>
