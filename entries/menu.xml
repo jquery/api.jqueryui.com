@@ -227,6 +227,22 @@
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
+	<extension-points>
+		<method name="_closeOnDocumentClick" return="Boolean">
+			<desc>
+				Method that determines whether clicks on the document should close any open menus. By default, menus are closed unless the click occurred a menu.
+			</desc>
+			<argument name="event" type="Event"/>
+			<example>
+				<desc>Never close menus on document click.</desc>
+				<code><![CDATA[
+_closeOnDocumentClick: function( event ) {
+	return false;
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<events>
 		<event name="blur">
 			<desc>
