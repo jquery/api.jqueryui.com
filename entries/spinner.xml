@@ -168,6 +168,40 @@
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
+	<extension-points>
+		<method name="_buttonHtml" return="String">
+			<desc>
+				Method that returns HTML to use for the spinner's increment and decrement buttons. Each button must be given a <code>ui-spinner-button</code> class name for the associated events to work.
+			</desc>
+			<example>
+				<desc>Use <code>&lt;button&gt;</code> elements for the increment and decrement buttons.</desc>
+				<code><![CDATA[
+_buttonHtml: function() {
+	return "" +
+		"<button class='ui-spinner-button ui-spinner-up'>" +
+			"<span class='ui-icon " + this.options.icons.up + "'>&#9650;</span>" +
+		"</button>" +
+		"<button class='ui-spinner-button ui-spinner-down'>" +
+			"<span class='ui-icon " + this.options.icons.down + "'>&#9660;</span>" +
+		"</button>";
+}
+]]></code>
+			</example>
+		</method>
+		<method name="_uiSpinnerHtml" return="String">
+			<desc>
+				Method that determines the HTML to use to wrap the spinner's <code>&lt;input&gt;</code> element.
+			</desc>
+			<example>
+				<desc>Wrap the spinner with a <code>&lt;div&gt;</code> with no rounded corners.</desc>
+				<code><![CDATA[
+_uiSpinnerHtml: function() {
+	return "<div class='ui-spinner ui-widget ui-widget-content'></div>";
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start">
