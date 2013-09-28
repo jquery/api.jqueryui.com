@@ -212,6 +212,14 @@ _destroy: function() {
 				<desc>
 					All widgets trigger the <a href="#event-create"><code>create</code></a> event. By default, no data is provided in the event, but this method can return an object which will be passed as the <code>create</code> event's data.
 				</desc>
+				<example>
+					<desc>Pass the widget's options <code>create</code> event handlers as an argument.</desc>
+					<code><![CDATA[
+_getCreateEventData: function() {
+	return this.options;
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_getCreateOptions" return="Object">
 				<desc>
