@@ -177,7 +177,7 @@
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
-			<desc>Recompute the height of the accordion panels. Results depend on the content and the <a href="#option-heightStyle"><code>heightStyle</code></a> option.</desc>
+			<desc>Process any headers and panels that were added or removed directly in the DOM and recompute the height of the accordion panels. Results depend on the content and the <a href="#option-heightStyle"><code>heightStyle</code></a> option.</desc>
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
