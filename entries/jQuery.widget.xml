@@ -213,7 +213,7 @@ _destroy: function() {
 					All widgets trigger the <a href="#event-create"><code>create</code></a> event. By default, no data is provided in the event, but this method can return an object which will be passed as the <code>create</code> event's data.
 				</desc>
 				<example>
-					<desc>Pass the widget's options <code>create</code> event handlers as an argument.</desc>
+					<desc>Pass the widget's options to <code>create</code> event handlers as an argument.</desc>
 					<code><![CDATA[
 _getCreateEventData: function() {
 	return this.options;
@@ -223,8 +223,16 @@ _getCreateEventData: function() {
 			</method>
 			<method name="_getCreateOptions" return="Object">
 				<desc>
-					This method allows the widget to define a custom method for defining options during instantiation. This user-provided options override the options returned by this method which override the default options.
+					This method allows the widget to define a custom method for defining options during instantiation. The user-provided options override the options returned by this method, which override the default options.
 				</desc>
+				<example>
+					<desc>Make the widget element's id attribute available as an option.</desc>
+					<code><![CDATA[
+_getCreateOptions: function() {
+	return { id: this.element.attr( "id" ) };
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_init">
 				<desc>
