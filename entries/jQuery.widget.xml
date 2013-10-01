@@ -336,6 +336,12 @@ this._delay( this._foo, 100 );
 				<argument name="element" type="jQuery">
 					<desc>The element(s) to apply the hoverable behavior to.</desc>
 				</argument>
+				<example>
+					<desc>Apply the <code>ui-state-hover</code> class to all <code>&lt;div&gt;</code>s within the element on hover.</desc>
+					<code><![CDATA[
+this._hoverable( this.element.find( "div" ) );
+]]></code>
+				</example>
 			</method>
 			<method name="_focusable">
 				<desc>
