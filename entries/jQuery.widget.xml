@@ -240,6 +240,16 @@ _getCreateOptions: function() {
 
 					<p><em>Note: Initialization should only be handled if there is a logical action to perform on successive calls to the widget with no arguments.</em></p>
 				</desc>
+				<example>
+					<desc>Call the <code>open()</code> method if the <code>autoOpen</code> option is set.</desc>
+					<code><![CDATA[
+_init: function() {
+	if ( this.options.autoOpen ) {
+		this.open();
+	}
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_setOptions">
 				<desc>
@@ -337,7 +347,7 @@ this._delay( this._foo, 100 );
 					<desc>The element(s) to apply the hoverable behavior to.</desc>
 				</argument>
 				<example>
-					<desc>Apply the <code>ui-state-hover</code> class to all <code>&lt;div&gt;</code>s within the element on hover.</desc>
+					<desc>Apply hoverable styling to all <code>&lt;div&gt;</code>s within the element on hover.</desc>
 					<code><![CDATA[
 this._hoverable( this.element.find( "div" ) );
 ]]></code>
