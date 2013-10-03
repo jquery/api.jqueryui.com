@@ -256,6 +256,26 @@ _init: function() {
 					Called whenever the <a href="#method-option"><code>option()</code></a> method is called, regardless of the form in which the <code>option()</code> method was called.
 					<p>Overriding this is useful if you can defer processor-intensive changes for multiple option changes.</p>
 				</desc>
+				<example>
+					<desc>Call a <code>resize()</code> method if the <code>height</code> or <code>width</code> options change.</desc>
+					<code><![CDATA[
+_setOptions: function( options ) {
+    var that = this,
+        resize = false;
+
+    $.each( options, function( key, value ) {
+        that._setOption( key, value );
+        if ( key == "height" || key == "width" ) {
+            resize = true;
+        }
+    });
+    
+    if ( resize ) {
+        this.resize();
+    }
+}
+]]></code>
+				</example>
 				<argument name="options" type="Object">
 					<desc>A map of option-value pairs to set.</desc>
 				</argument>
