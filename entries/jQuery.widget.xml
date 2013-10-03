@@ -290,6 +290,20 @@ _setOptions: function( options ) {
 				<argument name="value" type="Object">
 					<desc>A value to set for the option.</desc>
 				</argument>
+				<example>
+					<desc>Update a widget's element when its <code>height</code> or <code>width</code> option changes.</desc>
+					<code><![CDATA[
+_setOption: function( key, value ) {
+    if ( key == "width" ) {
+        this.element.width( value );
+    }
+    if ( key == "height" ) {
+        this.element.height( value );
+    }
+    this._super( key, value );
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_on">
 				<desc>
