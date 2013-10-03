@@ -348,6 +348,12 @@ this._on( this.element, {
 				<argument name="eventName" type="String">
 					<desc>One or more space-separated event types.</desc>
 				</argument>
+				<example>
+					<desc>Unbind all click events from the widget's element.</desc>
+					<code><![CDATA[
+this._off( this.element, "click" );
+]]></code>
+				</example>
 			</method>
 			<method name="_super">
 				<desc>
