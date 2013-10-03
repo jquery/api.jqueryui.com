@@ -325,6 +325,16 @@ _setOption: function( key, value ) {
 						A map in which the string keys represent the event type and optional selector for delegation, and the values represent a handler function to be called for the event.
 					</desc>
 				</argument>
+				<example>
+					<desc>Prevent the default action of all links clicked within the widget's element.</desc>
+					<code><![CDATA[
+this._on( this.element, {
+    "click a": function( event ) {
+        event.preventDefault();
+    }
+});
+]]></code>
+				</example>
 			</method>
 			<method name="_off">
 				<desc>
