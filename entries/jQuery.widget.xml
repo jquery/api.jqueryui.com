@@ -359,6 +359,14 @@ this._off( this.element, "click" );
 				<desc>
 					Invokes the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.
 				</desc>
+				<example>
+					<desc>Call the parent widget's <code>_setOption()</code> method.</desc>
+					<code><![CDATA[
+_setOption: function( key, value ) {
+    this._super( key, value );
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_superApply">
 				<desc>
@@ -367,6 +375,14 @@ this._off( this.element, "click" );
 				<argument name="arguments" type="Array">
 					<desc>Array of arguments to pass to the parent method.</desc>
 				</argument>
+				<example>
+					<desc>Call the parent widget's <code>_setOption()</code> method.</desc>
+					<code><![CDATA[
+_setOption: function( key, value ) {
+    this._superApply( arguments );
+}
+]]></code>
+				</example>
 			</method>
 			<method name="_delay" return="Number">
 				<desc>
