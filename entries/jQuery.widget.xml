@@ -176,7 +176,22 @@
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</options>
 		<methods suppress-auto-examples="true">
-			<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<method name="destroy">
+				<desc>
+					Removes the <placeholder name="name"/> functionality completely. This will return the element back to its pre-init state.
+				</desc>
+				<example>
+					<desc>Destroy the widget when any of its anchors are clicked.</desc>
+					<code><![CDATA[
+this._on( this.element, {
+    "click a": function( event ) {
+        event.preventDefault();
+        this.destroy();
+    }
+});
+]]></code>
+				</example>
+			</method>
 			<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
