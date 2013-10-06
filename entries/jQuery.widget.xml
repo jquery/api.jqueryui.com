@@ -265,7 +265,7 @@ _setOptions: function( options ) {
 
     $.each( options, function( key, value ) {
         that._setOption( key, value );
-        if ( key == "height" || key == "width" ) {
+        if ( key === "height" || key === "width" ) {
             resize = true;
         }
     });
@@ -294,10 +294,10 @@ _setOptions: function( options ) {
 					<desc>Update a widget's element when its <code>height</code> or <code>width</code> option changes.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-    if ( key == "width" ) {
+    if ( key === "width" ) {
         this.element.width( value );
     }
-    if ( key == "height" ) {
+    if ( key === "height" ) {
         this.element.height( value );
     }
     this._super( key, value );
@@ -430,7 +430,7 @@ this._hoverable( this.element.find( "div" ) );
 				<example>
 					<desc>Apply focusable styling to a set of elements within the widget.</desc>
 					<code><![CDATA[
-this._focusable( this.element.find( "my-items" ) );
+this._focusable( this.element.find( ".my-items" ) );
 ]]></code>
 				</example>
 			</method>
