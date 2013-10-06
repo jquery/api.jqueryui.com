@@ -192,10 +192,52 @@ this._on( this.element, {
 ]]></code>
 				</example>
 			</method>
-			<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<method name="disable">
+				<desc>
+					Disables the <placeholder name="name"/>.
+				</desc>
+				<example>
+					<desc>Disable the widget when any of its anchors are clicked.</desc>
+					<code><![CDATA[
+this._on( this.element, {
+	"click a": function( event ) {
+		event.preventDefault();
+		this.disable();
+	}
+});
+]]></code>
+				</example>
+			</method>
+			<method name="enable">
+				<desc>
+					Enables the <placeholder name="name"/>.
+				</desc>
+				<example>
+					<desc>Enable the widget when any of its anchors are clicked.</desc>
+					<code><![CDATA[
+this._on( this.element, {
+	"click a": function( event ) {
+		event.preventDefault();
+		this.enable();
+	}
+});
+]]></code>
+				</example>
+			</method>
 			<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<method name="widget" return="jQuery" example-return-var="widget">
+				<desc>
+					Returns a <code>jQuery</code> object containing the <placeholder name="widget-element"/>.
+				</desc>
+				<example>
+					<desc>Place a red border around the widget's original element when it's created.</desc>
+					<code><![CDATA[
+_create: function() {
+	this.widget().css( "border", "2px solid red" );
+}
+]]></code>
+				</example>
+			</method>
 			<method name="_create">
 				<desc>
 					The <code>_create()</code> method is the widget's constructor.
