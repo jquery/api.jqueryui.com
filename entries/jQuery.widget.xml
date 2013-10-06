@@ -184,10 +184,10 @@
 					<desc>Destroy the widget when any of its anchors are clicked.</desc>
 					<code><![CDATA[
 this._on( this.element, {
-    "click a": function( event ) {
-        event.preventDefault();
-        this.destroy();
-    }
+	"click a": function( event ) {
+		event.preventDefault();
+		this.destroy();
+	}
 });
 ]]></code>
 				</example>
@@ -275,19 +275,19 @@ _init: function() {
 					<desc>Call a <code>resize()</code> method if the <code>height</code> or <code>width</code> options change.</desc>
 					<code><![CDATA[
 _setOptions: function( options ) {
-    var that = this,
-        resize = false;
+	var that = this,
+		resize = false;
 
-    $.each( options, function( key, value ) {
-        that._setOption( key, value );
-        if ( key === "height" || key === "width" ) {
-            resize = true;
-        }
-    });
-    
-    if ( resize ) {
-        this.resize();
-    }
+	$.each( options, function( key, value ) {
+		that._setOption( key, value );
+		if ( key === "height" || key === "width" ) {
+			resize = true;
+		}
+	});
+
+	if ( resize ) {
+		this.resize();
+	}
 }
 ]]></code>
 				</example>
@@ -309,13 +309,13 @@ _setOptions: function( options ) {
 					<desc>Update a widget's element when its <code>height</code> or <code>width</code> option changes.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-    if ( key === "width" ) {
-        this.element.width( value );
-    }
-    if ( key === "height" ) {
-        this.element.height( value );
-    }
-    this._super( key, value );
+	if ( key === "width" ) {
+		this.element.width( value );
+	}
+	if ( key === "height" ) {
+		this.element.height( value );
+	}
+	this._super( key, value );
 }
 ]]></code>
 				</example>
@@ -344,9 +344,9 @@ _setOption: function( key, value ) {
 					<desc>Prevent the default action of all links clicked within the widget's element.</desc>
 					<code><![CDATA[
 this._on( this.element, {
-    "click a": function( event ) {
-        event.preventDefault();
-    }
+	"click a": function( event ) {
+		event.preventDefault();
+	}
 });
 ]]></code>
 				</example>
@@ -378,11 +378,11 @@ this._off( this.element, "click" );
 					<desc>Handle the width option and call the parent widget's <code>_setOption()</code> method to handle all other options.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-    if ( key === "width" ) {
-        this.resize();
-    } else {
-        this._super( key, value  );
-    }
+	if ( key === "width" ) {
+		this.resize();
+	} else {
+		this._super( key, value  );
+	}
 }
 ]]></code>
 				</example>
@@ -398,11 +398,11 @@ _setOption: function( key, value ) {
 					<desc>Handle the width option and call the parent widget's <code>_setOption()</code> method to handle all other options.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-    if ( key === "width" ) {
-        this.resize();
-    } else {
-        this._superApply( arguments );
-    }
+	if ( key === "width" ) {
+		this.resize();
+	} else {
+		this._superApply( arguments );
+	}
 }
 ]]></code>
 				</example>
@@ -511,8 +511,8 @@ this._on( this.element, {
 					<code><![CDATA[
 this._show( this.element, this.options.show, function() {
 
-	// Focus an item when the element is fully visible
-	this.mainElement.focus();
+	// Focus the element when it's fully visible.
+	this.focus();
 }]]></code>
 				</example>
 			</method>
@@ -535,8 +535,8 @@ this._show( this.element, this.options.show, function() {
 					<code><![CDATA[
 this._hide( this.element, this.options.hide, function() {
 
-	// Trigger a close event when the element is fully hidden
-	this._trigger( "close" );
+	// Remove the element from the DOM when it's fully hidden.
+	this.remove();
 });
 ]]></code>
 				</example>
