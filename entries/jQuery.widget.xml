@@ -475,14 +475,13 @@ this._off( this.element, "click" );
 					Invokes the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.
 				</desc>
 				<example>
-					<desc>Handle the width option and call the parent widget's <code>_setOption()</code> method to handle all other options.</desc>
+					<desc>Handle <code>title</code> option updates and call the parent widget's <code>_setOption()</code> to update the internal storage of the option.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-	if ( key === "width" ) {
-		this.resize();
-	} else {
-		this._super( key, value  );
+	if ( key === "title" ) {
+		this.element.find( "h3" ).text( value );
 	}
+	this._super( key, value );
 }
 ]]></code>
 				</example>
@@ -495,14 +494,13 @@ _setOption: function( key, value ) {
 					<desc>Array of arguments to pass to the parent method.</desc>
 				</argument>
 				<example>
-					<desc>Handle the width option and call the parent widget's <code>_setOption()</code> method to handle all other options.</desc>
+					<desc>Handle <code>title</code> option updates and call the parent widget's <code>_setOption()</code> to update the internal storage of the option.</desc>
 					<code><![CDATA[
 _setOption: function( key, value ) {
-	if ( key === "width" ) {
-		this.resize();
-	} else {
-		this._superApply( arguments );
+	if ( key === "title" ) {
+		this.element.find( "h3" ).text( value );
 	}
+	this._superApply( arguments );
 }
 ]]></code>
 				</example>
@@ -636,7 +634,7 @@ this._show( this.element, this.options.show, function() {
 this._hide( this.element, this.options.hide, function() {
 
 	// Remove the element from the DOM when it's fully hidden.
-	this.remove();
+	$( this ).remove();
 });
 ]]></code>
 				</example>
