@@ -474,6 +474,11 @@ this._off( this.element, "click" );
 				<desc>
 					Invokes the method of the same name from the parent widget, with any specified arguments. Essentially <code>.call()</code>.
 				</desc>
+				<argument name="arg" type="String" optional="true" rest="true">
+					<desc>
+						Zero to many string arguments to pass to the parent widget's method.
+					</desc>
+				</argument>
 				<example>
 					<desc>Handle <code>title</code> option updates and call the parent widget's <code>_setOption()</code> to update the internal storage of the option.</desc>
 					<code><![CDATA[
