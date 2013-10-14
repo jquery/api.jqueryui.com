@@ -104,7 +104,7 @@
 			<desc>Triggered when the field is blurred, if the value has changed.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item" type="jQuery">
+				<property name="item" type="Object">
 					<desc>The item selected from the menu, if any. Otherwise the property is <code>null</code>.</desc>
 				</property>
 			</argument>
@@ -122,7 +122,7 @@
 			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item" type="jQuery">
+				<property name="item" type="Object">
 					<desc>The focused item.</desc>
 				</property>
 			</argument>
@@ -153,8 +153,8 @@
 			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="item" type="jQuery">
-					<desc>The selected item.</desc>
+				<property name="item" type="Object">
+					<desc>An Object with <code>label</code> and <code>value</code> properties for the selected option.</desc>
 				</property>
 			</argument>
 		</event>
