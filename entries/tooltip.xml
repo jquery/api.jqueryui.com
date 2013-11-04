@@ -64,7 +64,7 @@
 		</option>
 		<option name="position" default='{ my: "left top+15", at: "left bottom", collision: "flipfit" }' example-value='{ my: "left+15 center", at: "right center" }'>
 			<desc>
-				<p>Identifies the position of the tooltip in relation to the associated target element. The <code>of</code> option defaults to the target element, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</p>
+				<p>Identifies the position of the tooltip in relation to the associated target element. The <code>of</code> option defaults to the target element, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</p>
 			</desc>
 			<type name="Object" />
 		</option>
