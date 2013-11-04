@@ -2,5 +2,5 @@
 <div>
 	<h3 id="theming">Theming</h3>
 
-	<p>The <placeholder name="name"/> widget uses the <a href="/theming/css-framework">jQuery UI CSS framework</a> to style its look and feel. If <placeholder name="name"/> specific styling is needed, the following CSS class names can be used:</p>
+	<p>The <placeholder name="name"/> widget uses the <a href="/theming/css-framework/">jQuery UI CSS framework</a> to style its look and feel. If <placeholder name="name"/> specific styling is needed, the following CSS class names can be used:</p>
 </div>
