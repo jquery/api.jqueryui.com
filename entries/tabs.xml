@@ -130,7 +130,7 @@
 					<desc>The <code>jqXHR</code> object that is requesting the content.</desc>
 				</property>
 				<property name="ajaxSettings" type="Object">
-					<desc>The settings that will be used by <a href="//api.jquery.com/jQuery.ajax"><code>jQuery.ajax</code></a> to request the content.</desc>
+					<desc>The settings that will be used by <a href="//api.jquery.com/jQuery.ajax/"><code>jQuery.ajax</code></a> to request the content.</desc>
 				</property>
 			</argument>
 		</event>

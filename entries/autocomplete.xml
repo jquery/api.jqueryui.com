@@ -51,7 +51,7 @@
 			<desc>The minimum number of characters a user must type before a search is performed. Zero is useful for local data with just a few items, but a higher value should be used when a single character search could match a few thousand items.</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "right top", at: "right bottom" }'>
-			<desc>Identifies the position of the suggestions menu in relation to the associated input element. The <code>of</code> option defaults to the input element, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of the suggestions menu in relation to the associated input element. The <code>of</code> option defaults to the input element, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 		<option name="source" default="none; must be specified" example-value='[ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]'>
 			<desc>
