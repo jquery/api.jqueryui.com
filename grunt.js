@@ -19,7 +19,8 @@ grunt.initConfig({
 		tasks: "deploy"
 	},
 	xmllint: {
-		all: [].concat( entryFiles, grunt.file.expandFiles( "includes/**" ), "categories.xml", "entries2html.xsl", "notes.xsl" )
+		all: [].concat( entryFiles, grunt.file.expandFiles( "includes/**" ),
+			"categories.xml", "entries2html.xsl", "notes.xsl" )
 	},
 	xmltidy: {
 		all: [].concat( entryFiles, "categories.xml" )
