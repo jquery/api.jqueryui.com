@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="dialog" type="widget" widget-element="generated wrapper">
+<entry name="dialog" type="widget" animated-element="dialog" widget-element="generated wrapper">
 	<title>Dialog Widget</title>
 	<desc>Open content in an interactive overlay.</desc>
 	<longdesc>
@@ -135,22 +135,7 @@
 				<desc>The only supported string value is <code>"auto"</code> which will allow the dialog height to adjust based on its content.</desc>
 			</type>
 		</option>
-		<option name="hide" default="null" example-value='"explode"'>
-			<desc>If and how to animate the hiding of the dialog.</desc>
-			<type name="Number">
-				<desc>
-					The dialog will fade out while animating the height and width for the specified duration.
-				</desc>
-			</type>
-			<type name="String">
-				<desc>
-					The dialog will be hidden using the specified jQuery UI effect. See the <a href="/category/effects/">list of effects</a> for possible values.
-				</desc>
-			</type>
-			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
-			</type>
-		</option>
+		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="maxHeight" default="false" example-value="600">
 			<desc>The maximum height to which the dialog can be resized, in pixels.</desc>
 			<type name="Number" />
@@ -190,22 +175,7 @@
 			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="show" default="null" example-value='"fade"'>
-			<desc>If and how to animate the showing of the dialog.</desc>
-			<type name="Number">
-				<desc>
-					The dialog will fade in while animating the height and width for the specified duration.
-				</desc>
-			</type>
-			<type name="String">
-				<desc>
-					The dialog will be shown using the specified jQuery UI effect. See the <a href="/category/effects/">list of effects</a> for possible values.
-				</desc>
-			</type>
-			<type name="Object">
-				<desc>If the value is an object, then <code>effect</code>, <code>delay</code>, <code>duration</code>, and <code>easing</code> properties may be provided. The <code>effect</code> property must be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If <code>duration</code> or <code>easing</code> is omitted, then the default values will be used. If <code>delay</code> is omitted, then no delay is used.</desc>
-			</type>
-		</option>
+		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="title" default='null' example-value='"Dialog Title"'>
 			<desc>Specifies the title of the dialog. If the value is <code>null</code>, the <code>title</code> attribute on the dialog source element will be used.</desc>
 			<type name="String" />
