@@ -190,7 +190,7 @@
 			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="show" default="null" example-value='"slow"'>
+		<option name="show" default="null" example-value='"fade"'>
 			<desc>If and how to animate the showing of the dialog.</desc>
 			<type name="Number">
 				<desc>
