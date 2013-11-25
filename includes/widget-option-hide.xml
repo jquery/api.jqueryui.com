@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<option name="hide" default="null" example-value='{ effect: "explode", duration: 1000 }'>
+<option name="hide" default="{option-hide-default|null}" example-value='{ effect: "explode", duration: 1000 }'>
 	<desc>If and how to animate the hiding of the <placeholder name="animated-element"/>.</desc>
 	<type name="Boolean">
 		<desc>
