@@ -5,23 +5,23 @@
 		Themeable menu with mouse and keyboard interactions for navigation.
 	</desc>
 	<longdesc>
-		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship and each menu item has an anchor. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
+		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li><a href="#">Item 1</a></li>
-	<li><a href="#">Item 2</a></li>
-	<li><a href="#">Item 3</a>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3
 		<ul>
-			<li><a href="#">Item 3-1</a></li>
-			<li><a href="#">Item 3-2</a></li>
-			<li><a href="#">Item 3-3</a></li>
-			<li><a href="#">Item 3-4</a></li>
-			<li><a href="#">Item 3-5</a></li>
+			<li>Item 3-1</li>
+			<li>Item 3-2</li>
+			<li>Item 3-3</li>
+			<li>Item 3-4</li>
+			<li>Item 3-5</li>
 		</ul>
 	</li>
-	<li><a href="#">Item 4</a></li>
-	<li><a href="#">Item 5</a></li>
+	<li>Item 4</li>
+	<li>Item 5</li>
 </ul>
 ]]></code></pre>
 
@@ -35,7 +35,7 @@
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li><a href="#"><span class="ui-icon ui-icon-disk"></span>Save</a></li>
+	<li><span class="ui-icon ui-icon-disk"></span>Save</li>
 </ul>
 ]]></code></pre>
 		<p>Menu automatically adds the necessary padding to items without icons.</p>
@@ -46,9 +46,9 @@
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li><a href="#">Item 1</a></li>
+	<li>Item 1</li>
 	<li>-</li>
-	<li><a href="#">Item 2</a></li>
+	<li>Item 2</li>
 </ul>
 ]]></code></pre>
 
@@ -282,19 +282,19 @@ $( "#menu" ).menu();
 ]]></css>
 		<html><![CDATA[
 <ul id="menu">
-	<li><a href="#">Item 1</a></li>
-	<li><a href="#">Item 2</a></li>
-	<li><a href="#">Item 3</a>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3
 		<ul>
-			<li><a href="#">Item 3-1</a></li>
-			<li><a href="#">Item 3-2</a></li>
-			<li><a href="#">Item 3-3</a></li>
-			<li><a href="#">Item 3-4</a></li>
-			<li><a href="#">Item 3-5</a></li>
+			<li>Item 3-1</li>
+			<li>Item 3-2</li>
+			<li>Item 3-3</li>
+			<li>Item 3-4</li>
+			<li>Item 3-5</li>
 		</ul>
 	</li>
-	<li><a href="#">Item 4</a></li>
-	<li><a href="#">Item 5</a></li>
+	<li>Item 4</li>
+	<li>Item 5</li>
 </ul>
 ]]></html>
 	</example>
