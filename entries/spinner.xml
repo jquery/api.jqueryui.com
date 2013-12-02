@@ -167,6 +167,11 @@
 				</argument>
 			</signature>
 		</method>
+		<method name="isValid" return="Boolean" example-return-var="isValid">
+			<desc>
+				Returns whether the Spinner's value is valid given its <a href="#option-min"><code>min</code></a>, <a href="#option-max"><code>max</code></a>, and <a href="#option-step"><code>step</code></a>.
+			</desc>
+		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<extension-points>
