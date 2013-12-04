@@ -8,7 +8,7 @@
 
 jQuery UI effects core adds the ability to animate color properties using `rgb()`,
 `rgba()`, hex values, or even color names such as `"aqua"`. Simply include the
-jQuery UI effects core file and [`.animate()`](http://api.jquery.com/animate/)
+jQuery UI effects core file and [`.animate()`](//api.jquery.com/animate/)
 will gain support for colors.
 
 The following properties are supported:

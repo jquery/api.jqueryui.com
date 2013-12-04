@@ -41,7 +41,7 @@
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
 
-			<p>You can pass multiple options arguments. Those arguments will be merged into one object (similar to <a href="http://api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>). This is useful for sharing options between instances, while overriding some settings for each one:</p>
+			<p>You can pass multiple options arguments. Those arguments will be merged into one object (similar to <a href="//api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>). This is useful for sharing options between instances, while overriding some settings for each one:</p>
 
 			<pre><code>
 				var options = { modal: true, show: "slow" };
@@ -107,7 +107,7 @@
 
 			<h3>Instance</h3>
 
-			<p>The widget's instance is stored using <a href="http://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
+			<p>The widget's instance is stored using <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, you can use the following to retrieve the progressbar widget's instance object from the element.</p>
 
 			<pre><code>
 				$( "#elem" ).data( "ui-progressbar" );
