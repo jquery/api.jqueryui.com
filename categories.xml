@@ -2,7 +2,7 @@
 	<category name="Uncategorized" slug="uncategorized"/>
 	<category name="Effects" slug="effects">
 		<desc><![CDATA[
-			<p>jQuery UI adds quite a bit of functionality on top of <a href="http://api.jquery.com/category/effects/">jQuery's built-in effects</a>. jQuery UI adds support for animating colors and class transitions, as well as providing several additional <a href="/easings/">easings</a>. In addition, a full suite of custom effects are available for use when showing and hiding elements or just to add some visual appeal.</p>
+			<p>jQuery UI adds quite a bit of functionality on top of <a href="//api.jquery.com/category/effects/">jQuery's built-in effects</a>. jQuery UI adds support for animating colors and class transitions, as well as providing several additional <a href="/easings/">easings</a>. In addition, a full suite of custom effects are available for use when showing and hiding elements or just to add some visual appeal.</p>
 		]]></desc>
 	</category>
 	<category name="Widgets" slug="widgets">
