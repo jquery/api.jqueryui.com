@@ -9,10 +9,10 @@
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
 	&lt;title&gt;<xsl:value-of select="//entry/@name"/> demo&lt;/title&gt;
-	&lt;link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"&gt;<xsl:if test="css">
+	&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"&gt;<xsl:if test="css">
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
-	&lt;script src="http://code.jquery.com/jquery-1.8.2.js"&gt;&lt;/script&gt;
-	&lt;script src="http://code.jquery.com/ui/1.8.24/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script src="//code.jquery.com/jquery-1.8.2.js"&gt;&lt;/script&gt;
+	&lt;script src="//code.jquery.com/ui/1.8.24/jquery-ui.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 <xsl:value-of select="html/text()"/>
@@ -27,7 +27,7 @@ the method of the same name from jQuery core -->
 <xsl:template match="//placeholder[@name = 'core-link']">
 	<a>
 		<xsl:attribute name="href">
-			<xsl:value-of select="concat('http://api.jquery.com/', ancestor::entry/@name)"/>
+			<xsl:value-of select="concat('//api.jquery.com/', ancestor::entry/@name)"/>
 		</xsl:attribute>
 		<code>
 			<xsl:text>.</xsl:text>
