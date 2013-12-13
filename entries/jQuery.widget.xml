@@ -564,7 +564,7 @@ this._focusable( this.element.find( ".my-items" ) );
 				<desc>
 					Triggers an event and its associated callback.
 					<p>The option with the name equal to type is invoked as the callback.</p>
-					<p>The event name is the widget name + type.</p>
+					<p>The event name is the lowercase concatenation of the widget name and type.</p>
 					<p><em>Note: When providing data, you must provide all three parameters. If there is no event to pass along, just pass <code>null</code>.</em></p>
 					<p>If the default action is prevented, <code>false</code> will be returned, otherwise <code>true</code>. Preventing the default action happens when the handler returns <code>false</code> or calls <code>event.preventDefault()</code>.</p>
 				</desc>
