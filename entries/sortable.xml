@@ -174,7 +174,26 @@
 		<event name="remove">
 			<desc>This event is triggered when a sortable item has been dragged out from the list and into another.</desc>
 			<argument name="event" type="Event"/>
-			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<argument name="ui" type="Object">
+				<property name="helper" type="jQuery">
+					<desc>The jQuery object representing the helper being sorted.</desc>
+				</property>
+				<property name="item" type="jQuery">
+					<desc>The jQuery object representing the current dragged element.</desc>
+				</property>
+				<property name="offset" type="Object">
+					<desc>The current absolute position of the helper represented as <code>{ top, left }</code>.</desc>
+				</property>
+				<property name="position" type="Object">
+					<desc>The current position of the helper represented as <code>{ top, left }</code>.</desc>
+				</property>
+				<property name="originalPosition" type="Object">
+					<desc>The original position of the element represented as <code>{ top, left }</code>.</desc>
+				</property>
+				<property name="placeholder" type="jQuery">
+					<desc>The jQuery object representing the element being used as a placeholder.</desc>
+				</property>
+			</argument>
 		</event>
 		<event name="over">
 			<desc>This event is triggered when a sortable item is moved into a sortable list.</desc>
