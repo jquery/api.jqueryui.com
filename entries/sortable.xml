@@ -167,12 +167,12 @@
 			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="receive">
-			<desc>This event is triggered when a connected sortable list has received an item from another list.</desc>
+			<desc>This event is triggered when an item from a connected sortable list has been dropped into another list. The latter is the event target.</desc>
 			<argument name="event" type="Event"/>
 			<xi:include href="../includes/sortable-argument-ui.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</event>
 		<event name="remove">
-			<desc>This event is triggered when a sortable item has been dragged out from the list and into another.</desc>
+			<desc>This event is triggered when a sortable item from the list has been dropped into another. The former is the event target.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="helper" type="jQuery">
