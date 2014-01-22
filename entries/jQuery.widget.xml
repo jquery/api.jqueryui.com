@@ -85,7 +85,7 @@
 
 			<h3>Events</h3>
 
-			<p>All widgets have events associated with their various behaviors to notify you when the state is changing. For most widgets, when the events are triggered, the names are prefixed with the widget name. For example, we can bind to progressbar's <code>change</code> event which is triggered whenever the value changes.</p>
+			<p>All widgets have events associated with their various behaviors to notify you when the state is changing. For most widgets, when the events are triggered, the names are prefixed with the widget name and lowercased. For example, we can bind to progressbar's <code>change</code> event which is triggered whenever the value changes.</p>
 
 			<pre><code>
 				$( "#elem" ).bind( "progressbarchange", function() {
