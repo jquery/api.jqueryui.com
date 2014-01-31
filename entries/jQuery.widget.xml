@@ -132,6 +132,9 @@
 
 			<ul>
 				<li>
+					<strong>defaultElement</strong>: An element to use when a widget instance is constructed without providing an element. For example, since the progressbar's <code>defaultElement</code> is <code>"&lt;div&gt;</code>", <code>$.ui.progressbar({ value: 50 })</code> instantiates a progressbar widget instance on a newly created <code>&lt;div&gt;</code>.
+				</li>
+				<li>
 					<strong>document</strong>: The <code>document</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
 				</li>
 				<li>
