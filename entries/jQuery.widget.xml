@@ -436,7 +436,7 @@ _setOption: function( key, value ) {
 					<desc>Whether or not to bypass the disabled check.</desc>
 				</argument>
 				<argument name="element" type="jQuery" optional="true">
-					<desc>Which element(s) to bind the event handlers to. If no element is provided, <code>this.element</code> is used.</desc>
+					<desc>Which element(s) to bind the event handlers to. If no element is provided, <code>this.element</code> is used for non-delegated events and <a href="#method-widget">the widget element</a> is used for delegated events.</desc>
 				</argument>
 				<argument name="handlers" type="Object">
 					<desc>
