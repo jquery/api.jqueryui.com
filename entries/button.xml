@@ -7,7 +7,7 @@
 
 		<p>In addition to basic push buttons, radio buttons and checkboxes (inputs of type radio and checkbox) can be converted to buttons. Their associated label is styled to appear as the button, while the underlying input is updated on click. For the association to work properly, give the input an <code>id</code> attribute, and refer to that in the label's <code>for</code> attribute. Don't nest the input inside the label, as that <a href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-form-control-labeling/">causes accessibility problems</a>.</p>
 
-		<p>In order to group radio buttons, Button also provides an additional widget, called Buttonset. Buttonset is used by selecting a container element (which contains the radio buttons) and calling <code>.buttonset()</code>. Buttonset will also provide visual grouping, and therefore should be used whenever you have a group of buttons. It works by selecting all descendants and applying <code>.button()</code> to them. You can enable and disable a button set, which will enable and disable all contained buttons. Destroying a button set also calls each button's <code>destroy</code> method.</p>
+		<p>In order to group radio buttons, Button also provides an additional widget, called Buttonset. Buttonset is used by selecting a container element (which contains the radio buttons) and calling <code>.buttonset()</code>. Buttonset will also provide visual grouping, and therefore should be used whenever you have a group of buttons. It works by selecting all descendants and applying <code>.button()</code> to them. You can enable and disable a button set, which will enable and disable all contained buttons. Destroying a button set also calls each button's <code>destroy</code> method. For grouped radio and checkbox buttons, it's recommended to use a <code>fieldset</code> with a <code>legend</code> to improve accessibility.</p>
 
 		<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
 
@@ -90,11 +90,21 @@ $( "button" ).button();
 $( "#radio" ).buttonset();
 ]]></code>
 		<html><![CDATA[
-<div id="radio">
-	<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
-	<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
-	<input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
-</div>
+<form>
+	<fieldset>
+		<legend>Favorite jQuery Project</legend>
+		<div id="radio">
+			<input type="radio" id="sizzle" name="project">
+			<label for="sizzle">Sizzle</label>
+
+			<input type="radio" id="qunit" name="project" checked="checked">
+			<label for="qunit">QUnit</label>
+
+			<input type="radio" id="color" name="project">
+			<label for="color">Color</label>
+		</div>
+	</fieldset>
+</form>
 ]]></html>
 	</example>
 	<category slug="widgets"/>
