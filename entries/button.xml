@@ -56,7 +56,7 @@
 			<type name="String" />
 		</option>
 		<option name="text" default="true" example-value="false">
-			<desc>Whether to show the label. When set to <code>false</code> no text will be displayed, but the <a href="#options-icons"><code>icons</code></a> option must be enabled, otherwise the <code>text</code> option will be ignored.</desc>
+			<desc>Whether to show the label. When set to <code>false</code> no text will be displayed, but the <a href="#option-icons"><code>icons</code></a> option must be enabled, otherwise the <code>text</code> option will be ignored.</desc>
 			<type name="Boolean" />
 		</option>
 	</options>
