@@ -66,7 +66,7 @@
 				<desc>The zero-based index of the panel that is active (open). A negative value selects panels going backward from the last panel.</desc>
 			</type>
 		</option>
-		<option name="animate" default="{}" example-value='"bounceslide"'>
+		<option name="animate" default="{}" example-value="200">
 			<desc>If and how to animate changing panels.</desc>
 			<type name="Boolean">
 				<desc>A value of <code>false</code> will disable animations.</desc>
