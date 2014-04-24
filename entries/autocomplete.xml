@@ -208,7 +208,7 @@ _renderItem: function( ul, item ) {
 		</method>
 		<method name="_renderMenu">
 			<desc>
-				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items that match the user typed term. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>.
+				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items that match the user typed term. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>, which in turn delegates to the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point.
 			</desc>
 			<argument name="ul" type="jQuery">
 				<desc>An empty <code>&lt;ul&gt;</code> element to use as the widget's menu.</desc>
