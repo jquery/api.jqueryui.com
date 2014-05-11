@@ -268,7 +268,7 @@
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<extension-points>
-		<method name="_getList">
+		<method name="_getList" return="jQuery">
 			<desc>Determine which list should be converted to tabs. By default the first descendant list is used.</desc>
 			<example>
 				<desc>Use the list with the class <code>my-tabs</code> or fall back to the default implementation.</desc>
