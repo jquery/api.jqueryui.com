@@ -215,6 +215,20 @@
 		</method>
 		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
+	<extension-points>
+		<method name="_getList">
+			<desc>Determine which list should be converted to tabs. By default the first descendant list is used.</desc>
+			<example>
+				<desc>Use the list with the class <code>my-tabs</code> or fall back to the default implementation.</desc>
+				<code><![CDATA[
+_getList: function() {
+	var list = this.element.find( ".my-tabs" );
+	return list.length ? list.eq( 0 ) : this._super();
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Tabs</desc>
 		<code><![CDATA[
