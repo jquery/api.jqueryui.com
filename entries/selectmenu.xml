@@ -7,7 +7,7 @@
 
 		<p>It supports optgroups and custom markup to render specific presentations like multiple lines.</p>
 
-		<p>The select or its options can be disabled by adding the <code>disbaled="disabled"</code> attribite to that element.</p>
+		<p>The select or its options can be disabled by adding the <code>disabled="disabled"</code> attribute to that element.</p>
 
 		<h3>Keyboard interaction</h3>
 
@@ -48,12 +48,12 @@
 			</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
-			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 	</options>
 	<events>
 		<event name="change">
-			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire an <code>change</code> event.</desc>
+			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire a <code>change</code> event.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="item" type="jQuery">
@@ -68,7 +68,7 @@
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="focus">
 			<desc>
-				Triggered when an items gains focus.
+				Triggered when an item gains focus.
 			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
@@ -78,7 +78,7 @@
 			</argument>
 		</event>
 		<event name="open">
-			<desc>Triggered when menu is opened.</desc>
+			<desc>Triggered when the menu is opened.</desc>
 			<argument name="event" type="Event"/>
 		</event>
 		<event name="select">
