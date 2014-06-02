@@ -137,7 +137,7 @@
 					<strong>defaultElement</strong>: An element to use when a widget instance is constructed without providing an element. For example, since the progressbar's <code>defaultElement</code> is <code>"&lt;div&gt;</code>", <code>$.ui.progressbar({ value: 50 })</code> instantiates a progressbar widget instance on a newly created <code>&lt;div&gt;</code>.
 				</li>
 				<li>
-					<strong>document</strong>: The <code>document</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
+					<strong>document</strong>: A jQuery object containing the <code>document</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
 				</li>
 				<li>
 					<strong>element</strong>: A jQuery object containing the element used to instantiate the widget.  If you select multiple elements and call <code>.myWidget()</code>, a separate widget instance will be created for each element.  Therefore, this property will always contain one element.
@@ -164,7 +164,7 @@
 					<strong>widgetName</strong>: The name of the widget.  For  <code>$.widget( "myNamespace.myWidget", {} )</code>, <code>widgetName</code> will be <code>"myWidget"</code>.
 				</li>
 				<li>
-					<strong>window</strong>: The <code>window</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
+					<strong>window</strong>: A jQuery object containing the <code>window</code> that the widget's element is within.  Useful if you need to interact with widgets within iframes.
 				</li>
 			</ul>
 		</longdesc>
