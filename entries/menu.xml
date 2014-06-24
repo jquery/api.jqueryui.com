@@ -231,7 +231,7 @@
 	<extension-points>
 		<method name="_closeOnDocumentClick" return="Boolean">
 			<desc>
-				Method that determines whether clicks on the document should close any open menus. By default, menus are closed unless the click occurred a menu.
+				Method that determines whether clicks on the document should close any open menus. By default, menus are closed unless the click occurred on the menu.
 			</desc>
 			<argument name="event" type="Event"/>
 			<example>
