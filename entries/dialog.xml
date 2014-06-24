@@ -158,11 +158,10 @@
 		</option>
 		<option name="position" default='{ my: "center", at: "center", of: window }' example-value='{ my: "left top", at: "left bottom", of: button }'>
 			<desc>
-				<p>Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.</p>
+				<p>Specifies where the dialog should be displayed when opened. The dialog will handle collisions such that as much of the dialog is visible as possible.</p>
+				<p>The <code>of</code> property defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the available properties.</p>
 			</desc>
-			<type name="Object">
-				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
-			</type>
+			<type name="Object"/>
 		</option>
 		<option name="resizable" default="true" example-value="false">
 			<desc>If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.</desc>
