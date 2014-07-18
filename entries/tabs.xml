@@ -217,18 +217,20 @@
 			<signature>
 				<desc>Disables all tabs.</desc>
 			</signature>
-			<signature example-params='1'>
+			<signature example-params="1">
 				<desc>
 					Disables a tab. The selected tab cannot be disabled. To disable more than one tab at once, set the <a href="#option-disabled"><code>disabled</code></a> option: <code>$( "#tabs" ).tabs( "option", "disabled", [ 1, 2, 3 ] )</code>.
 				</desc>
-				<argument name="index">
-					<desc>Which tab to disable.</desc>
-					<type name="Number">
-						<desc>The zero-based index of the tab to disable.</desc>
-					</type>
-					<type name="String">
-						<desc>The <code>href</code> of the tab to disable.</desc>
-					</type>
+				<argument name="index" type="Number">
+					<desc>The zero-based index of the tab to disable.</desc>
+				</argument>
+			</signature>
+			<signature example-params='"#foo"'>
+				<desc>
+					Disables a tab. The selected tab cannot be disabled.
+				</desc>
+				<argument name="href" type="String">
+					<desc>The <code>href</code> of the tab to disable.</desc>
 				</argument>
 			</signature>
 		</method>
@@ -236,30 +238,32 @@
 			<signature>
 				<desc>Enables all tabs.</desc>
 			</signature>
-			<signature example-params='1'>
+			<signature example-params="1">
 				<desc>Enables a tab. To enable more than one tab at once reset the disabled property like: <code>$( "#example" ).tabs( "option", "disabled", [] );</code>.</desc>
-				<argument name="index">
-					<desc>Which tab to enable.</desc>
-					<type name="Number">
-						<desc>The zero-based index of the tab to enable.</desc>
-					</type>
-					<type name="String">
-						<desc>The <code>href</code> of the tab to enable.</desc>
-					</type>
+				<argument name="index" type="Number">
+					<desc>The zero-based index of the tab to enable.</desc>
+				</argument>
+			</signature>
+			<signature example-params='"#foo"'>
+				<desc>Enables a tab.</desc>
+				<argument name="href" type="String">
+					<desc>The <code>href</code> of the tab to enable.</desc>
 				</argument>
 			</signature>
 		</method>
-		<method name="load" example-params='1'>
-			<desc>Loads the panel content of a remote tab.</desc>
-			<argument name="index">
-				<desc>Which tab to load.</desc>
-				<type name="Number">
+		<method name="load">
+			<signature example-params="1">
+				<desc>Loads the panel content of a remote tab.</desc>
+				<argument name="index" type="Number">
 					<desc>The zero-based index of the tab to load.</desc>
-				</type>
-				<type name="String">
+				</argument>
+			</signature>
+			<signature example-params='"#foo"'>
+				<desc>Loads the panel content of a remote tab.</desc>
+				<argument name="href" type="String">
 					<desc>The <code>href</code> of the tab to load.</desc>
-				</type>
-			</argument>
+				</argument>
+			</signature>
 		</method>
 		<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
