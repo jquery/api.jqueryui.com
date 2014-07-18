@@ -7,7 +7,7 @@
 
 		<p>In addition to basic push buttons, radio buttons and checkboxes (inputs of type radio and checkbox) can be converted to buttons. Their associated label is styled to appear as the button, while the underlying input is updated on click. For the association to work properly, give the input an <code>id</code> attribute, and refer to that in the label's <code>for</code> attribute. Don't nest the input inside the label, as that <a href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-form-control-labeling/">causes accessibility problems</a>.</p>
 
-		<p>In order to group radio buttons, Button also provides an additional widget, called <a href="/buttonset/">Buttonset</a>, which provides visual groupings of buttons.</p>
+		<p>In order to group radio buttons, you can use the <a href="/buttonset/">Buttonset</a> widget, which provides visual groupings of buttons.</p>
 
 		<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
 
