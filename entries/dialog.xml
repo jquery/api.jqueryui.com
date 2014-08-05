@@ -101,7 +101,7 @@
 			<desc>If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="buttons" default="{}" example-value='[ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ]'>
+		<option name="buttons" default="[]" example-value='[ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ]'>
 			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
 			<type name="Object">
 				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
