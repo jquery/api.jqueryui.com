@@ -21,16 +21,16 @@
 
 		<p>When focus is on a header, the following key commands are available:</p>
 		<ul>
-			<li>UP/LEFT - Move focus to the previous header. If on first header, moves focus to last header.</li>
-			<li>DOWN/RIGHT - Move focus to the next header. If on last header, moves focus to first header.</li>
-			<li>HOME - Move focus to the first header.</li>
-			<li>END - Move focus to the last header.</li>
-			<li>SPACE/ENTER - Activate panel associated with focused header.</li>
+			<li><code>UP</code>/<code>LEFT</code>: Move focus to the previous header. If on first header, moves focus to last header.</li>
+			<li><code>DOWN</code>/<code>RIGHT</code>: Move focus to the next header. If on last header, moves focus to first header.</li>
+			<li><code>HOME</code>: Move focus to the first header.</li>
+			<li><code>END</code>: Move focus to the last header.</li>
+			<li><code>SPACE</code>/<code>ENTER</code>: Activate panel associated with focused header.</li>
 		</ul>
 
 		<p>When focus is in a panel:</p>
 		<ul>
-			<li>CTRL+UP: Move focus to associated header.</li>
+			<li><code>CTRL</code> + <code>UP</code>: Move focus to associated header.</li>
 		</ul>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

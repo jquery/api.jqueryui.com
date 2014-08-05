@@ -12,10 +12,10 @@
 		<h3>Keyboard interaction</h3>
 
 		<ul>
-			<li>UP: Increment the value by one step.</li>
-			<li>DOWN: Decrement the value by one step.</li>
-			<li>PAGE UP: Increment the value by one page.</li>
-			<li>PAGE DOWN: Decrement the value by one page.</li>
+			<li><code>UP</code>: Increment the value by one step.</li>
+			<li><code>DOWN</code>: Decrement the value by one step.</li>
+			<li><code>PAGE UP</code>: Increment the value by one page.</li>
+			<li><code>PAGE DOWN</code>: Decrement the value by one page.</li>
 		</ul>
 
 		<p>Focus stays in the text field, even after using the mouse to click one of the spin buttons.</p>

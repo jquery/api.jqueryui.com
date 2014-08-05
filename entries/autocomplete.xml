@@ -15,17 +15,17 @@
 
 		<p>When the menu is open, the following key commands are available:</p>
 		<ul>
-			<li>UP - Move focus to the previous item. If on first item, move focus to the input. If on the input, move focus to last item.</li>
-			<li>DOWN - Move focus to the next item. If on last item, move focus to the input. If on the input, move focus to the first item.</li>
-			<li>ESCAPE - Close the menu.</li>
-			<li>ENTER - Select the currently focused item and close the menu.</li>
-			<li>TAB - Select the currently focused item, close the menu, and move focus to the next focusable element.</li>
-			<li>PAGE UP/DOWN - Scroll through a page of items (based on height of menu). <em>It's generally a bad idea to display so many items that users need to page.</em>.</li>
+			<li><code>UP</code>: Move focus to the previous item. If on first item, move focus to the input. If on the input, move focus to last item.</li>
+			<li><code>DOWN</code>: Move focus to the next item. If on last item, move focus to the input. If on the input, move focus to the first item.</li>
+			<li><code>ESCAPE</code>: Close the menu.</li>
+			<li><code>ENTER</code>: Select the currently focused item and close the menu.</li>
+			<li><code>TAB</code>: Select the currently focused item, close the menu, and move focus to the next focusable element.</li>
+			<li><code>PAGE UP</code>/<code>PAGE DOWN</code>: Scroll through a page of items (based on height of menu). <em>It's generally a bad idea to display so many items that users need to page.</em></li>
 		</ul>
 
 		<p>When the menu is closed, the following key commands are available:</p>
 		<ul>
-			<li>UP/DOWN - Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
+			<li><code>UP</code>/<code>DOWN</code>: Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
 		</ul>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
