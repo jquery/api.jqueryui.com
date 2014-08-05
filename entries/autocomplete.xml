@@ -182,7 +182,6 @@
 		<method name="_renderItem" return="jQuery">
 			<desc>
 				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.</p>
-				<p><em>Note: At this time the<code>&lt;ul&gt;</code> element created must contain an <code>&lt;a&gt;</code> element for compatibility with the <a href="/menu/">menu</a> widget. See the example below.</em></p>
 			</desc>
 			<argument name="ul" type="jQuery">
 				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
@@ -201,7 +200,7 @@
 _renderItem: function( ul, item ) {
 	return $( "<li>" )
 		.attr( "data-value", item.value )
-		.append( $( "<a>" ).text( item.label ) )
+		.append( item.label )
 		.appendTo( ul );
 }
 ]]></code>
