@@ -38,21 +38,21 @@
 
 		<p>When focus is on a tab, the following key commands are available:</p>
 		<ul>
-			<li>UP/LEFT: Move focus to the previous tab. If on first tab, moves focus to last tab. Activate focused tab after a short delay.</li>
-			<li>DOWN/RIGHT: Move focus to the next tab. If on last tab, moves focus to first tab. Activate focused tab after a short delay.</li>
-			<li>HOME: Move focus to the first tab. Activate focused tab after a short delay.</li>
-			<li>END: Move focus to the last tab. Activate focused tab after a short delay.</li>
-			<li>SPACE: Activate panel associated with focused tab.</li>
-			<li>ENTER: Activate or toggle panel associated with focused tab.</li>
-			<li>ALT+PAGE UP: Move focus to the previous tab and immediately activate.</li>
-			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
+			<li><code>UP</code>/<code>LEFT</code> - Move focus to the previous tab. If on first tab, moves focus to last tab. Activate focused tab after a short delay.</li>
+			<li><code>DOWN</code>/<code>RIGHT</code> - Move focus to the next tab. If on last tab, moves focus to first tab. Activate focused tab after a short delay.</li>
+			<li><code>HOME</code> - Move focus to the first tab. Activate focused tab after a short delay.</li>
+			<li><code>END</code> - Move focus to the last tab. Activate focused tab after a short delay.</li>
+			<li><code>SPACE</code> - Activate panel associated with focused tab.</li>
+			<li><code>ENTER</code> - Activate or toggle panel associated with focused tab.</li>
+			<li><code>ALT</code> + <code>PAGE UP</code> - Move focus to the previous tab and immediately activate.</li>
+			<li><code>ALT</code> + <code>PAGE DOWN</code> - Move focus to the next tab and immediately activate.</li>
 		</ul>
 
 		<p>When focus is in a panel, the following key commands are available:</p>
 		<ul>
-			<li>CTRL+UP: Move focus to associated tab.</li>
-			<li>ALT+PAGE UP: Move focus to the previous tab and immediately activate.</li>
-			<li>ALT+PAGE DOWN: Move focus to the next tab and immediately activate.</li>
+			<li><code>CTRL</code> + <code>UP</code> - Move focus to associated tab.</li>
+			<li><code>ALT</code> + <code>PAGE UP</code> - Move focus to the previous tab and immediately activate.</li>
+			<li><code>ALT</code> + <code>PAGE DOWN</code> - Move focus to the next tab and immediately activate.</li>
 		</ul>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
