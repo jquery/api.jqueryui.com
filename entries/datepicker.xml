@@ -10,19 +10,19 @@
 		<h3>Keyboard interaction</h3>
 		<p>While the datepicker is open, the following key commands are available:</p>
 		<ul>
-			<li>PAGE UP: Move to the previous month.</li>
-			<li>PAGE DOWN: Move to the next month.</li>
-			<li>CTRL+PAGE UP: Move to the previous year.</li>
-			<li>CTRL+PAGE DOWN: Move to the next year.</li>
-			<li>CTRL+HOME: Open the datepicker if closed.</li>
-			<li>CTRL/COMMAND+HOME: Move to the current month.</li>
-			<li>CTRL/COMMAND+LEFT: Move to the previous day.</li>
-			<li>CTRL/COMMAND+RIGHT: Move to the next day.</li>
-			<li>CTRL/COMMAND+UP: Move to the previous week.</li>
-			<li>CTRL/COMMAND+DOWN: Move the next week.</li>
-			<li>ENTER: Select the focused date.</li>
-			<li>CTRL/COMMAND+END: Close the datepicker and erase the date.</li>
-			<li>ESCAPE: Close the datepicker without selection.</li>
+			<li><code>PAGE UP</code>: Move to the previous month.</li>
+			<li><code>PAGE DOWN</code>: Move to the next month.</li>
+			<li><code>CTRL</code> + <code>PAGE UP</code>: Move to the previous year.</li>
+			<li><code>CTRL</code> + <code>PAGE DOWN</code>: Move to the next year.</li>
+			<li><code>CTRL</code> + <code>HOME</code>: Open the datepicker if closed.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>HOME</code>: Move to the current month.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>LEFT</code>: Move to the previous day.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>RIGHT</code>: Move to the next day.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>UP</code>: Move to the previous week.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>DOWN</code>: Move the next week.</li>
+			<li><code>ENTER</code>: Select the focused date.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>END</code>: Close the datepicker and erase the date.</li>
+			<li><code>ESCAPE</code>: Close the datepicker without selection.</li>
 		</ul>
 
 		<h3 id="utility-functions">Utility functions</h3>
