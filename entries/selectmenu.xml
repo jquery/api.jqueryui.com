@@ -17,7 +17,7 @@
 			<li><code>HOME</code>/<code>PAGE UP</code> - Move focus to the first item.</li>
 			<li><code>ESCAPE</code> - Close the menu.</li>
 			<li><code>ENTER</code>/<code>SPACE</code> - Select the currently focused item and close the menu.</li>
-			<li><code>ALT</code> + <code>UP</code>/<code>DOWN</code> - Toggle the visibility of the menu.</li>
+			<li><code>ALT</code>/<code>OPTION</code> + <code>UP</code>/<code>DOWN</code> - Toggle the visibility of the menu.</li>
 		</ul>
 
 		<p>When the menu is closed, the following key commands are available:</p>
@@ -26,7 +26,7 @@
 			<li><code>DOWN</code>/<code>RIGHT</code> - Select the next item.</li>
 			<li><code>END</code>/<code>PAGE DOWN</code> - Select the last item.</li>
 			<li><code>HOME</code>/<code>PAGE UP</code> - Select the first item.</li>
-			<li><code>ALT</code> + <code>UP</code>/<code>DOWN</code> - Toggle the visibility of the menu.</li>
+			<li><code>ALT</code>/<code>OPTION</code> + <code>UP</code>/<code>DOWN</code> - Toggle the visibility of the menu.</li>
 			<li><code>SPACE</code> - Open the menu.</li>
 		</ul>
 	</longdesc>
