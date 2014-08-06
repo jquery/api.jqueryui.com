@@ -55,12 +55,12 @@
 		<h3>Keyboard interaction</h3>
 
 		<ul>
-			<li><code>ENTER</code>/<code>SPACE</code> - Invoke the focused menu item's action, which may be opening a submenu.</li>
-			<li><code>UP</code> - Move focus to the previous menu item.</li>
-			<li><code>DOWN</code> - Move focus to the next menu item.</li>
-			<li><code>RIGHT</code> - Open the submenu, if available.</li>
-			<li><code>LEFT</code> - Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
-			<li><code>ESCAPE</code> - Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+			<li><code>ENTER</code>/<code>SPACE</code>: Invoke the focused menu item's action, which may be opening a submenu.</li>
+			<li><code>UP</code>: Move focus to the previous menu item.</li>
+			<li><code>DOWN</code>: Move focus to the next menu item.</li>
+			<li><code>RIGHT</code>: Open the submenu, if available.</li>
+			<li><code>LEFT</code>: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+			<li><code>ESCAPE</code>: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
 		</ul>
 
 		<p>Typing a letter moves focus to the first item whose title starts with that character. Repeating the same character cycles through matching items. Typing more characters within the one second timer matches those characters.</p>
