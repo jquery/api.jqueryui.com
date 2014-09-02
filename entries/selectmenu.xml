@@ -119,6 +119,53 @@
 			<desc>Returns a <code>jQuery</code> object containing the button element.</desc>
 		</method>
 	</methods>
+	<extension-points>
+		<method name="_renderButtonItem" return="jQuery">
+			<desc>
+				<p>Method that controls the creation of the generated button content. The method must create and return a new element.</p>
+			</desc>
+			<argument name="item" type="Object">
+				<property name="disabled" type="Boolean">
+					<desc>Whether the item is disabled.</desc>
+				</property>
+				<property name="element" type="jQuery">
+					<desc>A reference to the item's original <code>&lt;option&gt;</code> element.</desc>
+				</property>
+				<property name="index" type="Number">
+					<desc>The numeric index of the item.</desc>
+				</property>
+				<property name="label" type="String">
+					<desc>The string to display for the item.</desc>
+				</property>
+				<property name="optgroup" type="String">
+					<desc>If the item is within an <code>&lt;optgroup&gt;</code>, this is set to that <code>&lt;optgroup&gt;</code>'s label.</desc>
+				</property>
+				<property name="value" type="String">
+					<desc>The <code>value</code> attribute of the item's original <code>&lt;option&gt;</code>.</desc>
+				</property>
+			</argument>
+			<example>
+				<desc>Add a <a href="/theming/icons/">jQuery UI icon</a> to each generated button who's select has a <code>data-icon</code> attribute.</desc>
+				<code><![CDATA[
+_renderButtonItem = function( item ) {
+	var buttonItem = $( "<span>", {
+		"class": "ui-selectmenu-text"
+	})
+	this._setText( buttonItem, item.label );
+
+	buttonItem
+		.css( "padding-left", "2.5em" )
+		.append( "<span>" )
+		.find( "span" )
+		.addClass( "ui-icon " + item.element.attr( "data-icon") )
+		.css( "left", "0.5em" );
+
+	return buttonItem;
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Selectmenu</desc>
 		<code><![CDATA[
