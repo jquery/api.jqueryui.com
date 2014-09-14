@@ -119,6 +119,50 @@
 			<desc>Returns a <code>jQuery</code> object containing the button element.</desc>
 		</method>
 	</methods>
+	<extension-points>
+		<method name="_renderItem" return="jQuery">
+			<desc>
+				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.</p>
+			</desc>
+			<argument name="ul" type="jQuery">
+				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
+			</argument>
+			<argument name="item" type="Object">
+				<property name="disabled" type="Boolean">
+					<desc>Whether the item is disabled.</desc>
+				</property>
+				<property name="element" type="jQuery">
+					<desc>A reference to the item's original <code>&lt;option&gt;</code> element.</desc>
+				</property>
+				<property name="index" type="Number">
+					<desc>The numeric index of the item.</desc>
+				</property>
+				<property name="label" type="String">
+					<desc>The string to display for the item.</desc>
+				</property>
+				<property name="optgroup" type="String">
+					<desc>If the item is within an <code>&lt;optgroup&gt;</code>, this is set to that <code>&lt;optgroup&gt;</code>'s label.</desc>
+				</property>
+				<property name="value" type="String">
+					<desc>The <code>value</code> attribute of the item's original <code>&lt;option&gt;</code>.</desc>
+				</property>
+			</argument>
+			<example>
+				<desc>Add a <a href="/theming/icons/">jQuery UI icon</a> to any item who's <code>&lt;option&gt;</code> element has a <code>data-icon</code> attribute.</desc>
+				<code><![CDATA[
+_renderItem: function( ul, item ) {
+	var li = $( "<li>" )
+		.append( item.label )
+		.css( "padding-left", "1.5em" );
+	li.append( "<span>" )
+		.find( "span" )
+		.addClass( "ui-icon " + item.element.attr( "data-icon" ) );
+	return li.appendTo( ul );
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Selectmenu</desc>
 		<code><![CDATA[
