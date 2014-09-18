@@ -119,6 +119,90 @@
 			<desc>Returns a <code>jQuery</code> object containing the button element.</desc>
 		</method>
 	</methods>
+	<extension-points>
+		<method name="_renderItem" return="jQuery">
+			<desc>
+				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.</p>
+			</desc>
+			<argument name="ul" type="jQuery">
+				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
+			</argument>
+			<argument name="item" type="Object">
+				<property name="element" type="jQuery">
+					<desc>The original <code>&lt;option&gt;</code> element.</desc>
+				</property>
+				<property name="index" type="Integer">
+					<desc>The index of the <code>&lt;option&gt;</code> within the <code>&lt;select&gt;</code>.</desc>
+				</property>
+				<property name="value" type="String">
+					<desc>The value of the <code>&lt;option&gt;</code>.</desc>
+				</property>
+				<property name="label" type="String">
+					<desc>The label of the <code>&lt;option&gt;</code>.</desc>
+				</property>
+				<property name="optgroup" type="String">
+					<desc>The label for the parent <code>optgroup</code>, if any.</desc>
+				</property>
+				<property name="disabled" type="Boolean">
+					<desc>Whether the <code>&lt;option&gt;</code> is disabled.</desc>
+				</property>
+			</argument>
+			<example>
+				<desc>Style the menu item background colors based on the value of their corresponding option elements.</desc>
+				<code><![CDATA[
+_renderItem: function( ul, item ) {
+	var li = $( "<li>" )
+		.css( "background-color", item.value );
+
+	if ( item.disabled ) {
+		li.addClass( "ui-state-disabled" );
+	}
+
+	this._setText( li, item.label );
+
+	return li.appendTo( ul );
+}
+]]></code>
+			</example>
+		</method>
+		<method name="_renderMenu">
+			<desc>
+				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items based on the <code>&lt;option&gt;</code> elements in the original <code>&lt;select&gt;</code>. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>, which in turn delegates to the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point.
+			</desc>
+			<argument name="ul" type="jQuery">
+				<desc>An empty <code>&lt;ul&gt;</code> element to use as the widget's menu.</desc>
+			</argument>
+			<argument name="items" type="Array">
+				<desc>An array of items based on the <code>&lt;option&gt;</code> elements in the original <code>&lt;select&gt;</code>. See the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point for details on the format of the item objects.</desc>
+			</argument>
+			<example>
+				<desc>
+					<p>Add a CSS class name to the odd menu items.</p>
+					<div class="warning"><strong>Note:</strong> For simplicity, this example does not support optgroups or disabled menu items.</div>
+				</desc>
+				<code><![CDATA[
+_renderMenu: function( ul, items ) {
+	var that = this;
+	$.each( items, function( index, item ) {
+		that._renderItemData( ul, item );
+	});
+	$( ul ).find( "li:odd" ).addClass( "odd" );
+}
+]]></code>
+			</example>
+		</method>
+		<method name="_resizeMenu">
+			<desc>Method responsible for sizing the menu before it is displayed. The menu element is available at <code>this.menu</code>.</desc>
+			<example>
+				<desc>Always display the menu as 500 pixels wide.</desc>
+				<code><![CDATA[
+_resizeMenu: function() {
+	this.menu.outerWidth( 500 );
+}
+]]></code>
+			</example>
+		</method>
+	</extension-points>
 	<example>
 		<desc>A simple jQuery UI Selectmenu</desc>
 		<code><![CDATA[
