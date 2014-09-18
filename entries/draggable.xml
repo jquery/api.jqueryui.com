@@ -18,7 +18,10 @@
 			<desc>If set to <code>false</code>, will prevent the <code>ui-draggable</code> class from being added. This may be desired as a performance optimization when calling <code>.draggable()</code> on hundreds of elements.</desc>
 		</option>
 		<option name="appendTo" default='"parent"' example-value='"body"'>
-			<desc>Which element the draggable helper should be appended to while dragging.</desc>
+			<desc>
+				<p>Which element the draggable helper should be appended to while dragging.</p>
+				<div class="warning"><strong>Note:</strong> The <code>appendTo</code> option only works when the <a href="#option-helper"><code>helper</code></a> option is set to not use the original element.</div>
+			</desc>
 			<type name="jQuery">
 				<desc>A jQuery object containing the element to append the helper to.</desc>
 			</type>
