@@ -129,26 +129,26 @@
 			</argument>
 			<argument name="item" type="Object">
 				<property name="element" type="jQuery">
-					<desc>The original <code>option</code> element.</desc>
+					<desc>The original <code>&lt;option&gt;</code> element.</desc>
 				</property>
 				<property name="index" type="Integer">
-					<desc>The index of the <code>option</code> within the <code>select</code>.</desc>
+					<desc>The index of the <code>&lt;option&gt;</code> within the <code>&lt;select&gt;</code>.</desc>
 				</property>
 				<property name="value" type="String">
-					<desc>The value of the <code>option</code>.</desc>
+					<desc>The value of the <code>&lt;option&gt;</code>.</desc>
 				</property>
 				<property name="label" type="String">
-					<desc>The label of the <code>option</code>.</desc>
+					<desc>The label of the <code>&lt;option&gt;</code>.</desc>
 				</property>
 				<property name="optgroup" type="String">
 					<desc>The label for the parent <code>optgroup</code>, if any.</desc>
 				</property>
 				<property name="disabled" type="Boolean">
-					<desc>Whether the <code>option</code> is disabled.</desc>
+					<desc>Whether the <code>&lt;option&gt;</code> is disabled.</desc>
 				</property>
 			</argument>
 			<example>
-				<desc>Style the menu item backgrounds based on their value.</desc>
+				<desc>Style the menu item background colors based on the value of their corresponding option elements.</desc>
 				<code><![CDATA[
 _renderItem: function( ul, item ) {
 	var li = $( "<li>" )
@@ -167,13 +167,13 @@ _renderItem: function( ul, item ) {
 		</method>
 		<method name="_renderMenu">
 			<desc>
-				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items based on the <code>option</code> elements in the original <code>select</code>. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>, which in turn delegates to the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point.
+				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items based on the <code>&lt;option&gt;</code> elements in the original <code>&lt;select&gt;</code>. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>, which in turn delegates to the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point.
 			</desc>
 			<argument name="ul" type="jQuery">
 				<desc>An empty <code>&lt;ul&gt;</code> element to use as the widget's menu.</desc>
 			</argument>
 			<argument name="items" type="Array">
-				<desc>An Array of items based on the <code>option</code> elements in the original <code>select</code>. See the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point for details on the format of the item objects.</desc>
+				<desc>An array of items based on the <code>&lt;option&gt;</code> elements in the original <code>&lt;select&gt;</code>. See the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point for details on the format of the item objects.</desc>
 			</argument>
 			<example>
 				<desc>
