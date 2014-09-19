@@ -103,6 +103,12 @@
 				</ul>
 			</desc>
 		</option>
+		<option name="items" type="String" default='"> *"' example-value='".custom-item"' init-only="true" added="1.11.0">
+			<desc>
+				<p>Selector for the elements that sreve as the menu items.</p>
+				<div class="warning"><strong>Note:</strong> The <code>items</code> option should not be changed after initialization.</div>
+			</desc>
+		</option>
 		<option name="menus" type="String" default='"ul"' example-value='"div"' init-only="true">
 			<desc>
 				<p>Selector for the elements that serve as the menu container, including sub-menus.</p>
