@@ -8,7 +8,7 @@
 		<p>Selectmenu supports <code>&lt;optgroup&gt;</code> elements and custom markup to render specific presentations like multiple lines. The <code>&lt;select&gt;</code> and its options can be disabled by adding a <code>disabled</code> attribute.</p>
 
 		<div class="warning"><p>
-			<strong>Note:</strong> Support for <code>accesskey</code> on custom elements is extremely limited in browsers. As such, if there is an <code>accesskey</code> attribute on the <code>select</code> element, it will not work with the custom selectmenu. If there is an <code>accesskey</code> attribute on any of the <code>option</code> elements, using the accesskey may cause the original element and the custom element to be out of sync. However, most browsers don't support <code>accesskey</code> on <code>option</code> elements.
+			<strong>Note:</strong> Support for <code>accesskey</code> on custom elements is extremely limited in browsers. As such, if there is an <code>accesskey</code> attribute on the <code>&lt;select&gt;</code> element, it will not work with the custom selectmenu. If there is an <code>accesskey</code> attribute on any of the <code>&lt;option&gt;</code> elements, using the accesskey may cause the original element and the custom element to be out of sync. However, most browsers don't support <code>accesskey</code> on <code>&lt;option&gt;</code> elements.
 		</p></div>
 
 		<h3>Keyboard interaction</h3>
