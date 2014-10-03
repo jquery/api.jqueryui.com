@@ -5,7 +5,6 @@
 	<longdesc>
 		<p>The <code>.switchClass()</code> method allows you to animate the transition of adding and removing classes at the same time.</p>
 		<xi:include href="../includes/class-animation-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<signature>
 		<argument name="removeClassName" type="String">
