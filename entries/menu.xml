@@ -85,7 +85,7 @@
 	<methods>
 		<method name="blur">
 			<desc>
-				Removes focus from a menu, resets any active element styles and triggers the menu's <a href="event-blur"><code>blur</code></a> event.
+				Removes focus from a menu, resets any active element styles and triggers the menu's <a href="#event-blur"><code>blur</code></a> event.
 			</desc>
 			<argument name="event" type="Event" optional="true">
 				<desc>What triggered the menu to blur.</desc>
