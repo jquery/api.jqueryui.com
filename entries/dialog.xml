@@ -105,9 +105,16 @@
 			<example-value>[
 		{
 			text: "Ok",
+			icons: {
+				primary: "ui-icon-heart"
+			},
 			click: function() {
 				$( this ).dialog( "close" );
 			}
+
+			// Uncommenting the following line would hide the text,
+			// resulting in the label being used as a tooltip
+			//showText: false
 		}
 	]</example-value>
 			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
@@ -115,7 +122,7 @@
 				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
 			</type>
 			<type name="Array">
-				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button.</desc>
+				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button. In addition, a key of <code>icons</code> can be used to control <a href="/button/#option-icons">button's <code>icons</code> option</a>, and a key of <code>showText</code> can be used to control <a href="/button/#option-text">button's <code>text</code> option</a>.</desc>
 			</type>
 		</option>
 		<option name="closeOnEscape" default="true" example-value="false">
