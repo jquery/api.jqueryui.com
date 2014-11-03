@@ -4,7 +4,10 @@
 		Sets one or more options for the <placeholder name="name"/>.
 	</desc>
 	<signature return="Object" example-return-var="isDisabled" example-params='"disabled"'>
-		<desc>Gets the value currently associated with the specified <code>optionName</code>.</desc>
+		<desc>
+			<p>Gets the value currently associated with the specified <code>optionName</code>.</p>
+			<p><strong>Note:</strong> For options that have objects as their value, you can get the value of a specific key by using dot notation, e.g., <code>"foo.bar"</code> would get the value of the <code>bar</code> property on the <code>foo</code> option.</p>
+		</desc>
 		<argument name="optionName" type="String">
 			<desc>The name of the option to get.</desc>
 		</argument>
@@ -13,7 +16,10 @@
 		<desc>Gets an object containing key/value pairs representing the current <placeholder name="name"/> options hash.</desc>
 	</signature>
 	<signature example-params='"disabled", true'>
-		<desc>Sets the value of the <placeholder name="name"/> option associated with the specified <code>optionName</code>.</desc>
+		<desc>
+			<p>Sets the value of the <placeholder name="name"/> option associated with the specified <code>optionName</code>.</p>
+			<p><strong>Note:</strong> For options that have objects as their value, you can set the value of just one property by using dot notation for <code>optionName</code>, e.g., <code>"foo.bar"</code> would update only the <code>bar</code> property of the <code>foo</code> option.</p>
+		</desc>
 		<argument name="optionName" type="String">
 			<desc>The name of the option to set.</desc>
 		</argument>
