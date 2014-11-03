@@ -40,6 +40,8 @@
 		<ul>
 			<li><code>UP</code>/<code>LEFT</code>: Move focus to the previous tab. If on first tab, moves focus to last tab. Activate focused tab after a short delay.</li>
 			<li><code>DOWN</code>/<code>RIGHT</code>: Move focus to the next tab. If on last tab, moves focus to first tab. Activate focused tab after a short delay.</li>
+			<li><code>CTRL</code> + <code>UP</code>/<code>LEFT</code>: Move focus to the previous tab. If on first tab, moves focus to last tab. The focused tab must be manually activated.</li>
+			<li><code>CTRL</code> + <code>DOWN</code>/<code>RIGHT</code>: Move focus to the next tab. If on last tab, moves focus to first tab. The focused tab must be manually activated.</li>
 			<li><code>HOME</code>: Move focus to the first tab. Activate focused tab after a short delay.</li>
 			<li><code>END</code>: Move focus to the last tab. Activate focused tab after a short delay.</li>
 			<li><code>SPACE</code>: Activate panel associated with focused tab.</li>
