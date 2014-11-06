@@ -105,9 +105,16 @@
 			<example-value>[
 		{
 			text: "Ok",
+			icons: {
+				primary: "ui-icon-heart"
+			},
 			click: function() {
 				$( this ).dialog( "close" );
 			}
+
+			// Uncommenting the following line would hide the text,
+			// resulting in the label being used as a tooltip
+			//showText: false
 		}
 	]</example-value>
 			<desc>Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.</desc>
