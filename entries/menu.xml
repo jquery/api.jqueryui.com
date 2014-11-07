@@ -251,7 +251,7 @@ _closeOnDocumentClick: function( event ) {
 		</method>
 		<method name="_isDivider" return="Boolean">
 			<desc>
-				Determines whether an item should acually be represented as a divider instead of a menu item. By default any item that contains just spaces and/or dashes is considered a divider.
+				Determines whether an item should actually be represented as a divider instead of a menu item. By default any item that contains just spaces and/or dashes is considered a divider.
 			</desc>
 			<argument name="item" type="jQuery"/>
 			<example>

@@ -219,7 +219,7 @@ _create: function() {
 					The public <a href="#method-destroy"><code>destroy()</code></a> method cleans up all common data, events, etc. and then delegates out to <code>_destroy()</code> for custom, widget-specific, cleanup.
 				</desc>
 				<example>
-					<desc>Remove a class from the widget's element when the wiget is destroyed.</desc>
+					<desc>Remove a class from the widget's element when the widget is destroyed.</desc>
 					<code><![CDATA[
 _destroy: function() {
 	this.element.removeClass( "my-widget" );
