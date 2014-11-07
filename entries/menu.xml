@@ -5,23 +5,36 @@
 		Themeable menu with mouse and keyboard interactions for navigation.
 	</desc>
 	<longdesc>
-		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
+		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship. The most commonly used element is the unordered list (<code>&lt;ul></code>). Additionally, the contents of each menu item must be wrapped with a block-level DOM element. In the example below <code>&lt;div&gt;</code> elements are used as wrappers:</p>
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3
+	<li>
+		<div>Item 1</div>
+	</li>
+	<li>
+		<div>Item 2</div>
+	</li>
+	<li>
+		<div>Item 3</div>
 		<ul>
-			<li>Item 3-1</li>
-			<li>Item 3-2</li>
-			<li>Item 3-3</li>
-			<li>Item 3-4</li>
-			<li>Item 3-5</li>
+			<li>
+				<div>Item 3-1</div>
+			</li>
+			<li>
+				<div>Item 3-2</div>
+			</li>
+			<li>
+				<div>Item 3-3</div>
+			</li>
 		</ul>
 	</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+	<li>
+		<div>Item 4</div>
+	</li>
+	<li>
+		<div>Item 5</div>
+	</li>
 </ul>
 ]]></code></pre>
 
@@ -35,20 +48,26 @@
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li><span class="ui-icon ui-icon-disk"></span>Save</li>
+	<li>
+		<div><span class="ui-icon ui-icon-disk"></span>Save</div>
+	</li>
 </ul>
 ]]></code></pre>
 		<p>Menu automatically adds the necessary padding to items without icons.</p>
 
 		<h3 id="dividers">Dividers</h3>
 
-		<p>Divider elements can be created by including unlinked menu items that contain only spaces and/or dashes:</p>
+		<p>Divider elements can be created by including menu items that contain only spaces and/or dashes:</p>
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
+	<li>
+		<div>Item 1</div>
+	</li>
 	<li>-</li>
-	<li>Item 2</li>
+	<li>
+		<div>Item 2</div>
+	</li>
 </ul>
 ]]></code></pre>
 
@@ -76,7 +95,12 @@
 					<li>
 						<code>ui-menu-item</code>: The container for individual menu items.
 						<ul>
-							<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+							<li>
+								<code>ui-menu-item-wrapper</code>: The wrapper element inside each individual menu item.
+								<ul>
+									<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li><code>ui-menu-divider</code>: Divider elements between menu items.</li>
@@ -167,7 +191,7 @@
 		</method>
 		<method name="focus" example-params='null, menu.find( ".ui-menu-item:last" )'>
 			<desc>
-				Activates a particular menu item, begins opening any sub-menu if present and triggers the menu's <a href="#event-focus"><code>focus</code></a> event.
+				Activates the given menu item and triggers the menu's <a href="#event-focus"><code>focus</code></a> event. Opens the menu item's sub-menu, if one exists.
 			</desc>
 			<argument name="event" type="Event" optional="true">
 				<desc>What triggered the menu item to gain focus.</desc>
@@ -318,19 +342,32 @@ $( "#menu" ).menu();
 ]]></css>
 		<html><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3
+	<li>
+		<div>Item 1</div>
+	</li>
+	<li>
+		<div>Item 2</div>
+	</li>
+	<li>
+		<div>Item 3</div>
 		<ul>
-			<li>Item 3-1</li>
-			<li>Item 3-2</li>
-			<li>Item 3-3</li>
-			<li>Item 3-4</li>
-			<li>Item 3-5</li>
+			<li>
+				<div>Item 3-1</div>
+			</li>
+			<li>
+				<div>Item 3-2</div>
+			</li>
+			<li>
+				<div>Item 3-3</div>
+			</li>
 		</ul>
 	</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+	<li>
+		<div>Item 4</div>
+	</li>
+	<li>
+		<div>Item 5</div>
+	</li>
 </ul>
 ]]></html>
 	</example>
