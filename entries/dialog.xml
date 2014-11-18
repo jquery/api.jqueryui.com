@@ -21,7 +21,7 @@
 			<li>The dialog itself</li>
 		</ol>
 
-		<p>While open, the dialog widget ensures that tabbing cycles focus between elements within the dialog itself, not elements outside of it. Modal dialogs additionally prevent mouse users from clicking on elements outside of the dialog.</p>
+		<p>While open, the dialog widget ensures that keyboard navigation cycles the focus state among elements within the dialog itself, not elements outside of it. Modal dialogs additionally prevent mouse users from clicking on elements outside of the dialog.</p>
 
 		<p>Upon closing a dialog, focus is automatically returned to the element that had focus when the dialog was opened.</p>
 
