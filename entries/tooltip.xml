@@ -59,6 +59,12 @@
 			<type name="String">
 				<desc>A string of HTML to use for the tooltip content.</desc>
 			</type>
+			<type name="Element">
+				<desc>A DOM element to use for the tooltip content.</desc>
+			</type>
+			<type name="jQuery">
+				<desc>A jQuery object to use for the tooltip content.</desc>
+			</type>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
