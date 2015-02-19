@@ -56,6 +56,9 @@
 	<example>
 		<desc>A simple jQuery UI Position example.</desc>
 		<css><![CDATA[
+	#targetElement {
+		height: 240px;
+	}
 	.positionDiv {
 		position: absolute;
 		width: 75px;
