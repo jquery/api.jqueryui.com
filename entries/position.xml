@@ -54,13 +54,19 @@
 		</argument>
 	</signature>
 	<example>
+		<height>300</height>
 		<desc>A simple jQuery UI Position example.</desc>
 		<css><![CDATA[
+	#targetElement {
+		height: 200px;
+		margin: 50px;
+		background: #9cf;
+	}
 	.positionDiv {
 		position: absolute;
 		width: 75px;
 		height: 75px;
-		background: green;
+		background: #080;
 	}
 ]]></css>
 		<code><![CDATA[
