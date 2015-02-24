@@ -160,13 +160,11 @@
 				</property>
 			</argument>
 			<example>
-				<desc>Constrain horizontal resizing:</desc>
+				<desc>Restrict height resizing to 30 pixel increments:</desc>
 				<code><![CDATA[
 				$( ".selector" ).resizable({
 					resize: function( event, ui ) {
-
-						// Force a max width of 300 pixels
-						ui.size.width = Math.max( 300, ui.size.width );
+						ui.size.height = Math.round( ui.size.height / 30 ) * 30;
 					}
 				});
 				]]></code>
