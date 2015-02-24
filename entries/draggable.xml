@@ -174,19 +174,32 @@
 			</argument>
 		</event>
 		<event name="drag">
-			<desc>Triggered while the mouse is moved during the dragging.</desc>
+			<desc>Triggered while the mouse is moved during the dragging, immediately before the current move happens.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="helper" type="jQuery">
 					<desc>The jQuery object representing the helper that's being dragged.</desc>
 				</property>
 				<property name="position" type="Object">
-					<desc>Current CSS position of the helper as <code>{ top, left }</code> object.</desc>
+					<desc>Current CSS position of the helper as <code>{ top, left }</code> object. The values may be changed to modify where the element will be positioned. This is useful for custom containment, snapping, etc.</desc>
 				</property>
 				<property name="offset" type="Object">
 					<desc>Current offset position of the helper as <code>{ top, left }</code> object.</desc>
 				</property>
 			</argument>
+			<example>
+				<desc>Constrain movement via <code>ui.position</code>:</desc>
+				<code><![CDATA[
+				$( ".selector" ).draggable({
+					drag: function( event, ui ) {
+
+						// Keep the left edge of the element
+						// at least 100 pixels from the container
+						ui.position.left = Math.min( 100, ui.position.left );
+					}
+				});
+				]]></code>
+			</example>
 		</event>
 		<event name="stop">
 			<desc>Triggered when dragging stops.</desc>
