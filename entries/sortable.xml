@@ -62,10 +62,12 @@
 			<desc>Moves the sorting element or helper so the cursor always appears to drag from the same position. Coordinates can be given as a hash using a combination of one or two keys: <code>{ top, left, right, bottom }</code>.</desc>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
+			<deprecated>1.12</deprecated>
 			<desc>Time in milliseconds to define when the sorting should start. Adding a delay helps preventing unwanted drags when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" type="Number" default="1" example-value='5'>
+			<deprecated>1.12</deprecated>
 			<desc>Tolerance, in pixels, for when sorting should start. If specified, sorting will not start until after mouse is dragged beyond distance. Can be used to allow for clicks on elements within a handle.</desc>
 		</option>
 		<option name="dropOnEmpty" type="Boolean" default="true" example-value='false'>
