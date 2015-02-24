@@ -296,7 +296,7 @@ _setOptions: function( options ) {
 ]]></code>
 				</example>
 				<argument name="options" type="Object">
-					<desc>A map of option-value pairs to set.</desc>
+					<desc>An object containing options to set, with the name of the option as the key and the option value as the value.</desc>
 				</argument>
 			</method>
 			<method name="_setOption">
@@ -341,7 +341,7 @@ _setOption: function( key, value ) {
 				</argument>
 				<argument name="handlers" type="Object">
 					<desc>
-						A map in which the string keys represent the event type and optional selector for delegation, and the values represent a handler function to be called for the event.
+						An object in which the keys represent the event type and optional selector for delegation, and the values represent a handler function to be called for the event.
 					</desc>
 				</argument>
 				<example>
