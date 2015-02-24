@@ -64,10 +64,12 @@
 			</type>
 		</option>
 		<option name="delay" type="Number" default="0" example-value='150'>
+			<deprecated>1.12</deprecated>
 			<desc>Tolerance, in milliseconds, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond duration. This can help prevent unintended resizing when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" type="Number" default="1" example-value='30'>
+			<deprecated>1.12</deprecated>
 			<desc>Tolerance, in pixels, for when resizing should start. If specified, resizing will not start until after mouse is moved beyond distance. This can help prevent unintended resizing when clicking on an element.</desc>
 		</option>
 		<option name="ghost" type="Boolean" default="false" example-value='true'>
