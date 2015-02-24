@@ -27,9 +27,9 @@
 
 		<h3 id="utility-functions">Utility functions</h3>
 
-		<h4 id="utility-setDefaults">$.datepicker.setDefaults( settings )</h4>
-		<p>Change the default settings for all date pickers.</p>
-		<p>Use the <a href="#method-option"><code>option()</code></a> method to change settings for individual instances.</p>
+		<h4 id="utility-setDefaults">$.datepicker.setDefaults( options )</h4>
+		<p>Change the default options for all date pickers.</p>
+		<p>Use the <a href="#method-option"><code>option()</code></a> method to change options for individual instances.</p>
 		<div>
 			<strong>Code examples:</strong>
 			<p>Set all date pickers to open on focus or a click on an icon.</p>
@@ -47,7 +47,7 @@
 			</code></pre>
 		</div>
 
-		<h4 id="utility-formatDate">$.datepicker.formatDate( format, date, settings )</h4>
+		<h4 id="utility-formatDate">$.datepicker.formatDate( format, date, options )</h4>
 		<p>Format a date into a string value with a specified format.</p>
 		<p>The format can be combinations of the following:</p>
 		<ul>
@@ -101,7 +101,7 @@
 			</code></pre>
 		</div>
 
-		<h4 id="utility-parseDate">$.datepicker.parseDate( format, value, settings )</h4>
+		<h4 id="utility-parseDate">$.datepicker.parseDate( format, value, options )</h4>
 		<p>Extract a date from a string value with a specified format.</p>
 		<p>The format can be combinations of the following:</p>
 		<ul>
@@ -175,7 +175,7 @@
 		</div>
 
 		<h3>Localization</h3>
-		<p>Datepicker provides support for localizing its content to cater for different languages and date formats. Each localization is contained within its own file with the language code appended to the name, e.g., <code>jquery.ui.datepicker-fr.js</code> for French. The desired localization file should be included after the main datepicker code. Each localization file adds its settings to the set of available localizations and automatically applies them as defaults for all instances. Localization files can be found at <a href="https://github.com/jquery/jquery-ui/tree/master/ui/i18n">https://github.com/jquery/jquery-ui/tree/master/ui/i18n</a>.</p>
+		<p>Datepicker provides support for localizing its content to cater for different languages and date formats. Each localization is contained within its own file with the language code appended to the name, e.g., <code>jquery.ui.datepicker-fr.js</code> for French. The desired localization file should be included after the main datepicker code. Each localization file adds its options to the set of available localizations and automatically applies them as defaults for all instances. Localization files can be found at <a href="https://github.com/jquery/jquery-ui/tree/master/ui/i18n">https://github.com/jquery/jquery-ui/tree/master/ui/i18n</a>.</p>
 		<p>The <code>$.datepicker.regional</code> attribute holds an array of localizations, indexed by language code, with <code>""</code> referring to the default (English). Each entry is an object with the following attributes: <code>closeText</code>, <code>prevText</code>, <code>nextText</code>, <code>currentText</code>, <code>monthNames</code>, <code>monthNamesShort</code>, <code>dayNames</code>, <code>dayNamesShort</code>, <code>dayNamesMin</code>, <code>weekHeader</code>, <code>dateFormat</code>, <code>firstDay</code>, <code>isRTL</code>, <code>showMonthAfterYear</code>, and <code>yearSuffix</code>.</p>
 		<p>You can restore the default localizations with:</p>
 		<code>$.datepicker.setDefaults( $.datepicker.regional[ "" ] );</code>
@@ -405,7 +405,7 @@
 			<desc>When the datepicker should appear. The datepicker can appear when the field receives focus (<code>"focus"</code>), when a button is clicked (<code>"button"</code>), or when either event occurs (<code>"both"</code>).</desc>
 		</option>
 		<option name="showOptions" type="Object" default="{}" example-value='{ direction: "up" }'>
-			<desc>If using one of the jQuery UI effects for the <a href="#option-showAnim"><code>showAnim</code></a> option, you can provide additional settings for that animation via this option.</desc>
+			<desc>If using one of the jQuery UI effects for the <a href="#option-showAnim"><code>showAnim</code></a> option, you can provide additional properties for that animation using this option.</desc>
 		</option>
 		<option name="showOtherMonths" type="Boolean" default="false" example-value="true">
 			<desc>Whether to display dates in other months (non-selectable) at the start or end of the current month. To make these days selectable use the <a href="#option-selectOtherMonths"><code>selectOtherMonths</code></a> option.</desc>
@@ -471,8 +471,8 @@
 			<argument name="onSelect" type="Function" optional="true">
 				<desc>A callback function when a date is selected. The function receives the date text and date picker instance as parameters.</desc>
 			</argument>
-			<argument name="settings" type="Options" optional="true">
-				<desc>The new settings for the date picker.</desc>
+			<argument name="options" type="Options" optional="true">
+				<desc>The new options for the date picker.</desc>
 			</argument>
 			<argument name="pos" type="Number[2] or MouseEvent" optional="true">
 				<desc>The position of the top/left of the dialog as <code>[x, y]</code> or a <code>MouseEvent</code> that contains the coordinates. If not specified the dialog is centered on the screen.</desc>
