@@ -78,7 +78,7 @@
 				<desc>Name of <a href="/easings/">easing</a> to use with default duration.</desc>
 			</type>
 			<type name="Object">
-				<desc><code>easing</code> and <code>duration</code> properties to configure animations.
+				<desc>An object containing <code>easing</code> and <code>duration</code> properties to configure animations.
 					<ul>
 						<li>Can also contain a <code>down</code> property with any of the above options.</li>
 						<li>"Down" animations occur when the panel being activated has a lower index than the currently active panel.</li>
