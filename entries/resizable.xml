@@ -153,12 +153,22 @@
 					<desc>The size represented as <code>{ width, height }</code> before the resizable is resized</desc>
 				</property>
 				<property name="position" type="Object">
-					<desc>The current position represented as <code>{ left, top }</code></desc>
+					<desc>The current position represented as <code>{ left, top }</code>. The values may be changed to modify where the element will be positioned. Useful for custom resizing logic.</desc>
 				</property>
 				<property name="size" type="Object">
-					<desc>The current size represented as <code>{ width, height }</code></desc>
+					<desc>The current size represented as <code>{ width, height }</code>. The values may be changed to modify where the element will be positioned. Useful for custom resizing logic.</desc>
 				</property>
 			</argument>
+			<example>
+				<desc>Restrict height resizing to 30 pixel increments:</desc>
+				<code><![CDATA[
+				$( ".selector" ).resizable({
+					resize: function( event, ui ) {
+						ui.size.height = Math.round( ui.size.height / 30 ) * 30;
+					}
+				});
+				]]></code>
+			</example>
 		</event>
 		<event name="stop">
 			<desc>This event is triggered at the end of a resize operation.</desc>
