@@ -15,9 +15,11 @@
 			<desc>Prevents interactions from starting on specified elements.</desc>
 		</option>
 		<option name="delay" type="Number" default="0" example-value="300">
+			<deprecated>1.12</deprecated>
 			<desc>Time in milliseconds after mousedown until the interaction should start. This option can be used to prevent unwanted interactions when clicking on an element.</desc>
 		</option>
 		<option name="distance" type="Number" default="1" example-value="10">
+			<deprecated>1.12</deprecated>
 			<desc>Distance in pixels after mousedown the mouse must move before the interaction should start. This option can be used to prevent unwanted interactions when clicking on an element.</desc>
 		</option>
 	</options>
