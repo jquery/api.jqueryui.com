@@ -25,10 +25,12 @@
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
+			<deprecated>1.12</deprecated>
 			<desc>Time in milliseconds to define when the selecting should start. This helps prevent unwanted selections when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" type="Number" default="0" example-value='30'>
+			<deprecated>1.12</deprecated>
 			<desc>Tolerance, in pixels, for when selecting should start. If specified, selecting will not start until the mouse has been dragged beyond the specified distance.</desc>
 		</option>
 		<option name="filter" type="Selector" default='"*"' example-value='"li"'>
