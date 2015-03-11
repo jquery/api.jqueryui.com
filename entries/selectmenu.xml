@@ -50,7 +50,7 @@
 			</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
-			<desc>Identifies the position of the menu in relation to the associated button element. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of the menu in relation to the associated button element. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 		<option name="width" default="null" example-value="200">
 			<desc>The width of the menu, in pixels. When the value is <code>null</code>, the width of the native select is used.</desc>
