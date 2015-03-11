@@ -19,7 +19,7 @@
 
 			<p>jQuery UI contains many widgets that maintain state and therefore have a slightly different usage pattern than typical jQuery plugins. All of jQuery UI's widgets use the same patterns, which is defined by the widget factory. So if you learn how to use one widget, then you'll know how to use all of them.</p>
 
-			<p><em>Note: This documentation shows examples using the <a href="/progressbar">progressbar widget</a> but the syntax is the same for every widget.</em></p>
+			<p><em>Note: This documentation shows examples using the <a href="/progressbar/">progressbar widget</a> but the syntax is the same for every widget.</em></p>
 
 			<h3>Initialization</h3>
 
