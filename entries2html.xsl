@@ -27,7 +27,7 @@ the method of the same name from jQuery core -->
 <xsl:template match="//placeholder[@name = 'core-link']">
 	<a>
 		<xsl:attribute name="href">
-			<xsl:value-of select="concat('//api.jquery.com/', ancestor::entry/@name)"/>
+			<xsl:value-of select="concat('//api.jquery.com/', ancestor::entry/@name, '/')"/>
 		</xsl:attribute>
 		<code>
 			<xsl:text>.</xsl:text>
