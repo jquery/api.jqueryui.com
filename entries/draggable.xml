@@ -117,7 +117,7 @@
 			<desc>The duration of the revert animation, in milliseconds. Ignored if the <a href="#option-revert"><code>revert</code></a> option is <code>false</code>.</desc>
 		</option>
 		<option name="scope" type="String" default='"default"' example-value='"tasks"'>
-			<desc>Used to group sets of draggable and droppable items, in addition to droppable's <a href="/droppable#option-accept"><code>accept</code></a> option. A draggable with the same <code>scope</code> value as a droppable will be accepted by the droppable.</desc>
+			<desc>Used to group sets of draggable and droppable items, in addition to droppable's <a href="/droppable/#option-accept"><code>accept</code></a> option. A draggable with the same <code>scope</code> value as a droppable will be accepted by the droppable.</desc>
 		</option>
 		<option name="scroll" type="Boolean" default="true" example-value="false">
 			<desc>If set to <code>true</code>, container auto-scrolls while dragging.</desc>
