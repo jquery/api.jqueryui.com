@@ -90,7 +90,7 @@
 		<option name="position" default='{ my: "center", at: "center", of: window }'>
 			<desc>Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.</desc>
 			<type name="Object">
-				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+				<desc>Identifies the position of the dialog when opened. The <code>of</code> option defaults to the window, but you can specify another element to position against. You can refer to the <a href="/position/">jQuery UI Position</a> utility for more details about the various options.</desc>
 			</type>
 			<type name="String">
 				<desc>A string representing the position within the viewport. Possible values: <code>"center"</code>, <code>"left"</code>, <code>"right"</code>, <code>"top"</code>, <code>"botom"</code>.</desc>
