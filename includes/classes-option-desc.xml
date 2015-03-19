@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<desc>
+	<p>Specify additional classes to add to the widget's elements. Any of the default keys can be specified to override their value. To learn more about this option, check out the documentation for <a href="/jQuery.widget/#option-classes">jQuery.Widget's <code>classes</code> option</a>.</p>
+	<p>The default value for the <placeholder name="name"/> widget:</p>
+</desc>

@@ -86,8 +86,20 @@
 				</desc>
 			</type>
 		</option>
-		<option name="classes" type="Object" default='{ "ui-accordion": undefined, "ui-accordion-icons": undefined, "ui-accordion-header-icon": undefined, "ui-accordion-header": "ui-corner-top", "ui-accordion-header-active": undefined, "ui-accordion-header-collapsed": "ui-corner-all", "ui-accordion-content": "ui-corner-bottom", "ui-accordion-content-active": undefined }' example-value='{ "ui-accordion-header": null }'>
-			<desc>Specify additional classes to add to the widget's elements. Any of the default keys can be specified to override.</desc>
+		<option name="classes" type="Object" default='Object' example-value='{ "ui-accordion-header": null }'>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<desc>
+				<pre><code>{
+	"ui-accordion": undefined,
+	"ui-accordion-icons": undefined,
+	"ui-accordion-header-icon": undefined,
+	"ui-accordion-header": "ui-corner-top",
+	"ui-accordion-header-active": undefined,
+	"ui-accordion-header-collapsed": "ui-corner-all",
+	"ui-accordion-content": "ui-corner-bottom",
+	"ui-accordion-content-active": undefined
+}</code></pre>
+			</desc>
 		</option>
 		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section.</desc>

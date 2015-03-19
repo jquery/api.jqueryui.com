@@ -193,7 +193,17 @@
 			<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<option name="classes" default="{}" example-value='{ "custom-header": "icon-warning" }'>
-				<desc>Extra classes to add to the widget. See the <code>_addClass</code> for using this in custom widegts. The the documentation of individual widgets to see which classes they support.</desc>
+				<desc>
+					<p>Extra classes to add to the widget. See the <a href="#method-_addClass"><code>_addClass()</code> method</a> for using this in custom widegts. Check out the documentation of individual widgets to see which classes they support.</p>
+					<p>The primary motivation of this option is to map structural classes to theme classes. In other words, any class prefixed with namespace and widget, like <code>"ui-accordion-"</code>, is considered a structural class. These are always added to the widget. In contrast to that, any class not specific to the widget is considered a theme class. These could be part of jQuery UI's CSS framework, but can also come from other CSS frameworks or be defined in custom stylesheets.</p>
+					<ul>
+						<li>structurual classes: the keys of this option, equivalent to the <code>keys</code> argument to <code>_addClass()</code>, for example <code>"ui-accordion-header"</code></li>
+						<li>theme classes: the values of this option, for example <code>"ui-corner-top"</code></li>
+					</ul>
+					<p>In addition to the structural and theme classes, there are also extra classes that are required for layout or other reasons and can't be removed. These are specified in the <code>extras</code> argument to <code>_addClass()</code>, but aren't part of this option.</p>
+					<p>As long as the <code>_addClass()</code>, <code>_removeClass()</code> and <code>_toggleClass()</code> methods are used, any added classes are automatically removed when the widget is destroyed. This can heavily simplify the implementation of custom <code>_destroy()</code> methods.</p>
+					<p class="warning">Setting the <code>classes</code> option will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-accordion-header", null )</code>.</p>
+				</desc>
 				<type name="Object" />
 			</option>
 
@@ -208,19 +218,20 @@
 			<method name="_addClass">
 				<desc>
 					Add classes to an element of the widget.
-					<p>This provides a hook for the user to add additional classes or replace default styling classes, through the <code>classes</code> option.</p>
+					<p>This provides a hook for the user to add additional classes or replace default styling classes, through the <a href="#option-classes"><code>classes</code> option</a>.</p>
+					<p>It also provides automatic removal of these classes when a widget is destroyed.</p>
 				</desc>
 				<argument name="element" type="jQuery" optional="true">
 					<desc>The element to add the classes to. Defaults to <code>this.element</code>.</desc>
 				</argument>
-				<argument name="keys" type="String" optional="true">
+				<argument name="keys" type="String">
 					<desc>
 						The classes to add. If a property of the <code>classes</code> option matches a key, the value will be added as well.
 						<p>Like the <code>element</code> argument, this argument is also optional. To skip it, specify <code>null</code>.</p>
 					</desc>
 				</argument>
-				<argument name="extra" type="String">
-					<desc>Additional classes to add. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option.</desc>
+				<argument name="extra" type="String" optional="true">
+					<desc>Additional classes to add. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
 				</argument>
 				<example>
 					<desc>Add the "loading-indicator" class to the widget's element (<code>this.element</code>. Will also add any additional classes specified through the <code>classes</code> option for the given class.</desc>
