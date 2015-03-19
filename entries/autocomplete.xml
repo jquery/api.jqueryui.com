@@ -32,7 +32,7 @@
 
 		<ul>
 			<li><code>ui-autocomplete</code>: The <a href="/menu/#theming">menu</a> used to display matches to the user.</li>
-			<li><code>ui-autocomplete-input</code>: The input element that the Autocomplete widget was instantiated with.</li>
+			<li><code>ui-autocomplete-input</code>: The input element that the autocomplete widget was instantiated with. While requesting data to display to the user, the <code>ui-autocomplete-loading</code> class is also added to this element.</li>
 		</ul>
 
 		<h3>Dependencies</h3>
@@ -54,6 +54,10 @@
 		</option>
 		<option name="autoFocus" type="Boolean" default="false" example-value="true">
 			<desc>If set to <code>true</code> the first item will automatically be focused when the menu is shown.</desc>
+		</option>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="delay" type="Integer" default="300" example-value="500">
 			<desc>The delay in milliseconds between when a keystroke occurs and when a search is performed. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.</desc>
