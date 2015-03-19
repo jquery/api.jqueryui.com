@@ -5,6 +5,12 @@
 	<longdesc>
 		<p>The jQuery UI Droppable plugin makes selected elements droppable (meaning they accept being dropped on by <a href="/draggable/">draggables</a>). You can specify which draggables each will accept.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li><code>ui-droppable</code>: The droppable element. When a draggable that can be dropped on this dropppable is activated, the <code>ui-droppable-active</code> class is added. When dragging a draggable over this droppable, the <code>ui-droppable-hover</code> class is added.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
@@ -28,6 +34,10 @@
 		</option>
 		<option name="addClasses" type="Boolean" default="true" example-value="false">
 			<desc>If set to <code>false</code>, will prevent the <code>ui-droppable</code> class from being added. This may be desired as a performance optimization when calling <code>.droppable()</code> init on hundreds of elements.</desc>
+		</option>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="greedy" type="Boolean" default="false" example-value="true">

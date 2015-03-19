@@ -49,6 +49,15 @@
 	</note>
 	<added>1.9</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-spinner": "ui-corner-all",
+	"ui-spinner-down": "ui-corner-br",
+	"ui-spinner-up": "ui-corner-tr"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="culture" type="String" default="null" example-value='"fr"'>
 			<desc>Sets the culture to use for parsing and formatting the value. If <code>null</code>, the currently set culture in <code>Globalize</code> is used, see <a href="https://github.com/jquery/globalize">Globalize docs</a> for available cultures. Only relevant if the <a href="#option-numberFormat"><code>numberFormat</code></a> option is set. Requires <a href="https://github.com/jquery/globalize">Globalize</a> to be included.</desc>
 		</option>
