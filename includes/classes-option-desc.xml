@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<desc>
+	<p>Specify additional classes to add to the widget's elements. Any of classes specified in the <a href="#theming">Theming section</a> can be used as keys to override their value. To learn more about this option, check out the <a href="http://learn.jquery.com/jquery-ui/widget-factory/classes-option/">learn article about the <code>classes</code> option</a>.</p>
+</desc>
