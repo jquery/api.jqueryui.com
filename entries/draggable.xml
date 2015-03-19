@@ -41,6 +41,9 @@
 		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='".title"'>
 			<desc>Prevents dragging from starting on specified elements.</desc>
 		</option>
+		<option name="classes" type="Object" default='{ "ui-draggable": undefined, "ui-draggable-disabled": undefined, "ui-draggable-dragging": undefined, "ui-draggable-handle": undefined }' example-value='{ "ui-draggable-handle": "icon-handle" }'>
+			<desc>Specify additional classes to add to the widget's elements. Any of the default keys can be specified to override.</desc>
+		</option>
 		<option name="connectToSortable" type="Selector" default="false" example-value='"#my-sortable"'>
 			<desc>Allows the draggable to be dropped onto the specified sortables. If this option is used, a draggable can be dropped onto a sortable list and then becomes part of it. Note: The <a href="#option-helper"><code>helper</code></a> option must be set to <code>"clone"</code> in order to work flawlessly. Requires the <a href="/sortable/">jQuery UI Sortable plugin</a> to be included.</desc>
 		</option>

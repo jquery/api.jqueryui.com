@@ -192,6 +192,11 @@
 			<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<option name="classes" default="{}" example-value='{ "custom-header": "icon-warning" }'>
+				<desc>Extra classes to add to the widget. See the <code>_addClass</code> for using this in custom widegts. The the documentation of individual widgets to see which classes they support.</desc>
+				<type name="Object" />
+			</option>
+
 		</options>
 		<methods suppress-auto-examples="true">
 			<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
@@ -200,6 +205,42 @@
 			<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<method name="_addClass">
+				<desc>
+					Add classes to an element of the widget.
+					<p>This provides a hook for the user to add additional classes or replace default styling classes, through the <code>classes</code> option.</p>
+				</desc>
+				<argument name="element" type="jQuery" optional="true">
+					<desc>The element to add the classes to. Defaults to <code>this.element</code>.</desc>
+				</argument>
+				<argument name="keys" type="String" optional="true">
+					<desc>
+						The classes to add. If a property of the <code>classes</code> option matches a key, the value will be added as well.
+						<p>Like the <code>element</code> argument, this argument is also optional. To skip it, specify <code>null</code>.</p>
+					</desc>
+				</argument>
+				<argument name="extra" type="String">
+					<desc>Additional classes to add. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option.</desc>
+				</argument>
+				<example>
+					<desc>Add the "loading-indicator" class to the widget's element (<code>this.element</code>. Will also add any additional classes specified through the <code>classes</code> option for the given class.</desc>
+					<code><![CDATA[
+this._addClass( "loading-indicator" );
+]]></code>
+				</example>
+				<example>
+					<desc>Add the "popup-header" class to the specified element (here referencing <code>this.popup</code>). Will also add any additional classes specified through the <code>classes</code> option for the given class. In addition, it will always add the "ui-front" class.</desc>
+					<code><![CDATA[
+this._addClass( this.popup, "popup-header", "ui-front" );
+]]></code>
+				</example>
+				<example>
+					<desc>Adds the "ui-helper-hidden-accessible" class the to a specific element. Uses <code>null</code> for the <code>keys</code> argument to skip it.</desc>
+					<code><![CDATA[
+this._addClass( this.liveRegion, null, "ui-helper-hidden-accessible" );
+]]></code>
+				</example>
+			</method>
 			<method name="_create">
 				<desc>
 					The <code>_create()</code> method is the widget's constructor.
