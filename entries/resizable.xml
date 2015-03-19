@@ -5,6 +5,15 @@
 	<longdesc>
 		<p>The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li><code>ui-resizable</code>: The resizable element. During a resize, the <code>ui-resizable-resizing</code> class is added. When the <a href="#option-autoHide"><code>autoHide</code> option</a> is set, the <code>ui-resizable-autohide</code> class is added.</li>
+			<li><code>ui-resizable-handle</code>: One of the handles of the resizable, specified using the <a href="#option-handles"><code>handles</code> option</a>. Each handle will also have a <code>ui-resizable-{direction}</code> class according to its position.</li>
+			<li><code>ui-resizable-ghost</code>: When using the <a href="#option-ghost"><code>ghost</code> option</a>, this class is applied to the ghost helper element.</li>
+			<li><code>ui-resizable-helper</code>: When the <a href="#option-animate"><code>animate</code> option</a> is used, but the <a href="#option-helper"><code>helper</code> option</a> isn't specified, this class is added to the generated helper.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
@@ -62,6 +71,13 @@
 			<type name="String">
 				<desc>Possible values: <code>"parent"</code> and <code>"document"</code>.</desc>
 			</type>
+		</option>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-resizable-se": "ui-icon ui-icon-gripsmall-diagonal-se"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="delay" type="Number" default="0" example-value='150'>
 			<deprecated>1.12</deprecated>
