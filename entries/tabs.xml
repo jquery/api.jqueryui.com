@@ -63,12 +63,12 @@
 
 		<ul>
 			<li>
-				<code>ui-tabs</code>: The outer container of the tabs. This element will additionally have a class of <code>ui-tabs-collapsible</code> when the <a href="#option-collapsible"><code>collapsible</code></a> option is set.
+				<code>ui-tabs</code>: The outer container of the tabs. This element will additionally have a class of <code>ui-tabs-collapsible</code> when the <a href="#option-collapsible"><code>collapsible</code> option</a> is set.
 				<ul>
 					<li>
 						<code>ui-tabs-nav</code>: The list of tabs.
 						<ul>
-							<li>The active list item in the nav will have a <code>ui-tabs-active</code> class. Any list item whose associated content is loading via an Ajax call will have a <code>ui-tabs-loading</code> class.
+							<li><code>ui-tabs-tab</code>: One of the items in the list of tabs.The active item will have the <code>ui-tabs-active</code> class. Any list item whose associated content is loading via an Ajax call will have the <code>ui-tabs-loading</code> class.
 								<ul>
 									<li><code>ui-tabs-anchor</code>: The anchors used to switch panels.</li>
 								</ul>
@@ -100,6 +100,16 @@
 			<type name="Integer">
 				<desc>The zero-based index of the panel that is active (open). A negative value selects panels going backward from the last panel.</desc>
 			</type>
+		</option>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-tabs": "ui-corner-all",
+	"ui-tabs-nav": "ui-corner-all",
+	"ui-tabs-tab": "ui-corner-top",
+	"ui-tabs-panel": "ui-corner-bottom"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>When set to <code>true</code>, the active panel can be closed.</desc>
