@@ -14,7 +14,7 @@
 
 		<ul>
 			<li>
-				<code>ui-progressbar</code>: The outer container of the progressbar. This element will additionally have a class of <code>ui-progressbar-indeterminate</code> for indeterminate progressbars.
+				<code>ui-progressbar</code>: The outer container of the progressbar. This element will additionally have a class of <code>ui-progressbar-indeterminate</code> for indeterminate progressbars. For determinate progressbars, the <code>ui-progressbar-complete</code> class is added once the maximum value is reached.
 				<ul>
 					<li>
 						<code>ui-progressbar-value</code>: The element that represents the filled portion of the progressbar.
@@ -35,6 +35,15 @@
 	<note id="functional-css"/>
 	<added>1.6</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-progressbar": "ui-corner-all",
+	"ui-progressbar-complete": "ui-corner-right",
+	"ui-progressbar-value": "ui-corner-left"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="max" default="100" type="Number" example-value="1024">
 			<desc>The maximum value of the progressbar.</desc>

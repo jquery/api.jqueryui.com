@@ -39,6 +39,13 @@
 	<note id="functional-css"/>
 	<added>1.8</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-button": "ui-corner-all",
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" default="{ primary: null, secondary: null }" example-value='{ primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }'>
 			<desc>
