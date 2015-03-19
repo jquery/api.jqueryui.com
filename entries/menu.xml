@@ -90,13 +90,13 @@
 
 		<ul>
 			<li>
-				<code>ui-menu</code>: The outer container of the menu. This element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
+				<code>ui-menu</code>: The outer container of the menu, as well as any nested submenu. This top-level element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
 				<ul>
 					<li>
-						<code>ui-menu-item</code>: The container for individual menu items.
+						<code>ui-menu-item</code>: The container for individual menu items. This contains the element for the item's text itself as well as the element for submenus.
 						<ul>
 							<li>
-								<code>ui-menu-item-wrapper</code>: The wrapper element inside each individual menu item.
+								<code>ui-menu-item-wrapper</code>: The wrapper element inside each individual menu item, containting the text content and the icon indicating submenus.
 								<ul>
 									<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
 								</ul>
@@ -118,13 +118,17 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="icons" type="Object" default='{ submenu: "ui-icon-carat-1-e" }' example-value='{ submenu: "ui-icon-circle-triangle-e" }'>
+		<option name="icons" type="Object" example-value='{ submenu: "ui-icon-circle-triangle-e" }'>
+			<default>{
+	submenu: "ui-icon-carat-1-e"
+}</default>
 			<desc>
 				Icons to use for submenus, matching <a href="/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>.
-				<ul>
-					<li>submenu (string, default: "ui-icon-carat-1-e")</li>
-				</ul>
 			</desc>
 		</option>
 		<option name="items" type="String" default='"> *"' example-value='".custom-item"' init-only="true" added="1.11.0">

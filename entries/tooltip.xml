@@ -40,6 +40,13 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-tooltip": "ui-corner-all ui-widget-shadow"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="content" default="function returning the title attribute" example-value='"Awesome title!"'>
 			<desc>
 				<p>The content of the tooltip.</p>
