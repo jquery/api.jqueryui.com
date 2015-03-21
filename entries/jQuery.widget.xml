@@ -202,7 +202,7 @@
 					</ul>
 					<p>In addition to the structural and theme classes, there are also extra classes that are required for layout or other reasons and can't be removed. These are specified in the <code>extras</code> argument to <code>_addClass()</code>, but aren't part of this option.</p>
 					<p>As long as the <code>_addClass()</code>, <code>_removeClass()</code> and <code>_toggleClass()</code> methods are used, any added classes are automatically removed when the widget is destroyed. This can heavily simplify the implementation of custom <code>_destroy()</code> methods.</p>
-					<p class="warning">Setting the <code>classes</code> option will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-accordion-header", null )</code>.</p>
+					<p class="warning">Setting the <code>classes</code> option after creation will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-accordion-header", null )</code>.</p>
 				</desc>
 				<type name="Object" />
 			</option>
