@@ -113,7 +113,7 @@ $( ".selector" ).accordion({
 				<desc>Get or set a property of the <code>classes</code> option, after initialization, here reading and changing the theming for the "ui-accordion-header" class:</desc>
 				<code><![CDATA[
 // Getter
-$( ".selector" ).accordion( "option", "classes.ui-accordion-header" );
+var headerClass = $( ".selector" ).accordion( "option", "classes.ui-accordion-header" );
 
 // Setter
 $( ".selector" ).accordion( "option", "classes.ui-accordion-header", null );
