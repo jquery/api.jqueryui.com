@@ -194,15 +194,9 @@
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<option name="classes" default="{}" example-value='{ "custom-header": "icon-warning" }'>
 				<desc>
-					<p>Extra classes to add to the widget. See the <a href="#method-_addClass"><code>_addClass()</code> method</a> for using this in custom widegts. Check out the documentation of individual widgets to see which classes they support.</p>
-					<p>The primary motivation of this option is to map structural classes to theme classes. In other words, any class prefixed with namespace and widget, like <code>"ui-accordion-"</code>, is considered a structural class. These are always added to the widget. In contrast to that, any class not specific to the widget is considered a theme class. These could be part of jQuery UI's CSS framework, but can also come from other CSS frameworks or be defined in custom stylesheets.</p>
-					<ul>
-						<li>structurual classes: the keys of this option, equivalent to the <code>keys</code> argument to <code>_addClass()</code>, for example <code>"ui-accordion-header"</code></li>
-						<li>theme classes: the values of this option, for example <code>"ui-corner-top"</code></li>
-					</ul>
-					<p>In addition to the structural and theme classes, there are also extra classes that are required for layout or other reasons and can't be removed. These are specified in the <code>extras</code> argument to <code>_addClass()</code>, but aren't part of this option.</p>
-					<p>As long as the <code>_addClass()</code>, <code>_removeClass()</code> and <code>_toggleClass()</code> methods are used, any added classes are automatically removed when the widget is destroyed. This can heavily simplify the implementation of custom <code>_destroy()</code> methods.</p>
-					<p class="warning">Setting the <code>classes</code> option after creation will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-accordion-header", null )</code>.</p>
+					<p>Additional (thematic) classes to add to the widget, in addition to the structural classes. The structural classes are used as keys of this option and the thematic classes are the values. See the <a href="#method-_addClass"><code>_addClass()</code> method</a> for using this in custom widgets. Check out the documentation of individual widgets to see which classes they support.</p>
+					<p>The primary motivation of this option is to map structural classes to theme classes. In other words, any class prefixed with namespace and widget, like <code>"ui-progressbar-"</code>, is considered a structural class. These are always added to the widget. In contrast to that, any class not specific to the widget is considered a theme class. These could be part of jQuery UI's CSS framework, but can also come from other CSS frameworks or be defined in custom stylesheets.</p>
+					<p class="warning">Setting the <code>classes</code> option after creation will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-progressbar-value", null )</code>.</p>
 				</desc>
 				<type name="Object" />
 			</option>
@@ -219,30 +213,30 @@
 				<desc>
 					Add classes to an element of the widget.
 					<p>This provides a hook for the user to add additional classes or replace default styling classes, through the <a href="#option-classes"><code>classes</code> option</a>.</p>
-					<p>It also provides automatic removal of these classes when a widget is destroyed.</p>
+					<p>It also provides automatic removal of these classes when a widget is destroyed, as long as you're using <code>_addClass()</code>, <code>_removeClass()</code> and <code>_toggleClass()</code> together. This can heavily simplify the implementation of custom <code>_destroy()</code> methods.</p>
 				</desc>
 				<argument name="element" type="jQuery" optional="true">
 					<desc>The element to add the classes to. Defaults to <code>this.element</code>.</desc>
 				</argument>
 				<argument name="keys" type="String">
 					<desc>
-						The classes to add. If a property of the <code>classes</code> option matches a key, the value will be added as well.
-						<p>Like the <code>element</code> argument, this argument is also optional. To skip it, specify <code>null</code>.</p>
+						The classes to add, as a space-delimited list. If a property of the <a href="#option-classes"><code>classes</code> option</a> matches a key, the value will be added as well.
+						<p>When you only need the <code>extra</code> argument, you can skip this argument by specifying <code>null</code>.</p>
 					</desc>
 				</argument>
 				<argument name="extra" type="String" optional="true">
-					<desc>Additional classes to add. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
+					<desc>Additional classes to add, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
 				</argument>
 				<example>
 					<desc>Add the "loading-indicator" class to the widget's element (<code>this.element</code>. Will also add any additional classes specified through the <code>classes</code> option for the given class.</desc>
 					<code><![CDATA[
-this._addClass( "loading-indicator" );
+this._addClass( "ui-progressbar" );
 ]]></code>
 				</example>
 				<example>
-					<desc>Add the "popup-header" class to the specified element (here referencing <code>this.popup</code>). Will also add any additional classes specified through the <code>classes</code> option for the given class. In addition, it will always add the "ui-front" class.</desc>
+					<desc>Add the "demo-popup-header" class to the specified element (here referencing <code>this.popup</code>). Will also add any additional classes specified through the <code>classes</code> option for the given class. In addition, it will always add the "ui-front" class.</desc>
 					<code><![CDATA[
-this._addClass( this.popup, "popup-header", "ui-front" );
+this._addClass( this.popup, "demo-popup-header", "ui-front" );
 ]]></code>
 				</example>
 				<example>

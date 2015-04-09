@@ -86,7 +86,7 @@
 				</desc>
 			</type>
 		</option>
-		<option name="classes" type="Object" default='Object' example-value='{ "ui-accordion-header": null }'>
+		<option name="classes" type="Object" default='Object'>
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<desc>
 				<pre><code>{
@@ -100,6 +100,25 @@
 	"ui-accordion-content-active": undefined
 }</code></pre>
 			</desc>
+			<example>
+				<desc>Initialize the accordion with the <code>classes</code> option specified, changing the theming for the "ui-accordion-header" class:</desc>
+				<code><![CDATA[
+$( ".selector" ).accordion({
+	classes: {
+		"ui-accordion-header": null
+	}
+});
+]]></code>
+			</example><example>
+				<desc>Get or set a property of the <code>classes</code> option, after initialization, here reading and changing the theming for the "ui-accordion-header" class:</desc>
+				<code><![CDATA[
+// Getter
+$( ".selector" ).accordion( "option", "classes.ui-accordion-header" );
+
+// Setter
+$( ".selector" ).accordion( "option", "classes.ui-accordion-header", null );
+]]></code>
+			</example>
 		</option>
 		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section.</desc>
