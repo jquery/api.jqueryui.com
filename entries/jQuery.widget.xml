@@ -240,7 +240,7 @@ this._addClass( this.popup, "demo-popup-header", "ui-front" );
 ]]></code>
 				</example>
 				<example>
-					<desc>Adds the "ui-helper-hidden-accessible" class the to a specific element. Uses <code>null</code> for the <code>keys</code> argument to skip it.</desc>
+					<desc>Adds the "ui-helper-hidden-accessible" class to the specified element. Uses <code>null</code> for the <code>keys</code> argument to skip it.</desc>
 					<code><![CDATA[
 this._addClass( this.liveRegion, null, "ui-helper-hidden-accessible" );
 ]]></code>

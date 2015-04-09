@@ -86,10 +86,8 @@
 				</desc>
 			</type>
 		</option>
-		<option name="classes" type="Object" default='Object'>
-			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<desc>
-				<pre><code>{
+		<option name="classes" type="Object">
+			<default>{
 	"ui-accordion": undefined,
 	"ui-accordion-icons": undefined,
 	"ui-accordion-header-icon": undefined,
@@ -98,27 +96,9 @@
 	"ui-accordion-header-collapsed": "ui-corner-all",
 	"ui-accordion-content": "ui-corner-bottom",
 	"ui-accordion-content-active": undefined
-}</code></pre>
-			</desc>
-			<example>
-				<desc>Initialize the accordion with the <code>classes</code> option specified, changing the theming for the "ui-accordion-header" class:</desc>
-				<code><![CDATA[
-$( ".selector" ).accordion({
-	classes: {
-		"ui-accordion-header": null
-	}
-});
-]]></code>
-			</example><example>
-				<desc>Get or set a property of the <code>classes</code> option, after initialization, here reading and changing the theming for the "ui-accordion-header" class:</desc>
-				<code><![CDATA[
-// Getter
-var headerClass = $( ".selector" ).accordion( "option", "classes.ui-accordion-header" );
-
-// Setter
-$( ".selector" ).accordion( "option", "classes.ui-accordion-header", null );
-]]></code>
-			</example>
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="collapsible" type="Boolean" default="false" example-value="true">
 			<desc>Whether all the sections can be closed at once. Allows collapsing the active section.</desc>
@@ -142,7 +122,11 @@ $( ".selector" ).accordion( "option", "classes.ui-accordion-header", null );
 				</ul>
 			</desc>
 		</option>
-		<option name="icons" type="Object" default='{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }' example-value='{ "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }'>
+		<option name="icons" type="Object" example-value='{ "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }'>
+			<default>{
+	"header": "ui-icon-triangle-1-e",
+	"activeHeader": "ui-icon-triangle-1-s"
+}</default>
 			<desc>
 				<p>Icons to use for headers, matching <a href="/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>. Set to <code>false</code> to have no icons displayed.</p>
 				<ul>

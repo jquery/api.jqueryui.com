@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<examples>
+	<example>
+		<desc>Initialize the <placeholder name="name"/> with the <code>classes</code> option specified, changing the theming for the <code>ui-<placeholder name="name"/></code> class:</desc>
+		<code>
+$( ".selector" ).<placeholder name="name"/>({
+	classes: {
+		"ui-<placeholder name="name"/>": "highlight"
+	}
+});
+	</code>
+	</example>
+	<example>
+		<desc>Get or set a property of the <code>classes</code> option, after initialization, here reading and changing the theming for the <code>ui-<placeholder name="name"/></code> class:</desc>
+		<code>
+// Getter
+var themeClass = $( ".selector" ).<placeholder name="name"/>( "option", "classes.ui-<placeholder name="name"/>" );
+
+// Setter
+$( ".selector" ).<placeholder name="name"/>( "option", "classes.ui-<placeholder name="name"/>", "highlight" );
+</code>
+	</example>
+</examples>
