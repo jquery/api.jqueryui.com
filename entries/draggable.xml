@@ -42,13 +42,13 @@
 			<desc>Prevents dragging from starting on specified elements.</desc>
 		</option>
 		<option name="classes" type="Object">
-			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<default>{
 	"ui-draggable": undefined,
 	"ui-draggable-disabled": undefined,
 	"ui-draggable-dragging": undefined,
 	"ui-draggable-handle": undefined
 }</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="connectToSortable" type="Selector" default="false" example-value='"#my-sortable"'>
