@@ -192,13 +192,36 @@
 			<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<option name="classes" default="{}" example-value='{ "custom-header": "icon-warning" }'>
+			<option name="classes" default="{}">
 				<desc>
 					<p>Additional (thematic) classes to add to the widget, in addition to the structural classes. The structural classes are used as keys of this option and the thematic classes are the values. See the <a href="#method-_addClass"><code>_addClass()</code> method</a> for using this in custom widgets. Check out the documentation of individual widgets to see which classes they support.</p>
 					<p>The primary motivation of this option is to map structural classes to theme classes. In other words, any class prefixed with namespace and widget, like <code>"ui-progressbar-"</code>, is considered a structural class. These are always added to the widget. In contrast to that, any class not specific to the widget is considered a theme class. These could be part of jQuery UI's CSS framework, but can also come from other CSS frameworks or be defined in custom stylesheets.</p>
 					<p class="warning">Setting the <code>classes</code> option after creation will override all default properties. To only change specific values, use deep setters, e.g. <code>.option( "classes.ui-progressbar-value", null )</code>.</p>
 				</desc>
 				<type name="Object" />
+				<example>
+					<desc>Initialize a progressbar widget with the <code>classes</code> option specified, changing the theming for the <code>ui-progressbar</code> class:</desc>
+					<code>
+$( ".selector" ).progressbar({
+	classes: {
+		"ui-progressbar": "highlight"
+	}
+});
+				</code>
+				</example>
+				<example>
+					<desc>Get or set the <code>classes</code> option, after initialization:</desc>
+					<code>
+// Getter
+var classes = $( ".selector" ).widget( "option", "classes" );
+
+// Setter, override all classes
+$( ".selector" ).widget( "option", "classes", { "custom-header": "icon-warning" } );
+
+// Setter, override just one class
+$( ".selector" ).widget( "option", "classes.custom-header", "icon-warning" );
+				</code>
+				</example>
 			</option>
 
 		</options>
