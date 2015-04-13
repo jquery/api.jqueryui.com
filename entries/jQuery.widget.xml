@@ -213,7 +213,7 @@
 				<desc>
 					Add classes to an element of the widget.
 					<p>This provides a hook for the user to add additional classes or replace default styling classes, through the <a href="#option-classes"><code>classes</code> option</a>.</p>
-					<p>It also provides automatic removal of these classes when a widget is destroyed, as long as you're using <code>_addClass()</code>, <code>_removeClass()</code> and <code>_toggleClass()</code> together. This can heavily simplify the implementation of custom <code>_destroy()</code> methods.</p>
+					<p>It also provides automatic removal of these classes when a widget is destroyed, as long as you're using <a href="#method-_addClass"><code>_addClass()</code></a>, <a href="#method-_removeClass"><code>_removeClass()</code></a> and <a href="#method-_toggleClass"><code>_toggleClass()</code></a> together. This can heavily simplify the implementation of custom <a href="#method-_destroy"><code>_destroy()</code></a> methods.</p>
 				</desc>
 				<argument name="element" type="jQuery" optional="true">
 					<desc>The element to add the classes to. Defaults to <code>this.element</code>.</desc>
@@ -225,16 +225,16 @@
 					</desc>
 				</argument>
 				<argument name="extra" type="String" optional="true">
-					<desc>Additional classes to add, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
+					<desc>Additional classes to add, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <a href="#option-classes"><code>classes</code> option</a>. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
 				</argument>
 				<example>
-					<desc>Add the <code>ui-progressbar</code> class to the widget's element (<code>this.element</code>). Will also add any additional classes specified through the <code>classes</code> option for the given class.</desc>
+					<desc>Add the <code>ui-progressbar</code> class to the widget's element (<code>this.element</code>). Will also add any additional classes specified through the <a href="#option-classes"><code>classes</code> option</a> for the given class.</desc>
 					<code><![CDATA[
 this._addClass( "ui-progressbar" );
 ]]></code>
 				</example>
 				<example>
-					<desc>Add the <code>demo-popup-header</code> class to the specified element (here referencing <code>this.popup</code>). Will also add any additional classes specified through the <code>classes</code> option for the given class. In addition, it will always add the <code>ui-front</code> class.</desc>
+					<desc>Add the <code>demo-popup-header</code> class to the specified element (here referencing <code>this.popup</code>). Will also add any additional classes specified through the <a href="#option-classes"><code>classes</code> option</a> for the given class. In addition, it will always add the <code>ui-front</code> class.</desc>
 					<code><![CDATA[
 this._addClass( this.popup, "demo-popup-header", "ui-front" );
 ]]></code>
@@ -261,16 +261,16 @@ this._addClass( this.liveRegion, null, "ui-helper-hidden-accessible" );
 					</desc>
 				</argument>
 				<argument name="extra" type="String" optional="true">
-					<desc>Additional classes to remove, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option.</desc>
+					<desc>Additional classes to remove, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <a href="#option-classes"><code>classes</code> option</a>.</desc>
 				</argument>
 				<example>
-					<desc>Remove the <code>ui-progressbar</code> class from the widget's element (<code>this.element</code>). Will also remove any additional classes specified through the <code>classes</code> option for the given class.</desc>
+					<desc>Remove the <code>ui-progressbar</code> class from the widget's element (<code>this.element</code>). Will also remove any additional classes specified through the <a href="#option-classes"><code>classes</code> option</a> for the given class.</desc>
 					<code><![CDATA[
 this._removeClass( "ui-progressbar" );
 ]]></code>
 				</example>
 				<example>
-					<desc>Remove the <code>demo-popup-header</code> class from the specified element (here referencing <code>this.popup</code>). Will also remove any additional classes specified through the <code>classes</code> option for the given class. In addition, it will also remove the <code>ui-front</code> class.</desc>
+					<desc>Remove the <code>demo-popup-header</code> class from the specified element (here referencing <code>this.popup</code>). Will also remove any additional classes specified through the <a href="#option-classes"><code>classes</code> option</a> for the given class. In addition, it will also remove the <code>ui-front</code> class.</desc>
 					<code><![CDATA[
 this._removeClass( this.popup, "demo-popup-header", "ui-front" );
 ]]></code>
@@ -286,6 +286,7 @@ this._removeClass( this.liveRegion, null, "ui-helper-hidden-accessible" );
 				<desc>
 					Toggle classes of an element of the widget.
 					<p>The arguments are the same as for the <a href="#method-_addClass"><code>_addClass()</code></a> and <a href="#method-_removeClass"><code>_removeClass()</code></a> methods, except for the additional boolean argument that specifies to add or remove classes.</p>
+					<p class="warning">Unlike jQuery's <code>.toggleClass()</code> method, the boolean <code>add</code> argument is always required.</p>
 				</desc>
 				<argument name="element" type="jQuery" optional="true">
 					<desc>The element to toogle the classes on. Defaults to <code>this.element</code>.</desc>
@@ -297,10 +298,12 @@ this._removeClass( this.liveRegion, null, "ui-helper-hidden-accessible" );
 					</desc>
 				</argument>
 				<argument name="extra" type="String" optional="true">
-					<desc>Additional classes to toggle, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <code>classes</code> option. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
+					<desc>Additional classes to toggle, required for layout or other reasons. Unlike the <code>keys</code> argument, these aren't associated with any properties of the <a href="#option-classes"><code>classes</code> option</a>. Just like <code>keys</code>, they will also be automatically removed when destroying the widget.</desc>
 				</argument>
 				<argument name="add" type="Boolean">
-					<desc>Indicates whether to add or remove the specified classes, where a boolean <code>true</code> indicates that classes should be added, a boolean <code>false</code> indicates that classes should be removed.</desc>
+					<desc>
+						<p>Indicates whether to add or remove the specified classes, where a boolean <code>true</code> indicates that classes should be added, a boolean <code>false</code> indicates that classes should be removed.</p>
+					</desc>
 				</argument>
 				<example>
 					<desc>Toggle the <code>ui-state-disabled</code> class on the widget's element (<code>this.element</code>).</desc>
