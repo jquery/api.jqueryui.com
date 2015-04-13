@@ -5,6 +5,13 @@
 	<longdesc>
 		<p>Make the selected elements draggable by mouse. If you want not just drag, but drag &amp; drop, see the <a href="/droppable/">jQuery UI Droppable plugin</a>, which provides a drop target for draggables.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li><code>ui-draggable</code>: The draggable element. When the draggable is disabled, the <code>ui-draggable-disabled</code> class is added. While dragging, the <code>ui-draggable-dragging</code> class is added.</li>
+			<li><code>ui-draggable-handle</code>: The handle of the draggable, specified using the <a href="#option-handle"><code>handle</code> option</a>. By default, the draggable element itself is also the handle.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
@@ -41,13 +48,7 @@
 		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='".title"'>
 			<desc>Prevents dragging from starting on specified elements.</desc>
 		</option>
-		<option name="classes" type="Object">
-			<default>{
-	"ui-draggable": undefined,
-	"ui-draggable-disabled": undefined,
-	"ui-draggable-dragging": undefined,
-	"ui-draggable-handle": undefined
-}</default>
+		<option name="classes" type="Object" default="{}">
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
