@@ -5,6 +5,18 @@
 	<longdesc>
 		<p>The jQuery UI Selectable plugin allows for elements to be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Elements can also be selected via click or drag while holding the ctrl/meta key, allowing for multiple (non-contiguous) selections.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-selectable</code>: The selectable element.
+				<ul>
+					<li><code>ui-selectee</code>: One of the selectable elements, as specified through the <a href="#option-filter"><code>filter</code> option</a>. This element can also receive one of the following classes: <code>ui-selecting</code> (when the lasso includes this element), <code>ui-selected</code> (after a successful selection), <code>ui-unselecting</code> (when the lasso lost this element).</li>
+				</ul>
+			</li>
+			<li><code>ui-selectable-helper</code>: The "lasso" element used to visualize the ongoing selection.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
@@ -23,6 +35,10 @@
 		</option>
 		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,.cancel"'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
+		</option>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
 			<desc>Time in milliseconds to define when the selecting should start. This helps prevent unwanted selections when clicking on an element.</desc>

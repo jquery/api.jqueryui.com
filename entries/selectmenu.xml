@@ -33,12 +33,47 @@
 			<li><code>ALT</code>/<code>OPTION</code> + <code>UP</code>/<code>DOWN</code>: Toggle the visibility of the menu.</li>
 			<li><code>SPACE</code>: Open the menu.</li>
 		</ul>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-selectmenu-button</code>: The button-like element replacing the native selectmenu on the page. Has the <code>ui-selectmenu-button-closed</code> class when closed, the <code>ui-selectmenu-button-open</code> class when open.
+				<ul>
+					<li><code>ui-selectmenu-text</code>: The span representing the text portion of the button element.</li>
+					<li><code>ui-selectmenu-icon-space</code>: A supporting element between the text and the icon of the selectmenu button.</li>
+				</ul>
+			</li>
+			<li>
+				<code>ui-selectmenu-menu</code>: The wrapper element around the <a href="/menu/#theming">menu</a> used to display options to the user (not the menu itself). When the menu is open, the <code>ui-selectmenu-open</code> class is added.
+				<ul>
+					<li><code>ui-selectmenu-optgroup</code>: One of the elements that replicates <code>&lt;optgroup&gt;</code> elements from native selects.</li>
+				</ul>
+			</li>
+
+		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="/position/">Position</a></li>
+			<li><a href="/menu/">Menu</a></li>
+		</ul>
 	</longdesc>
 	<note id="functional-css"/>
 	<added>1.11</added>
 	<options>
 		<option name="appendTo" type="Selector" default="null" example-value='"#someElem"'>
 			<desc>Which element to append the menu to. When the value is <code>null</code>, the parents of the <code>&lt;select&gt;</code> are checked for a class name of <code>ui-front</code>. If an element with the <code>ui-front</code> class name is found, the menu is appended to that element. Regardless of the value, if no element is found, the menu is appended to the body.</desc>
+		</option>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-selectmenu-button-closed": "ui-corner-all",
+	"ui-selectmenu-button-open": "ui-corner-top",
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ button: "ui-icon-triangle-1-s" }' example-value='{ button: "ui-icon-circle-triangle-s" }'>
