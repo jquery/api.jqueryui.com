@@ -141,7 +141,7 @@
 			<desc>Specifies the text for the close button. Note that the close text is visibly hidden when using a standard theme.</desc>
 			<type name="String" />
 		</option>
-		<option name="dialogClass" default='""' example-value='"alert"'>
+		<option name="dialogClass" default='""' example-value='"alert"' deprecated="1.12">
 			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
 			<type name="String" />
 		</option>
