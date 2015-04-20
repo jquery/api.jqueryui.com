@@ -29,7 +29,7 @@
 				<desc>A function that will be called for each draggable on the page (passed as the first argument to the function). The function must return <code>true</code> if the draggable should be accepted.</desc>
 			</type>
 		</option>
-		<option name="activeClass" type="String" default="false" example-value='"ui-state-highlight"'>
+		<option name="activeClass" type="String" default="false" example-value='"ui-state-highlight"' deprecated="1.12">
 			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being dragged.</desc>
 		</option>
 		<option name="addClasses" type="Boolean" default="true" example-value="false">
@@ -43,7 +43,7 @@
 		<option name="greedy" type="Boolean" default="false" example-value="true">
 			<desc>By default, when an element is dropped on nested droppables, each droppable will receive the element. However, by setting this option to <code>true</code>, any parent droppables will not receive the element. The <code>drop</code> event will still bubble normally, but the <code>event.target</code> can be checked to see which droppable received the draggable element.</desc>
 		</option>
-		<option name="hoverClass" type="String" default="false" example-value='"drop-hover"'>
+		<option name="hoverClass" type="String" default="false" example-value='"drop-hover"' deprecated="1.12">
 			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being hovered over the droppable.</desc>
 		</option>
 		<option name="scope" type="String" default='"default"' example-value='"tasks"'>
