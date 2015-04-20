@@ -71,13 +71,13 @@
 
 		<ul>
 			<li>
-				<code>ui-menu</code>: The outer container of the menu, as well as any nested sub menu. This top-level element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
+				<code>ui-menu</code>: The outer container of the menu, as well as any nested submenu. This top-level element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
 				<ul>
 					<li>
-						<code>ui-menu-item</code>: The container for individual menu items. This contains the element for the item's text itself as well as the element for sub menus.
+						<code>ui-menu-item</code>: The container for individual menu items. This contains the element for the item's text itself as well as the element for submenus.
 						<ul>
 							<li>
-								<code>ui-menu-item-wrapper</code>: The text content of the item, along with the icon indicating sub menus.
+								<code>ui-menu-item-wrapper</code>: The text content of the item, along with the icon indicating submenus.
 								<ul>
 									<li><code>ui-menu-icon</code>: The submenu icon set via the <a href="#option-icons"><code>icons</code></a> option.</li>
 								</ul>

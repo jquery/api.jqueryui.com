@@ -9,10 +9,14 @@
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
-			<li><code>ui-sortable</code>: The sortable element.</li>
-			<li><code>ui-sortable-handle</code>: The handle of each sortable item, specified using the <a href="#option-handle"><code>handle</code> option</a>. By default, each sortable item itself is also the handle.</li>
+			<li>
+				<code>ui-sortable</code>: The sortable element.
+				<ul>
+					<li><code>ui-sortable-handle</code>: The handle of each sortable item, specified using the <a href="#option-handle"><code>handle</code> option</a>. By default, each sortable item itself is also the handle.</li>
+					<li><code>ui-sortable-placeholder</code>: The element used to show the future position of the item currently being sorted.</li>
+				</ul>
+			</li>
 			<li><code>ui-sortable-helper</code>: The element shown while dragging a sortable item. The element actually used depends on the <a href="#option-helper"><code>helper</code> option</a>.</li>
-			<li><code>ui-sortable-placeholder</code>: The element used to show the future position of the item currently being sorted.</li>
 		</ul>
 
 		<h3>Dependencies</h3>

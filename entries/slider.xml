@@ -45,7 +45,7 @@
 			<default>{
 	"ui-slider": "ui-corner-all",
 	"ui-slider-handle": "ui-corner-all",
-	"ui-slider-range": "ui-corner-all ui-widget-header",
+	"ui-slider-range": "ui-corner-all ui-widget-header"
 }</default>
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

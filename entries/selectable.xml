@@ -8,9 +8,13 @@
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
-			<li><code>ui-selectable</code>: The selectable element.</li>
+			<li>
+				<code>ui-selectable</code>: The selectable element.
+				<ul>
+					<li><code>ui-selectee</code>: One of the selectable elements, as specified through the <a href="#option-filter"><code>filter</code> option</a>. This element can also receive one of the following classes: <code>ui-selecting</code> (when the lasso includes this element), <code>ui-selected</code> (after a successful selection), <code>ui-unselecting</code> (when the lasso lost this element).</li>
+				</ul>
+			</li>
 			<li><code>ui-selectable-helper</code>: The "lasso" element used to visualize the ongoing selection.</li>
-			<li><code>ui-selectee</code>: One of the selectable elements, as specified through the <a href="#option-filter"><code>filter</code> option</a>. This element can also receive one of the following classes: <code>ui-selecting</code> (when the lasso includes this element), <code>ui-selected</code> (after a successful selection), <code>ui-unselecting</code> (when the lasso lost this element).</li>
 		</ul>
 
 		<h3>Dependencies</h3>

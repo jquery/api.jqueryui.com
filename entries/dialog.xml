@@ -55,7 +55,7 @@
 
 		<ul>
 			<li>
-				<code>ui-dialog</code>: The outer container of the dialog. If the <a href="#option-draggable"><code>draggable</code> option</a> is set, the <code>ui-dialog-dragging</code> class is added during a resize. If the <a href="#option-resizable"><code>resizable</code> option</a> is set, the <code>ui-dialog-resizing</code> class is added during a resize. If the <a href="#option-buttons"><code>buttons</code> option</a> is set, the <code>ui-dialog-buttons</code> class is added.
+				<code>ui-dialog</code>: The outer container of the dialog. If the <a href="#option-draggable"><code>draggable</code> option</a> is set, the <code>ui-dialog-dragging</code> class is added during a drag. If the <a href="#option-resizable"><code>resizable</code> option</a> is set, the <code>ui-dialog-resizing</code> class is added during a resize. If the <a href="#option-buttons"><code>buttons</code> option</a> is set, the <code>ui-dialog-buttons</code> class is added.
 				<ul>
 					<li>
 						<code>ui-dialog-titlebar</code>: The title bar containing the dialog's title and close button.
