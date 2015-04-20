@@ -83,7 +83,7 @@
 			<type name="Object" />
 		</option>
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="tooltipClass" default="null" example-value='"custom-tooltip-styling"'>
+		<option name="tooltipClass" default="null" example-value='"custom-tooltip-styling"' deprecated="1.12">
 			<desc>
 				A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
 				<p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
