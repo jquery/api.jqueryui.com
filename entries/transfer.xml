@@ -15,15 +15,13 @@
 				<desc>A class to add to the transfer element, in addition to <code>ui-effects-transfer</code>.</desc>
 			</property>
 			<property name="duration" type="Number" default="400">
-				<desc>How long the animation runs.</desc>
+				<desc>The strings <code>"fast"</code> and <code>"slow"</code> can be supplied to indicate durations of 200 and 600 milliseconds, respectively.</desc>
 			</property>
 			<property name="easing" type="String" default="swing">
-				<desc>The easing to use for the animation.</desc>
+				<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
 			</property>
 		</argument>
-		<argument name="done" type="Callback">
-			<desc>A function to invoke once the animation completes.</desc>
-		</argument>
+		<xi:include href="../includes/animation-argument-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</signature>
 	<example>
 		<height>150</height>
