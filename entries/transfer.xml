@@ -14,8 +14,10 @@
 			<property name="className" type="String" default="null">
 				<desc>A class to add to the transfer element, in addition to <code>ui-effects-transfer</code>.</desc>
 			</property>
-			<property name="duration" type="Number" default="400">
-				<desc>The strings <code>"fast"</code> and <code>"slow"</code> can be supplied to indicate durations of 200 and 600 milliseconds, respectively.</desc>
+			<property name="duration" default="400">
+				<desc>A string or number determining how long the animation will run. The strings <code>"fast"</code> and <code>"slow"</code> can be supplied to indicate durations of 200 and 600 milliseconds, respectively. The number type indicates the duration in milliseconds.</desc>
+				<type name="Number"/>
+				<type name="String"/>
 			</property>
 			<property name="easing" type="String" default="swing">
 				<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
