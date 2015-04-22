@@ -88,6 +88,9 @@
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
 				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle being moved.</desc>
+				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>
 				</property>
@@ -99,6 +102,9 @@
 			<argument name="ui" type="Object">
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
+				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle being moved.</desc>
 				</property>
 				<property name="value" type="Number">
 					<desc>The value that the handle will move to if the event is not canceled.</desc>
@@ -115,6 +121,9 @@
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was changed.</desc>
 				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle that was moved.</desc>
+				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>
 				</property>
@@ -126,6 +135,9 @@
 			<argument name="ui" type="Object">
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was moved.</desc>
+				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle that was moved.</desc>
 				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>
