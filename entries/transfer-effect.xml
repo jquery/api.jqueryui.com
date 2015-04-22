@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<entry name="transfer" type="effect">
+<entry name="transfer" type="effect" deprecated="1.12">
 	<title>Transfer Effect</title>
 	<desc>Transfers the outline of an element to another element</desc>
 	<longdesc>
 		<p>Very useful when trying to visualize interaction between two elements.</p>
 		<p>The transfer element itself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
+		<p class="warning">This effect is deprecated, replaced by the <a href="/transfer/">.transfer()</a> method.</p>
 	</longdesc>
 	<arguments>
 		<argument name="className" type="String">
