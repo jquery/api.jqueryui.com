@@ -1,38 +1,46 @@
 <?xml version="1.0"?>
-<entry name="transfer" type="effect" deprecated="1.12">
-	<title>Transfer Effect</title>
+<entry name="transfer" type="method" return="jQuery">
+	<title>.transfer()</title>
 	<desc>Transfers the outline of an element to another element</desc>
 	<longdesc>
 		<p>Very useful when trying to visualize interaction between two elements.</p>
 		<p>The transfer element itself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
-		<p class="warning">This effect is deprecated, replaced by the <a href="/transfer/">.transfer()</a> method.</p>
 	</longdesc>
-	<arguments>
-		<argument name="className" type="String">
-			<desc>argumental class name the transfer element will receive.</desc>
+	<signature>
+		<argument name="options" type="Object">
+			<property name="to" type="Selector">
+				<desc>The target of the transfer effect.</desc>
+			</property>
+			<property name="className" type="String" default="null">
+				<desc>A class to add to the transfer element, in addition to <code>ui-effects-transfer</code>.</desc>
+			</property>
+			<property name="duration" type="Number" default="400">
+				<desc>How long the animation runs.</desc>
+			</property>
+			<property name="easing" type="String" default="swing">
+				<desc>The easing to use for the animation.</desc>
+			</property>
 		</argument>
-		<argument name="to" type="String">
-			<desc>jQuery selector, the element to transfer to.</desc>
+		<argument name="done" type="Callback">
+			<desc>A function to invoke once the animation completes.</desc>
 		</argument>
-	</arguments>
+	</signature>
 	<example>
 		<height>150</height>
 		<desc>Clicking on the green element transfers to the other.</desc>
 		<css><![CDATA[
-	div.green {
+	.green {
 		width: 100px;
 		height: 80px;
 		background: green;
 		border: 1px solid black;
-		position: relative;
 	}
-	div.red {
+	.red {
 		margin-top: 10px;
 		width: 50px;
 		height: 30px;
 		background: red;
 		border: 1px solid black;
-		position: relative;
 	}
 	.ui-effects-transfer {
 		border: 1px dotted black;
@@ -41,7 +49,10 @@
 		<code><![CDATA[
 $( "div" ).click(function() {
 	var i = 1 - $( "div" ).index( this );
-	$( this ).effect( "transfer", { to: $( "div" ).eq( i ) }, 1000 );
+	$( this ).transfer( {
+		to: $( "div" ).eq( i ),
+		duration: 1000
+	} );
 });
 ]]></code>
 		<html><![CDATA[
@@ -50,4 +61,5 @@ $( "div" ).click(function() {
 ]]></html>
 	</example>
 	<category slug="effects"/>
+	<category slug="effects-core"/>
 </entry>
