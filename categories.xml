@@ -29,12 +29,12 @@
 	</category>
 	<category name="UI Core" slug="ui-core">
 		<desc><![CDATA[
-			<p>Functionality provided by jquery.ui.core.js.</p>
+			<p>Functionality provided by <code>core.js</code>.</p>
 		]]></desc>
 	</category>
 	<category name="Effects Core" slug="effects-core">
 		<desc><![CDATA[
-			<p>Functionality provided by jquery.ui.effect.js. In addition to the methods listed below, jquery.ui.effect.js also includes several <a href="/easings/">easings</a>.</p>
+			<p>Functionality provided by <code>effect.js</code>. In addition to the methods listed below, <code>effect.js</code> also includes several <a href="/easings/">easings</a>.</p>
 		]]></desc>
 	</category>
 	<category name="Theming" slug="theming">
