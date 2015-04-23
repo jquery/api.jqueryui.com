@@ -30,7 +30,10 @@
 			</type>
 		</option>
 		<option name="activeClass" type="String" default="false" example-value='"ui-state-highlight"' deprecated="1.12">
-			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being dragged.</desc>
+			<desc>
+				<p>If specified, the class will be added to the droppable while an acceptable draggable is being dragged.</p>
+				<p>The <code>activeClass</code> option has been deprecated in favor of the <a href="#option-classes"><code>classes</code> option</a>, using the <code>ui-droppable-active</code> property.</p>
+			</desc>
 		</option>
 		<option name="addClasses" type="Boolean" default="true" example-value="false">
 			<desc>If set to <code>false</code>, will prevent the <code>ui-droppable</code> class from being added. This may be desired as a performance optimization when calling <code>.droppable()</code> init on hundreds of elements.</desc>
@@ -44,7 +47,10 @@
 			<desc>By default, when an element is dropped on nested droppables, each droppable will receive the element. However, by setting this option to <code>true</code>, any parent droppables will not receive the element. The <code>drop</code> event will still bubble normally, but the <code>event.target</code> can be checked to see which droppable received the draggable element.</desc>
 		</option>
 		<option name="hoverClass" type="String" default="false" example-value='"drop-hover"' deprecated="1.12">
-			<desc>If specified, the class will be added to the droppable while an acceptable draggable is being hovered over the droppable.</desc>
+			<desc>
+				<p>If specified, the class will be added to the droppable while an acceptable draggable is being hovered over the droppable.</p>
+				<p>The <code>hoverClass</code> option has been deprecated in favor of the <a href="#option-classes"><code>classes</code> option</a>, using the <code>ui-droppable-hover</code> property.</p>
+			</desc>
 		</option>
 		<option name="scope" type="String" default='"default"' example-value='"tasks"'>
 			<desc>Used to group sets of draggable and droppable items, in addition to the <a href="#option-accept"><code>accept</code></a> option. A draggable with the same scope value as a droppable will be accepted.</desc>
