@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<entry name="cssClip" type="method" return="jQuery">
+	<title>.cssClip()</title>
+	<desc>Getter/setter for an object version of the CSS <code>clip</code> property.</desc>
+	<added>1.12</added>
+	<signature>
+		<argument name="dimensions" type="Object" optional="true">
+			<desc>When setting the CSS <code>clip</code> property, specify the <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code>, properties to use the <code>rect()</code> style.</desc>
+		</argument>
+	</signature>
+	<example>
+		<height>175</height>
+		<css><![CDATA[
+	.clipped {
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		background: #3b679e;
+		background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 50%, #207cca 51%, #7db9e8 100%);
+	}
+]]></css>
+		<code><![CDATA[
+var clippings = [
+	{
+		top: 10,
+		right: 50,
+		bottom: 50,
+		left: 5
+	},
+	{
+		top: 0,
+		right: 150,
+		bottom: 150,
+		left: 0
+	}
+];
+var index = 1;
+var box = $( ".clipped" ).cssClip( clippings[ 0 ] );
+
+$( document ).click(function() {
+	box.animate( {
+		clip: clippings[ index++ % 2 ]
+	}, 2000 );
+});
+
+]]></code>
+		<html><![CDATA[
+Click anywhere!
+<div class="clipped"></div>
+]]></html>
+	</example>
+	<category slug="methods"/>
+	<category slug="overrides"/>
+	<category slug="utilities"/>
+	<category slug="effects"/>
+	<category slug="effects-core"/>
+</entry>
