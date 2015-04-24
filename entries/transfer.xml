@@ -6,6 +6,7 @@
 		<p>Very useful when trying to visualize interaction between two elements.</p>
 		<p>The transfer element itself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
 	</longdesc>
+	<added>1.12</added>
 	<signature>
 		<argument name="options" type="Object">
 			<property name="to" type="Selector">
