@@ -2,6 +2,9 @@
 <entry name="size" type="effect">
 	<title>Size Effect</title>
 	<desc>Resize an element to a specified width and height.</desc>
+	<longdesc>
+		<p>When using this effect with the <a href="/show/"><code>.show()</code></a> and <a href="/toggle/"><code>.toggle()</code></a> methods, the <code>to</code> argument is used as the starting point and the original size used as the endpoint.</p>
+	</longdesc>
 	<arguments>
 		<argument name="to" type="Object">
 			<desc>Height and width to resize to.</desc>
