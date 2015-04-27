@@ -57,7 +57,7 @@
 		<xi:include href="../includes/widget-option-hide.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="items" default="[title]" example-value='"img[alt]"'>
 			<desc>
-				<p>A selector indicating which items should show tooltips. Customize if you're using something other then the title attribute for the tooltip content, or if you need a different selector for event delegation.</p>
+				<p>A selector indicating which items should show tooltips. Customize if you're using something other than the title attribute for the tooltip content, or if you need a different selector for event delegation.</p>
 
 				<p><em>When changing this option, you likely need to also change the <a href="#option-content"><code>content</code></a> option.</em></p>
 			</desc>
