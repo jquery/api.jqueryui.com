@@ -18,6 +18,13 @@
 
 		<p>In general, disabled elements do not trigger any DOM events. Therefore, it is not possible to properly control tooltips for disabled elements, since we need to listen to events to determine when to show and hide the tooltip. As a result, jQuery UI does not guarantee any level of support for tooltips attached to disabled elements. Unfortunately, this means that if you require tooltips on disabled elements, you may end up with a mixture of native tooltips and jQuery UI tooltips.</p>
 
+		<h3>Keyboard interaction</h3>
+
+		<p>When the tooltip is open and the corresponding item has focus, the following key commands are available:</p>
+		<ul>
+			<li><code>ESCAPE</code>: Close the tooltip.</li>
+		</ul>
+
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
