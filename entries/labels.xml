@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<entry name="labels" type="method" return="jQuery">
+	<title>.labels()</title>
+	<desc>Finds all label elements associated with the first selected element.</desc>
+	<longdesc>
+		<p>This can be used to find all the <code>&lt;label&gt;</code> elements associated with an <code>&lt;input&gt;</code> element. The association can be through nesting, where the label is an ancestor of the input, or through the <code>for</code> attribute on the label, pointing at the <code>id</code> attribute of the input. If no labels are associated with the given element, an empty jQuery object is returned.</p>
+		<p>This methods mimics the native <code>labels</code> property, which isn't supported in all browsers. In addition, this method also works for document fragments.</p>
+	</longdesc>
+	<added>1.12</added>
+	<example>
+		<height>100</height>
+		<desc>Highlight all labels of the input element</desc>
+		<code><![CDATA[
+$( "input" ).labels().addClass( "ui-state-highlight" )
+]]></code>
+		<html><![CDATA[
+<label>
+	Firstname
+	<input id="name">
+</label>
+<label for="name">Please enter your name</label>
+]]></html>
+	</example>
+	<category slug="methods"/>
+	<category slug="overrides"/>
+	<category slug="utilities"/>
+</entry>
