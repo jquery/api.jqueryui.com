@@ -6,7 +6,9 @@
 		<p>This can be used to find all the <code>&lt;label&gt;</code> elements associated with an <code>&lt;input&gt;</code> element. The association can be through nesting, where the label is an ancestor of the input, or through the <code>for</code> attribute on the label, pointing at the <code>id</code> attribute of the input. If no labels are associated with the given element, an empty jQuery object is returned.</p>
 		<p>This methods mimics the native <code>labels</code> property, which isn't supported in all browsers. In addition, this method also works for document fragments.</p>
 	</longdesc>
-	<added>1.12</added>
+	<signature>
+		<added>1.12</added>
+	</signature>
 	<example>
 		<height>100</height>
 		<desc>Highlight all labels of the input element</desc>
