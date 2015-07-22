@@ -360,7 +360,7 @@
 			<desc>The list of abbreviated month names, as used in the month header on each datepicker and as requested via the <a href="#option-dateFormat"><code>dateFormat</code></a> option.</desc>
 		</option>
 		<option name="navigationAsDateFormat" type="Boolean" default="false" example-value="true">
-			<desc>Whether the <a href="#option-prevText"><code>prevText</code></a> and <a href="#option-nextText"><code>nextText</code></a> options should be parsed as dates by the <code><a href="#utility-formatDate"><code>formatDate</code></a></code> function, allowing them to display the target month names for example.</desc>
+			<desc>Whether the <a href="#option-currentText"><code>currentText</code></a>, <a href="#option-prevText"><code>prevText</code></a> and <a href="#option-nextText"><code>nextText</code></a> options should be parsed as dates by the <code><a href="#utility-formatDate"><code>formatDate</code></a></code> function, allowing them to display the target month names for example.</desc>
 		</option>
 		<option name="nextText" type="String" default='"Next"' example-value='"Later"'>
 			<desc>The text to display for the next month link. With the standard ThemeRoller styling, this value is replaced by an icon.</desc>
