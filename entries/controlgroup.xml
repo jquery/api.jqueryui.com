@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<entry name="controlgroup" type="widget" widget-element="controlgroup">
+	<title>Controlgroup Widget</title>
+	<desc>Themeable set of input widgets.</desc>
+	<longdesc>
+		<p>A controlgroup provides a visual grouping for <a href="/button/">button</a> and other input widgets. Controlgroup works by selecting all appropriate descendants, based on the <a href="#option-items">items</a> option, and applying their respective widgets, if loaded. You can enable and disable a controlgroup, which will enable and disable all contained widgets. Destroying a controlgroup also calls each widgets's <code>.destroy()</code> method.</p>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-controlgroup</code>: The outer container of controlgroups. Depending on the <a href="#option-direction">direction</a> option, this element will additionally have the <code>ui-controlgroup-horizontal</code> or <code>ui-controlgroup-vertical</code> classes.
+				<ul>
+					<li>
+						<code>ui-controlgroup-item</code>: Each item inside the group.
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+		</ul>
+	</longdesc>
+	<note id="functional-css"/>
+	<added>1.12</added>
+	<options>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+		<option name="direction" default='"horizontal"' example-value='{ direction: "vertical" }'>
+			<desc>
+				<p>By default, controlgroup displays its widget's in a horizontal layout. Use this option to use a vertical layout instead.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="excludeInvisible" default="true" example-value="false">
+			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden, the controlgroup will, in effect, not have rounded corners on the top edge.</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="items">
+			<default>{
+	"button": "input[type=button], input[type=submit], input[type=reset], button, a",
+	"controlgroupLabel": ".ui-controlgroup-label",
+	"checkboxradio": "input[type='checkbox'], input[type='radio']",
+	"selectmenu": "select",
+	"spinner": ".ui-spinner-input"
+}</default>
+			<desc>
+				Which descendant elements to initialize as their respective widgets. Two elements have special behaviour:
+				<ul>
+					<li><code>controlgroupLabel</code>: Any elements matching the selector for this will be wrapped in a span with the <code>ui-controlgroup-label-contents</code> class.</li>
+					<li><code>spinner</code>: This uses a class selector as the value. Requires either adding the class manually or initializing the spinner manually. Can be overridden to use <code>input[type=number]</code>, but that also requires custom CSS to remove the native number controls.</li>
+				</ul>
+			</desc>
+			<type name="Object" />
+		</option>
+	</options>
+	<events>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</events>
+	<methods>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="refresh">
+			<desc>Process any widgets that were added or removed directly in the DOM. Results depend on the <a href="#option-items"><code>items</code></a> option.</desc>
+		</method>
+		<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</methods>
+	<example>
+		<height>100</height>
+		<desc>A simple jQuery UI controlgroup</desc>
+		<code><![CDATA[
+$( "#radio" ).controlgroup();
+]]></code>
+		<html><![CDATA[
+<form>
+	<fieldset>
+		<legend>Favorite jQuery Project</legend>
+		<div id="radio">
+			<input type="radio" id="sizzle" name="project">
+			<label for="sizzle">Sizzle</label>
+
+			<input type="radio" id="qunit" name="project" checked="checked">
+			<label for="qunit">QUnit</label>
+
+			<input type="radio" id="color" name="project">
+			<label for="color">Color</label>
+		</div>
+	</fieldset>
+</form>
+]]></html>
+	</example>
+	<category slug="widgets"/>
+</entry>

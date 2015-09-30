@@ -5,26 +5,21 @@
 	<longdesc>
 		<p>Button enhances standard form elements like buttons, inputs and anchors to themeable buttons with appropriate hover and active styles.</p>
 
-		<p>In addition to basic push buttons, radio buttons and checkboxes (inputs of type radio and checkbox) can be converted to buttons. Their associated label is styled to appear as the button, while the underlying input is updated on click. For the association to work properly, give the input an <code>id</code> attribute, and refer to that in the label's <code>for</code> attribute. Don't nest the input inside the label, as that <a href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-form-control-labeling/">causes accessibility problems</a>.</p>
-
-		<p>In order to group radio buttons, you can use the <a href="/buttonset/">Buttonset</a> widget, which provides visual groupings of buttons.</p>
-
 		<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
+
+		<p class="warning">Note: The button widget was rewritten in 1.12. Some options changed, you can find documentation for the old options in the <a href="/1.11/button/">1.11 button docs</a>. This widget used to bundle support for inputs of type radio and checkbox, this is now deprecated, use the <a href="/checkboxradio/">checkboxradio widget</a> instead. It also used to bundle the buttonset widget, this is also deprecated, use the <a href="/controlgroup/">controlgroup widget</a> instead.</p>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 		<ul>
 			<li>
-				<code>ui-button</code>: The DOM element that represents the button. This element will additionally have one of the following classes depending on the <a href="#option-text">text</a> and <a href="#option-icons">icons</a> option: <code>ui-button-text-only</code>, <code>ui-button-icon-only</code>, <code>ui-button-icons-only</code>, <code>ui-button-text-icons</code>.
+				<code>ui-button</code>: The DOM element that represents the button. This element will additionally have the <code>ui-button-icon-only</code> class, depending on the <a href="#option-showLabel">showLabel</a> and <a href="#option-icon">icon</a> options.
 				<ul>
 					<li>
-						<code>ui-button-icon-primary</code>: The element used to display the button's primary icon. This will only be present if a primary icon is provided in the <a href="#option-icons">icons</a> option.
+						<code>ui-button-icon</code>: The element used to display the button icon. This will only be present if an icon is provided in the <a href="#option-icon">icon</a> option.
 					</li>
 					<li>
-						<code>ui-button-text</code>: The container around the textual content of the button.
-					</li>
-					<li>
-						<code>ui-button-icon-secondary</code>: The element used to display the button's secondary icon. This will only be present if a secondary icon is provided in the <a href="#option-icons">icons</a> option.
+						<code>ui-button-icon-space</code>: A separator element between icon and text content of the button. This will only be present if an icon is provided in the <a href="#option-icon">icon</a> option and the <a href="#option-iconPosition">iconPosition</a> option is set to <code>"beginning"</code> or <code>"end"</code>.
 					</li>
 				</ul>
 			</li>
@@ -32,12 +27,12 @@
 
 		<h3>Dependencies</h3>
 		<ul>
-			<li><a href="/category/ui-core/">UI Core</a></li>
+			<li><a href="/jQuery.ui.keyCode/">jQuery.ui.keyCode</a></li>
 			<li><a href="/jQuery.widget/">Widget Factory</a></li>
 		</ul>
 	</longdesc>
 	<note id="functional-css"/>
-	<added>1.8</added>
+	<added>1.8, rewritten: 1.12</added>
 	<options>
 		<option name="classes" type="Object">
 			<default>{
@@ -47,20 +42,26 @@
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="icons" default="{ primary: null, secondary: null }" example-value='{ primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }'>
+		<option name="icon" default="null" example-value='{ icon: "ui-icon-gear" }'>
 			<desc>
-				<p>Icons to display, with or without text (see <a href="#option-text"><code>text</code></a> option). By default, the primary icon is displayed on the left of the label text and the secondary is displayed on the right. The positioning can be controlled via CSS.</p>
+				<p>Icon to display, with or without text (see <a href="#option-showLabel"><code>showLabel</code></a> option). By default, the icon is displayed on the left of the label text. The positioning can be controlled using the <a href="#option-iconPosition"><code>iconPosition</code></a> option.</p>
 
-				<p>The value for the <code>primary</code> and <code>secondary</code> properties must match <a href="/theming/icons/">an icon class name</a>, e.g., <code>"ui-icon-gear"</code>. For using only one icon: <code>icons: { primary: "ui-icon-locked" }</code>. For using two icons: <code>icons: { primary: "ui-icon-gear", secondary: "ui-icon-triangle-1-s" }</code>.</p>
+				<p>The value for this option must match <a href="/theming/icons/">an icon class name</a>, e.g., <code>"ui-icon-gear"</code>.</p>
 			</desc>
-			<type name="Object" />
+			<type name="String" />
+		</option>
+		<option name="iconPosition" default='"beginning"' example-value='{ iconPositon: "end" }'>
+			<desc>
+				<p>Where to display the <a href="#option-icon"><code>icon</code></a>: Valid values are "beginning", "end", "top" and "bottom". In a left-to-right (LTR) display, "beginning" refers to the left, in a right-to-left (RTL, e.g. in Hebrew or Arabic), it refers to the right.</p>
+			</desc>
+			<type name="String" />
 		</option>
 		<option name="label" default="null" example-value='"custom label"'>
 			<desc>Text to show in the button. When not specified (<code>null</code>), the element's HTML content is used, or its <code>value</code> attribute if the element is an input element of type submit or reset, or the HTML content of the associated label element if the element is an input of type radio or checkbox.</desc>
 			<type name="String" />
 		</option>
-		<option name="text" default="true" example-value="false">
-			<desc>Whether to show the label. When set to <code>false</code> no text will be displayed, but the <a href="#option-icons"><code>icons</code></a> option must be enabled, otherwise the <code>text</code> option will be ignored.</desc>
+		<option name="showLabel" default="true" example-value="false">
+			<desc>Whether to show the label. When set to <code>false</code> no text will be displayed, but the <a href="#option-icon"><code>icon</code></a> option must be used, otherwise the <code>showLabel</code> option will be ignored.</desc>
 			<type name="Boolean" />
 		</option>
 	</options>
@@ -72,7 +73,7 @@
 		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
-			<desc>Refreshes the visual state of the button. Useful for updating button state after the native element's checked or disabled state is changed programmatically.</desc>
+			<desc>Refreshes the visual state of the button. Useful for updating button state after the native element's disabled state is changed programmatically.</desc>
 		</method>
 		<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

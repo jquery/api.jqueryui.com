@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<entry name="checkboxradio" type="widget" widget-element="checkboxradio">
+	<title>Checkboxradio Widget</title>
+	<desc>Converts inputs of type radio and checkbox to themable buttons.</desc>
+	<longdesc>
+		<p>Native HTML input elements are impossible to style consistently. This widget allows working around that limitation by positining the associated label on top of the hidden input, and emulating the checkbox or radio element itself using an (optional) icon. The original input still receives focus and all events, the label merely provides a themable button on top.</p>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-checkboxradio</code>: The input of type radio or checkbox. Will be hidden, with its associated label positioned on top.
+				<ul>
+					<li>
+						<code>ui-checkboxradio-label</code>: The label associated with the input. If the input is checked, this will also get the <code>ui-checkboxradio-checked</code> class. If the input is of type radio, this will also get the <code>ui-checkboxradio-radio-label</code> class.
+					</li>
+					<li>
+						<code>ui-checkboxradio-icon</code>: If the <a href="#option-icon"><code>icon</code></a> option is enabled, the generated icon has this class.
+					</li>
+					<li>
+						<code>ui-checkboxradio-icon-space</code>: If the <a href="#option-icon"><code>icon</code></a> option is enabled, an extra element with this class as added between the text label and the icon.
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="/labels/">.labels()</a></li>
+			<li><a href="/jQuery.widget/">Widget Factory</a></li>
+		</ul>
+	</longdesc>
+	<note id="functional-css"/>
+	<added>1.12</added>
+	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-checkboxradio-label": "ui-corner-all",
+	"ui-checkboxradio-icon": "ui-corner-all"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="icon" default="true" example-value="false">
+			<desc>Whether to show the checkbox or radio icon, depending on the input's type.</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="label" default="null" example-value='"custom label"'>
+			<desc>Text to show in the button. When not specified (<code>null</code>), the HTML content of the associated <code>&lt;label&gt;</code> element is used.</desc>
+			<type name="String" />
+		</option>
+	</options>
+	<events>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</events>
+	<methods>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="refresh">
+			<desc>Refreshes the visual state of the widget. Useful for updating after the native element's checked or disabled state is changed programmatically.</desc>
+		</method>
+		<xi:include href="../includes/widget-method-instance.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-widget.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</methods>
+	<example>
+		<height>100</height>
+		<desc>A simple jQuery UI checkboxradio</desc>
+		<code><![CDATA[
+$( "input" ).checkboxradio();
+]]></code>
+		<html><![CDATA[
+<fieldset>
+	<legend>Select a Location: </legend>
+	<label for="radio-1">New York</label>
+	<input type="radio" name="radio-1" id="radio-1">
+	<label for="radio-2">Paris</label>
+	<input type="radio" name="radio-1" id="radio-2">
+	<label for="radio-3">London</label>
+	<input type="radio" name="radio-1" id="radio-3">
+</fieldset>
+]]></html>
+	</example>
+	<category slug="widgets"/>
+</entry>
