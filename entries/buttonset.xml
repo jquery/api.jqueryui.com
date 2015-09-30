@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<entry name="buttonset" type="widget" widget-element="button set element that contains the buttons">
+<entry name="buttonset" type="widget" widget-element="button set element that contains the buttons" deprecated="1.12">
 	<title>Buttonset Widget</title>
 	<desc>Themeable button sets.</desc>
 	<longdesc>
+		<p class="warning">This widget is deprecated, use <a href="/controlgroup/">Controlgroup</a> instead.</p>
+
 		<div class="note">
 			<code>.buttonset()</code> is bundled with <code>.button()</code>. Although they are separate widgets, they are combined into a single file. If you have <code>.button()</code> available, you also have <code>.buttonset()</code> available.
 		</div>
