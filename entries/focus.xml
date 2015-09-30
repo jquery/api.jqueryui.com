@@ -2,7 +2,7 @@
 <entry type="method" name="focus" return="jQuery">
 	<title>.focus()</title>
 	<desc>Asynchronously set focus to an element.</desc>
-	<signature>
+	<signature deprecated="1.11">
 		<argument name="delay" type="Integer">
 			<desc>The number of milliseconds to wait before setting focus.</desc>
 		</argument>
@@ -12,6 +12,7 @@
 	</signature>
 	<longdesc>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<p class="warning">This method is deprecated. Use <code>.focus()</code> without arguments inside a timeout or <a href="/jQuery.widget/#method-_delay">$.Widget's <code>._delay()</code></a> method.</p>
 	</longdesc>
 	<category slug="methods"/>
 	<category slug="overrides"/>
