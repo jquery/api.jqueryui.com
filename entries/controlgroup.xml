@@ -3,7 +3,7 @@
 	<title>Controlgroup Widget</title>
 	<desc>Themeable set of input widgets.</desc>
 	<longdesc>
-		<p>A controlgroup provides a visual grouping for <a href="/button/">button</a> and other input widgets. Controlgroup works by selecting all appropriate descendants, based on the <a href="#option-items">items</a> option, and applying their respective widgets, if loaded. You can enable and disable a controlgroup, which will enable and disable all contained widgets. Destroying a controlgroup also calls each widgets's <code>.destroy()</code> method.</p>
+		<p>A controlgroup provides a visual grouping for <a href="/button/">button</a> and other input widgets. Controlgroup works by selecting all appropriate descendants, based on the <a href="#option-items">items</a> option, and applying their respective widgets, if loaded. If the widgets already exist, their <code>refresh()</code> method is called. You can enable and disable a controlgroup, which will enable and disable all contained widgets. Destroying a controlgroup also calls each widgets's <code>.destroy()</code> method.</p>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
@@ -38,7 +38,7 @@
 			<type name="String" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="excludeInvisible" default="true" example-value="false">
+		<option name="onlyVisible" default="true" example-value="false">
 			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden, the controlgroup will, in effect, not have rounded corners on the top edge.</desc>
 			<type name="Boolean" />
 		</option>

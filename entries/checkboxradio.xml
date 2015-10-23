@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <entry name="checkboxradio" type="widget" widget-element="checkboxradio">
 	<title>Checkboxradio Widget</title>
-	<desc>Converts inputs of type radio and checkbox to themable buttons.</desc>
+	<desc>Converts inputs of type radio and checkbox to themeable buttons.</desc>
 	<longdesc>
-		<p>Native HTML input elements are impossible to style consistently. This widget allows working around that limitation by positining the associated label on top of the hidden input, and emulating the checkbox or radio element itself using an (optional) icon. The original input still receives focus and all events, the label merely provides a themable button on top.</p>
+		<p>Native HTML input elements are impossible to style consistently. This widget allows working around that limitation by positining the associated label on top of the hidden input, and emulating the checkbox or radio element itself using an (optional) icon. The original input still receives focus and all events, the label merely provides a themeable button on top.</p>
 
 		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
@@ -70,7 +70,7 @@
 		<height>100</height>
 		<desc>A simple jQuery UI checkboxradio</desc>
 		<code><![CDATA[
-$( "input" ).checkboxradio();
+$( "input[type='radio']" ).checkboxradio();
 ]]></code>
 		<html><![CDATA[
 <fieldset>
