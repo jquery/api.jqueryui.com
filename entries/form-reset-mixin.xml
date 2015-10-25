@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="widget" name="jQuery.ui.formResetMixin">
+		<title>Form Reset Mixin</title>
+		<desc>A mixin to call <code>refresh()</code> on an input widget when the parent form gets reset.</desc>
+		<longdesc>
+			This only works for native input elements that have a form attribute, like an <code>&lt;input&gt;</code>. It doesn't work for other elements like <code>&lt;label&gt;</code> or <code>&lt;div&gt;</code>
+		</longdesc>
+		<methods suppress-auto-examples="true">
+			<method name="_bindFormResetHandler">
+				<desc>
+					Call <code>this._bindFormResetHandler()</code> inside <code>_create()</code> to initialize the mixin.
+				</desc>
+				<example>
+					<desc>Set the background color of the widget's element based on an option.</desc>
+					<code><![CDATA[
+_create: function() {
+	this._bindFormResetHandler();
+}
+]]></code>
+				</example>
+			</method>
+			<method name="_unbindFormResetHandler">
+				<desc>
+					Call <code>this._unbindFormResetHandler()</code> inside <code>_destroy()</code> to destroy the mixin.
+				</desc>
+				<example>
+					<desc></desc>
+					<code><![CDATA[
+_destroy: function() {
+	this._unbindFormResetHandler();
+}
+]]></code>
+				</example>
+			</method>
+		</methods>
+		<example>
+			<height>100</height>
+			<desc>Type colors into the input</desc>
+			<code><![CDATA[
+$.widget( "custom.colorize", [ $.ui.formResetMixin, {
+	_create: function() {
+		this.swatch = $("<div>")
+			.addClass("demo-colorize-swatch")
+			.insertAfter(this.element);
+
+		this.refresh();
+		this._bindFormResetHandler();
+
+		this._on({ keyup: "refresh" });
+	},
+	refresh: function() {
+		this.swatch.css( "background-color", this.element.val() );
+	},
+	_destroy: function() {
+		this.swatch.remove();
+		this._unbindFormResetHandler();
+	}
+} ] );
+$( "#colorize" ).colorize();
+]]></code>
+			<css><![CDATA[
+	.demo-colorize-swatch {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+	}
+]]></css>
+			<html><![CDATA[
+<form>
+	<input id="colorize">
+	<button type="reset">Reset form</button>
+</form>
+]]></html>
+		</example>
+		<category slug="utilities"/>
+		<category slug="widgets"/>
+	</entry>
+</entries>
