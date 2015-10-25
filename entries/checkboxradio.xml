@@ -28,6 +28,7 @@
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/labels/">.labels()</a></li>
+			<li><a href="/form-reset-mixin/">Form Reset Mixin</a></li>
 			<li><a href="/jQuery.widget/">Widget Factory</a></li>
 		</ul>
 	</longdesc>
