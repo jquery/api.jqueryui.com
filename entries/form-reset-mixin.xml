@@ -2,7 +2,10 @@
 <entries>
 	<entry type="widget" name="jQuery.ui.formResetMixin">
 		<title>Form Reset Mixin</title>
-		<desc>A mixin to call <code>refresh()</code> on a form widget when the parent form gets reset.</desc>
+		<desc>A mixin to call <code>refresh()</code> on an input widget when the parent form gets reset.</desc>
+		<longdesc>
+			This only works for native input elements that have a form attribute, like an <code>&lt;input&gt;</code>. It doesn't work for other elements like <code>&lt;label&gt;</code> or <code>&lt;div&gt;</code>
+		</longdesc>
 		<methods suppress-auto-examples="true">
 			<method name="_bindFormResetHandler">
 				<desc>
@@ -57,11 +60,11 @@ $.widget( "custom.colorize", [ $.ui.formResetMixin, {
 $( "#colorize" ).colorize();
 ]]></code>
 			<css><![CDATA[
-.demo-colorize-swatch {
-	width: 50px;
-	height: 50px;
-	border: 1px solid black;
-}
+	.demo-colorize-swatch {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+	}
 ]]></css>
 			<html><![CDATA[
 <form>
