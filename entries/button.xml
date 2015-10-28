@@ -49,7 +49,10 @@
 			<type name="Object" />
 		</option>
 		<option name="label" default="null" example-value='"custom label"'>
-			<desc>Text to show in the button. When not specified (<code>null</code>), the element's HTML content is used, or its <code>value</code> attribute if the element is an input element of type submit or reset, or the HTML content of the associated label element if the element is an input of type radio or checkbox.</desc>
+			<desc>
+				<p>Text to show in the button. When not specified (<code>null</code>), the element's HTML content is used, or its <code>value</code> attribute if the element is an input element of type submit or reset, or the HTML content of the associated label element if the element is an input of type radio or checkbox.</p>
+				<p>When using an input of type button, submit or reset, support is limited to plain text labels with no icons.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="text" default="true" example-value="false">
