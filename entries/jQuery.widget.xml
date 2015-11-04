@@ -118,14 +118,14 @@
 			<p>Whether an element has a given widget bound to it can be determined using the <a href="/data-selector/"><code>:data</code></a> selector.</p>
 
 			<pre><code>
-				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
-				$( "#elem" ).is( ":data( 'ui-draggable' )" ); // false
+				$( "#elem" ).is( ":data('ui-progressbar')" ); // true
+				$( "#elem" ).is( ":data('ui-draggable')" ); // false
 			</code></pre>
 
 			<p>You can also use <code>:data</code> to get a list of all elements that are instances of a given widget.</p>
 
 			<pre><code>
-				$( ":data( 'ui-progressbar' )" );
+				$( ":data('ui-progressbar')" );
 			</code></pre>
 
 			<h3>Properties</h3>
