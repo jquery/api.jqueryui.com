@@ -124,21 +124,21 @@
 			<p>The instance is stored using <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, the <a href="/data-selector/"><code>:data</code></a> selector can also determine whether an element has a given widget bound to it.</p>
 
 			<pre><code>
-				$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
-				$( "#elem" ).is( ":data( 'ui-draggable' )" ); // false
+				$( "#elem" ).is( ":data('ui-progressbar')" ); // true
+				$( "#elem" ).is( ":data('ui-draggable')" ); // false
 			</code></pre>
 
 			<p>Unlike <code>instance()</code>, <code>:data</code> can be used even if the widget being tested for has not loaded.</p>
 
 			<pre><code>
 				$( "#elem" ).nonExistentWidget( "instance" ); // TypeError
-				$( "#elem" ).is( ":data( 'ui-nonExistentWidget' )" ); // false
+				$( "#elem" ).is( ":data('ui-nonExistentWidget')" ); // false
 			</code></pre>
 
 			<p>You can also use <code>:data</code> to get a list of all elements that are instances of a given widget.</p>
 
 			<pre><code>
-				$( ":data( 'ui-progressbar' )" );
+				$( ":data('ui-progressbar')" );
 			</code></pre>
 
 			<h3>Properties</h3>
