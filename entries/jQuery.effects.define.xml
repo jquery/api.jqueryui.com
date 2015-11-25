@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.define" return="Function" added="1.12">
+		<title>jQuery.effects.define()</title>
+		<signature>
+			<argument name="name" type="String">
+				<desc>The name of the effect to create.</desc>
+			</argument>
+			<argument name="mode" type="String" optional="true">
+				<desc>The default mode for the effect. Possible values are <code>"show"</code>, <code>"hide"</code>, or <code>"toggle"</code>.</desc>
+			</argument>
+			<argument name="effect" type="Function">
+				<argument name="options" type="Object"/>
+				<argument name="done" type="Function"/>
+				<desc>Defines the effect logic. The <code>options</code> argument contains <code>duration</code> and <code>mode</code> properties, as well as any effect-specific options.</desc>
+			</argument>
+		</signature>
+		<desc>Defines an effect.</desc>
+		<longdesc>
+			<p>Defines a new effect for use with <a href="/effect/"><code>.effect()</code></a>, <a href="/show/"><code>.show()</code></a>, <a href="/hide/"><code>.hide()</code></a>, and <a href="/toggle/"><code>.toggle()</code></a>. The effect method is invoked with <code>this</code> being a single DOM element. The <code>done</code> argument must be invoked when the animation is complete.</p>
+			<p><code>jQuery.effects.define()</code> stores the new effect in <code>jQuery.effects.effect[ name ]</code> and returns the function that was provided as the <code>effect</code> parameter.</p>
+		</longdesc>
+		<example>
+			<css><![CDATA[
+	.elem {
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		background: #3b679e;
+	}
+]]></css>
+			<html><![CDATA[
+Click anywhere!
+<div class="elem"></div>
+]]></html>
+			<code><![CDATA[
+$.effects.define( "fade", "toggle", function( options, done ) {
+	var show = options.mode === "show";
+
+	$( this )
+		.css( "opacity", show ? 0 : 1 )
+		.animate( {
+			opacity: show ? 1 : 0
+		}, {
+			queue: false,
+			duration: options.duration,
+			easing: options.easing,
+			complete: done
+		} );
+} );
+
+$( document ).on( "click", function() {
+	$( ".elem" ).toggle( "fade" );
+} );
+]]></code>
+		</example>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
