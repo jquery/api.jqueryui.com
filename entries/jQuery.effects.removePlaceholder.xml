@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <entries>
-	<entry type="method" name="jQuery.effects.removePlaceholder" added="1.12" >
+	<entry type="method" name="jQuery.effects.removePlaceholder" added="1.12">
 		<title>jQuery.effects.removePlaceholder()</title>
 		<signature>
 			<argument name="element" type="jQuery">
