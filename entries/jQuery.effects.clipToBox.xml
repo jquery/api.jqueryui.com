@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.clipToBox" return="Object" added="1.12">
+		<title>jQuery.effects.clipToBox()</title>
+		<signature>
+			<argument name="animationProperties" type="Object">
+				<desc>A set of properties that will eventually be passed to <a href="//api.jquery.com/animate/"><code>.animate()</code></a>. The <code>animationProperties</code> must contain a <code>clip</code> property.</desc>
+			</argument>
+		</signature>
+		<desc>Calculates position and dimensions based on a clip animation.</desc>
+		<longdesc>
+			<p>This method is useful for mimicking a clip animation when using a placeholder for effects. Given a clip animation, <code>jQuery.effects.clipToBox()</code> will generate an object containing <code>top</code>, <code>left</code>, <code>width</code>, and <code>height</code> properties which can be passed to <a href="//api.jquery.com/css/"><code>.css()</code></a> or <a href="//api.jquery.com/animate/"><code>.animate()</code></a>. This method is generally used in conjunction with <a href="/jQuery.effects.createPlaceholder/"><code>jQuery.effects.createPlaceholder()</code></a>.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
