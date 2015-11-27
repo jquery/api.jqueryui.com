@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.removePlaceholder" added="1.12">
+		<title>jQuery.effects.removePlaceholder()</title>
+		<signature>
+			<argument name="element" type="jQuery">
+				<desc>The original element that has an associated placeholder.</desc>
+			</argument>
+		</signature>
+		<desc>Removes a placeholder created with <a href="/jQuery.effects.createPlaceholder/"><code>jQuery.effects.createPlaceholder()</code></a>.</desc>
+		<longdesc>
+			<p>Removes the placeholder for an element. This method is safe to call even if <a href="/jQuery.effects.createPlaceholder/"><code>jQuery.effects.createPlaceholder()</code></a> did not create a placeholder.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
