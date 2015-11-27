@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <entries>
-	<entry type="method" name="jQuery.effects.clipToBox" return="Object" added="1.12" >
+	<entry type="method" name="jQuery.effects.clipToBox" return="Object" added="1.12">
 		<title>jQuery.effects.clipToBox()</title>
 		<signature>
 			<argument name="animationProperties" type="Object">
