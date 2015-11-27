@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.restoreStyle" added="1.12">
+		<title>jQuery.effects.restoreStyle()</title>
+		<signature>
+			<argument name="element" type="jQuery">
+				<desc>The element to restore styles for.</desc>
+			</argument>
+		</signature>
+		<desc>Restores all inline styles for an element.</desc>
+		<longdesc>
+			<p>Restores all inline styles for an element which have been saved using <a href="/jQuery.effects.saveStyle/"><code>jQuery.effects.saveStyle()</code></a>.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
