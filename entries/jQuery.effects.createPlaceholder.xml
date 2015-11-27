@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.createPlaceholder" return="jQuery" added="1.12" >
+		<title>jQuery.effects.createPlaceholder()</title>
+		<signature>
+			<argument name="element" type="jQuery">
+				<desc>The element to create a placeholder for.</desc>
+			</argument>
+		</signature>
+		<desc>Creates a placeholder to support <code>clip</code> animations without disrupting the layout.</desc>
+		<longdesc>
+			<p>Many effects require animating the <code>clip</code> CSS property. In order to apply clipping, the element must be absolutely positioned. As a result, if an animation using that utilizes clipping is applied to an element with static or relative positioning, the layout of the page will be affected when the animated element is removed from the flow. To compensate for this, a placeholder element with the same size and position can be inserted into the document.</p>
+			<p><code>jQuery.effects.createPlaceholder()</code> will create a placeholder with the same display, position, dimensions, and margins as the original element. The placeholder is inserted into the DOM as the next sibling of the original element.</p>
+			<div class="note">If the original element is already absolutely positioned, no placeholder will be generated since the page layout isn't affected. As a result, the return value will be <code>undefined</code>.</div>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
