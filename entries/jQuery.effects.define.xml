@@ -17,7 +17,7 @@
 		</signature>
 		<desc>Defines an effect.</desc>
 		<longdesc>
-			<p>Defines a new effect for use with <a href="/effect/"><code>.effect()</code></a>, <a href="/show/"><code>.show()</code></a>, <a href="/hide/"><code>.hide()</code></a>, and <a href="/toggle/"><code>.toggle()</code></a>. The effect method is invoked with <code>this</code> being a single DOM element. The <code>done</code> argument must be invoked when the animtion is complete.</p>
+			<p>Defines a new effect for use with <a href="/effect/"><code>.effect()</code></a>, <a href="/show/"><code>.show()</code></a>, <a href="/hide/"><code>.hide()</code></a>, and <a href="/toggle/"><code>.toggle()</code></a>. The effect method is invoked with <code>this</code> being a single DOM element. The <code>done</code> argument must be invoked when the animation is complete.</p>
 		</longdesc>
 		<example>
 			<css><![CDATA[
