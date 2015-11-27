@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.scaledDimensions" return="Object" added="1.12">
+		<title>jQuery.effects.scaledDimensions()</title>
+		<signature>
+			<argument name="element" type="jQuery">
+				<desc>The element to scale.</desc>
+			</argument>
+			<argument name="percent" type="Number">
+				<desc>The percentage of the original size that the element's dimensions should be scaled to.</desc>
+			</argument>
+			<argument name="direction" type="String" optional="true">
+				<desc>Which direction to scale the element's dimensions; either <code>"horizontal"</code> or <code>"vertical"</code>. If <code>direction</code> is omitted, both dimensions will be scaled.</desc>
+			</argument>
+		</signature>
+		<desc>Scales the dimensions of an element.</desc>
+		<longdesc>
+			<p>This method scales the dimensions of an element, returning an object containing <code>height</code>, <code>width</code>, <code>outerHeight</code>, and <code>outerWidth</code> properties. The element is not actually modified.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
