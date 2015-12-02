@@ -9,7 +9,7 @@
 		</signature>
 		<desc>Saves all inline styles applied to an element.</desc>
 		<longdesc>
-			<p>Saves all inline styles applied to an element. This is useful when animating various styles and restoring the existing styles at the end. The saved styles can be restored using <a href="/jQuery.effects.restoreStyle/"><code>jQuery.effects.restoreStyle()</code></a>.</p>
+			<p>Stores a copy of the current inline styles applied to the element, which can be reapplied to the element later using <a href="/jQuery.effects.restoreStyle/"><code>jQuery.effects.restoreStyle()</code></a>. This is useful when animating various styles and restoring the existing styles at the end.</p>
 			<p>When using <a href="/jQuery.effects.define/"><code>jQuery.effects.define()</code></a> to create an effect, if <code>jQuery.effects.saveStyle()</code> is used on the main element being animated, the styles will be restored automatically when the animation is complete.</p>
 		</longdesc>
 		<category slug="effects-core"/>
