@@ -14,7 +14,7 @@
 		<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
 	</property>
 	<property name="complete" type="Function" optional="true">
-		<desc>A function to call once the animation is complete.</desc>
+		<desc>A function to call once the animation is complete, called once per matched element.</desc>
 	</property>
 	<property name="children" type="Boolean" default="false">
 		<desc>Whether the animation should additionally be applied to all descendants of the matched elements. This feature should be used with caution as the cost of determining which descendants to animate can be very expensive, and grows linearly with the number of descendants.</desc>
