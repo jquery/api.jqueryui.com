@@ -18,7 +18,7 @@
 			</type>
 		</property>
 		<property name="complete" type="Function">
-			<desc>A function to call once the animation is complete.</desc>
+			<desc>A function to call once the animation is complete, called once per matched element.</desc>
 		</property>
 		<property name="queue" default="true">
 			<type name="Boolean"/>
