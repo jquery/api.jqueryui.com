@@ -1,46 +1,46 @@
 <categories>
-	<category name="Uncategorized" slug="uncategorized"/>
-	<category name="Effects" slug="effects">
-		<desc><![CDATA[
-			<p>jQuery UI adds quite a bit of functionality on top of <a href="//api.jquery.com/category/effects/">jQuery's built-in effects</a>. jQuery UI adds support for animating colors and class transitions, as well as providing several additional <a href="/easings/">easings</a>. In addition, a full suite of custom effects are available for use when showing and hiding elements or just to add some visual appeal.</p>
-		]]></desc>
-	</category>
-	<category name="Widgets" slug="widgets">
-		<desc><![CDATA[
-			<p>Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the <a href="/jQuery.widget/">widget factory</a> documentation for more details.</p>
-		]]></desc>
-	</category>
-	<category name="Interactions" slug="interactions">
-		<desc><![CDATA[
-			<p>jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.</p>
-		]]></desc>
-	</category>
-	<category name="Utilities" slug="utilities"/>
-	<category name="Methods" slug="methods">
-		<desc><![CDATA[
-			<p>Although jQuery UI is mostly comprised of <a href="/category/widgets/">widgets</a>, <a href="/category/interactions/">interactions</a>, and <a href="/category/effects/">effects</a>, there are also a few simple methods that are added for convenience.</p>
-		]]></desc>
-	</category>
-	<category name="Selectors" slug="selectors"/>
-	<category name="Method Overrides" slug="overrides">
-		<desc><![CDATA[
-			<p>jQuery UI overrides several built-in jQuery methods in order to provide additional functionality. When using these overrides, it's important to make sure that jQuery UI is loaded. If jQuery UI is not loaded, the methods will still exist, but the expected functionality will not be available, resulting in bugs that may be hard to track down.</p>
-		]]></desc>
-	</category>
-	<category name="UI Core" slug="ui-core">
-		<desc><![CDATA[
-			<p>Functionality provided by <code>core.js</code>.</p>
-		]]></desc>
-	</category>
-	<category name="Effects Core" slug="effects-core">
-		<desc><![CDATA[
-			<p>Functionality provided by <code>effect.js</code>. In addition to the methods listed below, <code>effect.js</code> also includes several <a href="/easings/">easings</a>.</p>
-		]]></desc>
-	</category>
-	<category name="Theming" slug="theming">
-		<desc><![CDATA[
-			<p>jQuery UI includes a robust CSS Framework designed for building custom jQuery widgets. The framework includes classes that cover a wide array of common user interface needs, and can be manipulated using <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller</a>. By building your UI components using the jQuery UI CSS Framework, you will be adopting shared markup conventions and allowing for ease of code integration across the plugin community at large. You can read more about jQuery UI theming at the <a href="http://learn.jquery.com/jquery-ui/theming/">jQuery Learning Center</a>.</p>
-		]]></desc>
-	</category>
-	<category name="All" slug="all"/>
+    <category name="Uncategorized" slug="uncategorized"/>
+    <category name="Effects" slug="effects">
+        <desc><![CDATA[
+            <p>jQuery UI adds quite a bit of functionality on top of <a href="//api.jquery.com/category/effects/">jQuery's built-in effects</a>. jQuery UI adds support for animating colors and class transitions, as well as providing several additional <a href="/easings/">easings</a>. In addition, a full suite of custom effects are available for use when showing and hiding elements or just to add some visual appeal.</p>
+        ]]></desc>
+    </category>
+    <category name="Widgets" slug="widgets">
+        <desc><![CDATA[
+            <p>Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the <a href="/jQuery.widget/">widget factory</a> documentation for more details.</p>
+        ]]></desc>
+    </category>
+    <category name="Interactions" slug="interactions">
+        <desc><![CDATA[
+            <p>jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.</p>
+        ]]></desc>
+    </category>
+    <category name="Utilities" slug="utilities"/>
+    <category name="Methods" slug="methods">
+        <desc><![CDATA[
+            <p>Although jQuery UI is mostly comprised of <a href="/category/widgets/">widgets</a>, <a href="/category/interactions/">interactions</a>, and <a href="/category/effects/">effects</a>, there are also a few simple methods that are added for convenience.</p>
+        ]]></desc>
+    </category>
+    <category name="Selectors" slug="selectors"/>
+    <category name="Method Overrides" slug="overrides">
+        <desc><![CDATA[
+            <p>jQuery UI overrides several built-in jQuery methods in order to provide additional functionality. When using these overrides, it's important to make sure that jQuery UI is loaded. If jQuery UI is not loaded, the methods will still exist, but the expected functionality will not be available, resulting in bugs that may be hard to track down.</p>
+        ]]></desc>
+    </category>
+    <category name="UI Core" slug="ui-core">
+        <desc><![CDATA[
+            <p>Functionality provided by <code>core.js</code>.</p>
+        ]]></desc>
+    </category>
+    <category name="Effects Core" slug="effects-core">
+        <desc><![CDATA[
+            <p>Functionality provided by <code>effect.js</code>. In addition to the methods listed below, <code>effect.js</code> also includes several <a href="/easings/">easings</a>.</p>
+        ]]></desc>
+    </category>
+    <category name="Theming" slug="theming">
+        <desc><![CDATA[
+            <p>jQuery UI includes a robust CSS Framework designed for building custom jQuery widgets. The framework includes classes that cover a wide array of common user interface needs, and can be manipulated using <a href="https://jqueryui.com/themeroller/">jQuery UI ThemeRoller</a>. By building your UI components using the jQuery UI CSS Framework, you will be adopting shared markup conventions and allowing for ease of code integration across the plugin community at large. You can read more about jQuery UI theming at the <a href="https://learn.jquery.com/jquery-ui/theming/">jQuery Learning Center</a>.</p>
+        ]]></desc>
+    </category>
+    <category name="All" slug="all"/>
 </categories>
