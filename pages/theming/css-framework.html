@@ -1,90 +1,90 @@
 <script>{
-	"title": "CSS Framework",
-	"excerpt": "A list of the class names used by jQuery UI to allow components to be themeable.",
-	"termSlugs": {
-		"category": [ "theming" ]
-	}
+    "title": "CSS Framework",
+    "excerpt": "A list of the class names used by jQuery UI to allow components to be themeable.",
+    "termSlugs": {
+        "category": [ "theming" ]
+    }
 }</script>
 
-<p>The following is a list of the class names used by jQuery UI. The classes are designed to create a visual consistency across an application and allow components to be themeable by <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
+<p>The following is a list of the class names used by jQuery UI. The classes are designed to create a visual consistency across an application and allow components to be themeable by <a href="https://jqueryui.com/themeroller/">jQuery UI ThemeRoller.</a> The class names are split between ui.core.css and ui.theme.css, depending on whether styles are fixed and structural, or themeable (colors, fonts, backgrounds, etc) respectively.</p>
 
 <h3>Layout Helpers</h3>
 <ul>
-	<li>
-		<code>.ui-helper-hidden</code>: Hides content visually and from assistive technologies, such as screen readers.
-	</li>
-	<li>
-		<code>.ui-helper-hidden-accessible</code>: Hides content visually, but leaves it available to assistive technologies.
-	</li>
-	<li>
-		<code>.ui-helper-reset</code>: A basic style reset for DOM nodes. Resets padding, margins, text-decoration, list-style, etc.
-	</li>
-	<li>
-		<code>.ui-helper-clearfix</code>: Applies float wrapping properties to parent elements.
-	</li>
-	<li>
-		<code>.ui-front</code>: Applies z-index to manage the stacking of multiple widgets on the screen. See the page about <a href="/theming/stacking-elements/">stacking elements</a> for more details.
-	</li>
+    <li>
+        <code>.ui-helper-hidden</code>: Hides content visually and from assistive technologies, such as screen readers.
+    </li>
+    <li>
+        <code>.ui-helper-hidden-accessible</code>: Hides content visually, but leaves it available to assistive technologies.
+    </li>
+    <li>
+        <code>.ui-helper-reset</code>: A basic style reset for DOM nodes. Resets padding, margins, text-decoration, list-style, etc.
+    </li>
+    <li>
+        <code>.ui-helper-clearfix</code>: Applies float wrapping properties to parent elements.
+    </li>
+    <li>
+        <code>.ui-front</code>: Applies z-index to manage the stacking of multiple widgets on the screen. See the page about <a href="/theming/stacking-elements/">stacking elements</a> for more details.
+    </li>
 </ul>
 
 <h3>Widget Containers</h3>
 <ul>
-	<li>
-		<code>.ui-widget</code>: Class to be applied to the outer container of all widgets. Applies font-family and font size to widgets.
-	</li>
-	<li>
-		<code>.ui-widget-header</code>: Class to be applied to header containers. Applies header container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-widget-content</code>: Class to be applied to content containers. Applies content container styles to an element and its child text, links, and icons. (can be applied to parent or sibling of header).
-	</li>
+    <li>
+        <code>.ui-widget</code>: Class to be applied to the outer container of all widgets. Applies font-family and font size to widgets.
+    </li>
+    <li>
+        <code>.ui-widget-header</code>: Class to be applied to header containers. Applies header container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-widget-content</code>: Class to be applied to content containers. Applies content container styles to an element and its child text, links, and icons. (can be applied to parent or sibling of header).
+    </li>
 </ul>
 
 <h3>Interaction States</h3>
 <ul>
-	<li>
-		<code>.ui-state-default</code>: Class to be applied to clickable button-like elements. Applies "clickable default" container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-state-hover</code>: Class to be applied on mouseover to clickable button-like elements. Applies "clickable hover" container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-state-focus</code>: Class to be applied on keyboard focus to clickable button-like elements. Applies "clickable focus" container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-state-active</code>: Class to be applied on mousedown to clickable button-like elements. Applies "clickable active" container styles to an element and its child text, links, and icons.
-	</li>
+    <li>
+        <code>.ui-state-default</code>: Class to be applied to clickable button-like elements. Applies "clickable default" container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-state-hover</code>: Class to be applied on mouseover to clickable button-like elements. Applies "clickable hover" container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-state-focus</code>: Class to be applied on keyboard focus to clickable button-like elements. Applies "clickable focus" container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-state-active</code>: Class to be applied on mousedown to clickable button-like elements. Applies "clickable active" container styles to an element and its child text, links, and icons.
+    </li>
 </ul>
 
 <h3>Interaction Cues</h3>
 <ul>
-	<li>
-		<code>.ui-state-highlight</code>: Class to be applied to highlighted or selected elements. Applies "highlight" container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-state-error</code>: Class to be applied to error messaging container elements. Applies "error" container styles to an element and its child text, links, and icons.
-	</li>
-	<li>
-		<code>.ui-state-error-text</code>: An additional class that applies just the error text color without background. Can be used on form labels for instance. Also applies error icon color to child icons.
-	</li>
-	<li>
-		<code>.ui-state-disabled</code>: Applies a dimmed opacity to disabled UI elements. Meant to be added in addition to an already-styled element.
-	</li>
-	<li>
-		<code>.ui-priority-primary</code>: Class to be applied to a priority-1 button in situations where button hierarchy is needed.
-	</li>
-	<li>
-		<code>.ui-priority-secondary</code>: Class to be applied to a priority-2 button in situations where button hierarchy is needed.
-	</li>
+    <li>
+        <code>.ui-state-highlight</code>: Class to be applied to highlighted or selected elements. Applies "highlight" container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-state-error</code>: Class to be applied to error messaging container elements. Applies "error" container styles to an element and its child text, links, and icons.
+    </li>
+    <li>
+        <code>.ui-state-error-text</code>: An additional class that applies just the error text color without background. Can be used on form labels for instance. Also applies error icon color to child icons.
+    </li>
+    <li>
+        <code>.ui-state-disabled</code>: Applies a dimmed opacity to disabled UI elements. Meant to be added in addition to an already-styled element.
+    </li>
+    <li>
+        <code>.ui-priority-primary</code>: Class to be applied to a priority-1 button in situations where button hierarchy is needed.
+    </li>
+    <li>
+        <code>.ui-priority-secondary</code>: Class to be applied to a priority-2 button in situations where button hierarchy is needed.
+    </li>
 </ul>
 
 <h3>Icons</h3>
 
 <h4>States and images</h4>
 <ul>
-	<li>
-		<code>.ui-icon</code>: Base class to be applied to an icon element. Sets dimensions to a 16px square block, hides inner text, and sets background image to the "content" state sprite image. Note: <code>ui-icon</code> class will be given a different sprite background image depending on its parent container. For example, a <code>ui-icon</code> element within a <code>ui-state-default</code> container will get colored according to the <code>ui-state-default</code>'s icon color.
-	</li>
+    <li>
+        <code>.ui-icon</code>: Base class to be applied to an icon element. Sets dimensions to a 16px square block, hides inner text, and sets background image to the "content" state sprite image. Note: <code>ui-icon</code> class will be given a different sprite background image depending on its parent container. For example, a <code>ui-icon</code> element within a <code>ui-state-default</code> container will get colored according to the <code>ui-state-default</code>'s icon color.
+    </li>
 </ul>
 
 <h4>Icon types</h4>
@@ -97,23 +97,23 @@
 
 <h4>Corner Radius helpers</h4>
 <ul>
-	<li><code>.ui-corner-tl</code>: Applies corner-radius to top left corner of element.</li>
-	<li><code>.ui-corner-tr</code>: Applies corner-radius to top right corner of element.</li>
-	<li><code>.ui-corner-bl</code>: Applies corner-radius to bottom left corner of element.</li>
-	<li><code>.ui-corner-br</code>: Applies corner-radius to bottom right corner of element.</li>
-	<li><code>.ui-corner-top</code>: Applies corner-radius to both top corners of element.</li>
-	<li><code>.ui-corner-bottom</code>: Applies corner-radius to both bottom corners of element.</li>
-	<li><code>.ui-corner-right</code>: Applies corner-radius to both right corners of element.</li>
-	<li><code>.ui-corner-left</code>: Applies corner-radius to both left corners of element.</li>
-	<li><code>.ui-corner-all</code>: Applies corner-radius to all 4 corners of element.</li>
+    <li><code>.ui-corner-tl</code>: Applies corner-radius to top left corner of element.</li>
+    <li><code>.ui-corner-tr</code>: Applies corner-radius to top right corner of element.</li>
+    <li><code>.ui-corner-bl</code>: Applies corner-radius to bottom left corner of element.</li>
+    <li><code>.ui-corner-br</code>: Applies corner-radius to bottom right corner of element.</li>
+    <li><code>.ui-corner-top</code>: Applies corner-radius to both top corners of element.</li>
+    <li><code>.ui-corner-bottom</code>: Applies corner-radius to both bottom corners of element.</li>
+    <li><code>.ui-corner-right</code>: Applies corner-radius to both right corners of element.</li>
+    <li><code>.ui-corner-left</code>: Applies corner-radius to both left corners of element.</li>
+    <li><code>.ui-corner-all</code>: Applies corner-radius to all 4 corners of element.</li>
 </ul>
 
 <h4>Overlay &amp; Shadow</h4>
 <ul>
-	<li>
-		<code>.ui-widget-overlay</code>: Applies 100% width &amp; height dimensions to an overlay screen, along with background color/texture, and screen opacity.
-	</li>
-	<li>
-		<code>.ui-widget-shadow</code>: Class to be applied to overlay widget shadow elements. Applies background color/texture, custom corner radius, opacity, top/left offsets and shadow "thickness". Thickness is applied via padding to all sides of a shadow that is set to match the dimensions of the overlay element. Offsets are applied via top and left margins (can be positive or negative).
-	</li>
+    <li>
+        <code>.ui-widget-overlay</code>: Applies 100% width &amp; height dimensions to an overlay screen, along with background color/texture, and screen opacity.
+    </li>
+    <li>
+        <code>.ui-widget-shadow</code>: Class to be applied to overlay widget shadow elements. Applies background color/texture, custom corner radius, opacity, top/left offsets and shadow "thickness". Thickness is applied via padding to all sides of a shadow that is set to match the dimensions of the overlay element. Offsets are applied via top and left margins (can be positive or negative).
+    </li>
 </ul>
