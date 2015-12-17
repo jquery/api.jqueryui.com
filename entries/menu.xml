@@ -5,23 +5,36 @@
 		Themeable menu with mouse and keyboard interactions for navigation.
 	</desc>
 	<longdesc>
-		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship. The most commonly used element is the unordered list (<code>&lt;ul></code>):</p>
+		<p>A menu can be created from any valid markup as long as the elements have a strict parent/child relationship. The most commonly used element is the unordered list (<code>&lt;ul></code>). Additionally, the contents of each menu item must be wrapped with a block-level DOM element. In the example below <code>&lt;div&gt;</code> elements are used as wrappers:</p>
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3
+	<li>
+		<div>Item 1</div>
+	</li>
+	<li>
+		<div>Item 2</div>
+	</li>
+	<li>
+		<div>Item 3</div>
 		<ul>
-			<li>Item 3-1</li>
-			<li>Item 3-2</li>
-			<li>Item 3-3</li>
-			<li>Item 3-4</li>
-			<li>Item 3-5</li>
+			<li>
+				<div>Item 3-1</div>
+			</li>
+			<li>
+				<div>Item 3-2</div>
+			</li>
+			<li>
+				<div>Item 3-3</div>
+			</li>
 		</ul>
 	</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+	<li>
+		<div>Item 4</div>
+	</li>
+	<li>
+		<div>Item 5</div>
+	</li>
 </ul>
 ]]></code></pre>
 
@@ -35,20 +48,26 @@
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li><span class="ui-icon ui-icon-disk"></span>Save</li>
+	<li>
+		<div><span class="ui-icon ui-icon-disk"></span>Save</div>
+	</li>
 </ul>
 ]]></code></pre>
 		<p>Menu automatically adds the necessary padding to items without icons.</p>
 
 		<h3 id="dividers">Dividers</h3>
 
-		<p>Divider elements can be created by including unlinked menu items that contain only spaces and/or dashes:</p>
+		<p>Divider elements can be created by including menu items that contain only spaces and/or dashes:</p>
 
 		<pre><code><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
+	<li>
+		<div>Item 1</div>
+	</li>
 	<li>-</li>
-	<li>Item 2</li>
+	<li>
+		<div>Item 2</div>
+	</li>
 </ul>
 ]]></code></pre>
 
@@ -71,12 +90,17 @@
 
 		<ul>
 			<li>
-				<code>ui-menu</code>: The outer container of the menu. This element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
+				<code>ui-menu</code>: The outer container of the menu, as well as any nested submenu. This top-level element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
 				<ul>
 					<li>
-						<code>ui-menu-item</code>: The container for individual menu items.
+						<code>ui-menu-item</code>: The container for individual menu items. This contains the element for the item's text itself as well as the element for submenus.
 						<ul>
-							<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+							<li>
+								<code>ui-menu-item-wrapper</code>: The wrapper element inside each individual menu item, containting the text content and the icon indicating submenus.
+								<ul>
+									<li><code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li><code>ui-menu-divider</code>: Divider elements between menu items.</li>
@@ -94,13 +118,17 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="icons" type="Object" default='{ submenu: "ui-icon-carat-1-e" }' example-value='{ submenu: "ui-icon-circle-triangle-e" }'>
+		<option name="icons" type="Object" example-value='{ submenu: "ui-icon-circle-triangle-e" }'>
+			<default>{
+	submenu: "ui-icon-carat-1-e"
+}</default>
 			<desc>
 				Icons to use for submenus, matching <a href="/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>.
-				<ul>
-					<li>submenu (string, default: "ui-icon-carat-1-e")</li>
-				</ul>
 			</desc>
 		</option>
 		<option name="items" type="String" default='"> *"' example-value='".custom-item"' init-only="true" added="1.11.0">
@@ -167,7 +195,7 @@
 		</method>
 		<method name="focus" example-params='null, menu.find( ".ui-menu-item:last" )'>
 			<desc>
-				Activates a particular menu item, begins opening any sub-menu if present and triggers the menu's <a href="#event-focus"><code>focus</code></a> event.
+				Activates the given menu item and triggers the menu's <a href="#event-focus"><code>focus</code></a> event. Opens the menu item's sub-menu, if one exists.
 			</desc>
 			<argument name="event" type="Event" optional="true">
 				<desc>What triggered the menu item to gain focus.</desc>
@@ -318,19 +346,32 @@ $( "#menu" ).menu();
 ]]></css>
 		<html><![CDATA[
 <ul id="menu">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3
+	<li>
+		<div>Item 1</div>
+	</li>
+	<li>
+		<div>Item 2</div>
+	</li>
+	<li>
+		<div>Item 3</div>
 		<ul>
-			<li>Item 3-1</li>
-			<li>Item 3-2</li>
-			<li>Item 3-3</li>
-			<li>Item 3-4</li>
-			<li>Item 3-5</li>
+			<li>
+				<div>Item 3-1</div>
+			</li>
+			<li>
+				<div>Item 3-2</div>
+			</li>
+			<li>
+				<div>Item 3-3</div>
+			</li>
 		</ul>
 	</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+	<li>
+		<div>Item 4</div>
+	</li>
+	<li>
+		<div>Item 5</div>
+	</li>
 </ul>
 ]]></html>
 	</example>

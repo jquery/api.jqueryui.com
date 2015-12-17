@@ -11,10 +11,10 @@
 
 		<ul>
 			<li>
-				<code>ui-slider</code>: The track of the slider control. This element will additionally have a class name of <code>ui-slider-horizontal</code> or <code>ui-slider-vertical</code> depending on the <a href="#option-orientation"><code>orientation</code></a> of the slider.
+				<code>ui-slider</code>: The track of the slider control. This element will additionally have a class name of <code>ui-slider-horizontal</code> or <code>ui-slider-vertical</code> depending on the <a href="#option-orientation"><code>orientation</code> option</a> of the slider.
 				<ul>
-					<li><code>ui-slider-handle</code>: The slider handles.</li>
-					<li><code>ui-slider-range</code>: The selected range used when the <a href="#option-range"><code>range</code></a> option is set. This element can additionally have a class of <code>ui-slider-range-min</code> or <code>ui-slider-range-max</code> if the <code>range</code> option is set to <code>"min"</code> or <code>"max"</code> respectively.</li>
+					<li><code>ui-slider-handle</code>: One of the slider handles.</li>
+					<li><code>ui-slider-range</code>: The selected range used when the <a href="#option-range"><code>range</code> option</a> is set. This element can additionally have a class of <code>ui-slider-range-min</code> or <code>ui-slider-range-max</code> if the <code>range</code> option is set to <code>"min"</code> or <code>"max"</code> respectively.</li>
 				</ul>
 			</li>
 		</ul>
@@ -40,6 +40,15 @@
 			<type name="Number">
 				<desc>The duration of the animation, in milliseconds.</desc>
 			</type>
+		</option>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-slider": "ui-corner-all",
+	"ui-slider-handle": "ui-corner-all",
+	"ui-slider-range": "ui-corner-all ui-widget-header"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="max" type="Number" default="100" example-value='50'>
@@ -79,6 +88,9 @@
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
 				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle being moved.</desc>
+				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>
 				</property>
@@ -90,6 +102,9 @@
 			<argument name="ui" type="Object">
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle being moved.</desc>
+				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle being moved.</desc>
 				</property>
 				<property name="value" type="Number">
 					<desc>The value that the handle will move to if the event is not canceled.</desc>
@@ -106,6 +121,9 @@
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was changed.</desc>
 				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle that was moved.</desc>
+				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>
 				</property>
@@ -117,6 +135,9 @@
 			<argument name="ui" type="Object">
 				<property name="handle" type="jQuery">
 					<desc>The jQuery object representing the handle that was moved.</desc>
+				</property>
+				<property name="handleIndex" type="Number">
+					<desc>The numeric index of the handle that was moved.</desc>
 				</property>
 				<property name="value" type="Number">
 					<desc>The current value of the slider.</desc>

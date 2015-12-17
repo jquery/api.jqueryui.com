@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<entry name="transfer" type="method" return="jQuery">
+	<title>.transfer()</title>
+	<desc>Transfers the outline of an element to another element</desc>
+	<longdesc>
+		<p>Very useful when trying to visualize interaction between two elements.</p>
+		<p>The transfer element itself has the class <code>ui-effects-transfer</code>, and needs to be styled by you, for example by adding a background or border.</p>
+	</longdesc>
+	<added>1.12</added>
+	<signature>
+		<argument name="options" type="Object">
+			<property name="to" type="Selector">
+				<desc>The target of the transfer effect.</desc>
+			</property>
+			<property name="className" type="String" default="null">
+				<desc>A class to add to the transfer element, in addition to <code>ui-effects-transfer</code>.</desc>
+			</property>
+			<property name="duration" default="400">
+				<desc>A string or number determining how long the animation will run. The strings <code>"fast"</code> and <code>"slow"</code> can be supplied to indicate durations of 200 and 600 milliseconds, respectively. The number type indicates the duration in milliseconds.</desc>
+				<type name="Number"/>
+				<type name="String"/>
+			</property>
+			<property name="easing" type="String" default="swing">
+				<desc>A string indicating which <a href="/easings/">easing</a> function to use for the transition.</desc>
+			</property>
+		</argument>
+		<xi:include href="../includes/animation-argument-complete.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</signature>
+	<example>
+		<height>150</height>
+		<desc>Clicking on the green element transfers to the other.</desc>
+		<css><![CDATA[
+	.green {
+		width: 100px;
+		height: 80px;
+		background: green;
+		border: 1px solid black;
+	}
+	.red {
+		margin-top: 10px;
+		width: 50px;
+		height: 30px;
+		background: red;
+		border: 1px solid black;
+	}
+	.ui-effects-transfer {
+		border: 1px dotted black;
+	}
+]]></css>
+		<code><![CDATA[
+$( "div" ).click(function() {
+	var i = 1 - $( "div" ).index( this );
+	$( this ).transfer( {
+		to: $( "div" ).eq( i ),
+		duration: 1000
+	} );
+});
+]]></code>
+		<html><![CDATA[
+<div class="green"></div>
+<div class="red"></div>
+]]></html>
+	</example>
+	<category slug="effects"/>
+	<category slug="effects-core"/>
+</entry>

@@ -47,6 +47,13 @@
 	<note id="functional-css"/>
 	<added>1.9</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-tooltip": "ui-corner-all ui-widget-shadow"
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="content" default="function returning the title attribute" example-value='"Awesome title!"'>
 			<desc>
 				<p>The content of the tooltip.</p>
@@ -58,6 +65,12 @@
 			</type>
 			<type name="String">
 				<desc>A string of HTML to use for the tooltip content.</desc>
+			</type>
+			<type name="Element">
+				<desc>A DOM element to use for the tooltip content.</desc>
+			</type>
+			<type name="jQuery">
+				<desc>A jQuery object to use for the tooltip content.</desc>
 			</type>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
@@ -77,10 +90,10 @@
 			<type name="Object" />
 		</option>
 		<xi:include href="../includes/widget-option-show.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="tooltipClass" default="null" example-value='"custom-tooltip-styling"'>
+		<option name="tooltipClass" default="null" example-value='"custom-tooltip-styling"' deprecated="1.12">
 			<desc>
-				A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
-				<p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
+				<p>A class to add to the widget, can be used to display various tooltip types, like warnings or errors.</p>
+				<p>The <code>tooltipClass</code> option has been deprecated in favor of the <a href="#option-classes"><code>classes</code> option</a>, using the <code>ui-tooltip</code> property.</p>
 			</desc>
 			<type name="String" />
 		</option>

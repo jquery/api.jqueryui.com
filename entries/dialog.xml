@@ -55,7 +55,7 @@
 
 		<ul>
 			<li>
-				<code>ui-dialog</code>: The outer container of the dialog.
+				<code>ui-dialog</code>: The outer container of the dialog. If the <a href="#option-draggable"><code>draggable</code> option</a> is set, the <code>ui-dialog-dragging</code> class is added during a drag. If the <a href="#option-resizable"><code>resizable</code> option</a> is set, the <code>ui-dialog-resizing</code> class is added during a resize. If the <a href="#option-buttons"><code>buttons</code> option</a> is set, the <code>ui-dialog-buttons</code> class is added.
 				<ul>
 					<li>
 						<code>ui-dialog-titlebar</code>: The title bar containing the dialog's title and close button.
@@ -125,6 +125,14 @@
 				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button. In addition, a key of <code>icons</code> can be used to control <a href="/button/#option-icons">button's <code>icons</code> option</a>, and a key of <code>showText</code> can be used to control <a href="/button/#option-text">button's <code>text</code> option</a>.</desc>
 			</type>
 		</option>
+		<option name="classes" type="Object">
+			<default>{
+	"ui-dialog": "ui-corner-all",
+	"ui-dialog-titlebar": "ui-corner-all",
+}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="closeOnEscape" default="true" example-value="false">
 			<desc>Specifies whether the dialog should close when it has focus and the user presses the escape (ESC) key.</desc>
 			<type name="Boolean" />
@@ -133,8 +141,11 @@
 			<desc>Specifies the text for the close button. Note that the close text is visibly hidden when using a standard theme.</desc>
 			<type name="String" />
 		</option>
-		<option name="dialogClass" default='""' example-value='"alert"'>
-			<desc>The specified class name(s) will be added to the dialog, for additional theming.</desc>
+		<option name="dialogClass" default='""' example-value='"alert"' deprecated="1.12">
+			<desc>
+				<p>The specified class name(s) will be added to the dialog, for additional theming.</p>
+				<p>The <code>dialogClass</code> option has been deprecated in favor of the <a href="#option-classes"><code>classes</code> option</a>, using the <code>ui-dialog</code> property.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="draggable" default="true" example-value="false">

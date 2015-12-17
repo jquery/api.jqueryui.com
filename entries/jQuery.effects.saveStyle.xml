@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.saveStyle" added="1.12">
+		<title>jQuery.effects.saveStyle()</title>
+		<signature>
+			<argument name="element" type="jQuery">
+				<desc>The element to save styles for.</desc>
+			</argument>
+		</signature>
+		<desc>Stores a copy of all inline styles applied to an element.</desc>
+		<longdesc>
+			<p>Stores a copy of the current inline styles applied to the element, which can be reapplied to the element later using <a href="/jQuery.effects.restoreStyle/"><code>jQuery.effects.restoreStyle()</code></a>. This is useful when animating various styles and restoring the existing styles at the end.</p>
+			<p>When using <a href="/jQuery.effects.define/"><code>jQuery.effects.define()</code></a> to create an effect, if <code>jQuery.effects.saveStyle()</code> is used on the main element being animated, the styles will be restored automatically when the animation is complete.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>

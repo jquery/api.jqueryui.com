@@ -6,6 +6,19 @@
 		<p>The jQuery UI Sortable plugin makes selected elements sortable by dragging with the mouse.</p>
 		<p><em>Note: In order to sort table rows, the <code>tbody</code> must be made sortable, not the <code>table</code>.</em></p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-sortable</code>: The sortable element.
+				<ul>
+					<li><code>ui-sortable-handle</code>: The handle of each sortable item, specified using the <a href="#option-handle"><code>handle</code> option</a>. By default, each sortable item itself is also the handle.</li>
+					<li><code>ui-sortable-placeholder</code>: The element used to show the future position of the item currently being sorted.</li>
+				</ul>
+			</li>
+			<li><code>ui-sortable-helper</code>: The element shown while dragging a sortable item. The element actually used depends on the <a href="#option-helper"><code>helper</code> option</a>.</li>
+		</ul>
+
 		<h3>Dependencies</h3>
 		<ul>
 			<li><a href="/category/ui-core/">UI Core</a></li>
@@ -36,6 +49,10 @@
 		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,button"'>
 			<desc>Prevents sorting if you start on elements matching the selector.</desc>
 		</option>
+		<option name="classes" type="Object" default="{}">
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="connectWith" type="Selector" default='false' example-value='"#shopping-cart"'>
 			<desc>A selector of other sortable elements that the items from this list should be connected to. This is a one-way relationship, if you want the items to be connected in both directions, the <code>connectWith</code> option must be set on both sortable elements.</desc>
 		</option>
@@ -62,10 +79,12 @@
 			<desc>Moves the sorting element or helper so the cursor always appears to drag from the same position. Coordinates can be given as a hash using a combination of one or two keys: <code>{ top, left, right, bottom }</code>.</desc>
 		</option>
 		<option name="delay" type="Integer" default="0" example-value='150'>
+			<deprecated>1.12</deprecated>
 			<desc>Time in milliseconds to define when the sorting should start. Adding a delay helps preventing unwanted drags when clicking on an element.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="distance" type="Number" default="1" example-value='5'>
+			<deprecated>1.12</deprecated>
 			<desc>Tolerance, in pixels, for when sorting should start. If specified, sorting will not start until after mouse is dragged beyond distance. Can be used to allow for clicks on elements within a handle.</desc>
 		</option>
 		<option name="dropOnEmpty" type="Boolean" default="true" example-value='false'>
