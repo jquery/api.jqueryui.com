@@ -139,7 +139,7 @@
 			<p>Extract a date in expanded French format.</p>
 			<pre><code>
 				$.datepicker.parseDate( "DD, MM d, yy", "Samedi, Juillet 14, 2007", {
-					shortYearCuroff: 20,
+					shortYearCutoff: 20,
 					dayNamesShort: $.datepicker.regional[ "fr" ].dayNamesShort,
 					dayNames: $.datepicker.regional[ "fr" ].dayNames,
 					monthNamesShort: $.datepicker.regional[ "fr" ].monthNamesShort,
