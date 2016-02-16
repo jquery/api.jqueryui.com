@@ -304,6 +304,7 @@ $( "#speed" ).selectmenu();
 ]]></css>
 	</example>
 	<example>
+		<height>270</height>
 		<desc>A simple jQuery UI Selectmenu with optgroups</desc>
 		<code><![CDATA[
 $( "#files" ).selectmenu();
@@ -327,6 +328,7 @@ $( "#files" ).selectmenu();
 ]]></css>
 	</example>
 	<example>
+		<height>270</height>
 		<desc>A jQuery UI Selectmenu with overflow</desc>
 		<code><![CDATA[
 $( "#number" )

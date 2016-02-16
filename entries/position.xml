@@ -54,7 +54,7 @@
 		</argument>
 	</signature>
 	<example>
-		<height>300</height>
+		<height>310</height>
 		<desc>A simple jQuery UI Position example.</desc>
 		<css><![CDATA[
 	#targetElement {
