@@ -41,7 +41,7 @@
 				<code>ui-selectmenu-button</code>: The button-like element replacing the native selectmenu on the page. Has the <code>ui-selectmenu-button-closed</code> class when closed, the <code>ui-selectmenu-button-open</code> class when open.
 				<ul>
 					<li><code>ui-selectmenu-text</code>: The span representing the text portion of the button element.</li>
-					<li><code>ui-selectmenu-icon-space</code>: A supporting element between the text and the icon of the selectmenu button.</li>
+					<li><code>ui-selectmenu-icon</code>: The icon within the selectmenu button.</li>
 				</ul>
 			</li>
 			<li>
