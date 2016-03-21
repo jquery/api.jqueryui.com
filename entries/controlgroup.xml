@@ -31,15 +31,15 @@
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
-		<option name="direction" default='"horizontal"' example-value='{ direction: "vertical" }'>
+		<option name="direction" default='"horizontal"' example-value='"vertical"'>
 			<desc>
-				<p>By default, controlgroup displays its widget's in a horizontal layout. Use this option to use a vertical layout instead.</p>
+				<p>By default, controlgroup displays its controls in a horizontal layout. Use this option to use a vertical layout instead.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="onlyVisible" default="true" example-value="false">
-			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden, the controlgroup will, in effect, not have rounded corners on the top edge.</desc>
+			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden and the default horizontal layout is applied, the controlgroup will, in effect, not have rounded corners on the left edge. Likewise, if the controlgroup has a vertical layout and its first child is hidden, the controlgroup will not have rounded corners on the top edge.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="items">
@@ -51,7 +51,7 @@
 	"spinner": ".ui-spinner-input"
 }</default>
 			<desc>
-				Which descendant elements to initialize as their respective widgets. Two elements have special behaviour:
+				Which descendant elements to initialize as their respective widgets. Two elements have special behavior:
 				<ul>
 					<li><code>controlgroupLabel</code>: Any elements matching the selector for this will be wrapped in a span with the <code>ui-controlgroup-label-contents</code> class.</li>
 					<li><code>spinner</code>: This uses a class selector as the value. Requires either adding the class manually or initializing the spinner manually. Can be overridden to use <code>input[type=number]</code>, but that also requires custom CSS to remove the native number controls.</li>
