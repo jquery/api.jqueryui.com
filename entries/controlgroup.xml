@@ -39,7 +39,7 @@
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="onlyVisible" default="true" example-value="false">
-			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden, the controlgroup will, in effect, not have rounded corners on the left edge.</desc>
+			<desc>Sets whether to exclude invisible children in the assignment of rounded corners. When set to false, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden and the default horizontal layout is applied, the controlgroup will, in effect, not have rounded corners on the left edge. Likewise, if the controlgroup has a vertical layout and its first child is hidden, the controlgroup will not have rounded corners on the top edge.</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="items">
