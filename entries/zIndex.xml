@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <entries>
-	<entry type="method" name="zIndex" return="jQuery">
+	<entry type="method" name="zIndex" return="Integer">
 		<title>.zIndex()</title>
 		<desc>Get the z-index for an element.</desc>
 		<signature/>
@@ -16,7 +16,7 @@
 		<category slug="methods"/>
 		<category slug="ui-core"/>
 	</entry>
-	<entry type="method" name="zIndex" return="Integer">
+	<entry type="method" name="zIndex" return="jQuery">
 		<title>.zIndex()</title>
 		<desc>Set the z-index for an element.</desc>
 		<signature>
