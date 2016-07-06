@@ -19,7 +19,7 @@
 			<li><code>CTRL</code>/<code>COMMAND</code> + <code>LEFT</code>: Move to the previous day.</li>
 			<li><code>CTRL</code>/<code>COMMAND</code> + <code>RIGHT</code>: Move to the next day.</li>
 			<li><code>CTRL</code>/<code>COMMAND</code> + <code>UP</code>: Move to the previous week.</li>
-			<li><code>CTRL</code>/<code>COMMAND</code> + <code>DOWN</code>: Move the next week.</li>
+			<li><code>CTRL</code>/<code>COMMAND</code> + <code>DOWN</code>: Move to the next week.</li>
 			<li><code>ENTER</code>: Select the focused date.</li>
 			<li><code>CTRL</code>/<code>COMMAND</code> + <code>END</code>: Close the datepicker and erase the date.</li>
 			<li><code>ESCAPE</code>: Close the datepicker without selection.</li>
