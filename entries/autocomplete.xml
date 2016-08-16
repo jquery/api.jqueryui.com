@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>Any field that can receive input can be converted into an Autocomplete, namely, <code>&lt;input&gt;</code> elements, <code>&lt;textarea&gt;</code> elements, and elements with the <code>contenteditable</code> attribute.</p>
 
-		<p>By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>
+		<p>When typing in the autocomplete field, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.</p>
 
 		<p>This can be used to choose previously selected values, such as entering tags for articles or entering email addresses from an address book. Autocomplete can also be used to populate associated information, such as entering a city name and getting the zip code.</p>
 
