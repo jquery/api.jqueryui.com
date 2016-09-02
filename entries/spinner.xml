@@ -5,9 +5,13 @@
 		Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
 	</desc>
 	<longdesc>
-		<p>The Spinner, or number stepper widget, is perfect for handling all kinds of numeric input. It allows users to type a value directly, or modify an existing value by spinning with the keyboard, mouse or scrollwheel. When combined with Globalize, you can even spin currencies and dates in a variety of locales.</p>
+		<p>The Spinner, or number stepper widget, is perfect for handling all kinds of numeric input. It allows users to type a value directly, or modify an existing value by spinning with the keyboard, mouse or scrollwheel. When combined with <a href="https://github.com/jquery/globalize">Globalize</a>, you can even spin currencies and dates in a variety of locales.</p>
 
 		<p>Spinner wraps a text input with two buttons to increment and decrement the current value. Key events are added so that the same incrementing and decrementing can be done with the keyboard. Spinner delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
+
+		<div class="note">
+			Spinner currently supports Globalize 0.x only. Support for Globalize 1.x is planned for jQuery UI 1.13.
+		</div>
 
 		<h3>Keyboard interaction</h3>
 
