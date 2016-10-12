@@ -162,7 +162,7 @@
 	<extension-points>
 		<method name="_renderItem" return="jQuery">
 			<desc>
-				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.</p>
+				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it. See the <a href="/menu/">Menu</a> documentation for more details about the markup.</p>
 			</desc>
 			<argument name="ul" type="jQuery">
 				<desc>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</desc>
