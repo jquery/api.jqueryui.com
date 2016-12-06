@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<entries>
+	<entry type="method" name="jQuery.effects.getBaseline" return="Object" added="1.12">
+		<title>jQuery.effects.getBaseline()</title>
+		<signature>
+			<argument name="origin" type="Array">
+				<desc>An two item array containing the vertical and horizontal origin point of the element. Possible values for the vertical (first) item are <code>"top"</code>, <code>"middle"</code>, and <code>"bottom"</code>. Possible values for the horizontal (second) item are <code>"left"</code>, <code>"center"</code>, and <code>"right"</code>. Both items also accept a pixel value based on the dimensions of the element.</desc>
+			</argument>
+			<argument name="originalDimensions" type="Object" optional="true">
+				<desc>An objection containing <code>width</code> and <code>height</code> properties for the original dimensions of the element. This parameter is requried when either of the values in <code>origin</code> are numeric.</desc>
+			</argument>
+		</signature>
+		<desc>Calculates the baseline of an element based on the provided origin.</desc>
+		<longdesc>
+			<p>Values range from 0 for top/left to 1 for bottom/right, though values outside of this range are possible when providing explicit values for the origin.</p>
+		</longdesc>
+		<category slug="effects-core"/>
+		<category slug="effects"/>
+	</entry>
+</entries>
