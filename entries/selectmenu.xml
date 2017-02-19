@@ -73,7 +73,29 @@
 	"ui-selectmenu-button-open": "ui-corner-top",
 }</default>
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<examples>
+				<example>
+					<desc>Initialize the <placeholder name="name"/> with the <code>classes</code> option specified, changing the theming for the <code>ui-selectmenu-menu</code> class:</desc>
+					<code>
+			$( ".selector" ).<placeholder name="name"/>({
+				classes: {
+					"ui-selectmenu-menu": "highlight"
+				}
+			});
+				</code>
+				</example>
+				<example>
+					<desc>Get or set a property of the <code>classes</code> option, after initialization, here reading and changing the theming for the <code>ui-selectmenu-menu</code> class:</desc>
+					<code>
+			// Getter
+			var themeClass = $( ".selector" ).<placeholder name="name"/>( "option", "classes.ui-selectmenu-menu" );
+
+			// Setter
+			$( ".selector" ).<placeholder name="name"/>( "option", "classes.ui-selectmenu-menu", "highlight" );
+			</code>
+				</example>
+			</examples>
+
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ button: "ui-icon-triangle-1-s" }' example-value='{ button: "ui-icon-circle-triangle-s" }'>
