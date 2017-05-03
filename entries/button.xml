@@ -42,7 +42,7 @@
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="icon" default="null" example-value='{ icon: "ui-icon-gear" }'>
+		<option name="icon" default="null" example-value='"ui-icon-gear"'>
 			<desc>
 				<p>Icon to display, with or without text (see <a href="#option-showLabel"><code>showLabel</code></a> option). By default, the icon is displayed on the left of the label text. The positioning can be controlled using the <a href="#option-iconPosition"><code>iconPosition</code></a> option.</p>
 				<p>The value for this option must match <a href="/theming/icons/">an icon class name</a>, e.g., <code>"ui-icon-gear"</code>.</p>
@@ -50,7 +50,7 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="iconPosition" default='"beginning"' example-value='{ iconPositon: "end" }'>
+		<option name="iconPosition" default='"beginning"' example-value='"end"'>
 			<desc>
 				<p>Where to display the <a href="#option-icon"><code>icon</code></a>: Valid values are "beginning", "end", "top" and "bottom". In a left-to-right (LTR) display, "beginning" refers to the left, in a right-to-left (RTL, e.g. in Hebrew or Arabic), it refers to the right.</p>
 			</desc>
