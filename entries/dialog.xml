@@ -120,7 +120,7 @@
 				<desc>The keys are the button labels and the values are the callbacks for when the associated button is clicked.</desc>
 			</type>
 			<type name="Array">
-				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button. In addition, a key of <code>icons</code> can be used to control <a href="/button/#option-icons">button's <code>icons</code> option</a>, and a key of <code>showText</code> can be used to control <a href="/button/#option-text">button's <code>text</code> option</a>.</desc>
+				<desc>Each element of the array must be an object defining the attributes, properties, and event handlers to set on the button. In addition, a key of <code>icon</code> can be used to control <a href="/button/#option-icon">button's <code>icon</code> option</a>, and a key of <code>showText</code> can be used to control <a href="/button/#option-text">button's <code>text</code> option</a>.</desc>
 			</type>
 		</option>
 		<option name="classes" type="Object">
