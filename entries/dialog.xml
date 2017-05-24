@@ -105,9 +105,7 @@
 			<example-value>[
 		{
 			text: "Ok",
-			icons: {
-				primary: "ui-icon-heart"
-			},
+			icon: "ui-icon-heart",
 			click: function() {
 				$( this ).dialog( "close" );
 			}
