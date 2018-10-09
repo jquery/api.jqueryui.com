@@ -85,8 +85,8 @@
 			<desc>Triggered when the user starts sliding.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="handle" type="jQuery">
-					<desc>The jQuery object representing the handle being moved.</desc>
+				<property name="handle" type="Element">
+					<desc>The HTML element representing the handle being moved.</desc>
 				</property>
 				<property name="handleIndex" type="Number">
 					<desc>The numeric index of the handle being moved.</desc>
@@ -100,8 +100,8 @@
 			<desc>Triggered on every mouse move during slide. The value provided in the event as <code>ui.value</code> represents the value that the handle will have as a result of the current movement. Canceling the event will prevent the handle from moving and the handle will continue to have its previous value.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="handle" type="jQuery">
-					<desc>The jQuery object representing the handle being moved.</desc>
+				<property name="handle" type="Element">
+					<desc>The HTML element representing the handle being moved.</desc>
 				</property>
 				<property name="handleIndex" type="Number">
 					<desc>The numeric index of the handle being moved.</desc>
@@ -118,8 +118,8 @@
 			<desc>Triggered after the user slides a handle, if the value has changed; or if the value is changed programmatically via the <a href="#method-value"><code>value</code></a> method.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="handle" type="jQuery">
-					<desc>The jQuery object representing the handle that was changed.</desc>
+				<property name="handle" type="Element">
+					<desc>The HTML element representing the handle that was changed.</desc>
 				</property>
 				<property name="handleIndex" type="Number">
 					<desc>The numeric index of the handle that was moved.</desc>
@@ -133,8 +133,8 @@
 			<desc>Triggered after the user slides a handle.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
-				<property name="handle" type="jQuery">
-					<desc>The jQuery object representing the handle that was moved.</desc>
+				<property name="handle" type="Element">
+					<desc>The HTML element representing the handle that was moved.</desc>
 				</property>
 				<property name="handleIndex" type="Number">
 					<desc>The numeric index of the handle that was moved.</desc>
