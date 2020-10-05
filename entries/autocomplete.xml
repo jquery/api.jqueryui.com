@@ -85,7 +85,7 @@
 				</desc>
 			</type>
 			<type name="String">
-				<desc>When a string is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must support CORS). The Autocomplete plugin does not filter the results, instead a query string is added with a <code>term</code> field, which the server-side script should use for filtering the results. For example, if the <code>source</code> option is set to <code>"http://example.com"</code> and the user types <code>foo</code>, a GET request would be made to <code>http://example.com?term=foo</code>. The data itself can be in the same format as the local data described above.</desc>
+				<desc>When a string is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must support CORS). The Autocomplete plugin does not filter the results, instead a query string is added with a <code>term</code> field, which the server-side script should use for filtering the results. For example, if the <code>source</code> option is set to <code>"https://example.com"</code> and the user types <code>foo</code>, a GET request would be made to <code>https://example.com?term=foo</code>. The data itself can be in the same format as the local data described above.</desc>
 			</type>
 			<type name="Function">
 				<argument name="request" type="Object"/>
