@@ -458,6 +458,10 @@
 			<argument name="inst" type="Object"/>
 			<desc>Called when the datepicker is selected. The function receives the selected date as text and the datepicker instance as parameters. <code>this</code> refers to the associated input field.</desc>
 		</option>
+		<option name="onUpdateDatepicker" type="Function" default="null">
+			<argument name="inst" type="Object"/>
+			<desc>Called when the datepicker widget's DOM is updated. The function receives the datepicker instance as the only parameter. <code>this</code> refers to the associated input field.</desc>
+		</option>
 	</options>
 	<methods>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
