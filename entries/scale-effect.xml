@@ -38,25 +38,5 @@ $( document ).click(function() {
 <div id="toggle"></div>
 ]]></html>
 	</example>
-	<example>
-		<height>200</height>
-		<desc>Toggle a div using the scale effect in just one direction.</desc>
-		<css><![CDATA[
-	#toggle {
-		width: 100px;
-		height: 100px;
-		background: #ccc;
-	}
-]]></css>
-		<code><![CDATA[
-$( document ).click(function() {
-	$( "#toggle" ).toggle({ effect: "scale", direction: "horizontal" });
-});
-]]></code>
-		<html><![CDATA[
-<p>Click anywhere to toggle the box.</p>
-<div id="toggle"></div>
-]]></html>
-	</example>
 	<category slug="effects"/>
 </entry>
