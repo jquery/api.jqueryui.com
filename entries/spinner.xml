@@ -10,7 +10,7 @@
 		<p>Spinner wraps a text input with two buttons to increment and decrement the current value. Key events are added so that the same incrementing and decrementing can be done with the keyboard. Spinner delegates to <a href="https://github.com/jquery/globalize">Globalize</a> for number formatting and parsing.</p>
 
 		<div class="note">
-			Spinner currently supports Globalize 0.x only. Support for Globalize 1.x is planned for jQuery UI 1.13.
+			Spinner currently supports Globalize 0.x only. Support for Globalize 1.x is currently not planned.
 		</div>
 
 		<h3>Keyboard interaction</h3>
