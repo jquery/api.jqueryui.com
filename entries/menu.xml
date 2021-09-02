@@ -193,7 +193,7 @@
 				<desc>What triggered the menu to expand.</desc>
 			</argument>
 		</method>
-		<method name="focus" example-params='null, menu.find( ".ui-menu-item:last" )'>
+		<method name="focus" example-params='null, menu.find( ".ui-menu-item" ).last()'>
 			<desc>
 				Activates the given menu item and triggers the menu's <a href="#event-focus"><code>focus</code></a> event. Opens the menu item's sub-menu, if one exists.
 			</desc>
