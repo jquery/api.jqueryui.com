@@ -107,10 +107,27 @@
 		<option name="event" type="String" default='"click"' example-value='"mouseover"'>
 			<desc>The event that accordion headers will react to in order to activate the associated panel. Multiple events can be specified, separated by a space.</desc>
 		</option>
-		<option name="header" type="Selector" default='"> li > :first-child,> :not(li):even"' example-value='"h3"'>
-			<desc>
-				<p>Selector for the header element, applied via <code>.find()</code> on the main accordion element. Content panels must be the sibling immediately after their associated headers.</p>
-			</desc>
+		<option name="header" default='function( elem ) { return elem.find( "> li > :first-child" ).add( elem.find( "> :not(li)" ).even() ); }' example-value='"h3"'>
+			<desc>Data identifying the header element. Content panels must be the sibling immediately after their associated headers.</desc>
+			<type name="Selector">
+				<desc>Selector for the header element, applied via <code>.find()</code> on the main accordion element.</desc>
+			</type>
+			<type name="Function">
+				<argument name="accordionElement" type="jQuery">
+					<desc>The accordion element</desc>
+				</argument>
+				<desc>A function accepting the accordion element and returning the header element.</desc>
+			</type>
+			<example>
+				<desc>Initialize the accordion with the <code>header</code> option specified as a function:</desc>
+				<code>
+$( ".selector" ).accordion({
+  header: function ( accordionElement ) {
+    return accordionElement.find( "h3" );
+  }
+});
+				</code>
+			</example>
 		</option>
 		<option name="heightStyle" type="String" default='"auto"' example-value='"fill"'>
 			<desc>
