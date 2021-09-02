@@ -228,7 +228,7 @@ _renderMenu: function( ul, items ) {
 	$.each( items, function( index, item ) {
 		that._renderItemData( ul, item );
 	});
-	$( ul ).find( "li:odd" ).addClass( "odd" );
+	$( ul ).find( "li" ).odd().addClass( "odd" );
 }
 ]]></code>
 			</example>
