@@ -113,10 +113,11 @@
 				<desc>Selector for the header element, applied via <code>.find()</code> on the main accordion element.</desc>
 			</type>
 			<type name="Function">
+				<added>1.13</added>
 				<argument name="accordionElement" type="jQuery">
 					<desc>The accordion element</desc>
 				</argument>
-				<desc>A function accepting the accordion element and returning the header element.</desc>
+				<desc>A function accepting the accordion element and returning the header element (added in <code>1.13</code>).</desc>
 			</type>
 			<example>
 				<desc>Initialize the accordion with the <code>header</code> option specified as a function:</desc>
