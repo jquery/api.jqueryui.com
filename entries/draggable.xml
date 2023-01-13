@@ -99,7 +99,7 @@
 				<desc>If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.</desc>
 			</type>
 			<type name="Function">
-				<desc>A function that will return a DOMElement to use while dragging.</desc>
+				<desc>A function that must return a jQuery or DOMElement to use while dragging.</desc>
 			</type>
 		</option>
 		<option name="iframeFix" default="false" example-value="true">
