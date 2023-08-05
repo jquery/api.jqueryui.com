@@ -110,7 +110,7 @@
 				<desc>If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.</desc>
 			</type>
 			<type name="Function">
-				<desc>A function that will return a DOMElement to use while dragging. The function receives the event and the element being sorted.</desc>
+				<desc>A function that must return a jQuery or DOMElement to use while dragging. The function receives the event and the jQuery element being sorted.</desc>
 			</type>
 		</option>
 		<option name="items" type="Selector" default='"> *"' example-value='"> li"'>
