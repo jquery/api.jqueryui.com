@@ -15,8 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        # Old infra requires Node 10
-        node-version: [10.x, 18.x]
+        node-version: [18.x, 20.x]
 
     steps:
     - name: Install xmllint
