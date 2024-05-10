@@ -9,10 +9,10 @@
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
 	&lt;title&gt;<xsl:value-of select="//entry/@name"/> demo&lt;/title&gt;
-	&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"&gt;<xsl:if test="css">
+	&lt;link rel="stylesheet" href="//code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css"&gt;<xsl:if test="css">
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
-	&lt;script src="//code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt;
-	&lt;script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script src="//code.jquery.com/jquery-3.7.1.js"&gt;&lt;/script&gt;
+	&lt;script src="//code.jquery.com/ui/1.13.3/jquery-ui.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 <xsl:value-of select="html/text()"/>
