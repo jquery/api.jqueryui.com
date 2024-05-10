@@ -30,7 +30,7 @@
 	<added>1.5</added>
 	<options>
 		<option name="animate" default="false" example-value='"fast"'>
-			<desc>Whether to slide the handle smoothly when the user clicks on the slider track. Also accepts any valid <a href="//api.jquery.com/animate/#duration">animation duration</a>.</desc>
+			<desc>Whether to slide the handle smoothly when the user clicks on the slider track. Also accepts any valid <a href="https://api.jquery.com/animate/#duration">animation duration</a>.</desc>
 			<type name="Boolean">
 				<desc>When set to <code>true</code>, the handle will animate with the default duration.</desc>
 			</type>

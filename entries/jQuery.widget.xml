@@ -43,7 +43,7 @@
 
 			<p>We can pass as many or as few options as we want during initialization. Any options that we don't pass will just use their default values.</p>
 
-			<p>You can pass multiple options arguments. Those arguments will be merged into one object (similar to <a href="//api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>). This is useful for sharing options between instances, while overriding some properties for each one:</p>
+			<p>You can pass multiple options arguments. Those arguments will be merged into one object (similar to <a href="https://api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>). This is useful for sharing options between instances, while overriding some properties for each one:</p>
 
 			<pre><code>
 				var options = { modal: true, show: "slow" };
@@ -121,7 +121,7 @@
 				$( "#not-a-progressbar" ).progressbar( "instance" ); // undefined
 			</code></pre>
 
-			<p>The instance is stored using <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, the <a href="/data-selector/"><code>:data</code></a> selector can also determine whether an element has a given widget bound to it.</p>
+			<p>The instance is stored using <a href="https://api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> with the widget's full name as the key. Therefore, the <a href="/data-selector/"><code>:data</code></a> selector can also determine whether an element has a given widget bound to it.</p>
 
 			<pre><code>
 				$( "#elem" ).is( ":data('ui-progressbar')" ); // true
