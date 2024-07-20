@@ -111,17 +111,5 @@ $( "#progressbar" ).progressbar({
 <div id="progressbar"></div>
 ]]></html>
 	</example>
-	<example>
-		<height>50</height>
-		<desc>A simple jQuery UI Indeterminate Progressbar</desc>
-		<code><![CDATA[
-$( "#progressbar" ).progressbar({
-	value: false
-});
-]]></code>
-		<html><![CDATA[
-<div id="progressbar"></div>
-]]></html>
-	</example>
 	<category slug="widgets"/>
 </entry>
