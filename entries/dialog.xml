@@ -198,7 +198,7 @@
 		</option>
 		<option name="uiDialogTitleHeadingLevel" default="0" example-value="1" added="1.14.1">
 			<desc>
-				<p>Specifies the heading level that wraps the title of the dialog. For a value between <code>1</code> to <code>6</code>, <code>h1</code> to <code>h6</code> is returned. To ensure backward compatibility, the default value <code>0</code> will keep returning a <code>span</code>, same as any other value entered here.</p>
+				<p>Specifies the heading level that wraps the title of the dialog. For a value between <code>1</code> to <code>6</code>, <code>h1</code> to <code>h6</code> is returned. Any other value, including the default <code>0</code>, uses a <code>span</code> instead.</p>
 			</desc>
 			<type name="Number" />
 		</option>
