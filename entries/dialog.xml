@@ -196,6 +196,12 @@
 			<desc>Specifies the title of the dialog. If the value is <code>null</code>, the <code>title</code> attribute on the dialog source element will be used.</desc>
 			<type name="String" />
 		</option>
+		<option name="uiDialogTitleHeadingLevel" default="0" example-value="1" added="1.14.1">
+			<desc>
+				<p>Specifies the heading level that wraps the title of the dialog. For a value between <code>1</code> to <code>6</code>, <code>h1</code> to <code>h6</code> is returned. Any other value, including the default <code>0</code>, uses a <code>span</code> instead.</p>
+			</desc>
+			<type name="Number" />
+		</option>
 		<option name="width" default="300" example-value="500">
 			<desc>The width of the dialog, in pixels.</desc>
 			<type name="Number" />
