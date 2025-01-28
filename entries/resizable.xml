@@ -57,8 +57,14 @@
 		<option name="autoHide" type="Boolean" default="false" example-value='true'>
 			<desc>Whether the handles should hide when the user is not hovering over the element.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='".cancel"'>
+		<option name="cancel" default='"input,textarea,button,select,option"' example-value='".cancel"'>
 			<desc>Prevents resizing from starting on specified elements.</desc>
+			<type name="Selector">
+				<desc>A selector specifying elements for which resizing is canceled.</desc>
+			</type>
+			<type name="Function">
+				<desc>A function that can return true to cancel resizing. The function receives the event object.</desc>
+			</type>
 		</option>
 		<option name="containment" default="false" example-value='"parent"'>
 			<desc>Constrains resizing to within the bounds of the specified element or region.</desc>

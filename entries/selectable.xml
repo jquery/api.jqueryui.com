@@ -33,8 +33,14 @@
 		<option name="autoRefresh" type="Boolean" default="true" example-value='false'>
 			<desc>This determines whether to refresh (recalculate) the position and size of each selectee at the beginning of each select operation. If you have many items, you may want to set this to false and call the <a href="#method-refresh"><code>refresh()</code></a> method manually.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,.cancel"'>
+		<option name="cancel" default='"input,textarea,button,select,option"' example-value='"a,.cancel"'>
 			<desc>Prevents selecting if you start on elements matching the selector.</desc>
+			<type name="Selector">
+				<desc>A selector specifying elements for which selecting is canceled.</desc>
+			</type>
+			<type name="Function">
+				<desc>A function that can return true to cancel selecting. The function receives the event object.</desc>
+			</type>
 		</option>
 		<option name="classes" type="Object" default="{}">
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
