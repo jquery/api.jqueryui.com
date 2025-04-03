@@ -206,6 +206,71 @@
 			<desc>The width of the dialog, in pixels.</desc>
 			<type name="Number" />
 		</option>
+		<option name="containment" default="document" example-value="#some_element">
+			<desc>
+				If set to <code>some_elemet</code>, the dialog will be unmoveable outside this element (like a div)<br/>
+			</desc>
+			<longdesc>
+				The Value of containment can be a Selector or a Object.
+				<pre><code>
+					$("#div_dialog").dialog({
+					  title: "hello"
+					, containment: "#some_div"
+					});
+				</code></pre>
+				It is the same result than:<br/>
+				<pre><code>
+					$("#div_dialog").dialog({
+					  title: "hello"
+					}).dialog("widget").draggable("option", "containment", "#some_div");
+				</code></pre>
+			</desc>
+			<type name="Selector" />
+		</option>
+		<option name="containment" default="document" example-value="#some_element">
+			<desc>
+				If set to <code>some_elemet</code>, the dialog will be unmoveable outside this element (like a div)<br/>
+				It is the same behavior than:<br/>
+				<pre><code>
+					$("#div_dialog").dialog({
+					  title: "hello"
+					}).dialog("widget").draggable("option", "containment", "#some_div");
+				</code></pre>
+			</desc>
+			<type name="String">
+				<desc>
+					The Value of containment can be a ID or some else to select a element.
+					<pre><code>
+						$("#div_dialog").dialog({
+						  title: "hello"
+						, containment: "#some_div"
+						});
+					</code></pre>
+				</desc>
+			</type>
+			<type name="Object" />
+				<desc>
+					The Value of containment can be a Object
+					<pre><code>
+						var jail = $( '<div id="xxx"></div>' ).css( {
+							height: '500px',border: '0px', margin:'0px', width:'500px', position: 'absolute', bottom: '0px', right: '0px', left: '50px', top: '50px'
+						} ).appendTo( "body" ),
+						$("#div_dialog").dialog({
+						  title: "hello"
+						, containment: jail
+						});
+					</code></pre>
+
+					It is the same behavior like:<br/>
+					<pre><code>
+						$("#div_dialog").dialog({
+						  title: "hello"
+						}).dialog("widget").draggable("option", "containment", "#some_div");
+					</code></pre>
+				</desc>
+			</type>
+		</option>
+		
 	</options>
 	<events>
 		<event name="beforeClose">
