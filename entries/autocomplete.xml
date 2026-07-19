@@ -257,23 +257,5 @@ $( "#autocomplete" ).autocomplete({
 <input id="autocomplete">
 ]]></html>
 	</example>
-	<example>
-		<desc>Using a custom source callback to match only the beginning of terms</desc>
-		<code><![CDATA[
-var tags = [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ];
-$( "#autocomplete" ).autocomplete({
-	source: function( request, response ) {
-	        var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-	        response( $.grep( tags, function( item ){
-	            return matcher.test( item );
-	        }) );
-	    }
-});
-]]></code>
-		<html><![CDATA[
-<label for="autocomplete">Select a programming language: </label>
-<input id="autocomplete">
-]]></html>
-	</example>
 	<category slug="widgets"/>
 </entry>
