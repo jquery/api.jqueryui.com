@@ -158,5 +158,28 @@
 	<input title="Input help">
 </p>]]></html>
 	</example>
+	<example>
+		<height>100</height>
+		<desc>Create an ajax tooltip</desc>
+		<code><![CDATA[
+	$(document).tooltip({
+		content: function(setContent){
+			var element = $( this );
+			$.get("somefile.txt")
+			.then( text => {
+				setContent(text);
+			})
+			.catch ( (e) => {
+				setContent(`${e.statusText}`);
+			})
+		},
+		items: "a, [href]",
+	});
+]]></code>
+		<html><![CDATA[
+<p>
+	<a href="#" title="Anchor description">Anchor text</a>
+</p>]]></html>
+	</example>
 	<category slug="widgets"/>
 </entry>
