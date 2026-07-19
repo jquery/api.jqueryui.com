@@ -46,8 +46,14 @@
 		<option name="axis" type="String" default='false' example-value='"x"'>
 			<desc>If defined, the items can be dragged only horizontally or vertically. Possible values: <code>"x"</code>, <code>"y"</code>.</desc>
 		</option>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='"a,button"'>
+		<option name="cancel" default='"input,textarea,button,select,option"' example-value='"a,button"'>
 			<desc>Prevents sorting if you start on elements matching the selector.</desc>
+			<type name="Selector">
+				<desc>A selector specifying elements for which sorting is canceled.</desc>
+			</type>
+			<type name="Function">
+				<desc>A function that can return true to cancel sorting. The function receives the event object.</desc>
+			</type>
 		</option>
 		<option name="classes" type="Object" default="{}">
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

@@ -11,8 +11,14 @@
 		</ul>
 	</longdesc>
 	<options>
-		<option name="cancel" type="Selector" default='"input,textarea,button,select,option"' example-value='".title"'>
+		<option name="cancel" default='"input,textarea,button,select,option"' example-value='".title"'>
 			<desc>Prevents interactions from starting on specified elements.</desc>
+			<type name="Selector">
+				<desc>A selector specifying elements for which interactions are canceled.</desc>
+			</type>
+			<type name="Function">
+				<desc>A function that can return true to cancel interactions. The function receives the event object.</desc>
+			</type>
 		</option>
 		<option name="delay" type="Number" default="0" example-value="300">
 			<deprecated>1.12</deprecated>
