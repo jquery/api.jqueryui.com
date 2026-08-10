@@ -24,8 +24,7 @@
     "test": "grunt lint"
   },
   "dependencies": {
-    "grunt": "1.5.2",
-    "grunt-cli": "1.4.3",
-    "grunt-jquery-content": "3.1.0"
+    "grunt": "1.6.3",
+    "grunt-jquery-content": "3.3.4"
   }
 }
